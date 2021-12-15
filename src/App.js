@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from "./components/theme/GlobalStyle";
+import { Row, Column } from "./components/Grid";
+import SpellBook from "./sections/SpellBook";
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Row>
+        <Column></Column>
+      </Row>
+      <GlobalStyle />
+      <h1>
+        Pathfinder 2 <small>Turu's Edition</small>
+      </h1>
+      <SpellBook />
+    </>
   );
-}
+};
 
 export default App;
