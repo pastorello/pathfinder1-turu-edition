@@ -33,14 +33,6 @@ const occultSpells = [
   },
   {
     level: 3,
-    url: "/wiki/Frasi_Dimenticate",
-    name: "Frasi Dimenticate Frasi Dimenticate ",
-    school: "divinazione",
-    description:
-      "Usi questo incantesimo per restaurare il materiale da importanti testi, storici o meno",
-  },
-  {
-    level: 3,
     url: "/wiki/Ipercognizione",
     name: "Ipercognizione Ipercognizione",
     school: "divinazione",
@@ -49,13 +41,6 @@ const occultSpells = [
 ];
 
 const divineSpells = [
-  {
-    level: 3,
-    url: "/wiki/Cecit%C3%A0",
-    name: "Cecità Cecità",
-    school: "necromanzia",
-    description: "Rendi cieco un bersaglio",
-  },
   {
     level: 3,
     url: "/wiki/Cerchio_di_Protezione",
