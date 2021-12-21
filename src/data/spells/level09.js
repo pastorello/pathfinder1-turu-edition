@@ -24,13 +24,6 @@ const occultSpells = [
     school: "ammaliamento",
     description: "Una canzone debilita le creature in strani modi",
   },
-  {
-    level: 9,
-    url: "/wiki/Sfera_Prismatica",
-    name: "Sfera Prismatica Sfera Prismatica",
-    school: "abiurazione",
-    description: "Crei una sfera protettiva composta di sette strati cromatici",
-  },
 ];
 
 const divineSpells = [
@@ -154,6 +147,11 @@ const arcaneSpells = [
   },
 ];
 
-const spells = [...divineSpells, ...arcaneSpells];
+const spells = [
+  ...divineSpells,
+  ...arcaneSpells,
+  ...occultSpells,
+  ...primeviSpells,
+];
 
 export default spells;

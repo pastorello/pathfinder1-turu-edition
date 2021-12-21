@@ -104,6 +104,11 @@ const arcaneSpells = [
   },
 ];
 
-const spells = [...divineSpells, ...arcaneSpells];
+const spells = [
+  ...divineSpells,
+  ...arcaneSpells,
+  ...occultSpells,
+  ...primeviSpells,
+];
 
 export default spells;
