@@ -1,4 +1,13 @@
-const primeviSpells = [];
+const primeviSpells = [
+  {
+    level: 0,
+    url: "/wiki/Impedimento",
+    name: "Impedimento",
+    school: "evocazione",
+    description: "Evochi un rampicante per intralciare una creatura",
+    source: "primeva",
+  },
+];
 
 const occultSpells = [
   {
@@ -25,6 +34,8 @@ const divineSpells = [
     name: "Distruggere Non Morti",
     school: "necromanzia",
     description: "Infliggi danni da energia positiva ai non morti",
+    source: "divina",
+    energy: "positiva",
   },
   {
     level: 0,
@@ -39,6 +50,7 @@ const divineSpells = [
     name: "Interdizione alla Minaccia",
     school: "abiurazione",
     description: "Proteggi un alleato da un nemico specifico",
+    source: "divina",
   },
   {
     level: 0,
@@ -47,6 +59,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Scagli energia divina che infligge danni in base all'allineamento della tua divinità",
+    source: "divina",
   },
   {
     level: 0,
@@ -54,6 +67,8 @@ const divineSpells = [
     name: "Stabilizzare",
     school: "necromanzia",
     description: "Stabilizzi una creatura morente.",
+    source: "divina",
+    energy: "positiva",
   },
 ];
 
@@ -79,13 +94,6 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Infliggi danni alla mente di una creatura, possibilmente fino a stordirla",
-  },
-  {
-    level: 0,
-    url: "/wiki/Impedimento",
-    name: "Impedimento",
-    school: "evocazione",
-    description: "Evochi un rampicante per intralciare una creatura",
   },
   {
     level: 0,
