@@ -5,7 +5,7 @@ const primeviSpells = [
     name: "Forma di Insetto",
     school: "trasmutazione",
     description: "Ti trasformi in un pericoloso insetto gigante",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 3,
@@ -13,7 +13,7 @@ const primeviSpells = [
     name: "Muro di Spine",
     school: "evocazione",
     description: "Crei un muro di rovi",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 3,
@@ -21,7 +21,7 @@ const primeviSpells = [
     name: "Visione dell'Animale",
     school: "divinazione",
     description: "Sposti i tuoi sensi su un animale",
-    source: "primeva",
+    source: ["primeva"],
   },
 ];
 
@@ -33,7 +33,7 @@ const occultSpells = [
     school: "ammaliamento",
     description:
       "Emetti un urlo liberatorio, spronando un alleato a liberarsi da un effetto che lo tiene fermo",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
   {
@@ -42,6 +42,7 @@ const occultSpells = [
     name: "Ipercognizione",
     school: "divinazione",
     description: "Ricordi enormi quantità di informazioni in un istante",
+    source: ["occulta"],
   },
 ];
 
@@ -53,7 +54,7 @@ const divineSpells = [
     school: "abiurazione",
     description:
       "Una creatura emette un'aura che protegge coloro che vi si trovano all'interno da un dato allineamento",
-    source: "divina",
+    source: ["divina"],
   },
   {
     level: 3,
@@ -62,7 +63,7 @@ const divineSpells = [
     school: "ammaliamento",
     description:
       "Provochi danni mentali, e potenzialmente rendi un devoto incapace di lanciare incantesimi",
-    source: "divina",
+    source: ["divina"],
   },
   {
     level: 3,
@@ -71,7 +72,8 @@ const divineSpells = [
     school: "ammaliamento",
     description:
       "Ravvivi l'eroismo insito in una creatura per renderla più abile",
-    source: "divina",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 3,
@@ -79,6 +81,7 @@ const divineSpells = [
     name: "Guida del Girovago",
     school: "divinazione",
     description: "Trovi un tragitto ideale verso una destinazione",
+    source: ["occulta", "primeva"],
   },
   {
     level: 3,
@@ -87,7 +90,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Un raggio di luce incandescente infligge danni aggiuntivi ai non morti e contrasta l'oscurità",
-    source: "divina",
+    source: ["divina"],
     energy: "positiva",
   },
   {
@@ -97,6 +100,7 @@ const divineSpells = [
     school: "divinazione",
     description:
       "Tu e i tuoi alleati influenzati ottenete una conoscenza preternaturale del sentiero davanti a voi",
+    source: ["occulta", "primeva"],
   },
   {
     level: 3,
@@ -104,7 +108,7 @@ const divineSpells = [
     name: "Neutralizza Veleno",
     school: "necromanzia",
     description: "Curi un veleno che affligge una creatura",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
   {
@@ -114,7 +118,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Un raggio di oscurità malvagia infligge danni da freddo, contrasta la luce e ferisce i celestiali",
-    source: "divina",
+    source: ["divina"],
     energy: "negativa",
   },
   {
@@ -123,7 +127,7 @@ const divineSpells = [
     name: "Rimuovi Malattia",
     school: "necromanzia",
     description: "Curi una malattia che affligge una creatura",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
   {
@@ -133,6 +137,8 @@ const divineSpells = [
     school: "abiurazione",
     description:
       "Vieni circondato da un vortice di turbinanti sciarpe colorate di forza che ti offuscano e disorientano i tuoi nemici",
+    source: ["occulta", "divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -141,7 +147,7 @@ const divineSpells = [
     school: "abiurazione",
     description:
       "Crei un'area di protezione della durata di 24 ore contro aberrazioni, celestiali, draghi, nefandi o non morti",
-    source: "divina",
+    source: ["divina"],
     energy: "positiva",
   },
   {
@@ -150,6 +156,8 @@ const divineSpells = [
     name: "Zona di Verità",
     school: "ammaliamento",
     description: "Costringi le creature a dire la verità",
+    source: ["divina"],
+    energy: "positiva",
   },
 ];
 
@@ -160,6 +168,7 @@ const arcaneSpells = [
     name: "Anti-Individuazione",
     school: "abiurazione",
     description: "Proteggi una creatura o un oggetto dall'individuazione",
+    source: ["occulta"],
   },
   {
     level: 3,
@@ -167,6 +176,8 @@ const arcaneSpells = [
     name: "Arma Spettrale",
     school: "trasmutazione",
     description: "un'arma ha effetto sulle creature incorporee",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 3,
@@ -174,6 +185,8 @@ const arcaneSpells = [
     name: "Cecità",
     school: "necromanzia",
     description: "Rendi cieco un bersaglio",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -181,6 +194,8 @@ const arcaneSpells = [
     name: "Chiaroudienza",
     school: "divinazione",
     description: "Puoi udire attraverso un sensore magico invisibile",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 3,
@@ -188,6 +203,8 @@ const arcaneSpells = [
     name: "Estasiare",
     school: "ammaliamento",
     description: "Le creature sono affascinate dal tuo discorso",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -195,6 +212,7 @@ const arcaneSpells = [
     name: "Fondersi nella Pietra",
     school: "trasmutazione",
     description: "Ti fondi in un blocco di pietra",
+    source: ["primeva"],
   },
   {
     level: 3,
@@ -202,6 +220,7 @@ const arcaneSpells = [
     name: "Fulmine",
     school: "invocazione",
     description: "Un fulmine colpisce tutte le creature in una linea",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -209,6 +228,8 @@ const arcaneSpells = [
     name: "Glifo di Interdizione",
     school: "abiurazione",
     description: "Infondi un incantesimo in un simbolo per creare una trappola",
+    source: ["arcana", "divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -216,6 +237,8 @@ const arcaneSpells = [
     name: "Legare Non Morto",
     school: "necromanzia",
     description: "Prendi il controllo di un non morto privo di intelletto",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -223,6 +246,7 @@ const arcaneSpells = [
     name: "Legato a Terra",
     school: "trasmutazione",
     description: "Porti a terra una creatura volante",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -230,6 +254,7 @@ const arcaneSpells = [
     name: "Leggere nella Mente",
     school: "divinazione",
     description: "Leggi i pensieri superficiali di una creatura",
+    source: ["occulta"],
   },
   {
     level: 3,
@@ -237,6 +262,8 @@ const arcaneSpells = [
     name: "Lentezza",
     school: "trasmutazione",
     description: "Rallenti una creatura, riducendone le azioni",
+    source: ["arcana", "divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -244,6 +271,7 @@ const arcaneSpells = [
     name: "Levitazione",
     school: "invocazione",
     description: "Fai fluttuare un oggetto o creatura a qualche metro da terra",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -251,6 +279,8 @@ const arcaneSpells = [
     name: "Localizzare",
     school: "divinazione",
     description: "Apprendi la direzione verso un oggetto",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 3,
@@ -258,6 +288,7 @@ const arcaneSpells = [
     name: "Messaggio Onirico",
     school: "divinazione",
     description: "Invii un messaggio che arriva tramite un sogno",
+    source: ["occulta"],
   },
   {
     level: 3,
@@ -266,6 +297,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Crei un muro di venti vorticosi che impedisce il movimento e gli attacchi a distanza",
+    source: ["primeva"],
   },
   {
     level: 3,
@@ -273,6 +305,7 @@ const arcaneSpells = [
     name: "Nube Maleodorante",
     school: "evocazione",
     description: "Formi una nube che nausea le creature",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -280,13 +313,15 @@ const arcaneSpells = [
     name: "Pagina Segreta",
     school: "illusione",
     description: "Alteri l'apparenza di una pagina",
+    source: ["occulta"],
   },
   {
     level: 3,
     url: "/wiki/Palla_di_Fuoco",
     name: "Palla di Fuoco",
     school: "invocazione",
-    description: "un'esplosione di fuoco in  un'area brucia le creature",
+    description: "un'esplosione di fuoco in un'area brucia le creature",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -294,6 +329,8 @@ const arcaneSpells = [
     name: "Paralizzare",
     school: "ammaliamento",
     description: "Blocchi un umanoide sul posto",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -302,6 +339,7 @@ const arcaneSpells = [
     school: "trasmutazione",
     description:
       "Trasforma i piedi di una creatura in pinne, consentendole di nuotare ma rallentandola sul terreno",
+    source: ["primeva"],
   },
   {
     level: 3,
@@ -309,6 +347,7 @@ const arcaneSpells = [
     name: "Pozzo Gravitazionale",
     school: "invocazione",
     description: "Crei una sfera di gravità alterata",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -316,6 +355,7 @@ const arcaneSpells = [
     name: "Restringere Oggetto",
     school: "trasmutazione",
     description: "Riduci un oggetto alle dimensioni di una moneta",
+    source: ["arcana"],
   },
   {
     level: 3,
@@ -323,6 +363,7 @@ const arcaneSpells = [
     name: "Sabbie Mobili",
     school: "trasmutazione",
     description: "Fai sussultare la superficie",
+    source: ["primeva"],
   },
   {
     level: 3,
@@ -331,6 +372,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Tu e le creature vicine diventate invisibili mentre esplorate",
+    source: ["occulta", "arcana"],
   },
   {
     level: 3,
@@ -339,6 +381,8 @@ const arcaneSpells = [
     school: "necromanzia",
     description:
       "Maledici il bersaglio con una sete che nessuna bevanda può estinguere",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -347,6 +391,8 @@ const arcaneSpells = [
     school: "necromanzia",
     description:
       "Infliggi danni di tipo negativo e ottieni pf temporanei con un tocco",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 3,
@@ -354,6 +400,7 @@ const arcaneSpells = [
     name: "Trama Ipnotica",
     school: "illusione",
     description: "Colori cangianti abbagliano ed affascinano le creature",
+    source: ["occulta", "arcana"],
   },
   {
     level: 3,
@@ -362,6 +409,7 @@ const arcaneSpells = [
     school: "trasmutazione",
     description:
       "Velocizzi una creatura in modo che possa attaccare o muoversi più spesso",
+    source: ["arcana"],
   },
 ];
 

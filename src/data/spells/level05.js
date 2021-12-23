@@ -5,6 +5,7 @@ const primeviSpells = [
     name: "Evoca Gigante",
     school: "evocazione",
     description: "Evochi un gigante che combatta con te",
+    source: ["primeva"],
   },
   {
     level: 5,
@@ -13,7 +14,7 @@ const primeviSpells = [
     school: "trasmutazione",
     description:
       "Ti trasformi in una pericolosa creatura con il tratto vegetale",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 5,
@@ -22,7 +23,7 @@ const primeviSpells = [
     school: "trasmutazione",
     description:
       "Creature consenzienti sviluppano zanne ed artigli e sono in preda alla follia",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 5,
@@ -30,7 +31,7 @@ const primeviSpells = [
     name: "Traslazione Arborea",
     school: "evocazione",
     description: "Ti teletrasporti da un albero all'altro",
-    source: "primeva",
+    source: ["primeva"],
   },
 ];
 
@@ -41,6 +42,8 @@ const occultSpells = [
     name: "Evoca Entità",
     school: "evocazione",
     description: "Evochi un'aberrazione che combatta con te",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -48,6 +51,8 @@ const occultSpells = [
     name: "Impulso Sinaptico",
     school: "ammaliamento",
     description: "Rallenti le creature con un'esplosione mentale",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -55,7 +60,7 @@ const occultSpells = [
     name: "Sinestesia",
     school: "divinazione",
     description: "Riprogrammi i sensi di una creatura",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 5,
@@ -63,7 +68,7 @@ const occultSpells = [
     name: "Sognare Potenziale",
     school: "ammaliamento",
     description: "Il bersaglio si riaddestra nei suoi sogni",
-    source: "primeva",
+    source: ["primeva"],
   },
 ];
 
@@ -74,7 +79,7 @@ const divineSpells = [
     name: "Colpo Infuocato",
     school: "invocazione",
     description: "Evochi il fuoco divino dal cielo",
-    source: "divina",
+    source: ["divina"],
     energy: "positiva",
   },
   {
@@ -83,8 +88,7 @@ const divineSpells = [
     name: "Esplosione d'Ombra",
     school: "invocazione",
     description: "Crei un cono d'ombra che infligge danni del tipo scelto",
-    source: "divina",
-    energy: "negativa",
+    source: ["occulta"],
   },
   {
     level: 5,
@@ -92,7 +96,7 @@ const divineSpells = [
     name: "Evoca Celestiale",
     school: "evocazione",
     description: "Evochi un celestiale che combatta con te",
-    source: "divina",
+    source: ["divina"],
     energy: "positiva",
   },
   {
@@ -101,7 +105,7 @@ const divineSpells = [
     name: "Evoca Nefando",
     school: "evocazione",
     description: "Evochi un nefando che combatta con te",
-    source: "divina",
+    source: ["divina"],
     energy: "negativa",
   },
   {
@@ -111,7 +115,8 @@ const divineSpells = [
     school: "abiurazione",
     description:
       "Crei un guardiano magico che attacca al tuo comando e subisce danni al posto dei tuoi alleati",
-    source: "divina",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 5,
@@ -119,7 +124,7 @@ const divineSpells = [
     name: "Interdizione alla Morte",
     school: "abiurazione",
     description: "Proteggi una creatura dall'energia negativa",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
   {
@@ -128,15 +133,17 @@ const divineSpells = [
     name: "Piaga Abissale",
     school: "necromanzia",
     description: "Infliggi una maledizione che rende risucchiato",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
     url: "/wiki/Respiro_di_Vita",
-    name: "Respiro di Vita Respiro di Vita",
+    name: "Respiro di Vita",
     school: "necromanzia",
     description:
       "Reagisci per rianimare una creatura al momento della sua morte",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
 ];
@@ -149,6 +156,8 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Una creatura crede che una cosa sia  un'altra, non può individuare qualcosa, oppure vede qualcosa che in realtà non c'è",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -156,6 +165,7 @@ const arcaneSpells = [
     name: "Camminare nelle Ombre",
     school: "evocazione",
     description: "Viaggi rapidamente attraverso il Piano delle Ombre",
+    source: ["occulta"],
   },
   {
     level: 5,
@@ -163,6 +173,7 @@ const arcaneSpells = [
     name: "Cono di Freddo",
     school: "invocazione",
     description: "Un freddo estremo infligge danni alle creature in un cono",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -171,6 +182,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Accresci o diminuisci il livello dell'acqua in una vasta area",
+    source: ["primeva"],
   },
   {
     level: 5,
@@ -178,6 +190,8 @@ const arcaneSpells = [
     name: "Disperazione Opprimente",
     school: "ammaliamento",
     description: "Fai piangere a dirotto una creatura",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -185,6 +199,8 @@ const arcaneSpells = [
     name: "Esilio",
     school: "abiurazione",
     description: "Fai tornare una creatura sul suo piano natio",
+    source: ["arcana", "divina"],
+    energy: "positiva",
   },
   {
     level: 5,
@@ -192,6 +208,7 @@ const arcaneSpells = [
     name: "Evoca Drago",
     school: "evocazione",
     description: "Evochi un drago che combatta con te",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -199,6 +216,7 @@ const arcaneSpells = [
     name: "Forma Elementale",
     school: "trasmutazione",
     description: "Ti trasformi in un elementale",
+    source: ["primeva"],
   },
   {
     level: 5,
@@ -207,6 +225,8 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Invii un messaggio mentale a una creatura sul tuo pianeta e ricevi una risposta",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 5,
@@ -215,6 +235,8 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Colleghi le menti con creature consenzienti per comunicare telepaticamente a grandi distanze",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 5,
@@ -223,6 +245,8 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Permetti a una creatura di comprendere e parlare tutte le lingue",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 5,
@@ -230,6 +254,8 @@ const arcaneSpells = [
     name: "Maledizione del Marinaio",
     school: "necromanzia",
     description: "Contagi una creatura con la maledizione del mare mosso",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -238,6 +264,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Colori accecanti abbagliano le creature vicine al bersaglio, e gli attacchi provocano lampi di luce abbaglianti",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -245,6 +272,7 @@ const arcaneSpells = [
     name: "Morte Illusoria",
     school: "illusione",
     description: "Il bersaglio sembra morire, ma in realtà diventa invisibile",
+    source: ["occulta"],
   },
   {
     level: 5,
@@ -253,6 +281,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Un muro di luci offre una protezione specifica in base al colore",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -261,6 +290,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Scolpisci un muro di ghiaccio spesso 30 cm che blocca la vista e può raffreddare le creature",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -268,6 +298,7 @@ const arcaneSpells = [
     name: "Muro di Pietra",
     school: "evocazione",
     description: "Crei un muro di pietra",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -275,6 +306,8 @@ const arcaneSpells = [
     name: "Nube Mortale",
     school: "necromanzia",
     description: "Avveleni le creature in una nube che si allontana da te",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -282,6 +315,8 @@ const arcaneSpells = [
     name: "Occhio Indagatore",
     school: "divinazione",
     description: "Un occhio invisibile ti trasmette ciò che vede",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 5,
@@ -289,6 +324,7 @@ const arcaneSpells = [
     name: "Passapareti",
     school: "evocazione",
     description: "Formi un tunnel di terra attraverso un muro",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -297,6 +333,8 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Crei una scena immaginaria che include più creature ed oggetti",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -305,6 +343,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Accedi alle conoscenze e alle memorie nella mente di una creatura",
+    source: ["occulta"],
   },
   {
     level: 5,
@@ -313,6 +352,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Reagisci per ridurre il danno di un incantesimo di un nemico trasformandolo in una versione parzialmente illusoria",
+    source: ["occulta"],
   },
   {
     level: 5,
@@ -321,6 +361,8 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Insinui una suggestione mentale che deve essere seguita quando si attiva un innesco",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 5,
@@ -329,6 +371,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Richiami una tempesta di pioggia acida che bombarda l'area per la durata dell'incantesimo",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -336,6 +379,7 @@ const arcaneSpells = [
     name: "Tentacoli Neri",
     school: "evocazione",
     description: "Tentacoli in  un'area afferrano le creature",
+    source: ["arcana"],
   },
   {
     level: 5,
@@ -343,6 +387,7 @@ const arcaneSpells = [
     name: "Trasporto Telecinetico",
     school: "invocazione",
     description: "Sposti un oggetto grande",
+    source: ["occulta"],
   },
   {
     level: 5,
@@ -350,6 +395,7 @@ const arcaneSpells = [
     name: "Visione Falsa",
     school: "illusione",
     description: "Inganni un incantesimo di scrutamento",
+    source: ["occulta"],
   },
 ];
 

@@ -12,7 +12,7 @@ const App = (props) => {
     <Router>
       <GlobalStyle />
       <Row>
-        <Column small={3}>
+        <Column small={1}>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -25,7 +25,7 @@ const App = (props) => {
             </li>
           </ul>
         </Column>
-        <Column small={9}>
+        <Column small={11}>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/party" element={<Party />} />

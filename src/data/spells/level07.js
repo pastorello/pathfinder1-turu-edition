@@ -2,11 +2,11 @@ const primeviSpells = [
   {
     level: 7,
     url: "/wiki/Eruzione_Vulcanica",
-    name: "Eruzione Vulcanica Eruzione Vulcanica ",
+    name: "Eruzione Vulcanica",
     school: "invocazione",
     description:
       "Sprigioni spruzzi di lava che bruciano le creature e le incastonano nella roccia",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 7,
@@ -14,7 +14,7 @@ const primeviSpells = [
     name: "Senza Ostacoli",
     school: "abiurazione",
     description: "Permetti alle creature di evitare ostacoli ambientali",
-    source: "primeva",
+    source: ["primeva"],
   },
 ];
 
@@ -26,6 +26,8 @@ const occultSpells = [
     school: "necromanzia",
     description:
       "Invii la tua mente e la tua anima nel corpo di un'altra creatura",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 7,
@@ -34,6 +36,8 @@ const occultSpells = [
     school: "divinazione",
     description:
       "Percepisci impressioni di eventi passati accaduti nella tua locazione",
+    source: ["occulta", "divina", "primeva"],
+    energy: "positiva",
   },
   {
     level: 7,
@@ -42,6 +46,8 @@ const occultSpells = [
     school: "illusione",
     description:
       "Crei una visione di terrificanti creature sciamanti che provocano danni mentali",
+    source: ["divina"],
+    energy: "negativa",
   },
 ];
 
@@ -53,6 +59,8 @@ const divineSpells = [
     school: "necromanzia",
     description:
       "Punti il dito verso una creatura per infliggere danni da energia negativa potenzialmente uccidendola all'istante",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 7,
@@ -61,7 +69,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Un globo di luce solare infligge danni da fuoco, ferisce i non morti e contrasta l'oscurità",
-    source: "divina",
+    source: ["divina"],
     energy: "positiva",
   },
   {
@@ -70,7 +78,8 @@ const divineSpells = [
     name: "Recipiente Divino",
     school: "trasmutazione",
     description: "Assumi le sembianze di un servitore della tua divinità",
-    source: "divina",
+    source: ["divina", "primeva"],
+    energy: "positiva",
   },
   {
     level: 7,
@@ -79,7 +88,7 @@ const divineSpells = [
     school: "necromanzia",
     description:
       "Permetti a una creatura di guarire col tempo, la ricrescita dei suoi organi e di riattaccarsi parti del corpo",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
   {
@@ -89,7 +98,8 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Le creature dell'allineamento opposto alla tua divinità subiscono danni, sono indebolite, paralizzate o vengono esiliate",
-    source: "divina",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 7,
@@ -98,7 +108,7 @@ const divineSpells = [
     school: "evocazione",
     description:
       "Usi il Piano Etereo per muoverti attraverso gli oggetti e nell'aria",
-    source: "divina",
+    source: ["occulta"],
   },
 ];
 
@@ -110,6 +120,8 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Rendi più attacchi contro una creatura particolarmente accurati",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 7,
@@ -118,6 +130,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Prepari un incantesimo da innescare in seguito alle condizioni che tu decidi",
+    source: ["occulta"],
   },
   {
     level: 7,
@@ -125,6 +138,7 @@ const arcaneSpells = [
     name: "Corpo Infuocato",
     school: "trasmutazione",
     description: "Trasformi il tuo corpo in una fiamma vivente",
+    source: ["primeva"],
   },
   {
     level: 7,
@@ -132,6 +146,8 @@ const arcaneSpells = [
     name: "Distorcere Mente",
     school: "ammaliamento",
     description: "Confondi una creatura, potenzialmente in modo permanente",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 7,
@@ -140,6 +156,7 @@ const arcaneSpells = [
     school: "evocazione",
     description:
       "Crei un duplicato temporaneo di un nemico che combatte al tuo posto",
+    source: ["arcana"],
   },
   {
     level: 7,
@@ -148,6 +165,8 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Una creatura ottiene resistenza ad acido, elettricità, forza, freddo, fuoco e sonoro",
+    source: ["arcana", "primeva", "divina"],
+    energy: "positiva",
   },
   {
     level: 7,
@@ -156,6 +175,8 @@ const arcaneSpells = [
     school: "necromanzia",
     description:
       "Un globo di oscurità infligge danni da freddo, ferisce i viventi e prevale sulla luce",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 7,
@@ -164,6 +185,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Crei un faro nel tempo, con l'intenzione di ritornarci se le cose dovessero mettersi male",
+    source: ["occulta"],
   },
   {
     level: 7,
@@ -172,6 +194,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Crei  un'illusione di te stesso attraverso la quale puoi lanciare incantesimi",
+    source: ["occulta"],
   },
   {
     level: 7,
@@ -179,6 +202,7 @@ const arcaneSpells = [
     name: "Inversione della Gravità",
     school: "invocazione",
     description: "Inverti la spinta gravitazionale in  un'area",
+    source: ["arcana"],
   },
   {
     level: 7,
@@ -187,6 +211,8 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "L'aspetto illusorio spaventoso di una creatura terrorizza chiunque la osservi",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 7,
@@ -194,6 +220,8 @@ const arcaneSpells = [
     name: "Parola del Potere, Accecare",
     school: "ammaliamento",
     description: "Pronunci una parola che acceca una creatura",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 7,
@@ -201,6 +229,7 @@ const arcaneSpells = [
     name: "Reggia Meravigliosa",
     school: "evocazione",
     description: "Evochi una residenza sicura in un semipiano",
+    source: ["occulta"],
   },
   {
     level: 7,
@@ -208,6 +237,7 @@ const arcaneSpells = [
     name: "Riflettere Incantesimo",
     school: "abiurazione",
     description: "Rifletti indietro gli incantesimi a chi li lanciati",
+    source: ["arcana"],
   },
   {
     level: 7,
@@ -215,6 +245,7 @@ const arcaneSpells = [
     name: "Serratura Dimensionale",
     school: "abiurazione",
     description: "Impedisci il teletrasporto ed i viaggi planati",
+    source: ["arcana"],
   },
   {
     level: 7,
@@ -222,6 +253,7 @@ const arcaneSpells = [
     name: "Spostamento Planare",
     school: "evocazione",
     description: "Trasporti le creature in un altro piano di esistenza",
+    source: ["arcana"],
   },
   {
     level: 7,
@@ -230,6 +262,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Sprigioni raggi di luce arcobaleno che hanno vari effetti sulle creature in un cono",
+    source: ["arcana"],
   },
 ];
 

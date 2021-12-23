@@ -5,7 +5,15 @@ const primeviSpells = [
     name: "Impedimento",
     school: "evocazione",
     description: "Evochi un rampicante per intralciare una creatura",
-    source: "primeva",
+    source: ["primeva"],
+  },
+  {
+    level: 0,
+    url: "/wiki/Conoscere_Direzione",
+    name: "Conoscere Direzione",
+    school: "divinazione",
+    description: "Sai in quale direzione è il nord",
+    source: ["primeva"],
   },
 ];
 
@@ -17,24 +25,18 @@ const occultSpells = [
     school: "divinazione",
     description:
       "Toccando la fronte dei bersagli, metti le loro menti in contatto.",
+    source: ["occulta"],
   },
 ];
 
 const divineSpells = [
   {
     level: 0,
-    url: "/wiki/Conoscere_Direzione",
-    name: "Conoscere Direzione",
-    school: "divinazione",
-    description: "Sai in quale direzione è il nord",
-  },
-  {
-    level: 0,
     url: "/wiki/Distruggere_Non_Morti",
     name: "Distruggere Non Morti",
     school: "necromanzia",
     description: "Infliggi danni da energia positiva ai non morti",
-    source: "divina",
+    source: ["divina", "primeva"],
     energy: "positiva",
   },
   {
@@ -43,6 +45,8 @@ const divineSpells = [
     name: "Guida",
     school: "divinazione",
     description: "Una guida divina fornisce un bonus su un tiro",
+    source: ["occulta", "divina"],
+    energy: "positiva",
   },
   {
     level: 0,
@@ -50,7 +54,8 @@ const divineSpells = [
     name: "Interdizione alla Minaccia",
     school: "abiurazione",
     description: "Proteggi un alleato da un nemico specifico",
-    source: "divina",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 0,
@@ -59,7 +64,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Scagli energia divina che infligge danni in base all'allineamento della tua divinità",
-    source: "divina",
+    source: ["divina"],
   },
   {
     level: 0,
@@ -67,7 +72,7 @@ const divineSpells = [
     name: "Stabilizzare",
     school: "necromanzia",
     description: "Stabilizzi una creatura morente.",
-    source: "divina",
+    source: ["divina"],
     energy: "positiva",
   },
 ];
@@ -79,6 +84,7 @@ const arcaneSpells = [
     name: "Arco Elettrico",
     school: "invocazione",
     description: "Colpisci una o due creature con fulmini",
+    source: ["arcana", "primeva"],
   },
   {
     level: 0,
@@ -86,6 +92,7 @@ const arcaneSpells = [
     name: "Fiotto Acido",
     school: "invocazione",
     description: "Infliggi danni da acido alle creature",
+    source: ["arcana"],
   },
   {
     level: 0,
@@ -94,6 +101,8 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Infliggi danni alla mente di una creatura, possibilmente fino a stordirla",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 0,
@@ -101,6 +110,7 @@ const arcaneSpells = [
     name: "Individuazione del Magico",
     school: "divinazione",
     description: "Percepisci la vicinanza della magia",
+    source: ["arcana", "occulta", "primeva", "divina"],
   },
   {
     level: 0,
@@ -109,6 +119,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Vieni a sapere se un oggetto è magico e ne determini la scuola di magia",
+    source: ["arcana", "occulta", "primeva", "divina"],
   },
   {
     level: 0,
@@ -116,6 +127,8 @@ const arcaneSpells = [
     name: "Luce",
     school: "invocazione",
     description: "Fai risplendere un oggetto",
+    source: ["arcana", "divina"],
+    energy: "positiva",
   },
   {
     level: 0,
@@ -123,6 +136,7 @@ const arcaneSpells = [
     name: "Luci Danzanti",
     school: "invocazione",
     description: "Crea quattro luci fluttuanti che puoi muovere",
+    source: ["primeva"],
   },
   {
     level: 0,
@@ -130,14 +144,17 @@ const arcaneSpells = [
     name: "Mano Magica",
     school: "invocazione",
     description: "Dai l'ordine a una mano magica di muovere un oggetto",
+    source: ["occulta"],
   },
   {
     level: 0,
     url: "/wiki/Messaggio",
-    name: "Messaggio Messaggio",
-    school: "illusione",
+    name: "Messaggio",
+    school: "divinazione",
     description:
       "Pronunci un messaggio a una creatura distante, la quale può rispondere",
+    source: ["occulta", "divina"],
+    energy: "negativa",
   },
   {
     level: 0,
@@ -145,6 +162,7 @@ const arcaneSpells = [
     name: "Prestidigitazione",
     school: "invocazione",
     description: "Esegui un trucco magico minore",
+    source: ["occulta"],
   },
   {
     level: 0,
@@ -152,6 +170,7 @@ const arcaneSpells = [
     name: "Produrre Fiamma",
     school: "invocazione",
     description: "Accendi piccole fiamme per attaccare da vicino o a distanza",
+    source: ["arcana", "primeva"],
   },
   {
     level: 0,
@@ -159,6 +178,8 @@ const arcaneSpells = [
     name: "Proiettile Telecinetico",
     school: "invocazione",
     description: "Scagli un oggetto contro una creatura",
+    source: ["occulta", "divina"],
+    energy: "negativa",
   },
   {
     level: 0,
@@ -166,6 +187,7 @@ const arcaneSpells = [
     name: "Raggio di Gelo",
     school: "invocazione",
     description: "Infliggi danni da freddo a una creatura",
+    source: ["arcana"],
   },
   {
     level: 0,
@@ -174,6 +196,8 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Uno scudo di forza magica blocca gli attacchi e dardo incantato",
+    source: ["arcana", "divina"],
+    energy: "positiva",
   },
   {
     level: 0,
@@ -181,6 +205,8 @@ const arcaneSpells = [
     name: "Sigillo",
     school: "trasmutazione",
     description: "Apponi un marchio magico",
+    source: ["divina", "arcana", "primeva"],
+    energy: "negativa",
   },
   {
     level: 0,
@@ -188,6 +214,8 @@ const arcaneSpells = [
     name: "Suono Fantasma",
     school: "illusione",
     description: "Crei suoni falsi",
+    source: ["occulta", "divina"],
+    energy: "negativa",
   },
   {
     level: 0,
@@ -195,6 +223,8 @@ const arcaneSpells = [
     name: "Tocco Gelido",
     school: "necromanzia",
     description: "Il tuo tocco ferisce i viventi o disorienta i non morti",
+    source: ["divina"],
+    energy: "negativa",
   },
 ];
 

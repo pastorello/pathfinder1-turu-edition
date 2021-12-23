@@ -6,7 +6,7 @@ const primeviSpells = [
     school: "ammaliamento",
     description:
       "Animali, piante e condizioni atmosferiche diventano ostili nei confronti di creature a tua scelta",
-    source: "primeva",
+    source: ["primeva"],
   },
   {
     level: 9,
@@ -14,7 +14,7 @@ const primeviSpells = [
     name: "Tempesta di Vendetta",
     school: "invocazione",
     description: "Crei un'enorme tempesta pericolosa",
-    source: "primeva",
+    source: ["primeva"],
   },
 ];
 
@@ -25,6 +25,7 @@ const occultSpells = [
     name: "Canzone Incomprensibile",
     school: "ammaliamento",
     description: "Una canzone debilita le creature in strani modi",
+    source: ["occulta"],
   },
 ];
 
@@ -35,7 +36,8 @@ const divineSpells = [
     name: "Arma del Giudizio",
     school: "invocazione",
     description: "Formi un'arma che rafforza la guerra o la pace",
-    source: "divina",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 9,
@@ -43,7 +45,8 @@ const divineSpells = [
     name: "Crociata",
     school: "ammaliamento",
     description: "Le creature diventano dedite a una causa di tua scelta",
-    source: "divina",
+    source: ["divina"],
+    energy: "positiva",
   },
   {
     level: 9,
@@ -51,6 +54,8 @@ const divineSpells = [
     name: "Legare Anima",
     school: "necromanzia",
     description: "Imprigioni l'anima di una creatura morta",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 9,
@@ -58,7 +63,7 @@ const divineSpells = [
     name: "Presenza Soverchiante",
     school: "ammaliamento",
     description: "Assumi gli aspetti maestosi di un dio",
-    source: "divina",
+    source: ["divina"],
   },
 ];
 
@@ -69,6 +74,7 @@ const arcaneSpells = [
     name: "Disgiunzione",
     school: "abiurazione",
     description: "Disattivi o distruggi un oggetto magico",
+    source: ["arcana", "primeva", "occulta"],
   },
   {
     level: 9,
@@ -77,6 +83,8 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Spaventi e infliggi danni mentali a un grande numero di creature, anche al punto di ucciderle",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 9,
@@ -84,6 +92,7 @@ const arcaneSpells = [
     name: "Implosione",
     school: "invocazione",
     description: "Fai collassare una creatura su sé stessa",
+    source: ["arcana"],
   },
   {
     level: 9,
@@ -91,6 +100,8 @@ const arcaneSpells = [
     name: "Massacro",
     school: "necromanzia",
     description: "Uccidi più creature all'istante",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 9,
@@ -98,6 +109,8 @@ const arcaneSpells = [
     name: "Parola del Potere, Uccidere",
     school: "ammaliamento",
     description: "Pronunci una parola che uccide una creatura",
+    source: ["divina"],
+    energy: "negativa",
   },
   {
     level: 9,
@@ -106,6 +119,8 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Percepisci quando una creatura è in pericolo e la proteggi con buona sorte",
+    source: ["occulta", "divina", "primeva"],
+    energy: "positiva",
   },
   {
     level: 9,
@@ -113,6 +128,7 @@ const arcaneSpells = [
     name: "Reggia Gloriosa",
     school: "evocazione",
     description: "Evochi una reggia che dura 1 giorno",
+    source: ["arcana", "occulta"],
   },
   {
     level: 9,
@@ -121,6 +137,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Invii un messaggio mentale che spinge una creatura a seguire una linea d'azione",
+    source: ["occulta"],
   },
   {
     level: 9,
@@ -128,6 +145,7 @@ const arcaneSpells = [
     name: "Sciame di Meteore",
     school: "invocazione",
     description: "Evochi quattro meteore infuocate che esplodono",
+    source: ["arcana"],
   },
   {
     level: 9,
@@ -135,6 +153,8 @@ const arcaneSpells = [
     name: "Sfera Prismatica",
     school: "abiurazione",
     description: "Crei una sfera protettiva composta di sette strati cromatici",
+    source: ["arcana", "divina"],
+    energy: "positiva",
   },
   {
     level: 9,
@@ -142,6 +162,7 @@ const arcaneSpells = [
     name: "Trasformazione",
     school: "trasmutazione",
     description: "Ti trasformi ripetutamente in una forma di tua scelta",
+    source: ["primeva"],
   },
 ];
 
