@@ -6,6 +6,7 @@ import { Row, Column } from "./components/Grid";
 import Home from "./sections/Home";
 import Party from "./sections/Party";
 import SpellBook from "./sections/SpellBook";
+import Deities from "./sections/Deities";
 
 const App = (props) => {
   return (
@@ -21,6 +22,9 @@ const App = (props) => {
               <Link to="/spells">SpellBook</Link>
             </li>
             <li>
+              <Link to="/deities">Divinità</Link>
+            </li>
+            <li>
               <Link to="/party">The Party</Link>
             </li>
           </ul>
@@ -30,6 +34,7 @@ const App = (props) => {
             <Route exact path="/" element={<Home />} />
             <Route path="/party" element={<Party />} />
             <Route path="/spells" element={<SpellBook />} />
+            <Route path="/deities" element={<Deities />} />
           </Routes>
         </Column>
       </Row>
