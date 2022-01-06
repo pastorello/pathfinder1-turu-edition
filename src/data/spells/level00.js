@@ -13,7 +13,7 @@ const primeviSpells = [
     name: "Conoscere Direzione",
     school: "divinazione",
     description: "Sai in quale direzione è il nord",
-    source: ["primeva"],
+    source: ["occulta", "primeva", "runica"],
   },
 ];
 
@@ -36,8 +36,7 @@ const divineSpells = [
     name: "Distruggere Non Morti",
     school: "necromanzia",
     description: "Infliggi danni da energia positiva ai non morti",
-    source: ["divina", "primeva"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 0,
@@ -45,8 +44,7 @@ const divineSpells = [
     name: "Guida",
     school: "divinazione",
     description: "Una guida divina fornisce un bonus su un tiro",
-    source: ["occulta", "divina"],
-    energy: "positiva",
+    source: ["demoniaca", "runica", "occulta"],
   },
   {
     level: 0,
@@ -54,8 +52,7 @@ const divineSpells = [
     name: "Interdizione alla Minaccia",
     school: "abiurazione",
     description: "Proteggi un alleato da un nemico specifico",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 0,
@@ -64,7 +61,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Scagli energia divina che infligge danni in base all'allineamento della tua divinità",
-    source: ["divina"],
+    source: ["demoniaca", "nera"],
   },
   {
     level: 0,
@@ -72,8 +69,7 @@ const divineSpells = [
     name: "Stabilizzare",
     school: "necromanzia",
     description: "Stabilizzi una creatura morente.",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca", "primeva"],
   },
 ];
 
@@ -84,7 +80,7 @@ const arcaneSpells = [
     name: "Arco Elettrico",
     school: "invocazione",
     description: "Colpisci una o due creature con fulmini",
-    source: ["arcana", "primeva"],
+    source: ["primeva"],
   },
   {
     level: 0,
@@ -92,7 +88,7 @@ const arcaneSpells = [
     name: "Fiotto Acido",
     school: "invocazione",
     description: "Infliggi danni da acido alle creature",
-    source: ["arcana"],
+    source: ["demoniaca"],
   },
   {
     level: 0,
@@ -101,8 +97,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Infliggi danni alla mente di una creatura, possibilmente fino a stordirla",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 0,
@@ -110,7 +105,16 @@ const arcaneSpells = [
     name: "Individuazione del Magico",
     school: "divinazione",
     description: "Percepisci la vicinanza della magia",
-    source: ["arcana", "occulta", "primeva", "divina"],
+    source: [
+      "bianca",
+      "arcana",
+      "occulta",
+      "satanica",
+      "runica",
+      "nera",
+      "demoniaca",
+      "primeva",
+    ],
   },
   {
     level: 0,
@@ -119,7 +123,15 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Vieni a sapere se un oggetto è magico e ne determini la scuola di magia",
-    source: ["arcana", "occulta", "primeva", "divina"],
+    source: [
+      "bianca",
+      "arcana",
+      "occulta",
+      "satanica",
+      "runica",
+      "nera",
+      "primeva",
+    ],
   },
   {
     level: 0,
@@ -127,8 +139,7 @@ const arcaneSpells = [
     name: "Luce",
     school: "invocazione",
     description: "Fai risplendere un oggetto",
-    source: ["arcana", "divina"],
-    energy: "positiva",
+    source: ["arcana", "bianca", "elementale"],
   },
   {
     level: 0,
@@ -136,7 +147,7 @@ const arcaneSpells = [
     name: "Luci Danzanti",
     school: "invocazione",
     description: "Crea quattro luci fluttuanti che puoi muovere",
-    source: ["primeva"],
+    source: ["elementale", "arcana"],
   },
   {
     level: 0,
@@ -153,8 +164,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Pronunci un messaggio a una creatura distante, la quale può rispondere",
-    source: ["occulta", "divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 0,
@@ -162,7 +172,7 @@ const arcaneSpells = [
     name: "Prestidigitazione",
     school: "invocazione",
     description: "Esegui un trucco magico minore",
-    source: ["occulta"],
+    source: ["elementale", "arcana"],
   },
   {
     level: 0,
@@ -170,7 +180,7 @@ const arcaneSpells = [
     name: "Produrre Fiamma",
     school: "invocazione",
     description: "Accendi piccole fiamme per attaccare da vicino o a distanza",
-    source: ["arcana", "primeva"],
+    source: ["elementale", "demoniaca"],
   },
   {
     level: 0,
@@ -178,8 +188,7 @@ const arcaneSpells = [
     name: "Proiettile Telecinetico",
     school: "invocazione",
     description: "Scagli un oggetto contro una creatura",
-    source: ["occulta", "divina"],
-    energy: "negativa",
+    source: ["elementale"],
   },
   {
     level: 0,
@@ -187,7 +196,7 @@ const arcaneSpells = [
     name: "Raggio di Gelo",
     school: "invocazione",
     description: "Infliggi danni da freddo a una creatura",
-    source: ["arcana"],
+    source: ["elementale", "nera"],
   },
   {
     level: 0,
@@ -196,8 +205,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Uno scudo di forza magica blocca gli attacchi e dardo incantato",
-    source: ["arcana", "divina"],
-    energy: "positiva",
+    source: ["arcana", "runica"],
   },
   {
     level: 0,
@@ -205,8 +213,7 @@ const arcaneSpells = [
     name: "Sigillo",
     school: "trasmutazione",
     description: "Apponi un marchio magico",
-    source: ["divina", "arcana", "primeva"],
-    energy: "negativa",
+    source: ["runica", "nera", "demoniaca", "satanica"],
   },
   {
     level: 0,
@@ -214,8 +221,7 @@ const arcaneSpells = [
     name: "Suono Fantasma",
     school: "illusione",
     description: "Crei suoni falsi",
-    source: ["occulta", "divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 0,
@@ -223,8 +229,7 @@ const arcaneSpells = [
     name: "Tocco Gelido",
     school: "necromanzia",
     description: "Il tuo tocco ferisce i viventi o disorienta i non morti",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
 ];
 

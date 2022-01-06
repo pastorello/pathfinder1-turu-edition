@@ -5,15 +5,11 @@ import { Row, Column } from "../components/Grid";
 const magicSchools = {
   blackMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return (
-      spell.energy !== "positiva" && theSource.some((item) => item === "divina")
-    );
+    return theSource.some((item) => item === "nera");
   },
   whiteMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return (
-      spell.energy !== "negativa" && theSource.some((item) => item === "divina")
-    );
+    return theSource.some((item) => item === "bianca");
   },
   primeviMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
@@ -26,6 +22,22 @@ const magicSchools = {
   occultMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
     return theSource.some((item) => item === "occulta");
+  },
+  elementalMagic: (spell) => {
+    const theSource = Array.isArray(spell.source) ? spell.source : [];
+    return theSource.some((item) => item === "elementale");
+  },
+  satanicMagic: (spell) => {
+    const theSource = Array.isArray(spell.source) ? spell.source : [];
+    return theSource.some((item) => item === "satanica");
+  },
+  runicMagic: (spell) => {
+    const theSource = Array.isArray(spell.source) ? spell.source : [];
+    return theSource.some((item) => item === "runica");
+  },
+  demonicMagic: (spell) => {
+    const theSource = Array.isArray(spell.source) ? spell.source : [];
+    return theSource.some((item) => item === "demoniaca");
   },
 };
 
@@ -126,9 +138,13 @@ const SpellBook = (props) => {
               <option value={"all"}>all</option>
               <option value={"whiteMagic"}>Magia Bianca</option>
               <option value={"arcaneMagic"}>Magia Arcana</option>
-              <option value={"blackMagic"}>Magia Nera</option>
-              <option value={"primeviMagic"}>Magia Primeva</option>
+              <option value={"runicMagic"}>Magia Runica</option>
               <option value={"occultMagic"}>Magia Occulta</option>
+              <option value={"primeviMagic"}>Magia Primeva</option>
+              <option value={"elementalMagic"}>Magia Elementale</option>
+              <option value={"demonicMagic"}>Magia Demoniaca</option>
+              <option value={"blackMagic"}>Magia Nera</option>
+              <option value={"satanicMagic"}>Magia Satanica</option>
             </select>
           </Column>
         </Row>

@@ -14,7 +14,7 @@ const primeviSpells = [
     name: "Tempesta di Vendetta",
     school: "invocazione",
     description: "Crei un'enorme tempesta pericolosa",
-    source: ["primeva"],
+    source: ["primeva", "elementale"],
   },
 ];
 
@@ -25,7 +25,7 @@ const occultSpells = [
     name: "Canzone Incomprensibile",
     school: "ammaliamento",
     description: "Una canzone debilita le creature in strani modi",
-    source: ["occulta"],
+    source: ["satanica", "occulta"],
   },
 ];
 
@@ -36,8 +36,7 @@ const divineSpells = [
     name: "Arma del Giudizio",
     school: "invocazione",
     description: "Formi un'arma che rafforza la guerra o la pace",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["runica", "bianca"],
   },
   {
     level: 9,
@@ -45,8 +44,7 @@ const divineSpells = [
     name: "Crociata",
     school: "ammaliamento",
     description: "Le creature diventano dedite a una causa di tua scelta",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 9,
@@ -54,8 +52,7 @@ const divineSpells = [
     name: "Legare Anima",
     school: "necromanzia",
     description: "Imprigioni l'anima di una creatura morta",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 9,
@@ -63,7 +60,7 @@ const divineSpells = [
     name: "Presenza Soverchiante",
     school: "ammaliamento",
     description: "Assumi gli aspetti maestosi di un dio",
-    source: ["divina"],
+    source: ["demoniaca"],
   },
 ];
 
@@ -74,7 +71,7 @@ const arcaneSpells = [
     name: "Disgiunzione",
     school: "abiurazione",
     description: "Disattivi o distruggi un oggetto magico",
-    source: ["arcana", "primeva", "occulta"],
+    source: ["arcana", "runica", "demoniaca", "elementale"],
   },
   {
     level: 9,
@@ -83,8 +80,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Spaventi e infliggi danni mentali a un grande numero di creature, anche al punto di ucciderle",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 9,
@@ -100,7 +96,7 @@ const arcaneSpells = [
     name: "Massacro",
     school: "necromanzia",
     description: "Uccidi più creature all'istante",
-    source: ["divina"],
+    source: ["nera"],
     energy: "negativa",
   },
   {
@@ -109,7 +105,7 @@ const arcaneSpells = [
     name: "Parola del Potere, Uccidere",
     school: "ammaliamento",
     description: "Pronunci una parola che uccide una creatura",
-    source: ["divina"],
+    source: ["nera"],
     energy: "negativa",
   },
   {
@@ -119,7 +115,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Percepisci quando una creatura è in pericolo e la proteggi con buona sorte",
-    source: ["occulta", "divina", "primeva"],
+    source: ["occulta"],
     energy: "positiva",
   },
   {
@@ -128,7 +124,7 @@ const arcaneSpells = [
     name: "Reggia Gloriosa",
     school: "evocazione",
     description: "Evochi una reggia che dura 1 giorno",
-    source: ["arcana", "occulta"],
+    source: ["occulta"],
   },
   {
     level: 9,
@@ -137,7 +133,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Invii un messaggio mentale che spinge una creatura a seguire una linea d'azione",
-    source: ["occulta"],
+    source: ["satanica"],
   },
   {
     level: 9,
@@ -145,7 +141,7 @@ const arcaneSpells = [
     name: "Sciame di Meteore",
     school: "invocazione",
     description: "Evochi quattro meteore infuocate che esplodono",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 9,
@@ -153,8 +149,7 @@ const arcaneSpells = [
     name: "Sfera Prismatica",
     school: "abiurazione",
     description: "Crei una sfera protettiva composta di sette strati cromatici",
-    source: ["arcana", "divina"],
-    energy: "positiva",
+    source: ["arcana", "runica", "bianca"],
   },
   {
     level: 9,
@@ -162,7 +157,7 @@ const arcaneSpells = [
     name: "Trasformazione",
     school: "trasmutazione",
     description: "Ti trasformi ripetutamente in una forma di tua scelta",
-    source: ["primeva"],
+    source: ["primeva", "demoniaca"],
   },
 ];
 

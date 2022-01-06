@@ -13,7 +13,7 @@ const primeviSpells = [
     name: "Cataclisma",
     school: "invocazione",
     description: "Evochi un rovinoso cataclisma istantaneo",
-    source: ["primeva", "arcana"],
+    source: ["elementale", "demoniaca"],
   },
   {
     level: 10,
@@ -41,8 +41,7 @@ const occultSpells = [
     name: "Verità Fittizia",
     school: "ammaliamento",
     description: "Fai credere alle creature che un fatto sia vero",
-    source: ["divina", "occulta"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 10,
@@ -50,7 +49,7 @@ const occultSpells = [
     name: "Alterare Realtà",
     school: "divinazione",
     description: "Distorci la realtà per duplicare incantesimi occulti",
-    source: ["occulta"],
+    source: ["occulta", "satanica"],
   },
 ];
 
@@ -62,7 +61,7 @@ const divineSpells = [
     school: "trasmutazione",
     description:
       "Ti trasformi in una forma da battaglia determinata dalla tua divinità",
-    source: ["divina"],
+    source: ["nera", "demoniaca", "elementale", "bianca", "runica", "satanica"],
   },
   {
     level: 10,
@@ -71,8 +70,7 @@ const divineSpells = [
     school: "necromanzia",
     description:
       "Guarisci le creature in un'area e riporti temporaneamente in vita i morti",
-    energy: "positiva",
-    source: ["divina"],
+    source: ["bianca"],
   },
   {
     level: 10,
@@ -80,7 +78,7 @@ const divineSpells = [
     name: "Miracolo",
     school: "divinazione",
     description: "Chiedi intercessione per duplicare incantesimi divini",
-    source: ["divina"],
+    source: ["nera", "bianca"],
   },
 ];
 
@@ -91,7 +89,7 @@ const arcaneSpells = [
     name: "Desiderio",
     school: "divinazione",
     description: "Esprimi un desiderio per duplicare incantesimi",
-    source: ["arcana"],
+    source: ["arcana", "elementale"],
   },
   {
     level: 10,
@@ -99,7 +97,7 @@ const arcaneSpells = [
     name: "Fermare il Tempo",
     school: "trasmutazione",
     description: "Fermi brevemente il tempo per tutto tranne che per te",
-    source: ["occulta"],
+    source: ["occulta", "arcana"],
   },
   {
     level: 10,
@@ -107,8 +105,7 @@ const arcaneSpells = [
     name: "Portale",
     school: "evocazione",
     description: "Apri un portale verso un altro piano",
-    source: ["arcana", "occulta", "divina"],
-    energy: "negativa",
+    source: ["arcana", "occulta", "demoniaca", "runica", "nera"],
   },
   {
     level: 10,
@@ -116,7 +113,7 @@ const arcaneSpells = [
     name: "Ricostruire",
     school: "evocazione",
     description: "Ricrei un oggetto distrutto",
-    source: ["arcana", "divina"],
+    source: ["runica"],
     energy: "positiva",
   },
 ];

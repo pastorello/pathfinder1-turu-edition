@@ -5,7 +5,7 @@ const primeviSpells = [
     name: "Creare Acqua",
     school: "evocazione",
     description: "Evochi 8 litri di acqua",
-    source: ["primeva"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -38,8 +38,7 @@ const primeviSpells = [
     school: "trasmutazione",
     description:
       "Rendi un randello o un bastone temporaneamente magico, ed infliggi un maggior numero di danni alle creature innaturali",
-    source: ["primeva", "divina"],
-    energy: "positiva",
+    source: ["primeva"],
   },
   {
     level: 1,
@@ -60,7 +59,7 @@ const occultSpells = [
     school: "divinazione",
     description:
       "Il bersaglio viene colpito dalla sfortuna, venendone destabilizzato",
-    source: ["occulta"],
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -69,7 +68,7 @@ const occultSpells = [
     school: "divinazione",
     description:
       "Impartisci mentalmente 10 minuti di informazioni in un istante",
-    source: ["occulta"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -78,8 +77,7 @@ const occultSpells = [
     school: "illusione",
     description:
       "Provochi a una creatura un dolore continuo che la rende nauseata",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 1,
@@ -87,7 +85,7 @@ const occultSpells = [
     name: "Evoca Fatato",
     school: "evocazione",
     description: "Evochi un fatato che combatta con te",
-    source: ["primeva"],
+    source: ["arcana"],
   },
   {
     level: 1,
@@ -105,8 +103,7 @@ const occultSpells = [
     school: "divinazione",
     description:
       "Posi la mano su un oggetto per scoprire un'informazione circa un evento emotivo che ha coinvolto l'oggetto",
-    source: ["occulta", "divina"],
-    energy: "positiva",
+    source: ["occulta"],
   },
   {
     level: 1,
@@ -115,8 +112,7 @@ const occultSpells = [
     school: "necromanzia",
     description:
       "Guarisci il bersaglio e lo rinforzi contro gli attacchi mentali",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
 ];
 
@@ -128,8 +124,7 @@ const divineSpells = [
     school: "ammaliamento",
     description:
       "Rendi difficili gli attacchi dei tuoi nemici in un'aura attorno a te",
-    source: ["occulta", "divina"],
-    energy: "positiva",
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -137,8 +132,7 @@ const divineSpells = [
     name: "Arma Distruttiva",
     school: "necromanzia",
     description: "Le armi infliggono danni di tipo positivo ai non morti",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -147,8 +141,7 @@ const divineSpells = [
     school: "ammaliamento",
     description:
       "Rendi potenti gli attacchi dei tuoi alleati in un'aura attorno a te",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -157,8 +150,7 @@ const divineSpells = [
     school: "necromanzia",
     description:
       "Energia negativa ferisce i viventi o guarisce i non morti, sia una creatura alla volta che tutte insieme in un'esplosione",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 1,
@@ -167,8 +159,7 @@ const divineSpells = [
     school: "necromanzia",
     description:
       "Energia positiva guarisce i viventi o ferisce i non morti sia una creatura singola che tutte quelle presenti in un'esplosione",
-    source: ["divina", "primeva"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -176,8 +167,7 @@ const divineSpells = [
     name: "Individuazione del Veleno",
     school: "divinazione",
     description: "Determini se un oggetto o creatura è velenoso",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -185,8 +175,7 @@ const divineSpells = [
     name: "Individuazione dell'Allineamento",
     school: "divinazione",
     description: "Vedi le aure di un dato allineamento",
-    source: ["divina", "occulta"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -194,8 +183,7 @@ const divineSpells = [
     name: "Legame con lo Spirito",
     school: "necromanzia",
     description: "Trasferisci ininterrottamente la tua salute a qualcun altro",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["nera"],
   },
   {
     level: 1,
@@ -203,8 +191,7 @@ const divineSpells = [
     name: "Protezione",
     school: "abiurazione",
     description: "Proteggi una creatura da quelle di un dato allineamento",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -212,8 +199,7 @@ const divineSpells = [
     name: "Purificare Cibo e Bevande",
     school: "necromanzia",
     description: "Rendi cibi e bevande sicuri da consumare",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 1,
@@ -221,8 +207,7 @@ const divineSpells = [
     name: "Santuario",
     school: "abiurazione",
     description: "Proteggi una creatura dagli attacchi",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["runica"],
   },
 ];
 const arcaneSpells = [
@@ -233,8 +218,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Mandi in sovraccarico la mente e il corpo di un bersaglio, costringendolo a diventare irrequieto e iperattivo",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -242,7 +226,7 @@ const arcaneSpells = [
     name: "Allarme",
     school: "abiurazione",
     description: "Vieni avvertito se una creatura entra in un'area protetta",
-    source: ["occulta"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -250,8 +234,7 @@ const arcaneSpells = [
     name: "Arma Magica",
     school: "trasmutazione",
     description: "Rendi un'arma temporaneamente magica",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -268,8 +251,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Cambi il modo in cui appare la magia di un oggetto agli incantesimi di individuazione",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -277,7 +259,7 @@ const arcaneSpells = [
     name: "Bolla d'Aria",
     school: "evocazione",
     description: "Reagisci per creare aria affinché una creatura respiri",
-    source: ["primeva"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -285,7 +267,7 @@ const arcaneSpells = [
     name: "Caduta Morbida",
     school: "abiurazione",
     description: "Reagisci per rallentare la caduta di una creatura",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -293,8 +275,7 @@ const arcaneSpells = [
     name: "Camuffamento Illusorio",
     school: "illusione",
     description: "Assumi l'aspetto di  un'altra creatura",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -310,8 +291,7 @@ const arcaneSpells = [
     name: "Charme",
     school: "ammaliamento",
     description: "Un umanoide diventa più amichevole nei tuoi confronti",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -319,7 +299,7 @@ const arcaneSpells = [
     name: "Colpo Accurato",
     school: "divinazione",
     description: "Rendi il tuo prossimo attacco particolarmente accurato",
-    source: ["occulta", "divina"],
+    source: ["occulta"],
     energy: "positiva",
   },
   {
@@ -329,8 +309,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Ordini a una creatura di avvicinarsi, fuggire, lasciar cadere qualcosa, cadere prona o alzarsi in piedi",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -338,7 +317,7 @@ const arcaneSpells = [
     name: "Condividere Sapienza",
     school: "divinazione",
     description: "Condividi la tua conoscenza con le creature toccate",
-    source: ["occulta"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -354,7 +333,7 @@ const arcaneSpells = [
     name: "Disco Fluttuante",
     school: "evocazione",
     description: "Un disco di energia ti segue, trasportando oggetti",
-    source: ["occulta"],
+    source: ["arcana"],
   },
   {
     level: 1,
@@ -363,8 +342,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Pianti semi di confusione nella mente del tuo bersaglio, rendendo maldestri sia le sue azioni che i suoi pensieri",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -373,7 +351,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Crei un guscio di acido attorno a tè che esplode immediatamente verso l'esterno",
-    source: ["arcana"],
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -381,7 +359,7 @@ const arcaneSpells = [
     name: "Evoca Costrutto",
     school: "evocazione",
     description: "Evochi un costrutto che combatta con te",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -389,7 +367,7 @@ const arcaneSpells = [
     name: "Folata di Vento",
     school: "invocazione",
     description: "Il vento spegne i fuochi e respinge oggetti e creature",
-    source: ["primeva", "occulta"],
+    source: ["elementale", "occulta"],
   },
   {
     level: 1,
@@ -406,7 +384,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Una grossa gemma fluttua attorno al bersaglio con  un'orbita irregolare",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -415,7 +393,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Usi catene, viticci o altri lacci di natura magica per legare il tuo bersaglio a te",
-    source: ["arcana"],
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -423,7 +401,7 @@ const arcaneSpells = [
     name: "Mani Brucianti",
     school: "invocazione",
     description: "Dalle tue mani si sprigiona un piccolo cono di fiamme",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -432,8 +410,7 @@ const arcaneSpells = [
     school: "necromanzia",
     description:
       "Infliggi danni a una creatura e la affliggi con il veleno del ragno",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 1,
@@ -449,8 +426,7 @@ const arcaneSpells = [
     name: "Oggetto Falsificato",
     school: "illusione",
     description: "Camuffi un oggetto per farlo apparire perfetto o scadente",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["occulta"],
   },
   {
     level: 1,
@@ -458,8 +434,7 @@ const arcaneSpells = [
     name: "Oggetto Illusorio",
     school: "illusione",
     description: "Crei  un'illusione verosimile di un oggetto",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["arcana"],
   },
   {
     level: 1,
@@ -476,7 +451,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Grazie alla magia, scagli una palla di neve densa e ghiacciata",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -484,7 +459,7 @@ const arcaneSpells = [
     name: "Passo Rapido",
     school: "trasmutazione",
     description: "Accelera notevolmente la tua velocità",
-    source: ["primeva"],
+    source: ["arcana"],
   },
   {
     level: 1,
@@ -492,7 +467,7 @@ const arcaneSpells = [
     name: "Passo Veloce",
     school: "trasmutazione",
     description: "Incrementi la tua velocità per 1 ora",
-    source: ["primeva"],
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -500,8 +475,7 @@ const arcaneSpells = [
     name: "Paura",
     school: "ammaliamento",
     description: "Infondi paura a una creatura, fino a farla fuggire",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -509,8 +483,7 @@ const arcaneSpells = [
     name: "Peste del Goblin",
     school: "necromanzia",
     description: "Infetti una creatura con la peste del goblin",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 1,
@@ -518,8 +491,7 @@ const arcaneSpells = [
     name: "Prevedere Pericolo",
     school: "divinazione",
     description: "Concedi al bersaglio un barlume di preveggenza",
-    source: ["occulta", "divina"],
-    energy: "positiva",
+    source: ["occulta"],
   },
   {
     level: 1,
@@ -527,8 +499,7 @@ const arcaneSpells = [
     name: "Raggio di Indebolimento",
     school: "necromanzia",
     description: "Prosciughi la forza di una creatura",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 1,
@@ -537,8 +508,7 @@ const arcaneSpells = [
     school: "necromanzia",
     description:
       "Le creature in una linea subiscono danni di tipo negativo e sanguinamento",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["demoniaca", "nera"],
   },
   {
     level: 1,
@@ -547,7 +517,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Registri un messaggio della durata massima di 5 minuti e iscrivi una runa speciale su qualsiasi superficie non custodita entro portata",
-    source: ["occulta"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -555,7 +525,7 @@ const arcaneSpells = [
     name: "Riparare",
     school: "trasmutazione",
     description: "Ripari un oggetto non magico",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -563,7 +533,7 @@ const arcaneSpells = [
     name: "Saltare",
     school: "trasmutazione",
     description: "Effettui un salto notevole",
-    source: ["primeva"],
+    source: ["demoniaca"],
   },
   {
     level: 1,
@@ -571,8 +541,7 @@ const arcaneSpells = [
     name: "Scambiare Aspetto",
     school: "illusione",
     description: "Scambi il tuo aspetto con quello di qualcun altro",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -580,7 +549,7 @@ const arcaneSpells = [
     name: "Serratura",
     school: "abiurazione",
     description: "Rendi una serratura difficile da aprire",
-    source: ["occulta"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -588,7 +557,7 @@ const arcaneSpells = [
     name: "Servitore Inosservato",
     school: "evocazione",
     description: "Crei una creatura invisibile al tuo servizio",
-    source: ["occulta"],
+    source: ["occulta", "nera"],
   },
   {
     level: 1,
@@ -596,8 +565,7 @@ const arcaneSpells = [
     name: "Sonno",
     school: "ammaliamento",
     description: "Fai addormentare le creature in  un'area piccola",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 1,
@@ -606,8 +574,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Rinvigorisci la mente della creatura toccata, spronandola a perseverare",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["demoniaca", "bianca"],
   },
   {
     level: 1,
@@ -615,7 +582,7 @@ const arcaneSpells = [
     name: "Spinta Idraulica",
     school: "invocazione",
     description: "Infliggi danni e spingi una creatura con un getto di acqua",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -632,7 +599,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Un cono di schegge di ghiaccio esplode dalle due mani aperte e ricopre il bersaglio in uno strato di gelo",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 1,
@@ -640,7 +607,7 @@ const arcaneSpells = [
     name: "Stretta Folgorante",
     school: "invocazione",
     description: "Fulmini una creatura con l'elettricità",
-    source: ["arcana"],
+    source: ["primeva"],
   },
   {
     level: 1,
@@ -649,7 +616,7 @@ const arcaneSpells = [
     school: "evocazione",
     description:
       "Evochi nelle tue mani un semplice attrezzo temporaneo, come una pala o una corda",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 1,
@@ -657,7 +624,7 @@ const arcaneSpells = [
     name: "Sudario di Penombra",
     school: "invocazione",
     description: "Avvolgi il bersaglio in un sudario d'ombra",
-    source: ["occulta"],
+    source: ["occulta", "nera"],
   },
   {
     level: 1,
@@ -665,7 +632,7 @@ const arcaneSpells = [
     name: "Unto",
     school: "evocazione",
     description: "Cospargi una superficie od oggetto con una poltiglia untuosa",
-    source: ["arcana", "primeva"],
+    source: ["arcana"],
   },
   {
     level: 1,

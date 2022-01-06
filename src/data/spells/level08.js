@@ -5,7 +5,7 @@ const primeviSpells = [
     name: "Camminare nel Vento",
     school: "trasmutazione",
     description: "Trasformi le creature in nubi rapide",
-    source: ["primeva"],
+    source: ["primeva", "demoniaca"],
   },
   {
     level: 8,
@@ -13,7 +13,7 @@ const primeviSpells = [
     name: "Venti Punitori",
     school: "invocazione",
     description: "Un ciclone ostacola i voli e intrappola le creature",
-    source: ["primeva"],
+    source: ["elementale", "primeva"],
   },
 ];
 
@@ -25,8 +25,7 @@ const occultSpells = [
     school: "necromanzia",
     description:
       "Canti una canzone sinistra che infligge danni a qualsiasi creatura abbia uno spirito",
-    source: ["occulta", "divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
 ];
 
@@ -38,7 +37,7 @@ const divineSpells = [
     school: "abiurazione",
     description:
       "Gli alleati in un'aura hanno difese migliori e sono protetti contro un allineamento",
-    source: ["divina"],
+    source: ["bianca", "demoniaca"],
   },
   {
     level: 8,
@@ -46,7 +45,7 @@ const divineSpells = [
     name: "Epidemia dello Spirito",
     school: "necromanzia",
     description: "Indebolisci un bersaglio con una maledizione contagiosa",
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 8,
@@ -55,7 +54,7 @@ const divineSpells = [
     school: "ammaliamento",
     description:
       "L'energia spirituale recupera un incantesimo speso da una creatura",
-    source: ["divina"],
+    source: ["bianca"],
   },
   {
     level: 8,
@@ -63,8 +62,7 @@ const divineSpells = [
     name: "Momento di Risanamento",
     school: "necromanzia",
     description: "Conferisci un giorno di recupero in un istante",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca", "primeva"],
   },
 ];
 
@@ -75,7 +73,7 @@ const arcaneSpells = [
     name: "Campo AntiMagia",
     school: "abiurazione",
     description: "La magia non funziona in  un'area che ti circonda",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 8,
@@ -92,8 +90,7 @@ const arcaneSpells = [
     school: "ammaliamento",
     description:
       "Il bersaglio è sopraffatto da una voglia irrefrenabile di danzare",
-    source: ["occulta", "divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 8,
@@ -101,7 +98,7 @@ const arcaneSpells = [
     name: "Forma di Mostruosità",
     school: "trasmutazione",
     description: "Ti trasformi in un potente mostro",
-    source: ["primeva"],
+    source: ["demoniaca"],
   },
   {
     level: 8,
@@ -117,7 +114,7 @@ const arcaneSpells = [
     name: "Muro Prismatico",
     school: "abiurazione",
     description: "Crei un muro protettivo con sette strati cromatici",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 8,
@@ -125,8 +122,7 @@ const arcaneSpells = [
     name: "Orrido Avvizzimento",
     school: "necromanzia",
     description: "Disidrati i corpi delle creature, infliggendo loro danni",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 8,
@@ -135,8 +131,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Tu ed altre creature tracciate la posizione esatta di un soggetto attraverso lo scrutamento",
-    source: ["occulta", "divina", "primeva"],
-    energy: "positiva",
+    source: ["occulta"],
   },
   {
     level: 8,
@@ -144,8 +139,7 @@ const arcaneSpells = [
     name: "Parola del Potere, Stordire",
     school: "ammaliamento",
     description: "Pronunci una parola che stordisce una creatura",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 8,
@@ -153,7 +147,7 @@ const arcaneSpells = [
     name: "Raggio Polare",
     school: "invocazione",
     description: "Un freddo estremo infligge danni e risucchia una creatura",
-    source: ["arcana"],
+    source: ["arcana", "elementale"],
   },
   {
     level: 8,
@@ -162,8 +156,7 @@ const arcaneSpells = [
     school: "divinazione",
     description:
       "Scopri l'esatta locazione di un bersaglio entro un raggio illimitato",
-    source: ["occulta", "divina", "primeva"],
-    energy: "positiva",
+    source: ["occulta"],
   },
   {
     level: 8,
@@ -172,7 +165,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Rendi una creatura invisibile, silente e impossibile da individuare da tutti i sensi",
-    source: ["occulta"],
+    source: ["satanica"],
   },
   {
     level: 8,
@@ -180,7 +173,7 @@ const arcaneSpells = [
     name: "Terremoto",
     school: "invocazione",
     description: "Scuoti il terreno con un terremoto devastante",
-    source: ["arcana", "primeva"],
+    source: ["elementale"],
   },
   {
     level: 8,
@@ -197,8 +190,7 @@ const arcaneSpells = [
     name: "Vuoto Mentale",
     school: "abiurazione",
     description: "Proteggi una creatura da magie mentali e alcune divinazioni",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["runica"],
   },
 ];
 

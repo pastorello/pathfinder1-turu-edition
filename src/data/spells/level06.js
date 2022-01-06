@@ -14,7 +14,7 @@ const primeviSpells = [
     name: "Semi di Fuoco",
     school: "invocazione",
     description: "Crei quattro ghiande esplosive",
-    source: ["primeva"],
+    source: ["primeva", "elementale"],
   },
   {
     level: 6,
@@ -22,7 +22,7 @@ const primeviSpells = [
     name: "Pietre Parlanti",
     school: "divinazione",
     description: "Parli agli spiriti insiti nella pietra naturale",
-    source: ["occulta", "primeva"],
+    source: ["occulta", "primeva", "elementale"],
   },
 ];
 
@@ -35,7 +35,7 @@ const divineSpells = [
     name: "Barriera di Lame",
     school: "invocazione",
     description: "Formi un muro di lame fatte di forza",
-    source: ["occulta"],
+    source: ["demoniaca"],
   },
   {
     level: 6,
@@ -44,8 +44,7 @@ const divineSpells = [
     school: "necromanzia",
     description:
       "Crei un campo di energia positiva che guarisce chi vi si trova all'interno",
-    source: ["divina", "primeva"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 6,
@@ -54,8 +53,7 @@ const divineSpells = [
     school: "ammaliamento",
     description:
       "Instilli convinzioni e zelo irremovibili nelle creature consenzienti",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["bianca"],
   },
   {
     level: 6,
@@ -63,8 +61,7 @@ const divineSpells = [
     name: "Esplosione dello Spirito",
     school: "necromanzia",
     description: "Infliggi danni all'essenza spirituale di una creatura",
-    source: ["occulta", "divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 6,
@@ -72,7 +69,7 @@ const divineSpells = [
     name: "Giusto Potere",
     school: "trasmutazione",
     description: "Ti trasformi in forma da battaglia con armi divine",
-    source: ["divina"],
+    source: ["demoniaca", "nera"],
   },
   {
     level: 6,
@@ -80,7 +77,7 @@ const divineSpells = [
     name: "Pietra in Carne",
     school: "trasmutazione",
     description: "Ripristini una creatura pietrificata al suo stato naturale",
-    source: ["primeva", "divina"],
+    source: ["bianca", "elementale"],
     energy: "positiva",
   },
   {
@@ -89,7 +86,7 @@ const divineSpells = [
     name: "Rianimare Morti",
     school: "necromanzia",
     description: "Riporti in vita una creatura morta",
-    source: ["divina", "primeva"],
+    source: ["bianca"],
     energy: "positiva",
   },
 ];
@@ -102,8 +99,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Infliggi danni alla mente di una creatura con visioni di  un'apocalisse",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 6,
@@ -111,7 +107,7 @@ const arcaneSpells = [
     name: "Carne in Pietra",
     school: "trasmutazione",
     description: "Trasformi una creatura vivente in una statua di pietra",
-    source: ["arcana"],
+    source: ["elementale"],
   },
   {
     level: 6,
@@ -119,7 +115,7 @@ const arcaneSpells = [
     name: "Catena di Fulmini",
     school: "invocazione",
     description: "Un fulmine rimbalza da una creatura all'altra",
-    source: ["arcana"],
+    source: ["primeva"],
   },
   {
     level: 6,
@@ -127,7 +123,7 @@ const arcaneSpells = [
     name: "Disintegrazione",
     school: "invocazione",
     description: "Riduci in polvere una creatura o un oggetto",
-    source: ["arcana"],
+    source: ["nera"],
   },
   {
     level: 6,
@@ -135,8 +131,7 @@ const arcaneSpells = [
     name: "Dissanguamento del Vampiro",
     school: "necromanzia",
     description: "Estrai sangue e forza vitale dalle creature in un cono",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["nera"],
   },
   {
     level: 6,
@@ -144,8 +139,7 @@ const arcaneSpells = [
     name: "Dominare",
     school: "ammaliamento",
     description: "Un umanoide deve obbedire ai tuoi ordini",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 6,
@@ -153,7 +147,7 @@ const arcaneSpells = [
     name: "Forma di Drago",
     school: "trasmutazione",
     description: "Ti trasformi in un drago",
-    source: ["arcana", "primeva"],
+    source: ["arcana"],
   },
   {
     level: 6,
@@ -162,7 +156,7 @@ const arcaneSpells = [
     school: "illusione",
     description:
       "Diventi invisibile e crei un duplicato di te stesso che agisce come te",
-    source: ["occulta", "divina"],
+    source: ["satanica", "occulta"],
     energy: "negativa",
   },
   {
@@ -171,7 +165,7 @@ const arcaneSpells = [
     name: "Metamorfosi Funesta",
     school: "trasmutazione",
     description: "Trasformi una creatura in un animale innocuo",
-    source: ["primeva"],
+    source: ["arcana"],
   },
   {
     level: 6,
@@ -179,7 +173,7 @@ const arcaneSpells = [
     name: "Muro di Forza",
     school: "invocazione",
     description: "Crei un muro invisibile e durevole di forza magica",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 6,
@@ -188,8 +182,7 @@ const arcaneSpells = [
     school: "necromanzia",
     description:
       "Infliggi danni a una creatura e la infetti con il veleno del verme purpureo",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["demoniaca"],
   },
   {
     level: 6,
@@ -197,8 +190,7 @@ const arcaneSpells = [
     name: "Regressione Mentale",
     school: "ammaliamento",
     description: "Riduci permanentemente le facoltà mentali di una creatura",
-    source: ["divina"],
-    energy: "negativa",
+    source: ["satanica"],
   },
   {
     level: 6,
@@ -206,8 +198,7 @@ const arcaneSpells = [
     name: "Repulsione",
     school: "abiurazione",
     description: "Impedisci alle creature di avvicinarsi a te",
-    source: ["divina", "occulta"],
-    energy: "positiva",
+    source: ["runica"],
   },
   {
     level: 6,
@@ -216,8 +207,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Una maledizione su una creatura le fa subire danni quando è colpita da un incantesimo e diminuisce la durata dei suoi incantesimi",
-    source: ["divina"],
-    energy: "positiva",
+    source: ["demoniaca"],
   },
   {
     level: 6,
@@ -234,7 +224,7 @@ const arcaneSpells = [
     school: "evocazione",
     description:
       "Tu e altre creature consenzienti vi trasportate a grande distanza",
-    source: ["arcana"],
+    source: ["runica"],
   },
   {
     level: 6,
@@ -242,7 +232,7 @@ const arcaneSpells = [
     name: "Trama Vibrante",
     school: "illusione",
     description: "Crei una trama di luci che abbaglia ed acceca",
-    source: ["arcana", "occulta"],
+    source: ["arcana"],
   },
   {
     level: 6,
@@ -259,8 +249,7 @@ const arcaneSpells = [
     name: "Visione del Vero",
     school: "divinazione",
     description: "Vedi attraverso illusioni e trasmutazioni",
-    source: ["occulta", "divina"],
-    energy: "positiva",
+    source: ["runica", "occulta"],
   },
 ];
 

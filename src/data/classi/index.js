@@ -11,6 +11,11 @@ const classi = [
   },
   {
     name: "Bardo",
+    subClasses: [
+      "Musa dell'Ecletticismo",
+      "Musa del Virtuosismo",
+      "Musa Enigmatica",
+    ],
     stirpi: ["umano", "hanfling", "elfo"],
     magia: "occulta",
     alignments: ["lb", "nb", "cb", "nn", "cn", "ln", "lm", "nm", "cm"],
