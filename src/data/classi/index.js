@@ -1,4 +1,11 @@
+import elfi from "./elfi";
+import nani from "./nani";
+import umani from "./umani";
+
 const classi = [
+  ...elfi,
+  ...nani,
+  ...umani,
   {
     name: "Alchimista",
     stirpi: ["umano", "nano", "hanfling", "elfo"],

@@ -1,5 +1,5 @@
 const deities = [
-  // pantheon buono
+  // pantheon buono | Culto delle Virtù
   {
     name: "Ketephys",
     title: "Il Cacciatore di Demoni",
