@@ -25,4 +25,15 @@ export default createGlobalStyle`
         margin-bottom: 10px;
         font-weight: bold;
     }
+    strong {
+        font-weight: bold;
+    }
+    button {
+        padding: 5px;
+        border: 1px solid black;
+    }
+    li {
+        list-style-type: "-";
+        padding-left: 10px;
+    }
 `;
