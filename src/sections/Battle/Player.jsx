@@ -40,9 +40,12 @@ const Player = (props) => {
       children: "in",
     },
     cdRoller: {
-      stat: props.initiative,
+      stat: props.perception,
       roll: initiativeRoll,
-      setRoll: setInitiativeRoll,
+      setRoll: (value) => {
+        setInitiativeRoll(value);
+        props.setInitiativeRollAction(props.id, value.value);
+      },
     },
     PFinput: {
       onChange: (event) => setPfInput(event.target.value),
@@ -65,8 +68,7 @@ const Player = (props) => {
           {props.name} {props.level}° <br />
         </label>
         <div>
-          Iniziativa:{" "}
-          <strong>{getBonus(props.initiative) + initiativeRoll.value}</strong>
+          Iniziativa: <strong>{props.initiativeRoll}</strong>
         </div>
         <hr />
         <CDRoller {...theProps.cdRoller} />

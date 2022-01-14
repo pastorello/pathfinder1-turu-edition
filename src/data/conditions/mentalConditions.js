@@ -88,6 +88,7 @@ const mentalConditions = {
     }),
   },
   sbigottito: {
+    hasValue: true,
     name: "Sbigottito",
     effect: (player, value) => ({
       ...player,
@@ -119,6 +120,7 @@ const mentalConditions = {
     }),
   },
   spaventato: {
+    hasValue: true,
     name: "Spaventato",
     effect: (player, value) => ({
       ...player,

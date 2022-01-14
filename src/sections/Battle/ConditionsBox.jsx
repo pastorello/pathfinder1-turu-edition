@@ -5,8 +5,14 @@ import abilities from "../../data/abilities";
 
 import { Row, Column } from "../../components/Grid";
 import getCDResult from "../../tools/getCDResult";
+import sortOnKey from "../../tools/sortOnKey";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
+
+const durationOptions = [...Array.from(Array(20).keys())].map((item) => ({
+  value: item,
+  label: item === 0 ? "Permanente" : `${item} round`,
+}));
 
 const checkTypes = [
   {
@@ -53,6 +59,13 @@ const saveThrowTypes = [
   },
 ];
 
+const conditionsList = Object.keys(conditions)
+  .map((item) => ({
+    value: item,
+    label: conditions[item].name,
+  }))
+  .sort(sortOnKey("label", "insensitive", false));
+
 const ConditionsBox = (props) => {
   const [selectedValue, editSelectedValue] = useState({
     value: 1,
@@ -68,10 +81,9 @@ const ConditionsBox = (props) => {
     value: 0,
     label: "Permanente",
   });
-  const [selectedCondition, editSelectedCondition] = useState({
-    value: Object.keys(conditions)[0],
-    label: conditions[Object.keys(conditions)[0]].name,
-  });
+  const [selectedCondition, editSelectedCondition] = useState(
+    conditionsList[0]
+  );
   const [actualCheckType, setActualCheckType] = useState(checkTypes[0]);
   const [actualAttackType, setAttackType] = useState(attackTypes[0]);
   const [actualsaveThrowType, setsaveThrowType] = useState(saveThrowTypes[0]);
@@ -105,10 +117,7 @@ const ConditionsBox = (props) => {
       value: selectedPG,
     },
     conditionSelect: {
-      options: Object.keys(conditions).map((item) => ({
-        value: item,
-        label: conditions[item].name,
-      })),
+      options: conditionsList,
       onChange: (value) => editSelectedCondition(value),
       value: selectedCondition,
     },
@@ -121,10 +130,7 @@ const ConditionsBox = (props) => {
       value: selectedValue,
     },
     roundsSelect: {
-      options: [...Array.from(Array(20).keys())].map((item) => ({
-        value: item,
-        label: item === 0 ? "Permanente" : `${item} round`,
-      })),
+      options: durationOptions,
       onChange: (value) => editDuration(value),
       value: selectedDuration,
     },
@@ -164,13 +170,20 @@ const ConditionsBox = (props) => {
         <Column small={3}>
           <Selector {...theProps.PGSelect} />
         </Column>
-        <Column>
-          <Selector {...theProps.conditionSelect} />
+        <Column small={4}>
+          <Row className="collapse">
+            <Column>
+              <Selector {...theProps.conditionSelect} />
+            </Column>
+
+            {conditions[selectedCondition.value].hasValue === true && (
+              <Column className="shrink">
+                <Selector {...theProps.valueSelect} />
+              </Column>
+            )}
+          </Row>
         </Column>
-        <Column>
-          <Selector {...theProps.valueSelect} />
-        </Column>
-        <Column>
+        <Column small={2}>
           <Selector {...theProps.roundsSelect} />
         </Column>
         <Column>

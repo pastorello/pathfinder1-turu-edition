@@ -3,6 +3,7 @@ import physicalConditions from "./physicalConditions";
 
 const healthConditions = {
   condannato: {
+    hasValue: true,
     name: "Condannato",
     effect: (player, value) => ({
       ...player,
@@ -10,6 +11,7 @@ const healthConditions = {
     }),
   },
   dannoPersistente: {
+    hasDices: true,
     name: "Danno Persistente",
     effect: (player) => ({
       ...player,
@@ -20,6 +22,7 @@ const healthConditions = {
     }),
   },
   ferito: {
+    hasValue: true,
     name: "Ferito",
     effect: (player, value) => ({
       ...player,
@@ -27,6 +30,7 @@ const healthConditions = {
     }),
   },
   morente: {
+    hasValue: true,
     name: "Morente",
     effect: (player, value) => {
       let thePlayer = physicalConditions.privoDiSensi.effect(player);

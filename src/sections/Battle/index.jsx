@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Row, Column } from "../../components/Grid";
 import conditions from "../../data/conditions";
+import getBonus from "../../tools/getBonus";
+import sortOnKey from "../../tools/sortOnKey";
 import ConditionsBox from "./ConditionsBox";
 import party from "./party";
 import Player from "./Player";
@@ -54,6 +56,24 @@ const Battle = (props) => {
             : item.conditions,
       }))
     );
+  };
+
+  const setInitiativeRoll = (playerID, initiative) => {
+    setParty(
+      theParty.map((item) => ({
+        ...item,
+        initiativeRoll:
+          item.id === playerID
+            ? getBonus(item.perception) + parseInt(initiative)
+            : item.initiativeRoll,
+      }))
+    );
+  };
+
+  const sortInitiative = () => {
+    const newSort = theParty.sort(sortOnKey("initiativeRoll", "number", true));
+    setParty(newSort);
+    setActualPlayer(newSort[0].id);
   };
 
   const nextTurn = () => {
@@ -123,6 +143,7 @@ const Battle = (props) => {
       isActive: item.id === actualPlayer,
       moveAction: movePG,
       removeConditionAction: removeCondition,
+      setInitiativeRollAction: setInitiativeRoll,
     };
     return <Player {...theProps} />;
   });
@@ -151,7 +172,7 @@ const Battle = (props) => {
           <Column small={4}>
             <h1>The Battle</h1>
           </Column>
-          <Column small={3}>
+          <Column small={1}>
             <h3>
               Round <strong>{actualTurn}</strong>
             </h3>
@@ -159,6 +180,11 @@ const Battle = (props) => {
           <Column>
             <button type="button" onClick={nextTurn}>
               Prossimo turno
+            </button>
+          </Column>
+          <Column>
+            <button type="button" onClick={sortInitiative}>
+              Ordina Iniziativa
             </button>
           </Column>
           <Column className="shrink">

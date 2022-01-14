@@ -4,6 +4,7 @@ import mobilityConditions from "./mobilityConditions";
 
 const basePhysicalConditions = {
   nauseato: {
+    hasValue: true,
     name: "Nauseato",
     effect: (player, value) => ({
       ...player,
@@ -34,6 +35,7 @@ const basePhysicalConditions = {
     }),
   },
   indebolito: {
+    hasValue: true,
     name: "Indebolito",
     effect: (player, value) => ({
       ...player,
@@ -58,6 +60,7 @@ const basePhysicalConditions = {
     }),
   },
   maldestro: {
+    hasValue: true,
     name: "Maldestro",
     effect: (player, value) => ({
       ...player,
@@ -124,6 +127,7 @@ const basePhysicalConditions = {
 const physicalConditions = {
   ...basePhysicalConditions,
   accelerato: {
+    hasValue: true,
     name: "Accelerato",
     effect: (player, value) => ({
       ...player,
@@ -131,6 +135,7 @@ const physicalConditions = {
     }),
   },
   rallentato: {
+    hasValue: true,
     name: "Rallentato",
     effect: (player, value) => ({
       ...player,
@@ -152,6 +157,7 @@ const physicalConditions = {
     }),
   },
   risucchiato: {
+    hasValue: true,
     name: "Risucchiato",
     effect: (player, value) => ({
       ...player,
@@ -174,6 +180,7 @@ const physicalConditions = {
     },
   },
   armaturaRotta: {
+    hasValue: true,
     name: "Armatura Rotta",
     effect: (player, value) => {
       return {
