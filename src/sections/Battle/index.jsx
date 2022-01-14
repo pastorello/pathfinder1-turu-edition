@@ -172,7 +172,7 @@ const Battle = (props) => {
             </button>
           </Column>
         </Row>
-        <ConditionsBox {...theProps.conditionsBox} />
+        {thePlayers.length > 0 && <ConditionsBox {...theProps.conditionsBox} />}
         {thePlayers}
         <h2 className="mt40">Fuori dal combattimento</h2>
         {outOfCombatPlayers}

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import CDRoller from "../../components/CDRoller";
 
 import { Row, Column } from "../../components/Grid";
 import getBonus from "../../tools/getBonus";
+import ConditionTag from "../../components/ConditionTag";
 
 const Wrapper = styled(Row)`
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
   .label {
     display: flex;
     ${(props) => props.isSelected === true && "background: #999;"}
@@ -13,71 +18,123 @@ const Wrapper = styled(Row)`
 `;
 
 const Player = (props) => {
+  const [initiativeRoll, setInitiativeRoll] = useState({ value: 1, label: 1 });
+  const [health, setHealth] = useState(props.hitPoints);
+  const [PFinput, setPfInput] = useState(0);
+
+  const theProps = {
+    upButton: {
+      onClick: () => props.moveAction(props.id, "up"),
+      children: "up",
+    },
+    downButton: {
+      onClick: () => props.moveAction(props.id, "down"),
+      children: "down",
+    },
+    outButton: {
+      onClick: () => props.moveAction(props.id, "out"),
+      children: "out",
+    },
+    inButton: {
+      onClick: () => props.moveAction(props.id, "in"),
+      children: "in",
+    },
+    cdRoller: {
+      stat: props.initiative,
+      roll: initiativeRoll,
+      setRoll: setInitiativeRoll,
+    },
+    PFinput: {
+      onChange: (event) => setPfInput(event.target.value),
+      value: PFinput,
+    },
+    addHeal: {
+      onClick: () => setHealth(parseInt(health) + parseInt(PFinput)),
+      children: "+",
+    },
+    addDamage: {
+      onClick: () => setHealth(parseInt(health) - parseInt(PFinput)),
+      children: "-",
+    },
+  };
+
   return (
     <Wrapper isSelected={props.isActive}>
       <Column small={3}>
         <label className="label mb10">
-          {props.name} {props.level}°
+          {props.name} {props.level}° <br />
         </label>
+        <div>
+          Iniziativa:{" "}
+          <strong>{getBonus(props.initiative) + initiativeRoll.value}</strong>
+        </div>
+        <hr />
+        <CDRoller {...theProps.cdRoller} />
+        <hr />
         <Row>
           <Column small={4}>
-            <button onClick={() => props.moveAction(props.id, "up")}>up</button>
+            <button {...theProps.upButton} />
           </Column>
           <Column small={4}>
-            <button onClick={() => props.moveAction(props.id, "down")}>
-              down
-            </button>
+            <button {...theProps.downButton} />
           </Column>
           <Column small={4}>
             {props.isOutOfCombat === true ? (
-              <button onClick={() => props.moveAction(props.id, "in")}>
-                in
-              </button>
+              <button {...theProps.inButton} />
             ) : (
-              <button onClick={() => props.moveAction(props.id, "out")}>
-                out
-              </button>
+              <button {...theProps.outButton} />
             )}
           </Column>
-        </Row>
-        <h3 className="mt10 mb10">Conditions</h3>
-        <Row>
-          {props.conditions.map((item) => (
-            <Column key={item.name} small={12}>
-              {item.name} {item.value}
-              {item.duration !== "infinito" &&
-                item.duration > 0 &&
-                item.duration}
-              <button
-                onClick={() => props.removeConditionAction(props.id, item.name)}
-              >
-                X
-              </button>
-            </Column>
-          ))}
         </Row>
       </Column>
       <Column small={9}>
         <Row>
           <Column>
-            <div>PF: {props.hitPoints}</div>
+            <Row className="collapse">
+              <Column small={4}>
+                PF: <strong>{health}</strong>/{props.hitPoints}
+              </Column>
+              <Column>
+                <button {...theProps.addDamage} />
+              </Column>
+              <Column small={4}>
+                <input {...theProps.PFinput} />
+              </Column>
+              <Column>
+                <button {...theProps.addHeal} />
+              </Column>
+            </Row>
             <div>Soglia Morente: {props.sogliaMorente}</div>
-            <div>Azioni: {props.actions}</div>
-            <hr />
           </Column>
           <Column>
             <div>CA: {getBonus(props.armorClass)}</div>
-            <div>Iniziativa: {getBonus(props.initiative)}</div>
             <div>Percezione: {getBonus(props.perception)}</div>
-            <hr />
+            <div>Visibilità: {props.visibility}</div>
           </Column>
           <Column>
-            <div>Visibilità: {props.visibility}</div>
+            <div>Azioni: {props.actions}</div>
             <div>Velocità: {props.speed}</div>
             <div>Terreno: {props.terrain}</div>
-            <hr />
           </Column>
         </Row>
+        <Row>
+          {props.conditions.map((item) => {
+            const theProps = {
+              name: item.name,
+              value: item.value,
+              duration: item.duration,
+              removeAction: () =>
+                props.removeConditionAction(props.id, item.name),
+            };
+
+            return (
+              <Column key={item.name} small={4}>
+                <ConditionTag {...theProps} />
+              </Column>
+            );
+          })}
+        </Row>
+        <hr />
         <ul>
           {props.activeEffects.map((item) => (
             <li key={item}>{item}</li>

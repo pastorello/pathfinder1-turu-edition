@@ -51,6 +51,9 @@ const party = [
     },
     armorClass: {
       bonus: {
+        base: 10,
+        armor: 2,
+        magic: 0,
         status: 0,
       },
       malus: {

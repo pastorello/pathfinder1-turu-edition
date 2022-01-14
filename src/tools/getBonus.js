@@ -5,7 +5,7 @@ const getBonus = (stat) => {
     Object.keys(stat.bonus).reduce((acc, item) => stat.bonus[item] + acc, 0);
   theValue =
     theValue +
-    Object.keys(stat.malus).reduce((acc, item) => stat.bonus[item] + acc, 0);
+    Object.keys(stat.malus).reduce((acc, item) => stat.malus[item] + acc, 0);
   return theValue;
 };
 

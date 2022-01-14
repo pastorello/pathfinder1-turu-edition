@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import Select from "react-select";
 
 import conditions from "../../data/conditions";
 import abilities from "../../data/abilities";
 
 import { Row, Column } from "../../components/Grid";
-import getBonus from "../../tools/getBonus";
 import getCDResult from "../../tools/getCDResult";
+import CDRoller from "../../components/CDRoller";
+import Selector from "../../components/Selector";
 
-const d20 = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-];
 const checkTypes = [
   {
     label: "Prova di Abilità",
@@ -68,8 +65,8 @@ const ConditionsBox = (props) => {
       props.actualParty.length > 0 ? props.actualParty[0].name : "no players",
   });
   const [selectedDuration, editDuration] = useState({
-    value: "infinito",
-    label: "infinito",
+    value: 0,
+    label: "Permanente",
   });
   const [selectedCondition, editSelectedCondition] = useState({
     value: Object.keys(conditions)[0],
@@ -124,19 +121,12 @@ const ConditionsBox = (props) => {
       value: selectedValue,
     },
     roundsSelect: {
-      options: ["infinito", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
-        (item) => ({
-          value: item,
-          label: item,
-        })
-      ),
+      options: [...Array.from(Array(20).keys())].map((item) => ({
+        value: item,
+        label: item === 0 ? "Permanente" : `${item} round`,
+      })),
       onChange: (value) => editDuration(value),
       value: selectedDuration,
-    },
-    rollSelect: {
-      options: d20.map((item) => ({ value: item, label: item })),
-      onChange: (event) => setActualRoll(event),
-      value: actualRoll,
     },
     abilitySelect: {
       options: Object.keys(abilities).map((item) => ({
@@ -161,32 +151,27 @@ const ConditionsBox = (props) => {
       onChange: (event) => setsaveThrowType(event),
       value: actualsaveThrowType,
     },
-    rollButton: {
-      onClick: () => {
-        const newValue = Math.floor(Math.random() * 20 + 1);
-        setActualRoll({
-          label: newValue,
-          value: newValue,
-        });
-      },
-      children: "ROLL",
+    cdRoller: {
+      stat: actualStat,
+      roll: actualRoll,
+      setRoll: setActualRoll,
     },
   };
 
   return (
     <>
-      <Row>
+      <Row className="mb20">
         <Column small={3}>
-          <Select {...theProps.PGSelect} />
+          <Selector {...theProps.PGSelect} />
         </Column>
         <Column>
-          <Select {...theProps.conditionSelect} />
+          <Selector {...theProps.conditionSelect} />
         </Column>
         <Column>
-          <Select {...theProps.valueSelect} />
+          <Selector {...theProps.valueSelect} />
         </Column>
         <Column>
-          <Select {...theProps.roundsSelect} />
+          <Selector {...theProps.roundsSelect} />
         </Column>
         <Column>
           <button
@@ -204,29 +189,21 @@ const ConditionsBox = (props) => {
       </Row>
       <Row className="mb20">
         <Column small={3}>
-          <Select {...theProps.checkTypeSelect} />
+          <Selector {...theProps.checkTypeSelect} />
         </Column>
         <Column small={3}>
           {actualCheckType.value === "abilityCheck" && (
-            <Select {...theProps.abilitySelect} />
+            <Selector {...theProps.abilitySelect} />
           )}
           {actualCheckType.value === "attack" && (
-            <Select {...theProps.attackTypeSelect} />
+            <Selector {...theProps.attackTypeSelect} />
           )}
           {actualCheckType.value === "saveThrow" && (
-            <Select {...theProps.saveThrowTypeSelect} />
+            <Selector {...theProps.saveThrowTypeSelect} />
           )}
         </Column>
         <Column small={3}>
-          <Row>
-            <Column className="shrink">{getBonus(actualStat)} +</Column>
-            <Column>
-              <Select {...theProps.rollSelect} />
-            </Column>
-            <Column className="shrink">
-              <button {...theProps.rollButton} />
-            </Column>
-          </Row>
+          <CDRoller {...theProps.cdRoller} />
         </Column>
         <Column small={3}>
           <Row>
@@ -248,6 +225,7 @@ const ConditionsBox = (props) => {
           </Row>
         </Column>
       </Row>
+      <hr />
     </>
   );
 };

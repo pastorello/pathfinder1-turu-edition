@@ -88,7 +88,7 @@ const mobilityConditions = {
   trattenuto: {
     name: "Trattenuto",
     effect: (player) => {
-      let thePlayer = baseMobilityConditions.afferrato.effect(player);
+      let thePlayer = mobilityConditions.afferrato.effect(player);
 
       return {
         ...thePlayer,

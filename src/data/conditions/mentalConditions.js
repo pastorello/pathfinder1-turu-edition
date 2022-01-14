@@ -107,7 +107,9 @@ const mentalConditions = {
         ...Object.keys(player.abilityCheck).reduce(
           (acc, item) => ({
             ...acc,
-            [item]: mentalSkills.some((item) => (item = abilities[item].skill))
+            [item]: mentalSkills.some(
+              (item2) => item2 === abilities[item].skill
+            )
               ? addBonus(player.abilityCheck[item], "status", -value)
               : player.abilityCheck[item],
           }),

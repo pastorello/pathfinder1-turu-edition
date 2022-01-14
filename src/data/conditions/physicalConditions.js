@@ -37,7 +37,7 @@ const basePhysicalConditions = {
     name: "Indebolito",
     effect: (player, value) => ({
       ...player,
-      strDamage: addBonus(player.saveThrows, "status", -value),
+      strDamage: addBonus(player.strDamage, "status", -value),
       strWeaponAttack: addBonus(player.strWeaponAttack, "status", -value),
       skillCheck: {
         ...player.skillCheck,
