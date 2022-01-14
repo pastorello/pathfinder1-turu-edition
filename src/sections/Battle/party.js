@@ -141,6 +141,7 @@ const party = [
       },
       in: {
         bonus: {
+          base: 3,
           status: 0,
         },
         malus: {

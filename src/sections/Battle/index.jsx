@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DiceRoller from "../../components/DiceRoller";
 import { Row, Column } from "../../components/Grid";
 import conditions from "../../data/conditions";
 import getBonus from "../../tools/getBonus";
@@ -15,7 +16,7 @@ const Battle = (props) => {
 
   const resetBattle = () => {
     setActualTurn(0);
-    setActualPlayer(party[0].id);
+    setActualPlayer(theParty[0].id);
   };
 
   const reloadParty = () => {
@@ -198,6 +199,7 @@ const Battle = (props) => {
             </button>
           </Column>
         </Row>
+        <DiceRoller />
         {thePlayers.length > 0 && <ConditionsBox {...theProps.conditionsBox} />}
         {thePlayers}
         <h2 className="mt40">Fuori dal combattimento</h2>

@@ -8,8 +8,9 @@ import getCDResult from "../../tools/getCDResult";
 import sortOnKey from "../../tools/sortOnKey";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
+import dices from "../../data/dices";
 
-const durationOptions = [...Array.from(Array(20).keys())].map((item) => ({
+const durationOptions = dices.d20.map((item) => ({
   value: item,
   label: item === 0 ? "Permanente" : `${item} round`,
 }));
