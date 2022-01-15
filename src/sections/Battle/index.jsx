@@ -78,16 +78,14 @@ const Battle = (props) => {
   };
 
   const nextTurn = () => {
-    const actualPlayerIndex = theParty.findIndex(
-      (item) => item.id === actualPlayer
-    );
-
     setActualTurn(actualTurn + 1);
-    setActualPlayer(
-      actualPlayerIndex + 1 < theParty.length
-        ? theParty[actualPlayerIndex + 1].id
-        : theParty[0].id
-    );
+    if (theParty.length > 1) {
+      const lastPlayer = theParty[0];
+      const newParty = [...theParty];
+      newParty.shift();
+      setParty([...newParty, lastPlayer]);
+      setActualPlayer(newParty[0].id);
+    }
   };
 
   const movePG = (playerID, direction) => {

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Row, Column } from "../Grid";
 import Selector from "../Selector";
 import dices from "../../data/dices";
+import isValidInt from "../../tools/isValidInt";
 
 const DiceRoller = () => {
   const [quantity, setQuantity] = useState({ value: 1, label: 1 });
@@ -31,7 +32,12 @@ const DiceRoller = () => {
       value: faces,
     },
     bonusInput: {
-      onChange: (event) => setBonus(parseInt(event.target.value)),
+      onChange: (event) => {
+        const newValue = isValidInt(event.target.value)
+          ? parseInt(event.target.value)
+          : 0;
+        setBonus(newValue);
+      },
       value: bonus,
     },
     rollButton: {

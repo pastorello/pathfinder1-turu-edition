@@ -6,8 +6,18 @@ const party = [
     activeEffects: [],
     id: "0",
     name: "Argon de Belimarius",
-    hitPoints: 10,
+    classSkill: "in",
+    hitPoints: 12,
     level: 1,
+    classCheck: {
+      bonus: {
+        base: 10,
+        addestramento: 3,
+      },
+      malus: {
+        status: 0,
+      },
+    },
     strWeaponAttack: {
       bonus: {
         status: 0,
@@ -32,7 +42,7 @@ const party = [
         status: 0,
       },
     },
-    speed: 0,
+    speed: 7.5,
     strDamage: {
       bonus: {
         status: 0,
@@ -52,6 +62,7 @@ const party = [
     armorClass: {
       bonus: {
         base: 10,
+        addestramento: 2,
         armor: 2,
         magic: 0,
         status: 0,
@@ -70,6 +81,7 @@ const party = [
     },
     perception: {
       bonus: {
+        addestramento: 2,
         status: 0,
       },
       malus: {
@@ -78,6 +90,7 @@ const party = [
     },
     tsTempra: {
       bonus: {
+        addestramento: 2,
         status: 0,
       },
       malus: {
@@ -86,6 +99,7 @@ const party = [
     },
     tsRiflessi: {
       bonus: {
+        addestramento: 2,
         status: 0,
       },
       malus: {
@@ -94,26 +108,24 @@ const party = [
     },
     tsVolonta: {
       bonus: {
+        addestramento: 4,
         status: 0,
       },
       malus: {
         status: 0,
       },
     },
-    abilityCheck: Object.keys(abilities).reduce(
-      (acc, item) => ({
-        ...acc,
-        [item]: {
-          bonus: {
-            status: 0,
-          },
-          malus: {
-            status: 0,
-          },
+    abilityCheck: {
+      arcano: {
+        bonus: {
+          addestramento: 2,
+          status: 0,
         },
-      }),
-      {}
-    ),
+        malus: {
+          status: 0,
+        },
+      },
+    },
     skillCheck: {
       fo: {
         bonus: {
@@ -125,6 +137,7 @@ const party = [
       },
       de: {
         bonus: {
+          base: 1,
           status: 0,
         },
         malus: {
@@ -133,7 +146,7 @@ const party = [
       },
       co: {
         bonus: {
-          status: 0,
+          status: 1,
         },
         malus: {
           status: 0,
@@ -150,6 +163,7 @@ const party = [
       },
       sa: {
         bonus: {
+          base: -1,
           status: 0,
         },
         malus: {
@@ -158,7 +172,7 @@ const party = [
       },
       ca: {
         bonus: {
-          status: 0,
+          status: 1,
         },
         malus: {
           status: 0,
@@ -269,20 +283,7 @@ const party = [
         status: 0,
       },
     },
-    abilityCheck: Object.keys(abilities).reduce(
-      (acc, item) => ({
-        ...acc,
-        [item]: {
-          bonus: {
-            status: 0,
-          },
-          malus: {
-            status: 0,
-          },
-        },
-      }),
-      {}
-    ),
+    abilityCheck: {},
     skillCheck: {
       fo: {
         bonus: {

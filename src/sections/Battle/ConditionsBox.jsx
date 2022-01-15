@@ -9,6 +9,8 @@ import sortOnKey from "../../tools/sortOnKey";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
 import dices from "../../data/dices";
+import addBonus from "../../tools/addBonus";
+import getBonus from "../../tools/getBonus";
 
 const durationOptions = dices.d20.map((item) => ({
   value: item,
@@ -27,6 +29,14 @@ const checkTypes = [
   {
     label: "Tiro Salvezza",
     value: "saveThrow",
+  },
+  {
+    label: "Prova di Classe",
+    value: "classCheck",
+  },
+  {
+    label: "Prova Semplice",
+    value: "baseCheck",
   },
 ];
 
@@ -102,8 +112,20 @@ const ConditionsBox = (props) => {
 
   const statGetters = {
     attack: actualPG[actualAttackType.value],
-    abilityCheck: actualPG.abilityCheck[actualAbility.value],
+    abilityCheck: actualPG.abilityCheck.hasOwnProperty(actualAbility.value)
+      ? addBonus(
+          actualPG.abilityCheck[actualAbility.value],
+          "skill",
+          getBonus(actualPG.skillCheck[abilities[actualAbility.value].skill])
+        )
+      : { bonus: {}, malus: {} },
     saveThrow: actualPG[actualsaveThrowType.value],
+    classCheck: addBonus(
+      actualPG.classCheck,
+      "skill",
+      getBonus(actualPG.skillCheck[actualPG.classSkill])
+    ),
+    baseCheck: { bonus: 0, malus: 0 },
   };
 
   const actualStat = statGetters[actualCheckType.value];
