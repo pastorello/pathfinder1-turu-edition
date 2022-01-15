@@ -119,6 +119,7 @@ const mentalConditions = {
         ),
       },
       hitPoints: addBonus(player.hitPoints, "spaventatoFix", value),
+      strDamage: addBonus(player.strDamage, "spaventatoFix", value),
     }),
   },
 };

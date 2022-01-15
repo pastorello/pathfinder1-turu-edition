@@ -9,8 +9,6 @@ const basePhysicalConditions = {
     name: "Nauseato",
     effect: (player, value) => ({
       ...player,
-      strWeaponAttack: addBonus(player.strWeaponAttack, "status", -value),
-      dexWeaponAttack: addBonus(player.dexWeaponAttack, "status", -value),
       skillCheck: {
         ...Object.keys(player.skillCheck).reduce(
           (acc, item) => ({
@@ -20,15 +18,9 @@ const basePhysicalConditions = {
           {}
         ),
       },
-      abilityCheck: {
-        ...Object.keys(player.abilityCheck).reduce(
-          (acc, item) => ({
-            ...acc,
-            [item]: addBonus(player.abilityCheck[item], "status", -value),
-          }),
-          {}
-        ),
-      },
+      hitPoints: addBonus(player.hitPoints, "nauseatoFix", value),
+      strDamage: addBonus(player.strDamage, "nauseatoFix", value),
+      dexDamage: addBonus(player.dexDamage, "nauseatoFix", value),
       activeEffects: [
         ...player.activeEffects,
         "non puoi ingerire nulla volontariamente (pozioni ed elisir compresi)",
@@ -40,23 +32,9 @@ const basePhysicalConditions = {
     name: "Indebolito",
     effect: (player, value) => ({
       ...player,
-      strDamage: addBonus(player.strDamage, "status", -value),
-      strWeaponAttack: addBonus(player.strWeaponAttack, "status", -value),
       skillCheck: {
         ...player.skillCheck,
         fo: addBonus(player.skillCheck.fo, "status", -value),
-      },
-      abilityCheck: {
-        ...Object.keys(player.abilityCheck).reduce(
-          (acc, item) => ({
-            ...acc,
-            [item]:
-              abilities[item].skill === "fo"
-                ? addBonus(player.abilityCheck[item], "status", -value)
-                : player.abilityCheck[item],
-          }),
-          {}
-        ),
       },
     }),
   },
@@ -65,25 +43,9 @@ const basePhysicalConditions = {
     name: "Maldestro",
     effect: (player, value) => ({
       ...player,
-      dexDamage: addBonus(player.dexDamage, "status", -value),
-      dexWeaponAttack: addBonus(player.dexWeaponAttack, "status", -value),
-      tsRiflessi: addBonus(player.tsRiflessi, "status", -value),
-      armorClass: addBonus(player.armorClass, "status", -value),
       skillCheck: {
         ...player.skillCheck,
         de: addBonus(player.skillCheck.de, "status", -value),
-      },
-      abilityCheck: {
-        ...Object.keys(player.abilityCheck).reduce(
-          (acc, item) => ({
-            ...acc,
-            [item]:
-              abilities[item].skill === "de"
-                ? addBonus(player.abilityCheck[item], "status", -value)
-                : player.abilityCheck[item],
-          }),
-          {}
-        ),
       },
     }),
   },
@@ -122,7 +84,6 @@ const basePhysicalConditions = {
         "Se compi un'azione con il tratto uditivo, prova semplice CD 5 o l'azione è perduta",
       ],
       perception: addBonus(player.perception, "status", -2),
-      initiative: addBonus(player.initiative, "status", -2),
     }),
   },
 };
@@ -157,19 +118,6 @@ const physicalConditions = {
       tsTempra: addBonus(player.tsTempra, "status", -1),
       tsRiflessi: addBonus(player.tsRiflessi, "status", -1),
       tsVolonta: addBonus(player.tsVolonta, "status", -1),
-    }),
-  },
-  risucchiato: {
-    hasValue: true,
-    name: "Risucchiato",
-    effect: (player, value) => ({
-      ...player,
-      tsTempra: addBonus(player.tsTempra, "status", -value),
-      hitPoints: getBonus(player.hitPoints) - value * player.level,
-      skillCheck: {
-        ...player.skillCheck,
-        co: addBonus(player.skillCheck.co, "status", -value),
-      },
     }),
   },
   ingombrato: {

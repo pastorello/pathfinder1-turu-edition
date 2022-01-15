@@ -1,3 +1,4 @@
+import addBonus from "../../tools/addBonus";
 import physicalConditions from "./physicalConditions";
 
 const healthConditions = {
@@ -54,6 +55,26 @@ const healthConditions = {
           "Se subisci danni mentre sei morente, la tua condizione morente aumenta di 1, o di 2 se subisci danni dal colpo critico di un nemico o per un fallimento critico su un tuo Tiro Salvezza.",
         ],
       };
+    },
+  },
+  risucchiato: {
+    hasValue: true,
+    name: "Risucchiato",
+    effect: (player, value) => {
+      const dio = {
+        ...player,
+        hitPoints: addBonus(
+          player.hitPoints,
+          "risucchiato",
+          value - value * player.level
+        ),
+        actualPF: player.actualPF - value * player.level,
+        skillCheck: {
+          ...player.skillCheck,
+          co: addBonus(player.skillCheck.co, "status", -value),
+        },
+      };
+      return dio;
     },
   },
 };

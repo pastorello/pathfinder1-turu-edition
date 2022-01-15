@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DiceRoller from "../../components/DiceRoller";
 import { Row, Column } from "../../components/Grid";
 import conditions from "../../data/conditions";
+import addBonus from "../../tools/addBonus";
 import getBonus from "../../tools/getBonus";
 import sortOnKey from "../../tools/sortOnKey";
 import CDBox from "./CDBox";
@@ -9,7 +10,14 @@ import ConditionsBox from "./ConditionsBox";
 import party from "./party";
 import Player from "./Player";
 
-const parseParty = (item) => item.map((item2) => ({ ...item2, ferito: 0 }));
+const parseParty = (item) =>
+  item.map((item2) => ({
+    ...item2,
+    ferito: 0,
+    actualPF: getBonus(
+      addBonus(item2.hitPoints, "co", getBonus(item2.skillCheck.co))
+    ),
+  }));
 
 const Battle = (props) => {
   const [actualTurn, setActualTurn] = useState(0);
@@ -46,7 +54,6 @@ const Battle = (props) => {
     };
 
     const getConditionsToRemove = (conditionsArray) => {
-      const asd = 1;
       return conditionsArray.reduce(
         (acc, item) =>
           conditions[item.name].hasOwnProperty("removesCondition")
@@ -177,12 +184,22 @@ const Battle = (props) => {
     }
   };
 
-  const buffedParty = theParty.map((item) =>
-    item.conditions.reduce(
+  const buffedParty = theParty.map((item) => {
+    const conditionedPG = item.conditions.reduce(
       (acc, item2) => conditions[item2.name].effect(acc, item2.value),
       item
-    )
-  );
+    );
+    return {
+      ...conditionedPG,
+      hitPoints: getBonus(
+        addBonus(
+          conditionedPG.hitPoints,
+          "co",
+          getBonus(conditionedPG.skillCheck.co)
+        )
+      ),
+    };
+  });
   const thePlayers = buffedParty.map((item) => {
     const theProps = {
       ...item,

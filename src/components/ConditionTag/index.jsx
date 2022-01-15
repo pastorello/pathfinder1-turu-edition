@@ -5,8 +5,9 @@ import conditions from "../../data/conditions";
 
 const Wrapper = styled(Row)`
   width: 100%;
-  border-radius: 4px;
   padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 5px;
   background: #ddd;
   button {
     width: 20px;
@@ -17,8 +18,6 @@ const Wrapper = styled(Row)`
 `;
 
 const ConditionTag = (props) => {
-  const theProps = {};
-
   return (
     <Wrapper className="collapse">
       <Column small={8}>

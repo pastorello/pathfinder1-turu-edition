@@ -21,11 +21,7 @@ const Wrapper = styled(Row)`
 `;
 
 const Player = (props) => {
-  const baseHP = getBonus(
-    addBonus(props.hitPoints, "co", getBonus(props.skillCheck.co))
-  );
   const [initiativeRoll, setInitiativeRoll] = useState({ value: 1, label: 1 });
-  const [health, setHealth] = useState(baseHP);
   const [PFinput, setPfInput] = useState(0);
 
   const theProps = {
@@ -58,11 +54,21 @@ const Player = (props) => {
       value: PFinput,
     },
     addHeal: {
-      onClick: () => setHealth(parseInt(health) + parseInt(PFinput)),
+      onClick: () =>
+        props.setStatAction(
+          props.id,
+          "actualPF",
+          props.actualPF + parseInt(PFinput)
+        ),
       children: "+",
     },
     addDamage: {
-      onClick: () => setHealth(parseInt(health) - parseInt(PFinput)),
+      onClick: () =>
+        props.setStatAction(
+          props.id,
+          "actualPF",
+          props.actualPF - parseInt(PFinput)
+        ),
       children: "-",
     },
     visibilitySelect: {
@@ -113,7 +119,7 @@ const Player = (props) => {
           <Column>
             <Row className="collapse">
               <Column small={4}>
-                PF: <strong>{health}</strong>/{baseHP}
+                PF: <strong>{props.actualPF}</strong>/{props.hitPoints}
               </Column>
               <Column>
                 <button {...theProps.addDamage} />
@@ -143,6 +149,7 @@ const Player = (props) => {
             <div>Terreno: {props.terrain}</div>
           </Column>
         </Row>
+        {props.conditions.length > 0 && <hr />}
         <Row>
           {props.conditions.map((item) => {
             const theProps = {
