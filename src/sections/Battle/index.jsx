@@ -4,6 +4,7 @@ import { Row, Column } from "../../components/Grid";
 import conditions from "../../data/conditions";
 import getBonus from "../../tools/getBonus";
 import sortOnKey from "../../tools/sortOnKey";
+import CDBox from "./CDBox";
 import ConditionsBox from "./ConditionsBox";
 import party from "./party";
 import Player from "./Player";
@@ -13,6 +14,10 @@ const Battle = (props) => {
   const [theParty, setParty] = useState(party);
   const [actualPlayer, setActualPlayer] = useState(party[0].id);
   const [panchina, setPanchina] = useState([]);
+  const [selectedPG, editSelectedPG] = useState({
+    value: party.length > 0 ? party[0].id : "no players",
+    label: party.length > 0 ? party[0].name : "no players",
+  });
 
   const resetBattle = () => {
     setActualTurn(0);
@@ -25,22 +30,19 @@ const Battle = (props) => {
     setActualPlayer(party[0].id);
   };
 
-  const addCondition = (
-    playerID,
-    { condition = null, value = null, duration = null }
-  ) => {
+  const addCondition = (playerID, conditions, removeConditions) => {
     setParty(
       theParty.map((item) => ({
         ...item,
         conditions:
           item.id === playerID
             ? [
-                ...item.conditions.filter((item2) => item2.name !== condition),
-                {
-                  name: condition,
-                  value: value,
-                  duration: duration,
-                },
+                ...item.conditions.filter(
+                  (item2) =>
+                    !conditions.some((item3) => item2.name !== item3.name) &&
+                    !removeConditions.some((item3) => item2.name !== item3)
+                ),
+                ...conditions,
               ]
             : item.conditions,
       }))
@@ -67,6 +69,15 @@ const Battle = (props) => {
           item.id === playerID
             ? getBonus(item.perception) + parseInt(initiative)
             : item.initiativeRoll,
+      }))
+    );
+  };
+
+  const setStat = (playerID, statName, value) => {
+    setParty(
+      theParty.map((item) => ({
+        ...item,
+        [statName]: item.id === playerID ? value : item[statName],
       }))
     );
   };
@@ -143,6 +154,7 @@ const Battle = (props) => {
       moveAction: movePG,
       removeConditionAction: removeCondition,
       setInitiativeRollAction: setInitiativeRoll,
+      setStatAction: setStat,
     };
     return <Player {...theProps} />;
   });
@@ -162,6 +174,14 @@ const Battle = (props) => {
     conditionsBox: {
       addConditionAction: addCondition,
       actualParty: buffedParty,
+      selectedPG: selectedPG,
+      editSelectedPG: editSelectedPG,
+    },
+    cdBox: {
+      actualPG: buffedParty.reduce(
+        (item, acc) => (item.id === selectedPG.value ? item : acc),
+        {}
+      ),
     },
   };
   return (
@@ -199,6 +219,7 @@ const Battle = (props) => {
         </Row>
         <DiceRoller />
         {thePlayers.length > 0 && <ConditionsBox {...theProps.conditionsBox} />}
+        {thePlayers.length > 0 && <CDBox {...theProps.cdBox} />}
         {thePlayers}
         <h2 className="mt40">Fuori dal combattimento</h2>
         {outOfCombatPlayers}

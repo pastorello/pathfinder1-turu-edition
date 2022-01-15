@@ -10,10 +10,6 @@ const baseMobilityConditions = {
         "prova semplice CD 5 per compiere le azioni che hanno un bersaglio",
         "se una forza esterna ti muoverebbe fuori dal tuo quadretto, questa deve superare una prova contro la CD dell'effetto che ti blocca o la difesa appropriata (in genere la CD di Tempra) di un mostro che ti blocca.",
       ],
-      vista: {
-        ...player.vista,
-        state: "abbagliato",
-      },
     }),
   },
   impreparato: {

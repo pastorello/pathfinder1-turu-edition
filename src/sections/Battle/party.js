@@ -1,5 +1,3 @@
-import abilities from "../../data/abilities";
-
 const party = [
   {
     conditions: [],
@@ -179,7 +177,7 @@ const party = [
         },
       },
     },
-    visibility: "osservato",
+    visibility: "inosservato",
     actions: 3,
     terrain: "normale",
     sogliaMorente: 0,
@@ -334,7 +332,7 @@ const party = [
         },
       },
     },
-    visibility: "osservato",
+    visibility: "inosservato",
     actions: 3,
     terrain: "normale",
     sogliaMorente: 0,

@@ -98,11 +98,13 @@ const basePhysicalConditions = {
   },
   accecato: {
     name: "Accecato",
+    removesConditions: ["abbagliato"],
     effect: (player) => ({
       ...player,
       terrain: "difficile",
       activeEffects: [
         ...player.activeEffects,
+        "tutte le creature e gli oggetti sono invisibili nei tuoi confronti.",
         "fallimento critico automatico nelle prove di Percezione che richiedono la vista",
         "Immune agli effetti visivi",
       ],

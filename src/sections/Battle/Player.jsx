@@ -5,6 +5,8 @@ import CDRoller from "../../components/CDRoller";
 import { Row, Column } from "../../components/Grid";
 import getBonus from "../../tools/getBonus";
 import ConditionTag from "../../components/ConditionTag";
+import visibilityConditions from "../../data/conditions/visibilityConditions";
+import Selector from "../../components/Selector";
 
 const Wrapper = styled(Row)`
   padding-bottom: 10px;
@@ -59,6 +61,19 @@ const Player = (props) => {
       onClick: () => setHealth(parseInt(health) - parseInt(PFinput)),
       children: "-",
     },
+    visibilitySelect: {
+      options: Object.keys(visibilityConditions).map((item) => ({
+        value: item,
+        label: visibilityConditions[item].name,
+      })),
+      onChange: (value) =>
+        props.setStatAction(props.id, "visibility", value.value),
+      value: {
+        value: props.visibility,
+        label: visibilityConditions[props.visibility].name,
+      },
+    },
+    terrainSelect: {},
   };
 
   return (
@@ -111,7 +126,7 @@ const Player = (props) => {
           <Column>
             <div>CA: {getBonus(props.armorClass)}</div>
             <div>Percezione: {getBonus(props.perception)}</div>
-            <div>Visibilità: {props.visibility}</div>
+            <Selector {...theProps.visibilitySelect} />
           </Column>
           <Column>
             <div>Azioni: {props.actions}</div>

@@ -10,6 +10,17 @@ const healthConditions = {
       sogliaMorente: player.sogliaMorente - value,
     }),
   },
+  terrenoPericoloso: {
+    hasDices: true,
+    name: "Terreno Pericoloso",
+    effect: (player) => ({
+      ...player,
+      activeEffects: [
+        ...player.activeEffects,
+        "Il terreno pericoloso ti danneggia ogni volta che ti muovi al suo interno.",
+      ],
+    }),
+  },
   dannoPersistente: {
     hasDices: true,
     name: "Danno Persistente",
