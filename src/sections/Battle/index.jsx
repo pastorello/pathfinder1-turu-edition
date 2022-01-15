@@ -9,9 +9,11 @@ import ConditionsBox from "./ConditionsBox";
 import party from "./party";
 import Player from "./Player";
 
+const parseParty = (item) => item.map((item2) => ({ ...item2, ferito: 0 }));
+
 const Battle = (props) => {
   const [actualTurn, setActualTurn] = useState(0);
-  const [theParty, setParty] = useState(party);
+  const [theParty, setParty] = useState(parseParty(party));
   const [actualPlayer, setActualPlayer] = useState(party[0].id);
   const [panchina, setPanchina] = useState([]);
   const [selectedPG, editSelectedPG] = useState({
@@ -25,12 +27,47 @@ const Battle = (props) => {
   };
 
   const reloadParty = () => {
-    setParty(party);
+    setParty(parseParty(party));
     setPanchina([]);
     setActualPlayer(party[0].id);
   };
 
-  const addCondition = (playerID, conditions, removeConditions) => {
+  const addCondition = (playerID, condition) => {
+    const getAdditionalConditions = (item, recursion = []) => {
+      if (conditions[item].hasOwnProperty("extendsCondition")) {
+        const newConditions = conditions[item].extendsCondition.filter(
+          (item2) => !recursion.some((item3) => item3 === item2)
+        );
+        return newConditions.reduce((acc, item2) => {
+          return [item2, ...getAdditionalConditions(item2, acc)];
+        }, recursion);
+      }
+      return recursion;
+    };
+
+    const getConditionsToRemove = (conditionsArray) => {
+      const asd = 1;
+      return conditionsArray.reduce(
+        (acc, item) =>
+          conditions[item.name].hasOwnProperty("removesCondition")
+            ? [...acc, conditionsArray[item].removesCondition]
+            : acc,
+        []
+      );
+    };
+
+    const additionalConditions = getAdditionalConditions(condition.name);
+    const conditionsToAdd = [
+      condition,
+      ...additionalConditions.map((item) => ({
+        name: item,
+        value: 0,
+        duration: 0,
+      })),
+    ];
+
+    const conditionsToRemove = getConditionsToRemove(conditionsToAdd);
+
     setParty(
       theParty.map((item) => ({
         ...item,
@@ -39,10 +76,10 @@ const Battle = (props) => {
             ? [
                 ...item.conditions.filter(
                   (item2) =>
-                    !conditions.some((item3) => item2.name !== item3.name) &&
-                    !removeConditions.some((item3) => item2.name !== item3)
+                    item2.name !== condition.name &&
+                    !conditionsToRemove.some((item3) => item2.name === item3)
                 ),
-                ...conditions,
+                ...conditionsToAdd,
               ]
             : item.conditions,
       }))

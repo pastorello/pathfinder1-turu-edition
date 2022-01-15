@@ -1,4 +1,5 @@
 import addBonus from "../../tools/addBonus";
+import getBonus from "../../tools/getBonus";
 import abilities from "../abilities";
 import mobilityConditions from "./mobilityConditions";
 
@@ -98,7 +99,7 @@ const basePhysicalConditions = {
   },
   accecato: {
     name: "Accecato",
-    removesConditions: ["abbagliato"],
+    removesCondition: ["abbagliato"],
     effect: (player) => ({
       ...player,
       terrain: "difficile",
@@ -164,7 +165,7 @@ const physicalConditions = {
     effect: (player, value) => ({
       ...player,
       tsTempra: addBonus(player.tsTempra, "status", -value),
-      hitPoints: player.hitPoints - value * player.level,
+      hitPoints: getBonus(player.hitPoints) - value * player.level,
       skillCheck: {
         ...player.skillCheck,
         co: addBonus(player.skillCheck.co, "status", -value),

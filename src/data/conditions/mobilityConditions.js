@@ -1,5 +1,6 @@
 import addBonus from "../../tools/addBonus";
-const baseMobilityConditions = {
+
+const mobilityConditions = {
   immobilizzato: {
     name: "Immobilizzato",
     effect: (player) => ({
@@ -7,7 +8,6 @@ const baseMobilityConditions = {
       activeEffects: [
         ...player.activeEffects,
         "non puoi usare azioni col tratto movimento.",
-        "prova semplice CD 5 per compiere le azioni che hanno un bersaglio",
         "se una forza esterna ti muoverebbe fuori dal tuo quadretto, questa deve superare una prova contro la CD dell'effetto che ti blocca o la difesa appropriata (in genere la CD di Tempra) di un mostro che ti blocca.",
       ],
     }),
@@ -19,20 +19,14 @@ const baseMobilityConditions = {
       armorClass: addBonus(player.armorClass, "status", -2),
     }),
   },
-};
-
-const mobilityConditions = {
-  ...baseMobilityConditions,
   afferrato: {
     name: "Afferrato",
+    extendsCondition: ["immobilizzato", "impreparato"],
     effect: (player) => {
-      let thePlayer = baseMobilityConditions.immobilizzato.effect(player);
-      thePlayer = baseMobilityConditions.impreparato.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         activeEffects: [
-          ...thePlayer.activeEffects,
+          ...player.activeEffects,
           "Se tenti un'azione Maneggiare, prova semplice con CD 5 o fallisci",
         ],
       };
@@ -40,15 +34,14 @@ const mobilityConditions = {
   },
   prono: {
     name: "Prono",
+    extendsCondition: ["impreparato"],
     effect: (player) => {
-      let thePlayer = baseMobilityConditions.impreparato.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         strWeaponAttack: addBonus(player.strWeaponAttack, "status", -2),
         dexWeaponAttack: addBonus(player.dexWeaponAttack, "status", -2),
         activeEffects: [
-          ...thePlayer.activeEffects,
+          ...player.activeEffects,
           "Le uniche azioni di movimento che puoi usare da prono sono Andare Carponi e Alzarsi.",
         ],
       };
@@ -56,13 +49,12 @@ const mobilityConditions = {
   },
   paralizzato: {
     name: "Paralizzato",
+    extendsCondition: ["impreparato"],
     effect: (player) => {
-      let thePlayer = baseMobilityConditions.impreparato.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         activeEffects: [
-          ...thePlayer.activeEffects,
+          ...player.activeEffects,
           "non puoi agire, se non per Ricordare Conoscenze e altre azioni che richiedono solo l'uso della mente",
         ],
       };
@@ -76,20 +68,19 @@ const mobilityConditions = {
         activeEffects: [
           ...player.activeEffects,
           "Non puoi agire e non puoi percepire nulla",
-          "Volume (12 Media, 6 Piccola), CA 9, Durezza 8",
+          "Volume (12 Media, 6 Piccola), CA 9, Durezza 8, PF attuali",
         ],
       };
     },
   },
   trattenuto: {
     name: "Trattenuto",
+    extendsCondition: ["afferrato"],
     effect: (player) => {
-      let thePlayer = mobilityConditions.afferrato.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         activeEffects: [
-          ...thePlayer.activeEffects,
+          ...player.activeEffects,
           "non puoi fare nulla che abbia i tratti attacco o maneggiare a parte Sfuggire o Forzare ciò che ti trattiene",
         ],
       };

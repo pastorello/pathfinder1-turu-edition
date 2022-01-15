@@ -7,6 +7,7 @@ import getBonus from "../../tools/getBonus";
 import ConditionTag from "../../components/ConditionTag";
 import visibilityConditions from "../../data/conditions/visibilityConditions";
 import Selector from "../../components/Selector";
+import addBonus from "../../tools/addBonus";
 
 const Wrapper = styled(Row)`
   padding-bottom: 10px;
@@ -20,8 +21,11 @@ const Wrapper = styled(Row)`
 `;
 
 const Player = (props) => {
+  const baseHP = getBonus(
+    addBonus(props.hitPoints, "co", getBonus(props.skillCheck.co))
+  );
   const [initiativeRoll, setInitiativeRoll] = useState({ value: 1, label: 1 });
-  const [health, setHealth] = useState(props.hitPoints);
+  const [health, setHealth] = useState(baseHP);
   const [PFinput, setPfInput] = useState(0);
 
   const theProps = {
@@ -109,7 +113,7 @@ const Player = (props) => {
           <Column>
             <Row className="collapse">
               <Column small={4}>
-                PF: <strong>{health}</strong>/{props.hitPoints}
+                PF: <strong>{health}</strong>/{baseHP}
               </Column>
               <Column>
                 <button {...theProps.addDamage} />
@@ -121,7 +125,12 @@ const Player = (props) => {
                 <button {...theProps.addHeal} />
               </Column>
             </Row>
-            <div>Soglia Morente: {props.sogliaMorente}</div>
+            <Row className="collapse">
+              <Column small={4}>Ferito {props.ferito}</Column>
+              <Column small={8}>
+                (morte a Morente {props.ferito + props.sogliaMorente})
+              </Column>
+            </Row>
           </Column>
           <Column>
             <div>CA: {getBonus(props.armorClass)}</div>

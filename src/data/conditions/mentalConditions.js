@@ -61,17 +61,17 @@ const mentalConditions = {
   },
   confuso: {
     name: "Confuso",
+    extendsCondition: ["impreparato"],
     effect: (player) => {
-      let thePlayer = mobilityConditions.impreparato.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         activeEffects: [
-          ...thePlayer.activeEffects,
+          ...player.activeEffects,
           "non puoi Ritardare, Preparare o usare reazioni",
           "usi tutte le tue azioni per attaccare bersagli casuali",
           "se non hai bersagli, ti colpisci automaticamente senza colpo critico",
           "se non puoi attaccare, sprechi tutte le tue azioni",
+          "Ogni volta che subisci danni da un attacco o incantesimo, prova semplice CD 11",
         ],
       };
     },
@@ -82,7 +82,7 @@ const mentalConditions = {
       ...player,
       activeEffects: [
         ...player.activeEffects,
-        "devi spendere ogni tua azione per cercare di scappare dalla fonte della condizione in fuga",
+        "spendi ogni azione per cercare di scappare dalla fonte della condizione in fuga",
         "non puoi Preparare o Ritardare",
       ],
     }),
@@ -96,26 +96,11 @@ const mentalConditions = {
         ...player.activeEffects,
         `Lanciare Incantesimi richiede una prova semplice con CD ${5 + value}`,
       ],
-      spellAttack: addBonus(player.spellAttack, "status", -value),
-      tsVolonta: addBonus(player.tsVolonta, "status", -value),
       skillCheck: {
         ...player.skillCheck,
         in: addBonus(player.skillCheck.in, "status", -value),
         sa: addBonus(player.skillCheck.sa, "status", -value),
         ca: addBonus(player.skillCheck.ca, "status", -value),
-      },
-      abilityCheck: {
-        ...Object.keys(player.abilityCheck).reduce(
-          (acc, item) => ({
-            ...acc,
-            [item]: mentalSkills.some(
-              (item2) => item2 === abilities[item].skill
-            )
-              ? addBonus(player.abilityCheck[item], "status", -value)
-              : player.abilityCheck[item],
-          }),
-          {}
-        ),
       },
     }),
   },
@@ -124,8 +109,6 @@ const mentalConditions = {
     name: "Spaventato",
     effect: (player, value) => ({
       ...player,
-      strWeaponAttack: addBonus(player.strWeaponAttack, "status", -value),
-      dexWeaponAttack: addBonus(player.dexWeaponAttack, "status", -value),
       skillCheck: {
         ...Object.keys(player.skillCheck).reduce(
           (acc, item) => ({
@@ -135,15 +118,7 @@ const mentalConditions = {
           {}
         ),
       },
-      abilityCheck: {
-        ...Object.keys(player.abilityCheck).reduce(
-          (acc, item) => ({
-            ...acc,
-            [item]: addBonus(player.abilityCheck[item], "status", -value),
-          }),
-          {}
-        ),
-      },
+      hitPoints: addBonus(player.hitPoints, "spaventatoFix", value),
     }),
   },
 };

@@ -5,7 +5,15 @@ const party = [
     id: "0",
     name: "Argon de Belimarius",
     classSkill: "in",
-    hitPoints: 12,
+    hitPoints: {
+      bonus: {
+        race: 8,
+        PGClass: 4,
+      },
+      malus: {
+        status: 0,
+      },
+    },
     level: 1,
     classCheck: {
       bonus: {
@@ -180,14 +188,22 @@ const party = [
     visibility: "inosservato",
     actions: 3,
     terrain: "normale",
-    sogliaMorente: 0,
+    sogliaMorente: 4,
   },
   {
     conditions: [],
     activeEffects: [],
     id: "m0",
     name: "Mostro Brtt",
-    hitPoints: 15,
+    hitPoints: {
+      bonus: {
+        base: 15,
+        status: 0,
+      },
+      malus: {
+        status: 0,
+      },
+    },
     level: 1,
     strWeaponAttack: {
       bonus: {
@@ -335,7 +351,7 @@ const party = [
     visibility: "inosservato",
     actions: 3,
     terrain: "normale",
-    sogliaMorente: 0,
+    sogliaMorente: 1,
   },
 ];
 

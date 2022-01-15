@@ -60,38 +60,12 @@ const ConditionsBox = (props) => {
       value: selectedDuration,
     },
     addConditionButton: {
-      onClick: () => {
-        const additionalConditions = conditions[
-          selectedCondition.value
-        ].hasOwnProperty("extendsCondition")
-          ? conditions[selectedCondition.value].exendsCondition
-          : [];
-
-        const conditionsToAdd = [
-          {
-            name: selectedCondition.value,
-            value: selectedValue.value,
-            duration: selectedDuration.value,
-          },
-          ...additionalConditions.map((item) => ({
-            name: item,
-            value: 0,
-            duration: 0,
-          })),
-        ];
-
-        const conditionsToRemove = conditions[
-          selectedCondition.value
-        ].hasOwnProperty("removesCondition")
-          ? conditions[selectedCondition.value].removesCondition
-          : [];
-
-        props.addConditionAction(
-          props.selectedPG.value,
-          conditionsToAdd,
-          conditionsToRemove
-        );
-      },
+      onClick: () =>
+        props.addConditionAction(props.selectedPG.value, {
+          name: selectedCondition.value,
+          value: selectedValue.value,
+          duration: selectedDuration.value,
+        }),
       children: "Aggiungi Condizione",
     },
   };

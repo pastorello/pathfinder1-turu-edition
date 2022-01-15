@@ -1,4 +1,3 @@
-import mobilityConditions from "./mobilityConditions";
 import physicalConditions from "./physicalConditions";
 
 const healthConditions = {
@@ -37,12 +36,13 @@ const healthConditions = {
     name: "Ferito",
     effect: (player, value) => ({
       ...player,
-      sogliaMorente: player.sogliaMorente - value,
+      ferito: player.ferito || 0 + value,
     }),
   },
   morente: {
     hasValue: true,
     name: "Morente",
+    extendsCondition: ["privoDiSensi"],
     effect: (player, value) => {
       let thePlayer = physicalConditions.privoDiSensi.effect(player);
 
@@ -50,7 +50,8 @@ const healthConditions = {
         ...thePlayer,
         activeEffects: [
           ...player.activeEffects,
-          " tentare una prova per il Recupero per determinare se migliori o peggiori.",
+          "prova di Recupero per determinare se migliori o peggiori.",
+          "Se subisci danni mentre sei morente, la tua condizione morente aumenta di 1, o di 2 se subisci danni dal colpo critico di un nemico o per un fallimento critico su un tuo Tiro Salvezza.",
         ],
       };
     },
