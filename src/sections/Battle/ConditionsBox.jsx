@@ -13,6 +13,11 @@ const durationOptions = dices.d20.map((item) => ({
 }));
 
 const conditionsList = Object.keys(conditions)
+  .filter(
+    (item) =>
+      !conditions[item].hasOwnProperty("showTag") ||
+      conditions[item].showTag === true
+  )
   .map((item) => ({
     value: item,
     label: conditions[item].name,

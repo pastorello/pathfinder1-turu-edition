@@ -126,7 +126,6 @@ const party = [
     },
     visibility: "inosservato",
     actions: 3,
-    terrain: "normale",
     sogliaMorente: 4,
   },
   {
@@ -168,7 +167,6 @@ const party = [
     },
     visibility: "inosservato",
     actions: 3,
-    terrain: "normale",
     sogliaMorente: 1,
   },
 ];

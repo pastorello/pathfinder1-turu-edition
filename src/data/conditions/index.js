@@ -3,6 +3,7 @@ import healthConditions from "./healthConditions";
 import mentalConditions from "./mentalConditions";
 import mobilityConditions from "./mobilityConditions";
 import physicalConditions from "./physicalConditions";
+import terrainConditions from "./terrainConditions";
 import visibilityConditions from "./visibilityConditions";
 
 const conditions = {
@@ -11,6 +12,7 @@ const conditions = {
   ...mobilityConditions,
   ...physicalConditions,
   ...buffConditions,
+  ...terrainConditions,
 };
 
 export default conditions;

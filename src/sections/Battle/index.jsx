@@ -62,7 +62,7 @@ const Battle = (props) => {
       return conditionsArray.reduce(
         (acc, item) =>
           conditions[item.name].hasOwnProperty("removesCondition")
-            ? [...acc, conditions[item.name].removesCondition]
+            ? [...acc, ...conditions[item.name].removesCondition]
             : acc,
         []
       );
@@ -81,20 +81,36 @@ const Battle = (props) => {
     const conditionsToRemove = getConditionsToRemove(conditionsToAdd);
 
     setParty(
-      theParty.map((item) => ({
-        ...item,
-        conditions:
-          item.id === playerID
-            ? [
-                ...item.conditions.filter(
-                  (item2) =>
-                    item2.name !== condition.name &&
-                    !conditionsToRemove.some((item3) => item2.name === item3)
-                ),
-                ...conditionsToAdd,
-              ]
-            : item.conditions,
-      }))
+      theParty.map((item) => {
+        if (item.id === playerID) {
+          const resultConditions = [];
+          const newConditions = [
+            ...item.conditions.filter((item2) => {
+              const asd = 2;
+              return (
+                item2.name !== condition.name &&
+                !conditionsToRemove.some((item3) => {
+                  const asd = 4;
+                  return item2.name === item3;
+                })
+              );
+            }),
+            ...conditionsToAdd,
+          ];
+
+          newConditions.forEach((item2) => {
+            if (!resultConditions.some((item3) => item3.name === item2.name)) {
+              resultConditions.push(item2);
+            }
+          });
+
+          return {
+            ...item,
+            conditions: resultConditions,
+          };
+        }
+        return item;
+      })
     );
   };
 
@@ -191,20 +207,11 @@ const Battle = (props) => {
 
   const buffedParty = theParty.map((item) => {
     let conditionedPG = assignSkillBonus(item);
-    const extraConditions = terrainConditions[
-      conditionedPG.terrain
-    ].hasOwnProperty("extendsCondition")
-      ? terrainConditions[conditionedPG.terrain].extendsCondition.map(
-          (item2) => ({ name: item2, duration: 0 })
-        )
-      : [];
 
-    conditionedPG = [...extraConditions, ...conditionedPG.conditions].reduce(
+    conditionedPG = conditionedPG.conditions.reduce(
       (acc, item2) => conditions[item2.name].effect(acc, item2.value),
       conditionedPG
     );
-    conditionedPG =
-      terrainConditions[conditionedPG.terrain].effect(conditionedPG);
     conditionedPG =
       visibilityConditions[conditionedPG.visibility].effect(conditionedPG);
 
@@ -219,6 +226,7 @@ const Battle = (props) => {
       removeConditionAction: removeCondition,
       setInitiativeRollAction: setInitiativeRoll,
       setStatAction: setStat,
+      addConditionAction: addCondition,
     };
     return <Player {...theProps} />;
   });

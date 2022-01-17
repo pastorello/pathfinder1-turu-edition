@@ -1,11 +1,16 @@
+const getRemovesCondition = (condition) =>
+  Object.keys(terrainConditions).filter((item) => item !== condition);
+
 const terrainConditions = {
-  normale: {
+  terrenoNormale: {
+    showTag: false,
     name: "Terreno Normale",
     effect: (player) => ({
       ...player,
     }),
   },
-  accidentato: {
+  terrenoAccidentato: {
+    showTag: false,
     name: "Terreno Accidentato",
     extendsCondition: ["impreparato"],
     effect: (player) => ({
@@ -17,15 +22,17 @@ const terrainConditions = {
       ],
     }),
   },
-  difficile: {
-    name: "Difficile",
+  terrenoDifficile: {
+    showTag: false,
+    name: "Terreno Difficile",
     effect: (player) => ({
       ...player,
       speed: (Math.round((player.speed / 2) * 2) / 2).toFixed(1),
       activeEffects: [...player.activeEffects, "Non puoi fare Passi"],
     }),
   },
-  difficileSuperiore: {
+  terrenoDifficileSuperiore: {
+    showTag: false,
     name: "Terreno Difficile Superiore",
     effect: (player) => ({
       ...player,
@@ -34,6 +41,7 @@ const terrainConditions = {
     }),
   },
   superficeStretta: {
+    showTag: false,
     name: "Superfice Stretta",
     extendsCondition: ["impreparato"],
     effect: (player) => ({
@@ -46,6 +54,7 @@ const terrainConditions = {
     }),
   },
   declivio: {
+    showTag: false,
     name: "Declivio",
     extendsCondition: ["impreparato"],
     effect: (player) => ({
@@ -53,5 +62,9 @@ const terrainConditions = {
     }),
   },
 };
+
+Object.keys(terrainConditions).forEach((item) => {
+  terrainConditions[item].removesCondition = getRemovesCondition(item);
+});
 
 export default terrainConditions;

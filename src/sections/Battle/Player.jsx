@@ -4,11 +4,12 @@ import CDRoller from "../../components/CDRoller";
 
 import { Row, Column } from "../../components/Grid";
 import getBonus from "../../tools/getBonus";
+import Selector from "../../components/Selector";
 import ConditionTag from "../../components/ConditionTag";
 import visibilityConditions from "../../data/conditions/visibilityConditions";
-import Selector from "../../components/Selector";
-import addBonus from "../../tools/addBonus";
 import terrainConditions from "../../data/conditions/terrainConditions";
+import conditions from "../../data/conditions";
+import isValidObject from "../../tools/isValidObject";
 
 const Wrapper = styled(Row)`
   padding-bottom: 10px;
@@ -24,6 +25,21 @@ const Wrapper = styled(Row)`
 const Player = (props) => {
   const [initiativeRoll, setInitiativeRoll] = useState({ value: 1, label: 1 });
   const [PFinput, setPfInput] = useState(0);
+
+  const actualTerrain = ((terrain) =>
+    isValidObject(terrain)
+      ? {
+          value: terrain.name,
+          label: terrainConditions[terrain.name].name,
+        }
+      : {
+          value: "terrenoNormale",
+          label: terrainConditions.terrenoNormale.name,
+        })(
+    props.conditions.find((item) =>
+      Object.keys(terrainConditions).some((item2) => item2 === item.name)
+    )
+  );
 
   const theProps = {
     upButton: {
@@ -89,14 +105,19 @@ const Player = (props) => {
         value: item,
         label: terrainConditions[item].name,
       })),
-      onChange: (value) =>
-        props.setStatAction(props.id, "terrain", value.value),
-      value: {
-        value: props.terrain,
-        label: terrainConditions[props.terrain].name,
+      onChange: (value) => {
+        props.addConditionAction(props.id, { name: value.value, duration: 0 });
       },
+      value: actualTerrain,
     },
   };
+
+  const conditionsToShow = props.conditions.filter((item) => {
+    const theCondition = conditions[item.name];
+    return (
+      !theCondition.hasOwnProperty("showTag") || theCondition.showTag === true
+    );
+  });
 
   return (
     <Wrapper isSelected={props.isActive}>
@@ -162,9 +183,9 @@ const Player = (props) => {
             <Selector {...theProps.terrainSelect} />
           </Column>
         </Row>
-        {props.conditions.length > 0 && <hr />}
+        {conditionsToShow.length > 0 && <hr />}
         <Row>
-          {props.conditions.map((item) => {
+          {conditionsToShow.map((item) => {
             const theProps = {
               name: item.name,
               value: item.value,

@@ -2,7 +2,7 @@ const elementExists = (element) => {
   return typeof element !== "undefined" && element !== null;
 };
 
-const isValidDataObject = (dataObject) => {
+const isValidObject = (dataObject) => {
   return (
     typeof dataObject === "object" &&
     elementExists(dataObject) &&
@@ -10,4 +10,4 @@ const isValidDataObject = (dataObject) => {
   );
 };
 
-export default isValidDataObject;
+export default isValidObject;
