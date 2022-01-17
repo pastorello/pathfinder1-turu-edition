@@ -71,7 +71,7 @@ const Player = (props) => {
   );
   const actualIllumination = getActualCondition(
     availableIlluminationConditions,
-    "oscurità"
+    "luceIntensa"
   );
 
   const theProps = {
