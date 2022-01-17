@@ -140,6 +140,7 @@ const physicalConditions = {
   privoDiSensi: {
     name: "Privo di Sensi",
     description: ["non puoi agire"],
+    removesCondition: ["inCopertura", "inCoperturaSuperiore"],
     extendsCondition: ["accecato", "impreparato", "prono"],
     effect: (player) => {
       return {

@@ -5,6 +5,8 @@ import cssReset from "./mixin/cssReset";
 
 const borderColor = chroma.hsl(0, 0, 0.8);
 const bgButtonColor = chroma.hsl(0, 0, 0.95);
+const hoverBg = chroma.temperature(3500);
+const selectedBg = chroma.hcl(130, 40, 80);
 export default createGlobalStyle`
 
     ${cssReset}
@@ -36,7 +38,7 @@ export default createGlobalStyle`
         border: 1px solid ${borderColor};
         background: ${bgButtonColor};
         &:hover{
-            background: ${chroma.temperature(3500)};
+            background: ${hoverBg};
         }
     }
     li {
@@ -50,5 +52,24 @@ export default createGlobalStyle`
         max-width: 100%;
         height: 36px;
         border: 1px solid ${borderColor};
+    }
+    .bg-selected{
+        background: ${selectedBg};
+    }
+    .mini-button {
+        width: 20px;
+        text-align: center;
+        padding: 0;
+    }
+    .small-button {
+        padding: 0;
+    }
+    .center-content {
+        align-items: center;
+        display: flex;
+    }
+    .center {
+        justify-content: center;
+        text-align: center;
     }
 `;

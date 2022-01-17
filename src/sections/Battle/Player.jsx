@@ -10,41 +10,37 @@ import visibilityConditions from "../../data/conditions/visibilityConditions";
 import terrainConditions from "../../data/conditions/terrainConditions";
 import conditions from "../../data/conditions";
 import isValidObject from "../../tools/isValidObject";
+import illuminationConditions from "../../data/conditions/illuminationConditions";
 
 const Wrapper = styled(Row)`
   padding-bottom: 10px;
   border-bottom: 1px solid #000;
   margin-bottom: 10px;
-  .label {
+  .selected-label {
     display: flex;
     ${(props) => props.isSelected === true && "background: #999;"}
     padding: 5px;
   }
 `;
 
-const availableTerrainConditions = Object.keys(terrainConditions)
-  .filter((item) => {
-    const theCondition = conditions[item];
-    return (
-      theCondition.hasOwnProperty("showTag") && theCondition.showTag === false
-    );
-  })
-  .map((item) => ({
-    value: item,
-    label: terrainConditions[item].name,
-  }));
-
-const availableVisibilityConditions = Object.keys(visibilityConditions)
-  .filter((item) => {
-    const theCondition = conditions[item];
-    return (
-      theCondition.hasOwnProperty("showTag") && theCondition.showTag === false
-    );
-  })
-  .map((item) => ({
-    value: item,
-    label: visibilityConditions[item].name,
-  }));
+const getSelectOptions = (optionsObject) => {
+  return Object.keys(optionsObject)
+    .filter((item) => {
+      const theCondition = conditions[item];
+      return (
+        theCondition.hasOwnProperty("showTag") && theCondition.showTag === false
+      );
+    })
+    .map((item) => ({
+      value: item,
+      label: optionsObject[item].name,
+    }));
+};
+const availableTerrainConditions = getSelectOptions(terrainConditions);
+const availableVisibilityConditions = getSelectOptions(visibilityConditions);
+const availableIlluminationConditions = getSelectOptions(
+  illuminationConditions
+);
 
 const Player = (props) => {
   const [initiativeRoll, setInitiativeRoll] = useState({ value: 1, label: 1 });
@@ -52,41 +48,52 @@ const Player = (props) => {
 
   const getActualCondition = (availableConditions, defaultCondition) => {
     const selectedCondition = props.conditions.find((item) =>
-      Object.keys(availableConditions).some((item2) => item2 === item.name)
+      availableConditions.some((item2) => item2.value === item.name)
     );
     return isValidObject(selectedCondition)
       ? {
           value: selectedCondition.name,
-          label: availableConditions[selectedCondition.name].name,
+          label: conditions[selectedCondition.name].name,
         }
       : {
           value: defaultCondition,
-          label: availableConditions[defaultCondition].name,
+          label: conditions[defaultCondition].name,
         };
   };
 
-  const actualTerrain = getActualCondition(terrainConditions, "terrenoNormale");
+  const actualTerrain = getActualCondition(
+    availableTerrainConditions,
+    "terrenoNormale"
+  );
   const actualVisibility = getActualCondition(
-    visibilityConditions,
+    availableVisibilityConditions,
     "inosservato"
+  );
+  const actualIllumination = getActualCondition(
+    availableIlluminationConditions,
+    "oscurità"
   );
 
   const theProps = {
     upButton: {
       onClick: () => props.moveAction(props.id, "up"),
       children: "up",
+      className: "small-button",
     },
     downButton: {
       onClick: () => props.moveAction(props.id, "down"),
       children: "down",
+      className: "small-button",
     },
     outButton: {
       onClick: () => props.moveAction(props.id, "out"),
       children: "out",
+      className: "small-button",
     },
     inButton: {
       onClick: () => props.moveAction(props.id, "in"),
       children: "in",
+      className: "small-button",
     },
     cdRoller: {
       stat: props.perception,
@@ -125,6 +132,13 @@ const Player = (props) => {
       },
       value: actualVisibility,
     },
+    illuminationSelect: {
+      options: availableIlluminationConditions,
+      onChange: (value) => {
+        props.addConditionAction(props.id, { name: value.value, duration: 0 });
+      },
+      value: actualIllumination,
+    },
     terrainSelect: {
       options: availableTerrainConditions,
       onChange: (value) => {
@@ -144,15 +158,9 @@ const Player = (props) => {
   return (
     <Wrapper isSelected={props.isActive}>
       <Column small={3}>
-        <label className="label mb10">
+        <label className="selected-label mb10">
           {props.name} {props.level}° <br />
         </label>
-        <div>
-          Iniziativa: <strong>{props.initiativeRoll}</strong>
-        </div>
-        <hr />
-        <CDRoller {...theProps.cdRoller} />
-        <hr />
         <Row>
           <Column small={4}>
             <button {...theProps.upButton} />
@@ -168,14 +176,32 @@ const Player = (props) => {
             )}
           </Column>
         </Row>
+        <hr />
+        <Row className="align-center center">
+          <Column small={6}>
+            <div>Percezione</div>
+            <div>{getBonus(props.perception)}</div>
+          </Column>
+          <Column small={6}>
+            <div>Iniziativa</div>
+            <div>
+              <strong>{props.initiativeRoll}</strong>
+            </div>
+          </Column>
+        </Row>
+        <hr />
+        <CDRoller {...theProps.cdRoller} />
       </Column>
       <Column small={9}>
         <Row>
           <Column>
+            <div>CA: {getBonus(props.armorClass)}</div>
             <Row className="collapse">
-              <Column small={4}>
-                PF: <strong>{props.actualPF}</strong>/
-                {getBonus(props.hitPoints)}
+              <Column small={4} className="center-content">
+                <div className="label">
+                  PF: <br /> <strong>{props.actualPF}</strong>/
+                  {getBonus(props.hitPoints)}
+                </div>
               </Column>
               <Column>
                 <button {...theProps.addDamage} />
@@ -187,6 +213,7 @@ const Player = (props) => {
                 <button {...theProps.addHeal} />
               </Column>
             </Row>
+            <hr />
             <Row className="collapse">
               <Column small={4}>Ferito {props.ferito}</Column>
               <Column small={8}>
@@ -195,8 +222,7 @@ const Player = (props) => {
             </Row>
           </Column>
           <Column>
-            <div>CA: {getBonus(props.armorClass)}</div>
-            <div>Percezione: {getBonus(props.perception)}</div>
+            <Selector {...theProps.illuminationSelect} />
             <Selector {...theProps.visibilitySelect} />
           </Column>
           <Column>

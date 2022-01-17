@@ -19,6 +19,8 @@ const parseParty = (item) =>
     actualPF: getBonus(
       addBonus(item2.hitPoints, "co", getBonus(item2.skillCheck.co))
     ),
+    conditions: [],
+    activeEffects: [],
   }));
 
 const Battle = (props) => {

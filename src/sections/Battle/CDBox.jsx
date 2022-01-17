@@ -133,20 +133,24 @@ const CDBox = (props) => {
       </Column>
       <Column small={3}>
         <Row>
-          <Column className="shrink">CD</Column>
+          <Column className="shrink center-content">
+            <div className="label">CD</div>
+          </Column>
           <Column small={3}>
             <input
               value={actualCD}
               onChange={(event) => setActualCD(event.target.value)}
             />
           </Column>
-          <Column>
-            {getCDResult(
-              actualRoll.value,
-              actualStat,
-              actualCD,
-              actualCheckType.value
-            )}
+          <Column className="center-content">
+            <div className="label">
+              {getCDResult(
+                actualRoll.value,
+                actualStat,
+                actualCD,
+                actualCheckType.value
+              )}
+            </div>
           </Column>
         </Row>
       </Column>

@@ -25,7 +25,9 @@ const CDRoller = (props) => {
   };
   return (
     <Row>
-      <Column className="shrink">{getBonus(props.stat)} +</Column>
+      <Column className="shrink center-content">
+        <div className="label">{getBonus(props.stat)} +</div>
+      </Column>
       <Column>
         <Selector {...theProps.rollSelect} />
       </Column>

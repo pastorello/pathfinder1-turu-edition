@@ -10,23 +10,22 @@ const Wrapper = styled(Row)`
   margin-bottom: 5px;
   background: #ddd;
   button {
-    width: 20px;
-    text-align: center;
     float: right;
-    padding: 0;
   }
 `;
 
 const ConditionTag = (props) => {
   return (
     <Wrapper className="collapse">
-      <Column small={8}>
+      <Column small={10}>
         {conditions[props.name].name}{" "}
         {conditions[props.name].hasValue && props.value}
       </Column>
-      <Column small={4}>
+      <Column small={2}>
         {props.duration > 0 && `(${props.duration}r)`}{" "}
-        <button onClick={props.removeAction}>X</button>
+        <button className="mini-button" onClick={props.removeAction}>
+          X
+        </button>
       </Column>
     </Wrapper>
   );

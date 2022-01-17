@@ -4,6 +4,7 @@ import { Row, Column } from "../Grid";
 import Selector from "../Selector";
 import dices from "../../data/dices";
 import isValidInt from "../../tools/isValidInt";
+import classNames from "classnames";
 
 const DiceRoller = (props) => {
   const [quantity, setQuantity] = useState({ value: 1, label: 1 });
@@ -58,17 +59,23 @@ const DiceRoller = (props) => {
     x2Button: {
       onClick: () => setActualMultiplier(actualMultiplier !== 2 ? 2 : 1),
       children: "X2",
-      className: actualMultiplier === 2 ? "bg-selected" : "",
+      className: classNames("mini-button", {
+        "bg-selected": actualMultiplier === 2,
+      }),
     },
     x3Button: {
       onClick: () => setActualMultiplier(actualMultiplier !== 3 ? 3 : 1),
-      children: "X2",
-      className: actualMultiplier === 3 ? "bg-selected" : "",
+      children: "X3",
+      className: classNames("mini-button", {
+        "bg-selected": actualMultiplier === 3,
+      }),
     },
     div2Button: {
       onClick: () => setActualMultiplier(actualMultiplier !== 0.5 ? 0.5 : 1),
       children: "/2",
-      className: actualMultiplier === 0.5 ? "bg-selected" : "",
+      className: classNames("mini-button", {
+        "bg-selected": actualMultiplier === 0.5,
+      }),
     },
   };
   return (
@@ -86,7 +93,19 @@ const DiceRoller = (props) => {
         <button {...theProps.rollButton} />
       </Column>
       <Column>
-        Risultato: <strong>{result}</strong>
+        Risultato:{" "}
+        <strong>{Math.floor(parseInt(result) * actualMultiplier)}</strong>
+        <Row className="collapse">
+          <Column small={4}>
+            <button {...theProps.x2Button} />
+          </Column>
+          <Column small={4}>
+            <button {...theProps.x3Button} />
+          </Column>
+          <Column small={4}>
+            <button {...theProps.div2Button} />
+          </Column>
+        </Row>
       </Column>
     </Row>
   );
