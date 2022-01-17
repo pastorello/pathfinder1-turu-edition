@@ -5,7 +5,7 @@ import Selector from "../Selector";
 import dices from "../../data/dices";
 import isValidInt from "../../tools/isValidInt";
 
-const DiceRoller = () => {
+const DiceRoller = (props) => {
   const [quantity, setQuantity] = useState({ value: 1, label: 1 });
   const [faces, setFaces] = useState({
     value: Object.keys(dices)[0],
@@ -50,6 +50,7 @@ const DiceRoller = () => {
           );
         }
         setResult(newValue);
+        props.onDiceRolled(newValue);
       },
       children: "ROLL",
     },
@@ -68,7 +69,9 @@ const DiceRoller = () => {
       <Column>
         <button {...theProps.rollButton} />
       </Column>
-      <Column>Risultato: {result}</Column>
+      <Column>
+        Risultato: <strong>{result}</strong>
+      </Column>
     </Row>
   );
 };

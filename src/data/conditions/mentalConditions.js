@@ -1,8 +1,4 @@
-import mobilityConditions from "./mobilityConditions";
 import addBonus from "../../tools/addBonus";
-import abilities from "../abilities";
-
-const mentalSkills = ["in", "sa", "ca"];
 
 const friendshipConditions = {
   indifferente: {

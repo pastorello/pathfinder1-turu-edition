@@ -1,7 +1,4 @@
 import addBonus from "../../tools/addBonus";
-import getBonus from "../../tools/getBonus";
-import abilities from "../abilities";
-import mobilityConditions from "./mobilityConditions";
 
 const basePhysicalConditions = {
   nauseato: {
@@ -143,13 +140,10 @@ const physicalConditions = {
   privoDiSensi: {
     name: "Privo di Sensi",
     description: ["non puoi agire"],
+    extendsCondition: ["accecato", "impreparato", "prono"],
     effect: (player) => {
-      let thePlayer = basePhysicalConditions.accecato.effect(player);
-      thePlayer = mobilityConditions.impreparato.effect(player);
-      thePlayer = mobilityConditions.prono.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         tsRiflessi: addBonus(player.tsRiflessi, "status", -4),
         armorClass: addBonus(player.armorClass, "status", -4),
         perception: addBonus(player.perception, "status", -4),

@@ -45,10 +45,8 @@ const healthConditions = {
     name: "Morente",
     extendsCondition: ["privoDiSensi"],
     effect: (player, value) => {
-      let thePlayer = physicalConditions.privoDiSensi.effect(player);
-
       return {
-        ...thePlayer,
+        ...player,
         activeEffects: [
           ...player.activeEffects,
           "prova di Recupero per determinare se migliori o peggiori.",

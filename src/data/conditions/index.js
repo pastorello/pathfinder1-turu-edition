@@ -1,3 +1,4 @@
+import buffConditions from "./buffConditions";
 import healthConditions from "./healthConditions";
 import mentalConditions from "./mentalConditions";
 import mobilityConditions from "./mobilityConditions";
@@ -9,7 +10,7 @@ const conditions = {
   ...mentalConditions,
   ...mobilityConditions,
   ...physicalConditions,
-  // ...visibilityConditions,
+  ...buffConditions,
 };
 
 export default conditions;

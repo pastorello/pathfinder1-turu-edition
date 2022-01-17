@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import DiceRoller from "../../components/DiceRoller";
+
 import { Row, Column } from "../../components/Grid";
 import conditions from "../../data/conditions";
+import terrainConditions from "../../data/conditions/terrainConditions";
+import visibilityConditions from "../../data/conditions/visibilityConditions";
 import addBonus from "../../tools/addBonus";
 import getBonus from "../../tools/getBonus";
 import sortOnKey from "../../tools/sortOnKey";
+import assignSkillBonus from "./assignSkillBonus";
 import CDBox from "./CDBox";
 import ConditionsBox from "./ConditionsBox";
+import DamageRoller from "./DamageRoller";
 import party from "./party";
 import Player from "./Player";
 
@@ -24,6 +28,7 @@ const Battle = (props) => {
   const [theParty, setParty] = useState(parseParty(party));
   const [actualPlayer, setActualPlayer] = useState(party[0].id);
   const [panchina, setPanchina] = useState([]);
+  const [actualRollResult, setActualRollResult] = useState(0);
   const [selectedPG, editSelectedPG] = useState({
     value: party.length > 0 ? party[0].id : "no players",
     label: party.length > 0 ? party[0].name : "no players",
@@ -57,7 +62,7 @@ const Battle = (props) => {
       return conditionsArray.reduce(
         (acc, item) =>
           conditions[item.name].hasOwnProperty("removesCondition")
-            ? [...acc, conditionsArray[item].removesCondition]
+            ? [...acc, conditions[item.name].removesCondition]
             : acc,
         []
       );
@@ -185,20 +190,25 @@ const Battle = (props) => {
   };
 
   const buffedParty = theParty.map((item) => {
-    const conditionedPG = item.conditions.reduce(
-      (acc, item2) => conditions[item2.name].effect(acc, item2.value),
-      item
-    );
-    return {
-      ...conditionedPG,
-      hitPoints: getBonus(
-        addBonus(
-          conditionedPG.hitPoints,
-          "co",
-          getBonus(conditionedPG.skillCheck.co)
+    let conditionedPG = assignSkillBonus(item);
+    const extraConditions = terrainConditions[
+      conditionedPG.terrain
+    ].hasOwnProperty("extendsCondition")
+      ? terrainConditions[conditionedPG.terrain].extendsCondition.map(
+          (item2) => ({ name: item2, duration: 0 })
         )
-      ),
-    };
+      : [];
+
+    conditionedPG = [...extraConditions, ...conditionedPG.conditions].reduce(
+      (acc, item2) => conditions[item2.name].effect(acc, item2.value),
+      conditionedPG
+    );
+    conditionedPG =
+      terrainConditions[conditionedPG.terrain].effect(conditionedPG);
+    conditionedPG =
+      visibilityConditions[conditionedPG.visibility].effect(conditionedPG);
+
+    return conditionedPG;
   });
   const thePlayers = buffedParty.map((item) => {
     const theProps = {
@@ -237,6 +247,20 @@ const Battle = (props) => {
         {}
       ),
     },
+    damageRoller: {
+      onDiceRolled: setActualRollResult,
+      roll: actualRollResult,
+      onAssignRoll: (type) =>
+        setStat(
+          selectedPG.value,
+          "actualPF",
+          buffedParty.reduce(
+            (acc, item) => (item.id === selectedPG.value ? item.actualPF : acc),
+            0
+          ) +
+            (type === "heal" ? 1 : -1) * parseInt(actualRollResult)
+        ),
+    },
   };
   return (
     <Row className="mb20">
@@ -271,7 +295,8 @@ const Battle = (props) => {
             </button>
           </Column>
         </Row>
-        <DiceRoller />
+        <DamageRoller {...theProps.damageRoller} />
+        <hr />
         {thePlayers.length > 0 && <ConditionsBox {...theProps.conditionsBox} />}
         {thePlayers.length > 0 && <CDBox {...theProps.cdBox} />}
         {thePlayers}

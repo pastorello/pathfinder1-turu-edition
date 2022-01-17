@@ -8,6 +8,7 @@ import ConditionTag from "../../components/ConditionTag";
 import visibilityConditions from "../../data/conditions/visibilityConditions";
 import Selector from "../../components/Selector";
 import addBonus from "../../tools/addBonus";
+import terrainConditions from "../../data/conditions/terrainConditions";
 
 const Wrapper = styled(Row)`
   padding-bottom: 10px;
@@ -83,7 +84,18 @@ const Player = (props) => {
         label: visibilityConditions[props.visibility].name,
       },
     },
-    terrainSelect: {},
+    terrainSelect: {
+      options: Object.keys(terrainConditions).map((item) => ({
+        value: item,
+        label: terrainConditions[item].name,
+      })),
+      onChange: (value) =>
+        props.setStatAction(props.id, "terrain", value.value),
+      value: {
+        value: props.terrain,
+        label: terrainConditions[props.terrain].name,
+      },
+    },
   };
 
   return (
@@ -119,7 +131,8 @@ const Player = (props) => {
           <Column>
             <Row className="collapse">
               <Column small={4}>
-                PF: <strong>{props.actualPF}</strong>/{props.hitPoints}
+                PF: <strong>{props.actualPF}</strong>/
+                {getBonus(props.hitPoints)}
               </Column>
               <Column>
                 <button {...theProps.addDamage} />
@@ -146,7 +159,7 @@ const Player = (props) => {
           <Column>
             <div>Azioni: {props.actions}</div>
             <div>Velocità: {props.speed}</div>
-            <div>Terreno: {props.terrain}</div>
+            <Selector {...theProps.terrainSelect} />
           </Column>
         </Row>
         {props.conditions.length > 0 && <hr />}

@@ -6,8 +6,6 @@ import { Row, Column } from "../../components/Grid";
 import getCDResult from "../../tools/getCDResult";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
-import addBonus from "../../tools/addBonus";
-import getBonus from "../../tools/getBonus";
 
 const checkTypes = [
   {
@@ -34,11 +32,11 @@ const checkTypes = [
 
 const attackTypes = [
   {
-    label: "Attacco (de)",
+    label: "Attacco (fo)",
     value: "strWeaponAttack",
   },
   {
-    label: "Attacco (fo)",
+    label: "Attacco (de)",
     value: "dexWeaponAttack",
   },
   {
@@ -75,25 +73,9 @@ const CDBox = (props) => {
 
   const statGetters = {
     attack: props.actualPG[actualAttackType.value],
-    abilityCheck: props.actualPG.abilityCheck.hasOwnProperty(
-      actualAbility.value
-    )
-      ? addBonus(
-          props.actualPG.abilityCheck[actualAbility.value],
-          "skill",
-          getBonus(
-            props.actualPG.skillCheck[abilities[actualAbility.value].skill]
-          )
-        )
-      : { bonus: {}, malus: {} },
+    abilityCheck: props.actualPG.abilityCheck[actualAbility.value],
     saveThrow: props.actualPG[actualsaveThrowType.value],
-    classCheck: props.actualPG.hasOwnProperty("classSkill")
-      ? addBonus(
-          props.actualPG.classCheck,
-          "skill",
-          getBonus(props.actualPG.skillCheck[props.actualPG.classSkill])
-        )
-      : { bonus: 0, malus: 0 },
+    classCheck: props.actualPG.classCheck,
     baseCheck: { bonus: 0, malus: 0 },
   };
 
