@@ -212,8 +212,6 @@ const Battle = (props) => {
       (acc, item2) => conditions[item2.name].effect(acc, item2.value),
       conditionedPG
     );
-    conditionedPG =
-      visibilityConditions[conditionedPG.visibility].effect(conditionedPG);
 
     return conditionedPG;
   });

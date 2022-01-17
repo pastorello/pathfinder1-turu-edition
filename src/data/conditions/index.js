@@ -13,6 +13,7 @@ const conditions = {
   ...physicalConditions,
   ...buffConditions,
   ...terrainConditions,
+  ...visibilityConditions,
 };
 
 export default conditions;

@@ -22,23 +22,53 @@ const Wrapper = styled(Row)`
   }
 `;
 
+const availableTerrainConditions = Object.keys(terrainConditions)
+  .filter((item) => {
+    const theCondition = conditions[item];
+    return (
+      theCondition.hasOwnProperty("showTag") && theCondition.showTag === false
+    );
+  })
+  .map((item) => ({
+    value: item,
+    label: terrainConditions[item].name,
+  }));
+
+const availableVisibilityConditions = Object.keys(visibilityConditions)
+  .filter((item) => {
+    const theCondition = conditions[item];
+    return (
+      theCondition.hasOwnProperty("showTag") && theCondition.showTag === false
+    );
+  })
+  .map((item) => ({
+    value: item,
+    label: visibilityConditions[item].name,
+  }));
+
 const Player = (props) => {
   const [initiativeRoll, setInitiativeRoll] = useState({ value: 1, label: 1 });
   const [PFinput, setPfInput] = useState(0);
 
-  const actualTerrain = ((terrain) =>
-    isValidObject(terrain)
+  const getActualCondition = (availableConditions, defaultCondition) => {
+    const selectedCondition = props.conditions.find((item) =>
+      Object.keys(availableConditions).some((item2) => item2 === item.name)
+    );
+    return isValidObject(selectedCondition)
       ? {
-          value: terrain.name,
-          label: terrainConditions[terrain.name].name,
+          value: selectedCondition.name,
+          label: availableConditions[selectedCondition.name].name,
         }
       : {
-          value: "terrenoNormale",
-          label: terrainConditions.terrenoNormale.name,
-        })(
-    props.conditions.find((item) =>
-      Object.keys(terrainConditions).some((item2) => item2 === item.name)
-    )
+          value: defaultCondition,
+          label: availableConditions[defaultCondition].name,
+        };
+  };
+
+  const actualTerrain = getActualCondition(terrainConditions, "terrenoNormale");
+  const actualVisibility = getActualCondition(
+    visibilityConditions,
+    "inosservato"
   );
 
   const theProps = {
@@ -89,22 +119,14 @@ const Player = (props) => {
       children: "-",
     },
     visibilitySelect: {
-      options: Object.keys(visibilityConditions).map((item) => ({
-        value: item,
-        label: visibilityConditions[item].name,
-      })),
-      onChange: (value) =>
-        props.setStatAction(props.id, "visibility", value.value),
-      value: {
-        value: props.visibility,
-        label: visibilityConditions[props.visibility].name,
+      options: availableVisibilityConditions,
+      onChange: (value) => {
+        props.addConditionAction(props.id, { name: value.value, duration: 0 });
       },
+      value: actualVisibility,
     },
     terrainSelect: {
-      options: Object.keys(terrainConditions).map((item) => ({
-        value: item,
-        label: terrainConditions[item].name,
-      })),
+      options: availableTerrainConditions,
       onChange: (value) => {
         props.addConditionAction(props.id, { name: value.value, duration: 0 });
       },
