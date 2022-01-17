@@ -16,7 +16,7 @@ const mobilityConditions = {
     name: "Impreparato",
     effect: (player) => ({
       ...player,
-      armorClass: addBonus(player.armorClass, "status", -2),
+      armorClass: addBonus(player.armorClass, "circostanza", -2),
     }),
   },
   afferrato: {
@@ -38,8 +38,8 @@ const mobilityConditions = {
     effect: (player) => {
       return {
         ...player,
-        strWeaponAttack: addBonus(player.strWeaponAttack, "status", -2),
-        dexWeaponAttack: addBonus(player.dexWeaponAttack, "status", -2),
+        strWeaponAttack: addBonus(player.strWeaponAttack, "circostanza", -2),
+        dexWeaponAttack: addBonus(player.dexWeaponAttack, "circostanza", -2),
         activeEffects: [
           ...player.activeEffects,
           "Le uniche azioni di movimento che puoi usare da prono sono Andare Carponi e Alzarsi.",

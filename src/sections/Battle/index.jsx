@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import { Row, Column } from "../../components/Grid";
 import conditions from "../../data/conditions";
-import terrainConditions from "../../data/conditions/terrainConditions";
-import visibilityConditions from "../../data/conditions/visibilityConditions";
 import addBonus from "../../tools/addBonus";
 import getBonus from "../../tools/getBonus";
 import sortOnKey from "../../tools/sortOnKey";
@@ -206,11 +204,11 @@ const Battle = (props) => {
   };
 
   const buffedParty = theParty.map((item) => {
-    let conditionedPG = assignSkillBonus(item);
-
-    conditionedPG = conditionedPG.conditions.reduce(
-      (acc, item2) => conditions[item2.name].effect(acc, item2.value),
-      conditionedPG
+    let conditionedPG = assignSkillBonus(
+      item.conditions.reduce(
+        (acc, item2) => conditions[item2.name].effect(acc, item2.value),
+        item
+      )
     );
 
     return conditionedPG;

@@ -13,6 +13,7 @@ const DiceRoller = (props) => {
   });
   const [bonus, setBonus] = useState(0);
   const [result, setResult] = useState(0);
+  const [actualMultiplier, setActualMultiplier] = useState(1);
 
   const theProps = {
     quantitySelect: {
@@ -53,6 +54,21 @@ const DiceRoller = (props) => {
         props.onDiceRolled(newValue);
       },
       children: "ROLL",
+    },
+    x2Button: {
+      onClick: () => setActualMultiplier(actualMultiplier !== 2 ? 2 : 1),
+      children: "X2",
+      className: actualMultiplier === 2 ? "bg-selected" : "",
+    },
+    x3Button: {
+      onClick: () => setActualMultiplier(actualMultiplier !== 3 ? 3 : 1),
+      children: "X2",
+      className: actualMultiplier === 3 ? "bg-selected" : "",
+    },
+    div2Button: {
+      onClick: () => setActualMultiplier(actualMultiplier !== 0.5 ? 0.5 : 1),
+      children: "/2",
+      className: actualMultiplier === 0.5 ? "bg-selected" : "",
     },
   };
   return (

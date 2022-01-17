@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import GlobalStyle from "./components/theme/GlobalStyle";
+import GlobalStyle from "./theme/GlobalStyle";
 import { Row, Column } from "./components/Grid";
 import Home from "./sections/Home";
 import Battle from "./sections/Battle";
