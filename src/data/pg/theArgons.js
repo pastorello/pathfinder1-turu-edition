@@ -16,12 +16,12 @@ const theArgons = [
         addestramento: 3,
       },
     },
-    strWeaponAttack: {
+    meleeAttack: {
       bonus: {
         addestramento: 2,
       },
     },
-    dexWeaponAttack: {
+    rangedAttack: {
       bonus: {
         addestramento: 2,
       },

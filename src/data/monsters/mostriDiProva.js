@@ -1,3 +1,5 @@
+import weapons from "../weapons";
+
 const mostriDiProva = [
   {
     id: "m0",
@@ -9,12 +11,18 @@ const mostriDiProva = [
       },
     },
     level: 1,
-    strWeaponAttack: {},
-    dexWeaponAttack: {},
     spellAttack: {},
     speed: 7.5,
-    strDamage: {},
-    dexDamage: {},
+    meleeAttack: {
+      bonus: {
+        base: 3,
+      },
+    },
+    rangedAttack: {
+      bonus: {
+        base: 3,
+      },
+    },
     armorClass: {
       bonus: {
         base: 10,
@@ -44,52 +52,20 @@ const mostriDiProva = [
     },
     actions: 3,
     sogliaMorente: 1,
-    attacks: [
-      {
-        name: "Spezzacolli orchesco",
-        dices: {
-          quantity: 1,
-          faces: 8,
-          bonus: 0,
-        },
-        attacks: [7, 2, -3],
-        weaponType: "t",
-        feats: ["impeto", "spazzare"],
+    attackTypes: {
+      spezzaColli: {
+        ...weapons.spezzaColli,
       },
-      {
-        name: "Spada corta",
-        dices: {
-          quantity: 1,
-          faces: 6,
-          bonus: 0,
-        },
-        attacks: [7, 3, -1],
-        weaponType: "t",
-        feats: ["agile", "versatile (p)"],
+      spadaCorta: {
+        ...weapons.spadaCorta,
       },
-      {
-        name: "Pugno",
-        dices: {
-          quantity: 1,
-          faces: 4,
-          bonus: 0,
-        },
-        attacks: [7, 3, -1],
-        weaponType: "c",
-        feats: ["agile", "non letale"],
+      pugno: {
+        ...weapons.pugno,
       },
-      {
-        name: "Giavellotto",
-        dices: {
-          quantity: 1,
-          faces: 6,
-          bonus: 0,
-        },
-        attacks: [5, 0, -5],
-        weaponType: "p",
-        feats: ["lancio 9"],
+      giavellotto: {
+        ...weapons.giavellotto,
       },
-    ],
+    },
     abilityCheck: {
       atletica: {
         bonus: {

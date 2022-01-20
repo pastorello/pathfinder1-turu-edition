@@ -9,7 +9,7 @@ import ConditionTag from "../../components/ConditionTag";
 import visibilityConditions from "../../data/conditions/visibilityConditions";
 import terrainConditions from "../../data/conditions/terrainConditions";
 import conditions from "../../data/conditions";
-import isValidObject from "../../tools/isValidObject";
+import isValid from "../../tools/isValid";
 import illuminationConditions from "../../data/conditions/illuminationConditions";
 
 const Wrapper = styled(Row)`
@@ -50,7 +50,7 @@ const Player = (props) => {
     const selectedCondition = props.conditions.find((item) =>
       availableConditions.some((item2) => item2.value === item.name)
     );
-    return isValidObject(selectedCondition)
+    return isValid.dataObj(selectedCondition)
       ? {
           value: selectedCondition.name,
           label: conditions[selectedCondition.name].name,

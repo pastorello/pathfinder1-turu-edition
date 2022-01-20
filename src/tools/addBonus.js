@@ -1,11 +1,11 @@
-import isValidDataObject from "./isValidObject";
+import isValid from "./isValid";
 
 const addBonus = (item, type, value) => {
-  const newObject = isValidDataObject(item)
+  const newObject = isValid.dataObj(item)
     ? { ...item }
     : { bonus: {}, malus: {} };
-  const newBonus = isValidDataObject(newObject.bonus) ? newObject.bonus : {};
-  const newMalus = isValidDataObject(newObject.malus) ? newObject.malus : {};
+  const newBonus = isValid.dataObj(newObject.bonus) ? newObject.bonus : {};
+  const newMalus = isValid.dataObj(newObject.malus) ? newObject.malus : {};
 
   return {
     bonus: {

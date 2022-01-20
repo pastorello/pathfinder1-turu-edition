@@ -1,10 +1,10 @@
-import isValidDataObject from "./isValidObject";
+import isValid from "./isValid";
 
 const getBonus = (stat) => {
   let theValue = 0;
 
-  if (isValidDataObject(stat)) {
-    if (isValidDataObject(stat.bonus)) {
+  if (isValid.dataObj(stat)) {
+    if (isValid.dataObj(stat.bonus)) {
       theValue =
         theValue +
         Object.keys(stat.bonus).reduce(
@@ -12,7 +12,7 @@ const getBonus = (stat) => {
           0
         );
     }
-    if (isValidDataObject(stat.malus)) {
+    if (isValid.dataObj(stat.malus)) {
       theValue =
         theValue +
         Object.keys(stat.malus).reduce(

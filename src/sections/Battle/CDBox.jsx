@@ -6,6 +6,9 @@ import { Row, Column } from "../../components/Grid";
 import getCDResult from "../../tools/getCDResult";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
+import isValid from "../../tools/isValid";
+import weapons from "../../data/weapons";
+import assignWeaponBuffs from "./assignWeaponBuffs";
 
 const checkTypes = [
   {
@@ -15,6 +18,10 @@ const checkTypes = [
   {
     label: "Attacco",
     value: "attack",
+  },
+  {
+    label: "Incantesimo",
+    value: "spellAttack",
   },
   {
     label: "Tiro Salvezza",
@@ -27,21 +34,6 @@ const checkTypes = [
   {
     label: "Prova Semplice",
     value: "baseCheck",
-  },
-];
-
-const attackTypes = [
-  {
-    label: "Attacco (fo)",
-    value: "strWeaponAttack",
-  },
-  {
-    label: "Attacco (de)",
-    value: "dexWeaponAttack",
-  },
-  {
-    label: "Incantesimo",
-    value: "spellAttack",
   },
 ];
 
@@ -61,6 +53,18 @@ const saveThrowTypes = [
 ];
 
 const CDBox = (props) => {
+  const attackTypes = isValid.dataObj(props.actualPG.attackTypes)
+    ? Object.keys(props.actualPG.attackTypes).map((item) => ({
+        value: item,
+        label: props.actualPG.attackTypes[item].name,
+      }))
+    : [
+        {
+          value: "pugno",
+          label: weapons.pugno.name,
+        },
+      ];
+
   const [actualCheckType, setActualCheckType] = useState(checkTypes[0]);
   const [actualAttackType, setAttackType] = useState(attackTypes[0]);
   const [actualsaveThrowType, setsaveThrowType] = useState(saveThrowTypes[0]);
@@ -71,11 +75,16 @@ const CDBox = (props) => {
   });
   const [actualCD, setActualCD] = useState(5);
 
+  const actualPlayer = assignWeaponBuffs(
+    actualAttackType.value,
+    props.actualPG
+  );
+
   const statGetters = {
-    attack: props.actualPG[actualAttackType.value],
-    abilityCheck: props.actualPG.abilityCheck[actualAbility.value],
-    saveThrow: props.actualPG[actualsaveThrowType.value],
-    classCheck: props.actualPG.classCheck,
+    attack: actualPlayer.attackBonus,
+    abilityCheck: actualPlayer.abilityCheck[actualAbility.value],
+    saveThrow: actualPlayer[actualsaveThrowType.value],
+    classCheck: actualPlayer.classCheck,
     baseCheck: { bonus: 0, malus: 0 },
   };
 
@@ -114,19 +123,23 @@ const CDBox = (props) => {
 
   return (
     <Row className="mb20">
-      <Column small={3}>
-        <Selector {...theProps.checkTypeSelect} />
-      </Column>
-      <Column small={3}>
-        {actualCheckType.value === "abilityCheck" && (
-          <Selector {...theProps.abilitySelect} />
-        )}
-        {actualCheckType.value === "attack" && (
-          <Selector {...theProps.attackTypeSelect} />
-        )}
-        {actualCheckType.value === "saveThrow" && (
-          <Selector {...theProps.saveThrowTypeSelect} />
-        )}
+      <Column small={6}>
+        <Row className={"collapse"}>
+          <Column small={4}>
+            <Selector {...theProps.checkTypeSelect} />
+          </Column>
+          <Column small={8}>
+            {actualCheckType.value === "abilityCheck" && (
+              <Selector {...theProps.abilitySelect} />
+            )}
+            {actualCheckType.value === "attack" && (
+              <Selector {...theProps.attackTypeSelect} />
+            )}
+            {actualCheckType.value === "saveThrow" && (
+              <Selector {...theProps.saveThrowTypeSelect} />
+            )}
+          </Column>
+        </Row>
       </Column>
       <Column small={3}>
         <CDRoller {...theProps.cdRoller} />

@@ -16,8 +16,7 @@ const basePhysicalConditions = {
         ),
       },
       hitPoints: addBonus(player.hitPoints, "nauseatoFix", value),
-      strDamage: addBonus(player.strDamage, "nauseatoFix", value),
-      dexDamage: addBonus(player.dexDamage, "nauseatoFix", value),
+      damage: addBonus(player.damage, "nauseatoFix", value),
       activeEffects: [
         ...player.activeEffects,
         "non puoi ingerire nulla volontariamente (pozioni ed elisir compresi)",

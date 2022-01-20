@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Row, Column } from "../Grid";
 import Selector from "../Selector";
 import dices from "../../data/dices";
-import isValidInt from "../../tools/isValidInt";
+import isValid from "../../tools/isValid";
 import classNames from "classnames";
 
 const DiceRoller = (props) => {
@@ -35,7 +35,7 @@ const DiceRoller = (props) => {
     },
     bonusInput: {
       onChange: (event) => {
-        const newValue = isValidInt(event.target.value)
+        const newValue = isValid.num(event.target.value)
           ? parseInt(event.target.value)
           : 0;
         setBonus(newValue);

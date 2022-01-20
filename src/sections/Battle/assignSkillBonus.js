@@ -3,8 +3,8 @@ import getBonus from "../../tools/getBonus";
 import abilities from "../../data/abilities";
 
 const skillBuffInfluence = {
-  fo: ["strWeaponAttack", "strDamage"],
-  de: ["dexWeaponAttack", "dexDamage", "armorClass", "tsRiflessi"],
+  fo: ["meleeAttack", "meleeDamage"],
+  de: ["rangedAttack", "rangedDamage", "armorClass", "tsRiflessi"],
   co: ["hitPoints", "tsTempra"],
   sa: ["perception", "tsVolonta"],
 };

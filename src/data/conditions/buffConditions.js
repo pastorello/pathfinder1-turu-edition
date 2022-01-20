@@ -1,8 +1,16 @@
 import addBonus from "../../tools/addBonus";
 
 const buffConditions = {
+  inCoperturaInferiore: {
+    name: "In Copertura Inferiore",
+    removesCondition: ["inCoperturaSuperiore", "inCopertura"],
+    effect: (player) => ({
+      ...player,
+      armorClass: addBonus(player.armorClass, "circostanza", 1),
+    }),
+  },
   inCopertura: {
-    removesCondition: ["inCoperturaSuperiore"],
+    removesCondition: ["inCoperturaSuperiore", "inCoperturaInferiore"],
     name: "In Copertura",
     effect: (player) => ({
       ...player,
@@ -15,7 +23,7 @@ const buffConditions = {
     }),
   },
   inCoperturaSuperiore: {
-    removesCondition: ["inCopertura"],
+    removesCondition: ["inCopertura", "inCoperturaInferiore"],
     name: "In Copertura Superiore",
     effect: (player) => ({
       ...player,
