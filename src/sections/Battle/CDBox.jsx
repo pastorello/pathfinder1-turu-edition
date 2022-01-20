@@ -9,6 +9,8 @@ import Selector from "../../components/Selector";
 import isValid from "../../tools/isValid";
 import weapons from "../../data/weapons";
 import assignWeaponBuffs from "./assignWeaponBuffs";
+import classNames from "classnames";
+import getBonus from "../../tools/getBonus";
 
 const checkTypes = [
   {
@@ -69,6 +71,7 @@ const CDBox = (props) => {
   const [actualAttackType, setAttackType] = useState(attackTypes[0]);
   const [actualsaveThrowType, setsaveThrowType] = useState(saveThrowTypes[0]);
   const [actualRoll, setActualRoll] = useState({ value: 1, label: 1 });
+  const [actualAttack, setActualAttack] = useState(0);
   const [actualAbility, setActualAbility] = useState({
     value: Object.keys(abilities)[0],
     label: abilities[Object.keys(abilities)[0]].name,
@@ -81,7 +84,7 @@ const CDBox = (props) => {
   );
 
   const statGetters = {
-    attack: actualPlayer.attackBonus,
+    attack: actualPlayer.attacks[actualAttack],
     abilityCheck: actualPlayer.abilityCheck[actualAbility.value],
     saveThrow: actualPlayer[actualsaveThrowType.value],
     classCheck: actualPlayer.classCheck,
@@ -89,6 +92,17 @@ const CDBox = (props) => {
   };
 
   const actualStat = statGetters[actualCheckType.value];
+  const attackBonus = actualPlayer.attacks.map((item) => getBonus(item));
+  const bonusDamage =
+    weapons[actualAttackType.value].dices.bonus +
+    getBonus(actualPlayer.bonusDamage);
+
+  const attackLabel = `${weapons[actualAttackType.value].dices.quantity}d${
+    weapons[actualAttackType.value].dices.faces
+  }${bonusDamage >= 0 ? " + " : " "}${
+    weapons[actualAttackType.value].dices.bonus +
+    getBonus(actualPlayer.bonusDamage)
+  }`;
 
   const theProps = {
     abilitySelect: {
@@ -119,21 +133,60 @@ const CDBox = (props) => {
       roll: actualRoll,
       setRoll: setActualRoll,
     },
+    attack1Button: {
+      onClick: () => setActualAttack(0),
+      children: `${attackBonus[0] >= 0 ? "+" : ""}${attackBonus[0]}`,
+      className: classNames("mini-button", {
+        "bg-selected": actualAttack === 0,
+      }),
+    },
+    attack2Button: {
+      onClick: () => setActualAttack(1),
+      children: `${attackBonus[1] >= 0 ? "+" : ""}${attackBonus[1]}`,
+      className: classNames("mini-button", {
+        "bg-selected": actualAttack === 1,
+      }),
+    },
+    attack3Button: {
+      onClick: () => setActualAttack(2),
+      children: `${attackBonus[2] >= 0 ? "+" : ""}${attackBonus[2]}`,
+      className: classNames("mini-button", {
+        "bg-selected": actualAttack === 2,
+      }),
+    },
   };
 
   return (
-    <Row className="mb20">
+    <Row className="mb20 collapse">
       <Column small={6}>
-        <Row className={"collapse"}>
-          <Column small={4}>
+        <Row>
+          <Column small={5}>
             <Selector {...theProps.checkTypeSelect} />
           </Column>
-          <Column small={8}>
+          <Column small={7}>
             {actualCheckType.value === "abilityCheck" && (
               <Selector {...theProps.abilitySelect} />
             )}
             {actualCheckType.value === "attack" && (
-              <Selector {...theProps.attackTypeSelect} />
+              <Row className="collapse">
+                <Column small={8}>
+                  <Selector {...theProps.attackTypeSelect} />
+                </Column>
+                <Column small={4} className="center">
+                  <div>{attackLabel}</div>
+                  <Row className="collapse center">
+                    <Column small={4}>
+                      <button {...theProps.attack1Button} />
+                    </Column>
+                    <Column small={4}>
+                      <button {...theProps.attack2Button} />
+                    </Column>
+                    <Column small={4}>
+                      <button {...theProps.attack3Button} />
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
             )}
             {actualCheckType.value === "saveThrow" && (
               <Selector {...theProps.saveThrowTypeSelect} />
@@ -141,21 +194,25 @@ const CDBox = (props) => {
           </Column>
         </Row>
       </Column>
-      <Column small={3}>
-        <CDRoller {...theProps.cdRoller} />
-      </Column>
-      <Column small={3}>
+      <Column small={6}>
         <Row>
-          <Column className="shrink center-content">
-            <div className="label">CD</div>
+          <Column small={6}>
+            <CDRoller {...theProps.cdRoller} />
           </Column>
           <Column small={3}>
-            <input
-              value={actualCD}
-              onChange={(event) => setActualCD(event.target.value)}
-            />
+            <Row>
+              <Column className="shrink center-content">
+                <div className="label">CD</div>
+              </Column>
+              <Column>
+                <input
+                  value={actualCD}
+                  onChange={(event) => setActualCD(event.target.value)}
+                />
+              </Column>
+            </Row>
           </Column>
-          <Column className="center-content">
+          <Column small={3} className="center-content">
             <div className="label">
               {getCDResult(
                 actualRoll.value,

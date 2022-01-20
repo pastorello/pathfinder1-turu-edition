@@ -23,7 +23,7 @@ const weaponsTraits = {
     name: "Agile",
     effect: (player) => ({
       ...player,
-      attacks: [0, player.attacks[1] - 2, player.attacks[3] - 2],
+      attacks: [0, player.attacks[1] + 2, player.attacks[2] + 2],
     }),
   },
   lancio: {

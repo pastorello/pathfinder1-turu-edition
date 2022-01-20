@@ -7,10 +7,7 @@ const senzArmi = {
       bonus: 0,
     },
     weaponType: "c",
-    traits: [
-      { name: "agile", value: false },
-      { name: "nonLetale", value: true },
-    ],
+    traits: [{ name: "agile" }, { name: "nonLetale", value: false }],
   },
 };
 

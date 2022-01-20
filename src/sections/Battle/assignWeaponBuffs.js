@@ -1,5 +1,7 @@
 import weaponsTraits from "../../data/weapons/weaponsTraits";
 import weapons from "../../data/weapons";
+import getBonus from "../../tools/getBonus";
+import addBonus from "../../tools/addBonus";
 
 const assignWeaponBuffs = (theWeapon, player) => {
   const thePlayer = weapons[theWeapon].traits.reduce(
@@ -11,11 +13,15 @@ const assignWeaponBuffs = (theWeapon, player) => {
     }
   );
 
+  const attackBonus =
+    thePlayer.range > 0 ? thePlayer.rangedAttack : thePlayer.meleeAttack;
+
   return {
     ...thePlayer,
-    attackBonus:
-      thePlayer.range > 0 ? thePlayer.rangedAttack : thePlayer.meleeAttack,
-    damageBonus:
+    attacks: thePlayer.attacks.map((item) =>
+      addBonus(attackBonus, "attackNumber", item)
+    ),
+    bonusDamage:
       thePlayer.range > 0 ? thePlayer.rangedDamage : thePlayer.meleeDamage,
   };
 };

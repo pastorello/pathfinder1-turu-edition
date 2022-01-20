@@ -8,7 +8,7 @@ import dices from "../../data/dices";
 const CDRoller = (props) => {
   const theProps = {
     rollSelect: {
-      options: dices.d20.map((item) => ({ value: item, label: item })),
+      options: dices.d20.map((item) => ({ value: item, label: item + 1 })),
       onChange: (event) => props.setRoll(event),
       value: props.roll,
     },
