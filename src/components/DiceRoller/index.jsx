@@ -80,19 +80,23 @@ const DiceRoller = (props) => {
   };
   return (
     <Row className="mb20">
-      <Column>
-        <Selector {...theProps.quantitySelect} />
+      <Column small={5}>
+        <Row>
+          <Column small={6}>
+            <Selector {...theProps.quantitySelect} />
+          </Column>
+          <Column small={6}>
+            <Selector {...theProps.facesSelect} />
+          </Column>
+        </Row>
       </Column>
-      <Column>
-        <Selector {...theProps.facesSelect} />
-      </Column>
-      <Column>
+      <Column small={2}>
         <input {...theProps.bonusInput} />
       </Column>
-      <Column>
+      <Column small={2}>
         <button {...theProps.rollButton} />
       </Column>
-      <Column>
+      <Column small={3}>
         Risultato:{" "}
         <strong>{Math.floor(parseInt(result) * actualMultiplier)}</strong>
         <Row className="collapse">

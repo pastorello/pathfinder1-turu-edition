@@ -34,7 +34,6 @@ const theArgons = [
     speed: 7.5,
     armorClass: {
       bonus: {
-        base: 10,
         addestramento: 2,
         armor: 2,
       },

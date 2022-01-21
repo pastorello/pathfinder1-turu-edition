@@ -6,11 +6,13 @@ import addBonus from "../../tools/addBonus";
 import getBonus from "../../tools/getBonus";
 import sortOnKey from "../../tools/sortOnKey";
 import assignSkillBonus from "./assignSkillBonus";
+import AttackBox from "./AttackBox";
 import CDBox from "./CDBox";
 import ConditionsBox from "./ConditionsBox";
 import DamageRoller from "./DamageRoller";
 import party from "./party";
 import Player from "./Player";
+import VsBox from "./VSBox";
 
 const parseParty = (item) =>
   item.map((item2) => ({
@@ -29,7 +31,7 @@ const Battle = (props) => {
   const [actualPlayer, setActualPlayer] = useState(party[0].id);
   const [panchina, setPanchina] = useState([]);
   const [actualRollResult, setActualRollResult] = useState(0);
-  const [selectedPG, editSelectedPG] = useState({
+  const [selectedPG, setSelectedPG] = useState({
     value: party.length > 0 ? party[0].id : "no players",
     label: party.length > 0 ? party[0].name : "no players",
   });
@@ -151,6 +153,10 @@ const Battle = (props) => {
     const newSort = theParty.sort(sortOnKey("initiativeRoll", "number", true));
     setParty(newSort);
     setActualPlayer(newSort[0].id);
+    setSelectedPG({
+      value: newSort[0].id,
+      label: newSort[0].name,
+    });
   };
 
   const nextTurn = () => {
@@ -215,6 +221,15 @@ const Battle = (props) => {
 
     return conditionedPG;
   });
+  const actualPG = buffedParty.reduce(
+    (item, acc) => (item.id === selectedPG.value ? item : acc),
+    {}
+  );
+  const actualTurnPG = buffedParty.reduce(
+    (item, acc) => (item.id === actualPlayer ? item : acc),
+    {}
+  );
+
   const thePlayers = buffedParty.map((item) => {
     const theProps = {
       ...item,
@@ -241,17 +256,24 @@ const Battle = (props) => {
   });
 
   const theProps = {
+    vsBox: {
+      actualParty: buffedParty,
+      selectedPG: actualTurnPG,
+      vsPG: actualPG,
+      editSelectedPG: setSelectedPG,
+    },
     conditionsBox: {
       addConditionAction: addCondition,
       actualParty: buffedParty,
       selectedPG: selectedPG,
-      editSelectedPG: editSelectedPG,
+      editSelectedPG: setSelectedPG,
+    },
+    attackBox: {
+      actualPG: actualTurnPG,
+      vsPG: actualPG,
     },
     cdBox: {
-      actualPG: buffedParty.reduce(
-        (item, acc) => (item.id === selectedPG.value ? item : acc),
-        {}
-      ),
+      actualPG: actualPG,
     },
     damageRoller: {
       onDiceRolled: setActualRollResult,
@@ -269,7 +291,7 @@ const Battle = (props) => {
     },
   };
   return (
-    <Row className="mb20">
+    <Row>
       <Column small={12}>
         <Row>
           <Column small={4}>
@@ -301,11 +323,24 @@ const Battle = (props) => {
             </button>
           </Column>
         </Row>
-        <DamageRoller {...theProps.damageRoller} />
-        <hr />
-        {thePlayers.length > 0 && <ConditionsBox {...theProps.conditionsBox} />}
-        {thePlayers.length > 0 && <CDBox {...theProps.cdBox} />}
-        {thePlayers}
+        <hr className="mb20" />
+        {thePlayers.length > 0 && (
+          <>
+            <Row className="collapse">
+              <Column small={3}>
+                <VsBox {...theProps.vsBox} />
+              </Column>
+              <Column small={9}>
+                <AttackBox {...theProps.attackBox} />
+                <DamageRoller {...theProps.damageRoller} />
+                <CDBox {...theProps.cdBox} />
+                <ConditionsBox {...theProps.conditionsBox} />
+              </Column>
+            </Row>
+            <hr />
+            {thePlayers}
+          </>
+        )}
         <h2 className="mt40">Fuori dal combattimento</h2>
         {outOfCombatPlayers}
       </Column>

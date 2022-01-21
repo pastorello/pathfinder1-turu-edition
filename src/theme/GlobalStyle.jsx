@@ -15,7 +15,6 @@ export default createGlobalStyle`
     }
     h1 {
         font-size: 30px;
-        margin-bottom: 20px;
         font-weight: bold;
     }
     h2 {
@@ -71,5 +70,9 @@ export default createGlobalStyle`
     .center {
         justify-content: center;
         text-align: center;
+    }
+    .columns > .row {
+        margin-left: -5px;
+        margin-right: -5px;
     }
 `;

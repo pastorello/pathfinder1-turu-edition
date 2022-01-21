@@ -25,7 +25,7 @@ const App = (props) => {
               <Link to="/deities">Divinità</Link>
             </li>
             <li>
-              <Link to="/battle">Combattimento</Link>
+              <Link to="/battle">Battaglia</Link>
             </li>
           </ul>
         </Column>

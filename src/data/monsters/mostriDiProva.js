@@ -25,7 +25,6 @@ const mostriDiProva = [
     },
     armorClass: {
       bonus: {
-        base: 10,
         armor: 4,
         addestramento: 2,
       },

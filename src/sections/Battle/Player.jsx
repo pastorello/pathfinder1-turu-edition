@@ -112,7 +112,7 @@ const Player = (props) => {
         props.setStatAction(
           props.id,
           "actualPF",
-          props.actualPF + parseInt(PFinput)
+          props.actualPF + (PFinput !== 0 ? parseInt(PFinput) : 1)
         ),
       children: "+",
     },
@@ -121,7 +121,7 @@ const Player = (props) => {
         props.setStatAction(
           props.id,
           "actualPF",
-          props.actualPF - parseInt(PFinput)
+          props.actualPF - (PFinput !== 0 ? parseInt(PFinput) : 1)
         ),
       children: "-",
     },
@@ -195,7 +195,7 @@ const Player = (props) => {
       <Column small={9}>
         <Row>
           <Column>
-            <div>CA: {getBonus(props.armorClass)}</div>
+            <div>CA: {getBonus(props.armorClass) + 10}</div>
             <Row className="collapse">
               <Column small={4} className="center-content">
                 <div className="label">

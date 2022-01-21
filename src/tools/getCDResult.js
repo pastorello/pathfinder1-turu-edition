@@ -1,31 +1,36 @@
 import getBonus from "./getBonus";
-
-const getCDResult = (roll, modificators, CD, type) => {
-  const result = roll + getBonus(modificators);
+import isValid from "./isValid";
+const getCDResult = (roll, modificators, CD, versusStat) => {
+  const result = roll - 10 + getBonus(modificators);
   let resultMessage = "";
+  let additionalMessage = "";
 
-  if (result >= CD + 10) {
-    return "crit succ!";
-  }
-  if (result <= CD - 10) {
-    return "crit fail!";
+  const theCD = parseInt(CD);
+
+  if (result >= theCD + 10) {
+    resultMessage = "crit succ!";
   }
 
-  if (result < CD) {
-    resultMessage = "fail";
-    if (type === "attack") {
-      Object.keys(modificators.bonus).reduce((acc, item) => {
-        if (acc >= CD) {
-          resultMessage = item;
+  if (result < theCD) {
+    resultMessage = result <= theCD - 10 ? "crit fail!" : "fail";
+    if (isValid.dataObj(versusStat)) {
+      Object.keys(versusStat.bonus).reduce((acc, item) => {
+        if (acc >= result) {
+          additionalMessage = item;
         }
-        return acc - modificators.bonus[item];
-      }, result);
+        return acc - versusStat.bonus[item];
+      }, getBonus(versusStat));
     }
   } else {
     resultMessage = "success";
   }
 
-  return resultMessage;
+  return (
+    <>
+      <div>{resultMessage}</div>
+      <div>{additionalMessage}</div>
+    </>
+  );
 };
 
 export default getCDResult;

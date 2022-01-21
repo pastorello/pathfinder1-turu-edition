@@ -1,6 +1,6 @@
 const senzArmi = {
   pugno: {
-    name: "Pugno",
+    name: "Senza Armi",
     dices: {
       quantity: 1,
       faces: 4,

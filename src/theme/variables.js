@@ -1,13 +1,8 @@
 const typography = {
-  baseFontStack: '"Open Sans", sans-serif',
-  titleFontStack: "akzidenz-grotesk",
   fontLight: 200,
   fontNormal: 400,
   fontSemibold: 600,
   fontBold: 700,
-  baseFontSize: "16px",
-  labelFontSize: "12px",
-  inputsFontSize: "12px",
 };
 
 const breakpoints = {
@@ -33,29 +28,12 @@ const zDimensions = {
 };
 
 const xyDimensions = {
-  columnGutter: 20,
+  columnGutter: 10,
   gridWidth: "1060px",
-  globalPadding: "16px",
-  globalMargin: "16px",
-  iconButtonWidth: "36px",
-  iconButtonWidthBig: "50px",
-  sidebarLeftWidth: "200px",
-  sidebarRightWidth: "280px",
-};
-
-const animations = {
-  hoverAnimationTiming: "0.25s",
-  hoverAnimationType: "ease-out",
-};
-
-const buttons = {
-  buttonFontSize: "16px",
 };
 
 const themeVariables = {
   ...typography,
-  ...buttons,
-  ...animations,
   ...xyDimensions,
   ...zDimensions,
   ...breakpoints,

@@ -38,14 +38,6 @@ const ConditionsBox = (props) => {
   );
 
   const theProps = {
-    PGSelect: {
-      options: props.actualParty.map((item) => ({
-        value: item.id,
-        label: item.name,
-      })),
-      onChange: (value) => props.editSelectedPG(value),
-      value: props.selectedPG,
-    },
     conditionSelect: {
       options: conditionsList,
       onChange: (value) => editSelectedCondition(value),
@@ -77,26 +69,23 @@ const ConditionsBox = (props) => {
 
   return (
     <Row className="mb20">
-      <Column small={3}>
-        <Selector {...theProps.PGSelect} />
-      </Column>
-      <Column small={4}>
-        <Row className="collapse">
-          <Column>
+      <Column small={6}>
+        <Row>
+          <Column small={8}>
             <Selector {...theProps.conditionSelect} />
           </Column>
 
           {conditions[selectedCondition.value].hasValue === true && (
-            <Column className="shrink">
+            <Column small={4}>
               <Selector {...theProps.valueSelect} />
             </Column>
           )}
         </Row>
       </Column>
-      <Column small={2}>
+      <Column small={3}>
         <Selector {...theProps.roundsSelect} />
       </Column>
-      <Column>
+      <Column small={3}>
         <button {...theProps.addConditionButton} />
       </Column>
     </Row>
