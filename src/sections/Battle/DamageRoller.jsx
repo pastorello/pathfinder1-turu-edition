@@ -10,23 +10,23 @@ const DamageRoller = (props) => {
     },
     assignDamageButton: {
       onClick: () => props.onAssignRoll("damage"),
-      children: "Assegna danno",
+      children: "Danno",
     },
     assignHealButton: {
       onClick: () => props.onAssignRoll("heal"),
-      children: "Assegna cura",
+      children: "Cura",
     },
   };
   return (
     <Row>
-      <Column small={8}>
-        <DiceRoller {...theProps.cdRoller} />
-      </Column>
-      <Column>
+      <Column small={2}>
         <button {...theProps.assignDamageButton} />
       </Column>
-      <Column>
+      <Column small={2}>
         <button {...theProps.assignHealButton} />
+      </Column>
+      <Column small={8}>
+        <DiceRoller {...theProps.cdRoller} />
       </Column>
     </Row>
   );

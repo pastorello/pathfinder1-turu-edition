@@ -5,37 +5,15 @@ import { Row, Column } from "../../components/Grid";
 import getCDResult from "../../tools/getCDResult";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
-import isValid from "../../tools/isValid";
 import weapons from "../../data/weapons";
 import assignWeaponBuffs from "./assignWeaponBuffs";
 import classNames from "classnames";
 import getBonus from "../../tools/getBonus";
 
 const AttackBox = (props) => {
-  const baseAttackTypes = [
-    {
-      value: "pugno",
-      label: weapons.pugno.name,
-    },
-  ];
-
-  if (getBonus(props.actualPG.spellAttack) > 0) {
-    baseAttackTypes.push({
-      value: "incantesimo",
-      label: "Incantesimo",
-    });
-  }
-
-  const additionalAttackTypes = isValid.dataObj(props.actualPG.attackTypes)
-    ? Object.keys(props.actualPG.attackTypes).map((item) => ({
-        value: item,
-        label: props.actualPG.attackTypes[item].name,
-      }))
-    : [];
-
-  const attackTypes = [...baseAttackTypes, ...additionalAttackTypes];
-
-  const [actualAttackType, setAttackType] = useState(attackTypes[0]);
+  const [actualAttackType, setAttackType] = useState(
+    props.actualPG.attackTypes[0]
+  );
   const [actualRoll, setActualRoll] = useState({ value: 1, label: 1 });
   const [actualAttack, setActualAttack] = useState(0);
   const [actualCD, setActualCD] = useState(
@@ -45,6 +23,11 @@ const AttackBox = (props) => {
   useEffect(() => {
     setActualCD(getBonus(props.vsPG.armorClass) + 10);
   }, [props.vsPG.armorClass]);
+
+  useEffect(() => {
+    setAttackType(props.actualPG.attackTypes[0]);
+  }, [props.actualPG.attackTypes]);
+
   const actualPlayer = assignWeaponBuffs(
     actualAttackType.value,
     props.actualPG
@@ -73,7 +56,7 @@ const AttackBox = (props) => {
 
   const theProps = {
     attackTypeSelect: {
-      options: attackTypes,
+      options: props.actualPG.attackTypes,
       onChange: (event) => setAttackType(event),
       value: actualAttackType,
     },

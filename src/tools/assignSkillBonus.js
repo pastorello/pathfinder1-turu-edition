@@ -1,6 +1,6 @@
-import addBonus from "../../tools/addBonus";
-import getBonus from "../../tools/getBonus";
-import abilities from "../../data/abilities";
+import addBonus from "./addBonus";
+import getBonus from "./getBonus";
+import abilities from "../data/abilities";
 
 const skillBuffInfluence = {
   fo: ["meleeAttack", "meleeDamage"],

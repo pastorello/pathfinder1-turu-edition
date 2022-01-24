@@ -1,40 +1,34 @@
 import React, { useState } from "react";
 
+import parseParty from "../../tools/parseParty";
+
 import { Row, Column } from "../../components/Grid";
-import conditions from "../../data/conditions";
-import addBonus from "../../tools/addBonus";
-import getBonus from "../../tools/getBonus";
-import sortOnKey from "../../tools/sortOnKey";
-import assignSkillBonus from "./assignSkillBonus";
 import AttackBox from "./AttackBox";
 import CDBox from "./CDBox";
-import ConditionsBox from "./ConditionsBox";
-import DamageRoller from "./DamageRoller";
-import party from "./party";
 import Player from "./Player";
 import VsBox from "./VSBox";
+import DamageRoller from "./DamageRoller";
+import ConditionsBox from "./ConditionsBox";
 
-const parseParty = (item) =>
-  item.map((item2) => ({
-    ...item2,
-    ferito: 0,
-    actualPF: getBonus(
-      addBonus(item2.hitPoints, "co", getBonus(item2.skillCheck.co))
-    ),
-    conditions: [],
-    activeEffects: [],
-  }));
+import conditions from "../../data/conditions";
+import getBonus from "../../tools/getBonus";
+import sortOnKey from "../../tools/sortOnKey";
+import buffParty from "../../tools/buffParty";
+
+import party from "./party";
 
 const Battle = (props) => {
   const [actualTurn, setActualTurn] = useState(0);
-  const [theParty, setParty] = useState(parseParty(party));
   const [actualPlayer, setActualPlayer] = useState(party[0].id);
-  const [panchina, setPanchina] = useState([]);
-  const [actualRollResult, setActualRollResult] = useState(0);
   const [selectedPG, setSelectedPG] = useState({
     value: party.length > 0 ? party[0].id : "no players",
     label: party.length > 0 ? party[0].name : "no players",
   });
+
+  const [theParty, setParty] = useState(parseParty(party));
+  const [panchina, setPanchina] = useState([]);
+
+  const [actualRollResult, setActualRollResult] = useState(0);
 
   const resetBattle = () => {
     setActualTurn(0);
@@ -211,16 +205,8 @@ const Battle = (props) => {
     }
   };
 
-  const buffedParty = theParty.map((item) => {
-    let conditionedPG = assignSkillBonus(
-      item.conditions.reduce(
-        (acc, item2) => conditions[item2.name].effect(acc, item2.value),
-        item
-      )
-    );
+  const buffedParty = buffParty(theParty);
 
-    return conditionedPG;
-  });
   const actualPG = buffedParty.reduce(
     (item, acc) => (item.id === selectedPG.value ? item : acc),
     {}
