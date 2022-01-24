@@ -64,7 +64,6 @@ const AttackBox = (props) => {
       stat: actualPlayer.attacks[actualAttack],
       roll: actualRoll,
       setRoll: setActualRoll,
-      rollButtonOnLeft: true,
     },
     attack1Button: {
       onClick: () => setActualAttack(0),

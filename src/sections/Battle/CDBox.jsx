@@ -81,7 +81,6 @@ const CDBox = (props) => {
       value: actualsaveThrowType,
     },
     cdRoller: {
-      rollButtonOnLeft: true,
       stat: actualStat,
       roll: actualRoll,
       setRoll: setActualRoll,

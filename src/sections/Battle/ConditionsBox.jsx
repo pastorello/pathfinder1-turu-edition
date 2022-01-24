@@ -58,7 +58,7 @@ const ConditionsBox = (props) => {
     },
     addConditionButton: {
       onClick: () =>
-        props.addConditionAction(props.selectedPG.value, {
+        props.addConditionAction(props.selectedPGID, {
           name: selectedCondition.value,
           value: selectedValue.value,
           duration: selectedDuration.value,

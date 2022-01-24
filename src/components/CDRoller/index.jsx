@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Row, Column } from "../Grid";
 import getBonus from "../../tools/getBonus";
@@ -6,6 +6,13 @@ import Selector from "../Selector";
 import dices from "../../data/dices";
 
 const CDRoller = (props) => {
+  const [resultClass, setResultClass] = useState("");
+
+  useEffect(() => {
+    setResultClass("is-changed");
+    setTimeout(() => setResultClass(""), 1000);
+  }, [props.roll]);
+
   const theProps = {
     rollSelect: {
       options: dices.d20.map((item) => ({ value: item, label: item + 1 })),
@@ -25,44 +32,21 @@ const CDRoller = (props) => {
   };
 
   const theBonus = getBonus(props.stat);
-  if (props.rollButtonOnLeft === true) {
-    return (
-      <Row>
-        <Column small={4}>
-          <button {...theProps.rollButton} />
-        </Column>
-        <Column small={5}>
-          <Selector {...theProps.rollSelect} />
-        </Column>
-        <Column small={3}>
-          <div>
-            {theBonus > 0 && "+"}
-            {theBonus}
-          </div>
-          <div>
-            <strong>{theBonus + props.roll.value}</strong>
-          </div>
-        </Column>
-      </Row>
-    );
-  }
-
   return (
     <Row>
-      <Column className="shrink center-content">
-        <div className="label">
-          <strong>{theBonus}</strong> +
-        </div>
-      </Column>
-      <Column>
-        <Selector {...theProps.rollSelect} />
-      </Column>
-      <Column className="shrink">
+      <Column small={4}>
         <button {...theProps.rollButton} />
       </Column>
-      <Column className="center-content">
+      <Column small={5}>
+        <Selector {...theProps.rollSelect} />
+      </Column>
+      <Column small={3}>
         <div>
-          = <strong>{theBonus + props.roll.value}</strong>
+          {theBonus > 0 && "+"}
+          {theBonus}
+        </div>
+        <div className={"total-result " + resultClass}>
+          <strong>{theBonus + props.roll.value}</strong>
         </div>
       </Column>
     </Row>

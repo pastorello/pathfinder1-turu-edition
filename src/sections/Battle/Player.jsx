@@ -177,19 +177,7 @@ const Player = (props) => {
           </Column>
         </Row>
         <hr />
-        <Row className="align-center center">
-          <Column small={6}>
-            <div>Percezione</div>
-            <div>{getBonus(props.perception)}</div>
-          </Column>
-          <Column small={6}>
-            <div>Iniziativa</div>
-            <div>
-              <strong>{props.initiativeRoll}</strong>
-            </div>
-          </Column>
-        </Row>
-        <hr />
+        <div>Iniziativa</div>
         <CDRoller {...theProps.cdRoller} />
       </Column>
       <Column small={9}>

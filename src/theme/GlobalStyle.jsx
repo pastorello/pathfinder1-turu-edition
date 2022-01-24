@@ -2,11 +2,23 @@ import { createGlobalStyle } from "styled-components";
 import chroma from "chroma-js";
 import baseCss from "./mixin/baseCss";
 import cssReset from "./mixin/cssReset";
+import { keyframes } from "styled-components";
 
 const borderColor = chroma.hsl(0, 0, 0.8);
 const bgButtonColor = chroma.hsl(0, 0, 0.95);
 const hoverBg = chroma.temperature(3500);
 const selectedBg = chroma.hcl(130, 40, 80);
+
+const rotate = keyframes`
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+`;
+
 export default createGlobalStyle`
 
     ${cssReset}
@@ -74,5 +86,14 @@ export default createGlobalStyle`
     .columns > .row {
         margin-left: -5px;
         margin-right: -5px;
+    }
+    .total-result {
+        text-align: center;
+        background: #333;
+        color: #fff;
+        border-radius: 4px;
+        &.is-changed {
+            animation: ${rotate} 1s linear;
+        }
     }
 `;

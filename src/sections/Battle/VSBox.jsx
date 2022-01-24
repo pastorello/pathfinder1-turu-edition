@@ -10,7 +10,7 @@ const VsBox = (props) => {
         value: item.id,
         label: item.name,
       })),
-      onChange: (value) => props.editSelectedPG(value),
+      onChange: (value) => props.setVSPG(value.value),
       value: {
         value: props.vsPG.id,
         label: props.vsPG.name,

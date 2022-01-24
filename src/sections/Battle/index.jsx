@@ -20,10 +20,9 @@ import party from "./party";
 const Battle = (props) => {
   const [actualTurn, setActualTurn] = useState(0);
   const [actualPlayer, setActualPlayer] = useState(party[0].id);
-  const [selectedPG, setSelectedPG] = useState({
-    value: party.length > 0 ? party[0].id : "no players",
-    label: party.length > 0 ? party[0].name : "no players",
-  });
+  const [selectedPG, setSelectedPG] = useState(
+    party[party.length > 1 ? 1 : 0].id
+  );
 
   const [theParty, setParty] = useState(parseParty(party));
   const [panchina, setPanchina] = useState([]);
@@ -147,10 +146,7 @@ const Battle = (props) => {
     const newSort = theParty.sort(sortOnKey("initiativeRoll", "number", true));
     setParty(newSort);
     setActualPlayer(newSort[0].id);
-    setSelectedPG({
-      value: newSort[0].id,
-      label: newSort[0].name,
-    });
+    setSelectedPG(newSort[newSort.length > 1 ? 1 : 0].id);
   };
 
   const nextTurn = () => {
@@ -208,7 +204,7 @@ const Battle = (props) => {
   const buffedParty = buffParty(theParty);
 
   const actualPG = buffedParty.reduce(
-    (item, acc) => (item.id === selectedPG.value ? item : acc),
+    (item, acc) => (item.id === selectedPG ? item : acc),
     {}
   );
   const actualTurnPG = buffedParty.reduce(
@@ -246,13 +242,12 @@ const Battle = (props) => {
       actualParty: buffedParty,
       selectedPG: actualTurnPG,
       vsPG: actualPG,
-      editSelectedPG: setSelectedPG,
+      setVSPG: setSelectedPG,
     },
     conditionsBox: {
       addConditionAction: addCondition,
       actualParty: buffedParty,
-      selectedPG: selectedPG,
-      editSelectedPG: setSelectedPG,
+      selectedPGID: selectedPG,
     },
     attackBox: {
       actualPG: actualTurnPG,
@@ -266,10 +261,10 @@ const Battle = (props) => {
       roll: actualRollResult,
       onAssignRoll: (type) =>
         setStat(
-          selectedPG.value,
+          selectedPG,
           "actualPF",
           buffedParty.reduce(
-            (acc, item) => (item.id === selectedPG.value ? item.actualPF : acc),
+            (acc, item) => (item.id === selectedPG ? item.actualPF : acc),
             0
           ) +
             (type === "heal" ? 1 : -1) * parseInt(actualRollResult)
