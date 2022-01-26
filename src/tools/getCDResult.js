@@ -17,42 +17,31 @@ const getCDResult = (roll, modificators, CD, versusStat) => {
   const stats = isValid.dataObj(versusStat)
     ? getStatsOrder(versusStat.bonus)
     : [];
-  const result = roll - 10 + getBonus(modificators);
-  let resultMessage = "";
-  let additionalMessage = "";
-
+  const theResult = roll + getBonus(modificators);
   const theCD = parseInt(CD);
 
-  if (result >= theCD + 10) {
-    resultMessage = "crit succ!";
-  }
+  let resultMessage = theResult >= theCD + 10 ? "CRIT SUCCESS!" : "Success";
+  let additionalMessage = "";
 
-  if (result < theCD) {
-    if (result <= theCD - 10) {
-      resultMessage = "crit fail!";
-    }
-    if (result < 0) {
-      resultMessage = "Manchi il bersaglio";
-    } else {
+  if (theResult < theCD) {
+    if (stats.length > 0) {
       stats.reduce((acc, item) => {
-        if (acc >= result) {
+        if (acc >= theResult) {
           additionalMessage = protectionsMessage.hasOwnProperty(item)
             ? protectionsMessage[item]
             : item;
         }
         return acc - versusStat.bonus[item];
-      }, getBonus(versusStat));
+      }, 10 + getBonus(versusStat));
+      resultMessage =
+        theResult < 10 ? "Manchi il bersaglio" : additionalMessage;
+    } else {
+      resultMessage = "Fail";
     }
-  } else {
-    resultMessage = "success";
+    resultMessage = theResult <= theCD - 10 ? "CRIT FAIL!" : resultMessage;
   }
 
-  return (
-    <>
-      <div>{resultMessage}</div>
-      <div>{additionalMessage}</div>
-    </>
-  );
+  return <div>{resultMessage}</div>;
 };
 
 export default getCDResult;

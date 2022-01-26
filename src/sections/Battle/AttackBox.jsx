@@ -136,7 +136,7 @@ const AttackBox = (props) => {
               {getCDResult(
                 actualRoll.value,
                 actualPlayer.attacks[actualAttack],
-                actualCD - 10,
+                actualCD,
                 props.vsPG.armorClass
               )}
             </div>
