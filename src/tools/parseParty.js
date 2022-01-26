@@ -41,6 +41,7 @@ const parseParty = (party) => {
     activeEffects: [],
     attackTypes: getAttackTypes(item),
     selectedAttack: 0,
+    lastTarget: item.id,
   }));
 
   return theParty;

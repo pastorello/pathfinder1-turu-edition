@@ -31,13 +31,13 @@ const Battle = (props) => {
 
   const resetBattle = () => {
     setActualTurn(0);
-    setActualPlayer(theParty[0].id);
+    goToPGTurn(theParty[0].id);
   };
 
   const reloadParty = () => {
     setParty(parseParty(party));
     setPanchina([]);
-    setActualPlayer(party[0].id);
+    resetBattle();
   };
 
   const addCondition = (playerID, condition) => {
@@ -145,8 +145,7 @@ const Battle = (props) => {
   const sortInitiative = () => {
     const newSort = theParty.sort(sortOnKey("initiativeRoll", "number", true));
     setParty(newSort);
-    setActualPlayer(newSort[0].id);
-    setSelectedPG(newSort[newSort.length > 1 ? 1 : 0].id);
+    goToPGTurn(newSort[0].id);
   };
 
   const nextTurn = () => {
@@ -156,7 +155,7 @@ const Battle = (props) => {
       const newParty = [...theParty];
       newParty.shift();
       setParty([...newParty, lastPlayer]);
-      setActualPlayer(newParty[0].id);
+      goToPGTurn(newParty[0].id);
     }
   };
 
@@ -201,12 +200,33 @@ const Battle = (props) => {
     }
   };
 
+  const setVsPG = (playerID) => {
+    setSelectedPG(playerID);
+    setParty(
+      theParty.map((item) => ({
+        ...item,
+        lastTarget: item.id === actualPlayer ? playerID : item.lastTarget,
+      }))
+    );
+  };
+
+  const goToPGTurn = (playerID) => {
+    setActualPlayer(playerID);
+    setSelectedPG(
+      theParty.reduce(
+        (acc, item) => (item.id === playerID ? item.lastTarget : acc),
+        playerID
+      )
+    );
+  };
+
   const buffedParty = buffParty(theParty);
 
   const actualPG = buffedParty.reduce(
     (item, acc) => (item.id === selectedPG ? item : acc),
     {}
   );
+
   const actualTurnPG = buffedParty.reduce(
     (item, acc) => (item.id === actualPlayer ? item : acc),
     {}
@@ -242,7 +262,7 @@ const Battle = (props) => {
       actualParty: buffedParty,
       selectedPG: actualTurnPG,
       vsPG: actualPG,
-      setVSPG: setSelectedPG,
+      setVSPG: setVsPG,
     },
     conditionsBox: {
       addConditionAction: addCondition,
