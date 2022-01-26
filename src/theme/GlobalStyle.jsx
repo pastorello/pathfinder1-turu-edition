@@ -93,7 +93,7 @@ export default createGlobalStyle`
         color: #fff;
         border-radius: 4px;
         &.is-changed {
-            animation: ${rotate} 1s linear;
+            animation: ${rotate} 1s ease-out;
         }
     }
 `;
