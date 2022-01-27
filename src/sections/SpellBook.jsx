@@ -25,7 +25,7 @@ const magicSchools = {
   },
   elementalMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "elementale");
+    return theSource.some((item) => item === "fatata");
   },
   satanicMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
@@ -141,7 +141,7 @@ const SpellBook = (props) => {
               <option value={"runicMagic"}>Magia Runica</option>
               <option value={"occultMagic"}>Magia Occulta</option>
               <option value={"primeviMagic"}>Magia Primeva</option>
-              <option value={"elementalMagic"}>Magia Elementale</option>
+              <option value={"elementalMagic"}>Magia Fatata</option>
               <option value={"demonicMagic"}>Magia Demoniaca</option>
               <option value={"blackMagic"}>Magia Nera</option>
               <option value={"satanicMagic"}>Magia Satanica</option>

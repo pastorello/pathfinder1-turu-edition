@@ -199,7 +199,7 @@ const arcaneSpells = [
     name: "Fondersi nella Pietra",
     school: "trasmutazione",
     description: "Ti fondi in un blocco di pietra",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 3,
@@ -231,7 +231,7 @@ const arcaneSpells = [
     name: "Legato a Terra",
     school: "trasmutazione",
     description: "Porti a terra una creatura volante",
-    source: ["primeva", "elementale"],
+    source: ["primeva", "fatata"],
   },
   {
     level: 3,
@@ -255,7 +255,7 @@ const arcaneSpells = [
     name: "Levitazione",
     school: "invocazione",
     description: "Fai fluttuare un oggetto o creatura a qualche metro da terra",
-    source: ["arcana", "elementale"],
+    source: ["arcana", "fatata"],
   },
   {
     level: 3,
@@ -281,7 +281,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Crei un muro di venti vorticosi che impedisce il movimento e gli attacchi a distanza",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 3,
@@ -305,7 +305,7 @@ const arcaneSpells = [
     name: "Palla di Fuoco",
     school: "invocazione",
     description: "un'esplosione di fuoco in un'area brucia le creature",
-    source: ["elementale", "demoniaca"],
+    source: ["fatata", "demoniaca"],
   },
   {
     level: 3,
@@ -346,7 +346,7 @@ const arcaneSpells = [
     name: "Sabbie Mobili",
     school: "trasmutazione",
     description: "Fai sussultare la superficie",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 3,

@@ -2,6 +2,7 @@ const constants = {
   maxSpellsPerLevel: {
     0: {
       spells: 11,
+      //mago 5, + 1 specializz, + 1 famiglio, +2 fusione incantesimi, +2 trucchetti aggiuntivi
       focalized: 0,
     },
     1: {

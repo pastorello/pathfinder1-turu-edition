@@ -14,7 +14,7 @@ const primeviSpells = [
     name: "Semi di Fuoco",
     school: "invocazione",
     description: "Crei quattro ghiande esplosive",
-    source: ["primeva", "elementale"],
+    source: ["primeva", "fatata"],
   },
   {
     level: 6,
@@ -22,7 +22,7 @@ const primeviSpells = [
     name: "Pietre Parlanti",
     school: "divinazione",
     description: "Parli agli spiriti insiti nella pietra naturale",
-    source: ["occulta", "primeva", "elementale"],
+    source: ["occulta", "primeva", "fatata"],
   },
 ];
 
@@ -77,7 +77,7 @@ const divineSpells = [
     name: "Pietra in Carne",
     school: "trasmutazione",
     description: "Ripristini una creatura pietrificata al suo stato naturale",
-    source: ["bianca", "elementale"],
+    source: ["bianca", "fatata"],
     energy: "positiva",
   },
   {
@@ -107,7 +107,7 @@ const arcaneSpells = [
     name: "Carne in Pietra",
     school: "trasmutazione",
     description: "Trasformi una creatura vivente in una statua di pietra",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 6,

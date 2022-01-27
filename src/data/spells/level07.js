@@ -6,7 +6,7 @@ const primeviSpells = [
     school: "invocazione",
     description:
       "Sprigioni spruzzi di lava che bruciano le creature e le incastonano nella roccia",
-    source: ["primeva", "elementale", "demoniaca"],
+    source: ["primeva", "fatata", "demoniaca"],
   },
   {
     level: 7,
@@ -65,7 +65,7 @@ const divineSpells = [
     school: "invocazione",
     description:
       "Un globo di luce solare infligge danni da fuoco, ferisce i non morti e contrasta l'oscurità",
-    source: ["bianca", "elementale"],
+    source: ["bianca", "fatata"],
   },
   {
     level: 7,
@@ -129,7 +129,7 @@ const arcaneSpells = [
     name: "Corpo Infuocato",
     school: "trasmutazione",
     description: "Trasformi il tuo corpo in una fiamma vivente",
-    source: ["elementale", "demoniaca"],
+    source: ["fatata", "demoniaca"],
   },
   {
     level: 7,
@@ -155,7 +155,7 @@ const arcaneSpells = [
     school: "abiurazione",
     description:
       "Una creatura ottiene resistenza ad acido, elettricità, forza, freddo, fuoco e sonoro",
-    source: ["primeva", "elementale"],
+    source: ["primeva", "fatata"],
   },
   {
     level: 7,

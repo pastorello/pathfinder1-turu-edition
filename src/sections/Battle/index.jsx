@@ -272,11 +272,14 @@ const Battle = (props) => {
     attackBox: {
       actualPG: actualTurnPG,
       vsPG: actualPG,
+      onWeaponSelect: (weaponIndex) =>
+        setStat(selectedPG, "selectedAttack", weaponIndex),
     },
     cdBox: {
       actualPG: actualPG,
     },
     damageRoller: {
+      defaultDice: {},
       onDiceRolled: setActualRollResult,
       roll: actualRollResult,
       onAssignRoll: (type) =>

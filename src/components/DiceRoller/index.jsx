@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import PropTypes from "prop-types";
 import { Row, Column } from "../Grid";
 import Selector from "../Selector";
 import dices from "../../data/dices";
@@ -7,12 +7,19 @@ import isValid from "../../tools/isValid";
 import classNames from "classnames";
 
 const DiceRoller = (props) => {
-  const [quantity, setQuantity] = useState({ value: 1, label: 1 });
-  const [faces, setFaces] = useState({
-    value: Object.keys(dices)[0],
-    label: Object.keys(dices)[0],
+  const [quantity, setQuantity] = useState({
+    value: props.defaultDice.quantity || 1,
+    label: 1,
   });
-  const [bonus, setBonus] = useState(0);
+  const [faces, setFaces] = useState({
+    value: dices.hasOwnProperty(props.defaultDice.faces)
+      ? dices[props.defaultDice.faces]
+      : Object.keys(dices)[0],
+    label: dices.hasOwnProperty(props.defaultDice.faces)
+      ? dices[props.defaultDice.faces]
+      : Object.keys(dices)[0],
+  });
+  const [bonus, setBonus] = useState(props.defaultDice.bonus || 0);
   const [result, setResult] = useState(0);
   const [actualMultiplier, setActualMultiplier] = useState(1);
 
@@ -36,7 +43,7 @@ const DiceRoller = (props) => {
     bonusInput: {
       onChange: (event) => {
         const newValue = isValid.num(event.target.value)
-          ? parseInt(event.target.value)
+          ? event.target.value
           : 0;
         setBonus(newValue);
       },
@@ -113,5 +120,13 @@ const DiceRoller = (props) => {
       </Column>
     </Row>
   );
+};
+
+DiceRoller.propTypes = {
+  defaultDice: PropTypes.shape({
+    quantity: PropTypes.number,
+    faces: PropTypes.number,
+    bonus: PropTypes.number,
+  }),
 };
 export default DiceRoller;

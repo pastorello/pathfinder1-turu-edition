@@ -13,7 +13,7 @@ const primeviSpells = [
     name: "Venti Punitori",
     school: "invocazione",
     description: "Un ciclone ostacola i voli e intrappola le creature",
-    source: ["elementale", "primeva"],
+    source: ["fatata", "primeva"],
   },
 ];
 
@@ -147,7 +147,7 @@ const arcaneSpells = [
     name: "Raggio Polare",
     school: "invocazione",
     description: "Un freddo estremo infligge danni e risucchia una creatura",
-    source: ["arcana", "elementale"],
+    source: ["arcana", "fatata"],
   },
   {
     level: 8,
@@ -173,7 +173,7 @@ const arcaneSpells = [
     name: "Terremoto",
     school: "invocazione",
     description: "Scuoti il terreno con un terremoto devastante",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 8,

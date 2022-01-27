@@ -265,7 +265,7 @@ const arcaneSpells = [
     school: "trasmutazione",
     description:
       "Fai galleggiare una creatura in modo che possa camminare sull'acqua",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -282,7 +282,7 @@ const arcaneSpells = [
     name: "Contrastare Elementi",
     school: "abiurazione",
     description: "Proteggi una creatura da freddo o caldo intensi",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -331,7 +331,7 @@ const arcaneSpells = [
     name: "Evoca Elementale",
     school: "evocazione",
     description: "Evochi un elementale che combatta con te",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -339,7 +339,7 @@ const arcaneSpells = [
     name: "Fiamma Perenne",
     school: "invocazione",
     description: "Una fiamma magica arde illimitatamente",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -455,7 +455,7 @@ const arcaneSpells = [
     name: "Resistere all'Energia",
     school: "abiurazione",
     description: "Proteggi una creatura da un tipo di danno da energia",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -463,7 +463,7 @@ const arcaneSpells = [
     name: "Respirare Sott'Acqua",
     school: "trasmutazione",
     description: "Permetti alle creature di respirare sott'acqua",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -507,7 +507,7 @@ const arcaneSpells = [
     school: "trasmutazione",
     description:
       "Rimuovi terra, polvere, ghiaia, sabbia e simili (ma non pietra solida) fino alle dimensioni di un cubo di 1,5 metri",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,
@@ -523,7 +523,7 @@ const arcaneSpells = [
     name: "Sfera Infuocata",
     school: "invocazione",
     description: "Una sfera di fuoco rotola al tuo comando",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 2,

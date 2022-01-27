@@ -13,7 +13,7 @@ const primeviSpells = [
     name: "Cataclisma",
     school: "invocazione",
     description: "Evochi un rovinoso cataclisma istantaneo",
-    source: ["elementale", "demoniaca"],
+    source: ["fatata", "demoniaca"],
   },
   {
     level: 10,
@@ -61,7 +61,7 @@ const divineSpells = [
     school: "trasmutazione",
     description:
       "Ti trasformi in una forma da battaglia determinata dalla tua divinità",
-    source: ["nera", "demoniaca", "elementale", "bianca", "runica", "satanica"],
+    source: ["nera", "demoniaca", "fatata", "bianca", "runica", "satanica"],
   },
   {
     level: 10,
@@ -89,7 +89,7 @@ const arcaneSpells = [
     name: "Desiderio",
     school: "divinazione",
     description: "Esprimi un desiderio per duplicare incantesimi",
-    source: ["arcana", "elementale"],
+    source: ["arcana", "fatata"],
   },
   {
     level: 10,

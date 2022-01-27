@@ -77,7 +77,7 @@ const divineSpells = [
     name: "Colpo Infuocato",
     school: "invocazione",
     description: "Evochi il fuoco divino dal cielo",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 5,
@@ -172,7 +172,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Accresci o diminuisci il livello dell'acqua in una vasta area",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 5,
@@ -204,7 +204,7 @@ const arcaneSpells = [
     name: "Forma Elementale",
     school: "trasmutazione",
     description: "Ti trasformi in un elementale",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 5,
@@ -282,7 +282,7 @@ const arcaneSpells = [
     name: "Muro di Pietra",
     school: "evocazione",
     description: "Crei un muro di pietra",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 5,
@@ -306,7 +306,7 @@ const arcaneSpells = [
     name: "Passapareti",
     school: "evocazione",
     description: "Formi un tunnel di terra attraverso un muro",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 5,

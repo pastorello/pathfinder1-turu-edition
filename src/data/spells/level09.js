@@ -14,7 +14,7 @@ const primeviSpells = [
     name: "Tempesta di Vendetta",
     school: "invocazione",
     description: "Crei un'enorme tempesta pericolosa",
-    source: ["primeva", "elementale"],
+    source: ["primeva", "fatata"],
   },
 ];
 
@@ -71,7 +71,7 @@ const arcaneSpells = [
     name: "Disgiunzione",
     school: "abiurazione",
     description: "Disattivi o distruggi un oggetto magico",
-    source: ["arcana", "runica", "demoniaca", "elementale"],
+    source: ["arcana", "runica", "demoniaca", "fatata"],
   },
   {
     level: 9,
@@ -141,7 +141,7 @@ const arcaneSpells = [
     name: "Sciame di Meteore",
     school: "invocazione",
     description: "Evochi quattro meteore infuocate che esplodono",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 9,

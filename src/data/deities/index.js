@@ -201,7 +201,7 @@ const deities = [
   {
     name: "I Quattro Titani",
     title: "Stratos, Pyros, Hydros e Lythos",
-    tradition: "elementale",
+    tradition: "fatata",
     plane: "I Quattro Piani Elementali",
     planeUrl:
       "https://pf2.altervista.org/wiki/I_Piani#Piani_della_Sfera_Interna",

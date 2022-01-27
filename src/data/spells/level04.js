@@ -21,7 +21,7 @@ const primeviSpells = [
     name: "Torrente Impetuoso",
     school: "invocazione",
     description: "Respingi le creature con un rovinoso torrente d'acqua",
-    source: ["elementale"],
+    source: ["fatata"],
   },
 ];
 
@@ -68,7 +68,7 @@ const divineSpells = [
     name: "Camminare nell'Aria",
     school: "trasmutazione",
     description: "Cammini nell'aria come se fosse terreno solido",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 4,
@@ -256,7 +256,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Crei un muro ardente che brucia le creature che vi passano attraverso",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 4,
@@ -273,7 +273,7 @@ const arcaneSpells = [
     name: "Pelle di Pietra",
     school: "abiurazione",
     description: "Indurisci la pelle di una creatura in pietra durevole",
-    source: ["elementale", "primeva"],
+    source: ["fatata", "primeva"],
   },
   {
     level: 4,
@@ -315,7 +315,7 @@ const arcaneSpells = [
     name: "Scolpire Pietra",
     school: "trasmutazione",
     description: "Scolpisci un cubo di pietra",
-    source: ["elementale"],
+    source: ["fatata"],
   },
   {
     level: 4,
@@ -324,7 +324,7 @@ const arcaneSpells = [
     school: "invocazione",
     description:
       "Le fiamme ti proteggono dal freddo e feriscono coloro che ti toccano",
-    source: ["elementale", "demoniaca"],
+    source: ["fatata", "demoniaca"],
   },
   {
     level: 4,
