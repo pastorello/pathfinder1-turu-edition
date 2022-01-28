@@ -343,7 +343,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description:
       "La tua bocca, esofago e stomaco diventano incredibilmente elastici e più duri del metallo",
-    source: ["arcana", "demoniaca"],
+    source: ["fatata", "demoniaca"],
   },
   creareCibo: {
     level: 2,
@@ -477,7 +477,7 @@ const utilitySpells = {
     name: "Contrastare Elementi",
     school: "abiurazione",
     description: "Proteggi una creatura da freddo o caldo intensi",
-    source: ["fatata"],
+    source: ["arcana"],
   },
   scavoRapido: {
     level: 2,
