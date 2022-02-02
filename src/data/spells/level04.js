@@ -1,76 +1,5 @@
-const primeviSpells = [
-  {
-    level: 4,
-    url: "/wiki/Forma_di_Dinosauro",
-    name: "Forma di Dinosauro",
-    school: "trasmutazione",
-    description: "Ti trasformi in un dinosauro",
-    source: ["primeva"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Parlare_con_i_Vegetali",
-    name: "Parlare con i Vegetali",
-    school: "divinazione",
-    description: "Comunichi con le piante e le creature con il tratto vegetale",
-    source: ["primeva"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Torrente_Impetuoso",
-    name: "Torrente Impetuoso",
-    school: "invocazione",
-    description: "Respingi le creature con un rovinoso torrente d'acqua",
-    source: ["fatata"],
-  },
-];
-
-const occultSpells = [
-  {
-    level: 4,
-    url: "/wiki/Loquacit%C3%A0",
-    name: "Loquacità",
-    school: "ammaliamento",
-    description: "Menti impunemente",
-    source: ["demoniaca"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Modificare_Memoria",
-    name: "Modificare Memoria",
-    school: "ammaliamento",
-    description: "Cambi o impianti memorie",
-    source: ["satanica"],
-  },
-];
-
-const divineSpells = [
-  {
-    level: 4,
-    url: "/wiki/Anamnesi_Spirituale",
-    name: "Anamnesi Spirituale",
-    school: "necromanzia",
-    description:
-      "La mente del bersaglio viene sopraffatta dai ricordi di una vita passata che sembrano incredibilmente reali",
-    source: ["occulta"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Cadavere_Parlante",
-    name: "Cadavere Parlante",
-    school: "necromanzia",
-    description: "Un cadavere risponde a tre domande",
-    source: ["nera"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Camminare_nell%27Aria",
-    name: "Camminare nell'Aria",
-    school: "trasmutazione",
-    description: "Cammini nell'aria come se fosse terreno solido",
-    source: ["fatata"],
-  },
-  {
+const baseAttackSpells = {
+  cascataSacra: {
     level: 4,
     url: "/wiki/Cascata_Sacra",
     name: "Cascata Sacra",
@@ -79,102 +8,33 @@ const divineSpells = [
       "Trasforma una fiala di acqua santa in un'esplosione di acqua benedetta",
     source: ["bianca"],
   },
-  {
-    level: 4,
-    url: "/wiki/Collera_Divina",
-    name: "Collera Divina",
-    school: "invocazione",
-    description:
-      "Ostacoli e infliggi danni alle creature di allineamento opposto alla tua divinità",
-    source: ["bianca", "demoniaca", "nera"],
-  },
-  {
+  faroVitale: {
     level: 4,
     url: "/wiki/Faro_Vitale",
     name: "Faro Vitale",
     school: "necromanzia",
     description: "Irradi vitalità che guarisce le creature che ti toccano",
-    source: ["bianca", "primeva"],
+    source: ["bianca", "primeva", "runica"],
   },
-  {
+  tempestaDarmi: {
     level: 4,
-    url: "/wiki/Leggere_Premonizioni",
-    name: "Leggere Premonizioni",
-    school: "divinazione",
-    description: "Apprendi un indizio su un evento che sta per accadere",
-    source: ["occulta"],
+    url: "/wiki/Tempesta_di_Armi",
+    name: "Tempesta di Armi",
+    school: "invocazione",
+    description:
+      "Moltiplica un'arma che stai impugnando ed attacca più creature con essa",
+    source: ["arcana", "runica", "occulta"],
   },
-  {
+  anamnesiSpirituale: {
     level: 4,
-    url: "/wiki/Rimuovi_Maledizione",
-    name: "Rimuovi Maledizione",
+    url: "/wiki/Anamnesi_Spirituale",
+    name: "Anamnesi Spirituale",
     school: "necromanzia",
-    description: "Contrasti una maledizione che affligge una creatura",
-    source: ["bianca"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Ritorsione_dell%27Anatema",
-    name: "Ritorsione dell'Anatema",
-    school: "ammaliamento",
     description:
-      "Provochi sofferenza mentale a chi scaglia un anatema contro la tua divinità",
-    source: ["bianca", "demoniaca", "nera"],
-  },
-];
-
-const arcaneSpells = [
-  {
-    level: 4,
-    url: "/wiki/Allucinazione_Mortale",
-    name: "Allucinazione Mortale",
-    school: "illusione",
-    description:
-      "Introduci  un'immagine spaventosa nella mente di una creatura per spaventarla anche al punto di morire",
-    source: ["satanica"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Ancora_Dimensionale",
-    name: "Ancora Dimensionale",
-    school: "abiurazione",
-    description:
-      "Impedisci a una creatura di teletrasportarsi o viaggiare in altri piani",
-    source: ["runica"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Chiaroveggenza",
-    name: "Chiaroveggenza",
-    school: "divinazione",
-    description: "Puoi vedere attraverso un sensore magico invisibile",
+      "La mente del bersaglio viene sopraffatta dai ricordi di una vita passata che sembrano incredibilmente reali",
     source: ["occulta"],
   },
-  {
-    level: 4,
-    url: "/wiki/Confusione",
-    name: "Confusione",
-    school: "ammaliamento",
-    description: "Disorienti una creatura, facendola agire a caso",
-    source: ["satanica"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Creazione",
-    name: "Creazione",
-    school: "evocazione",
-    description: "Crei un oggetto temporaneo",
-    source: ["runica"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Forma_Gassosa",
-    name: "Forma Gassosa",
-    school: "trasmutazione",
-    description: "Trasforma una creatura consenziente in una nube volante",
-    source: ["nera"],
-  },
-  {
+  formaVolante: {
     level: 4,
     url: "/wiki/Forma_Volante",
     name: "Forma Volante",
@@ -182,16 +42,103 @@ const arcaneSpells = [
     description: "Ti trasformi in un combattente volante",
     source: ["primeva"],
   },
-  {
+  torrenteImpetuoso: {
     level: 4,
-    url: "/wiki/Frasi_Dimenticate",
-    name: "Frasi Dimenticate",
-    school: "divinazione",
-    description:
-      "Usi questo incantesimo per restaurare il materiale da importanti testi, storici o meno",
-    source: ["runica"],
+    url: "/wiki/Torrente_Impetuoso",
+    name: "Torrente Impetuoso",
+    school: "invocazione",
+    description: "Respingi le creature con un rovinoso torrente d'acqua",
+    source: ["fatata", "arcana"],
   },
-  {
+  muroDiFuoco: {
+    level: 4,
+    url: "/wiki/Muro_di_Fuoco",
+    name: "Muro di Fuoco",
+    school: "invocazione",
+    description:
+      "Crei un muro ardente che brucia le creature che vi passano attraverso",
+    source: ["demoniaca"],
+  },
+  colleraDivina: {
+    level: 4,
+    url: "/wiki/Collera_Divina",
+    name: "Collera Divina",
+    school: "invocazione",
+    description:
+      "Ostacoli e infliggi danni alle creature di allineamento opposto alla tua divinità",
+    source: ["demoniaca", "nera"],
+  },
+  ritorsioneAnatema: {
+    level: 4,
+    url: "/wiki/Ritorsione_dell%27Anatema",
+    name: "Ritorsione dell'Anatema",
+    school: "ammaliamento",
+    description:
+      "Provochi sofferenza mentale a chi scaglia un anatema contro la tua divinità",
+    source: ["nera"],
+  },
+  suggestione: {
+    level: 4,
+    url: "/wiki/Suggestione",
+    name: "Suggestione",
+    school: "ammaliamento",
+    description: "Suggerisci a una creatura una linea di azione da seguire",
+    source: ["satanica", "fatata"],
+  },
+  allucinazioneMortale: {
+    level: 4,
+    url: "/wiki/Allucinazione_Mortale",
+    name: "Allucinazione Mortale",
+    school: "illusione",
+    description:
+      "Introduci un'immagine spaventosa nella mente di una creatura per spaventarla anche al punto di morire",
+    source: ["satanica"],
+  },
+};
+
+const combatSpells = {
+  portaDimensionale: {
+    level: 4,
+    url: "/wiki/Porta_Dimensionale",
+    name: "Porta Dimensionale",
+    school: "evocazione",
+    description: "Ti teletrasporti fino a 36 metri",
+    source: ["arcana", "occulta"],
+  },
+  intermittenza: {
+    level: 4,
+    url: "/wiki/Intermittenza",
+    name: "Intermittenza",
+    school: "evocazione",
+    description: "Ti sposti rapidamente tra i piani, svanendo e riapparendo",
+    source: ["arcana", "fatata"],
+  },
+  volare: {
+    level: 4,
+    url: "/wiki/Incantesimi/Volare",
+    name: "Volare",
+    school: "trasmutazione",
+    description: "Fai ottenere alla creatura bersaglio una velocità di volare",
+    source: ["arcana", "fatata"],
+  },
+  rimuoviMaledizione: {
+    level: 4,
+    url: "/wiki/Rimuovi_Maledizione",
+    name: "Rimuovi Maledizione",
+    school: "necromanzia",
+    description: "Contrasti una maledizione che affligge una creatura",
+    source: ["bianca"],
+  },
+  ancoraDimensionale: {
+    level: 4,
+    url: "/wiki/Ancora_Dimensionale",
+    name: "Ancora Dimensionale",
+    school: "abiurazione",
+    description:
+      "Impedisci a una creatura di teletrasportarsi o viaggiare in altri piani",
+    source: ["runica", "demoniaca"],
+  },
+  globoInvulnerabilità: {
     level: 4,
     url: "/wiki/Globo_di_Invulnerabilit%C3%A0",
     name: "Globo di Invulnerabilità",
@@ -200,15 +147,108 @@ const arcaneSpells = [
       "Una sfera magica contrasta gli incantesimi che tentano di entrarvi",
     source: ["runica"],
   },
-  {
+  immunitàIncantesimi: {
     level: 4,
     url: "/wiki/Immunit%C3%A0_agli_Incantesimi",
     name: "Immunità agli Incantesimi",
     school: "abiurazione",
     description: "Pronuncia un incantesimo per negare i suoi effetti su di te",
-    source: ["runica"],
+    source: ["runica", "bianca", "nera"],
   },
-  {
+  sferaElastica: {
+    level: 4,
+    url: "/wiki/Sfera_Elastica",
+    name: "Sfera Elastica",
+    school: "abiurazione",
+    description:
+      "Crei una sfera di forza che blocca qualsiasi cosa tenti di attraversarla",
+    source: ["runica", "arcana"],
+  },
+  chiaroveggenza: {
+    level: 4,
+    url: "/wiki/Chiaroveggenza",
+    name: "Chiaroveggenza",
+    school: "divinazione",
+    description: "Puoi vedere attraverso un sensore magico invisibile",
+    source: ["occulta", "bianca", "satanica"],
+  },
+  camminareAria: {
+    level: 4,
+    url: "/wiki/Camminare_nell%27Aria",
+    name: "Camminare nell'Aria",
+    school: "trasmutazione",
+    description: "Cammini nell'aria come se fosse terreno solido",
+    source: ["occulta"],
+  },
+  libertàMovimento: {
+    level: 4,
+    url: "/wiki/Libert%C3%A0_di_Movimento",
+    name: "Libertà di Movimento",
+    school: "abiurazione",
+    description: "Una creatura supera gli impedimenti al suo movimento",
+    source: ["primeva", "bianca"],
+  },
+  formaDinosauro: {
+    level: 4,
+    url: "/wiki/Forma_di_Dinosauro",
+    name: "Forma di Dinosauro",
+    school: "trasmutazione",
+    description: "Ti trasformi in un dinosauro",
+    source: ["primeva"],
+  },
+  scaglieRiflettenti: {
+    level: 4,
+    url: "/wiki/Scaglie_Riflettenti",
+    name: "Scaglie Riflettenti",
+    school: "abiurazione",
+    description:
+      "Ti crescono una serie di colorate scaglie luminose o  un'armatura di scaglie che conservano l'energia prima di rilasciarla in  un'esplosione finale",
+    source: ["primeva"],
+  },
+  pellePietra: {
+    level: 4,
+    url: "/wiki/Pelle_di_Pietra",
+    name: "Pelle di Pietra",
+    school: "abiurazione",
+    description: "Indurisci la pelle di una creatura in pietra durevole",
+    source: ["primeva", "demoniaca"],
+  },
+  scudoFuoco: {
+    level: 4,
+    url: "/wiki/Scudo_di_Fuoco",
+    name: "Scudo di Fuoco",
+    school: "invocazione",
+    description:
+      "Le fiamme ti proteggono dal freddo e feriscono coloro che ti toccano",
+    source: ["demoniaca"],
+  },
+  maledizioneReietto: {
+    level: 4,
+    url: "/wiki/Maledizione_del_Reietto",
+    name: "Maledizione del Reietto",
+    school: "ammaliamento",
+    description:
+      "Affliggi una creatura con una maledizione che la rende sgradevole e fastidiosa",
+    source: ["demoniaca", "nera", "satanica"],
+  },
+  formaGassosa: {
+    level: 4,
+    url: "/wiki/Forma_Gassosa",
+    name: "Forma Gassosa",
+    school: "trasmutazione",
+    description: "Trasforma una creatura consenziente in una nube volante",
+    source: ["nera", "fatata"],
+  },
+  nebbiaSolida: {
+    level: 4,
+    url: "/wiki/Nebbia_Solida",
+    name: "Nebbia Solida",
+    school: "evocazione",
+    description:
+      "Evochi una nebbia fitta difficile da attraversare che oscura la vista",
+    source: ["nera", "occulta", "fatata"],
+  },
+  incubo: {
     level: 4,
     url: "/wiki/Incubo",
     name: "Incubo",
@@ -216,190 +256,148 @@ const arcaneSpells = [
     description: "Infesta i sogni di una creatura con incubi inquietanti",
     source: ["satanica"],
   },
-  {
+  confusione: {
     level: 4,
-    url: "/wiki/Individuazione_dello_Scrutamento",
-    name: "Individuazione dello Scrutamento",
-    school: "divinazione",
-    description: "Scopri se gli effetti dello scrutamento sono nell'area",
-    source: ["occulta"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Intermittenza",
-    name: "Intermittenza",
-    school: "evocazione",
-    description: "Ti sposti rapidamente tra i piani, svanendo e riapparendo",
-    source: ["arcana"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Libert%C3%A0_di_Movimento",
-    name: "Libertà di Movimento",
-    school: "abiurazione",
-    description: "Una creatura supera gli impedimenti al suo movimento",
-    source: ["primeva"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Maledizione_del_Reietto",
-    name: "Maledizione del Reietto",
+    url: "/wiki/Confusione",
+    name: "Confusione",
     school: "ammaliamento",
-    description:
-      "Affliggi una creatura con una maledizione che la rende sgradevole e fastidiosa",
-    source: ["demoniaca", "nera"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Muro_di_Fuoco",
-    name: "Muro di Fuoco",
-    school: "invocazione",
-    description:
-      "Crei un muro ardente che brucia le creature che vi passano attraverso",
-    source: ["fatata"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Nebbia_Solida",
-    name: "Nebbia Solida",
-    school: "evocazione",
-    description:
-      "Evochi una nebbia fitta difficile da attraversare che oscura la vista",
-    source: ["nera"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Pelle_di_Pietra",
-    name: "Pelle di Pietra",
-    school: "abiurazione",
-    description: "Indurisci la pelle di una creatura in pietra durevole",
-    source: ["fatata", "primeva"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Porta_Dimensionale",
-    name: "Porta Dimensionale",
-    school: "evocazione",
-    description: "Ti teletrasporti fino a 36 metri",
-    source: ["arcana"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Rivela_Bugie",
-    name: "Rivela Bugie",
-    school: "divinazione",
-    description: "Individui abilmente bugie e falsità",
-    source: ["bianca"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Santuario_Privato",
-    name: "Santuario Privato",
-    school: "abiurazione",
-    description:
-      "Una nebbia nera impedisce di percepire, scrutare e leggere nella mente di chiunque al suo interno",
-    source: ["occulta"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Scaglie_Riflettenti",
-    name: "Scaglie Riflettenti",
-    school: "abiurazione",
-    description:
-      "Ti crescono una serie di colorate scaglie luminose o  un'armatura di scaglie che conservano l'energia prima di rilasciarla in  un'esplosione finale",
-    source: ["arcana"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Scolpire_Pietra",
-    name: "Scolpire Pietra",
-    school: "trasmutazione",
-    description: "Scolpisci un cubo di pietra",
-    source: ["fatata"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Scudo_di_Fuoco",
-    name: "Scudo di Fuoco",
-    school: "invocazione",
-    description:
-      "Le fiamme ti proteggono dal freddo e feriscono coloro che ti toccano",
-    source: ["fatata", "demoniaca"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Sfera_Elastica",
-    name: "Sfera Elastica",
-    school: "abiurazione",
-    description:
-      "Crei una sfera di forza che blocca qualsiasi cosa tenti di attraversarla",
-    source: ["runica"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Suggestione",
-    name: "Suggestione",
-    school: "ammaliamento",
-    description: "Suggerisci a una creatura una linea di azione da seguire",
+    description: "Disorienti una creatura, facendola agire a caso",
     source: ["satanica"],
   },
-  {
+};
+
+const utilitySpells = {
+  velo: {
     level: 4,
-    url: "/wiki/Telepatia",
-    name: "Telepatia",
-    school: "divinazione",
-    description: "Comunichi telepaticamente con qualsiasi creatura vicina",
-    source: ["occulta"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Tempesta_di_Armi",
-    name: "Tempesta di Armi",
-    school: "invocazione",
-    description:
-      "Moltiplica un'arma che stai impugnando ed attacca più creature con essa",
-    source: ["demoniaca"],
-  },
-  {
-    level: 4,
-    url: "/wiki/Terreno_Illusorio",
-    name: "Terreno Illusorio",
+    url: "/wiki/Velo",
+    name: "Velo",
     school: "illusione",
-    description: "Un ambiente naturale appare come un altro tipo di terreno",
-    source: ["satanica"],
+    description: "Camuffi molte creature in altre creature",
+    source: ["arcana", "fatata", "nera"],
   },
-  {
+  truccoCorda: {
     level: 4,
     url: "/wiki/Trucco_della_Corda",
     name: "Trucco della Corda",
     school: "evocazione",
     description:
       "Animi una corda che sale verso un nascondiglio extradimensionale",
-    source: ["arcana"],
+    source: ["arcana", "fatata"],
   },
-  {
+  rivelaBugie: {
     level: 4,
-    url: "/wiki/Velo",
-    name: "Velo",
-    school: "illusione",
-    description: "Camuffi molte creature in altre creature",
-    source: ["arcana"],
+    url: "/wiki/Rivela_Bugie",
+    name: "Rivela Bugie",
+    school: "divinazione",
+    description: "Individui abilmente bugie e falsità",
+    source: ["bianca", "demoniaca"],
   },
-  {
+  creazione: {
     level: 4,
-    url: "/wiki/Incantesimi/Volare",
-    name: "Volare",
+    url: "/wiki/Creazione",
+    name: "Creazione",
+    school: "evocazione",
+    description: "Crei un oggetto temporaneo",
+    source: ["runica"],
+  },
+  frasiDimenticate: {
+    level: 4,
+    url: "/wiki/Frasi_Dimenticate",
+    name: "Frasi Dimenticate",
+    school: "divinazione",
+    description:
+      "Usi questo incantesimo per restaurare il materiale da importanti testi, storici o meno",
+    source: ["arcana", "runica", "bianca"],
+  },
+  individuazioneScrutamento: {
+    level: 4,
+    url: "/wiki/Individuazione_dello_Scrutamento",
+    name: "Individuazione dello Scrutamento",
+    school: "divinazione",
+    description: "Scopri se gli effetti dello scrutamento sono nell'area",
+    source: ["occulta", "demoniaca"],
+  },
+  telepatia: {
+    level: 4,
+    url: "/wiki/Telepatia",
+    name: "Telepatia",
+    school: "divinazione",
+    description: "Comunichi telepaticamente con qualsiasi creatura vicina",
+    source: ["occulta", "fatata", "nera", "satanica"],
+  },
+  leggerePremonizioni: {
+    level: 4,
+    url: "/wiki/Leggere_Premonizioni",
+    name: "Leggere Premonizioni",
+    school: "divinazione",
+    description: "Apprendi un indizio su un evento che sta per accadere",
+    source: ["occulta", "bianca", "primeva"],
+  },
+  santuarioPrivato: {
+    level: 4,
+    url: "/wiki/Santuario_Privato",
+    name: "Santuario Privato",
+    school: "abiurazione",
+    description:
+      "Una nebbia nera impedisce di percepire, scrutare e leggere nella mente di chiunque al suo interno",
+    source: ["bianca", "runica", "primeva"],
+  },
+  parlareVegetali: {
+    level: 4,
+    url: "/wiki/Parlare_con_i_Vegetali",
+    name: "Parlare con i Vegetali",
+    school: "divinazione",
+    description: "Comunichi con le piante e le creature con il tratto vegetale",
+    source: ["primeva"],
+  },
+  scolpirePietra: {
+    level: 4,
+    url: "/wiki/Scolpire_Pietra",
+    name: "Scolpire Pietra",
     school: "trasmutazione",
-    description: "Fai ottenere alla creatura bersaglio una velocità di volare",
-    source: ["arcana"],
+    description: "Scolpisci un cubo di pietra",
+    source: ["runica", "primeva"],
   },
-];
+  loquacità: {
+    level: 4,
+    url: "/wiki/Loquacit%C3%A0",
+    name: "Loquacità",
+    school: "ammaliamento",
+    description: "Menti impunemente",
+    source: ["demoniaca", "nera", "satanica"],
+  },
+  cadavereParlante: {
+    level: 4,
+    url: "/wiki/Cadavere_Parlante",
+    name: "Cadavere Parlante",
+    school: "necromanzia",
+    description: "Un cadavere risponde a tre domande",
+    source: ["nera", "occulta", "demoniaca"],
+  },
+  modificareMemoria: {
+    level: 4,
+    url: "/wiki/Modificare_Memoria",
+    name: "Modificare Memoria",
+    school: "ammaliamento",
+    description: "Cambi o impianti memorie",
+    source: ["satanica"],
+  },
+  terrenoIllusorio: {
+    level: 4,
+    url: "/wiki/Terreno_Illusorio",
+    name: "Terreno Illusorio",
+    school: "illusione",
+    description: "Un ambiente naturale appare come un altro tipo di terreno",
+    source: ["satanica", "arcana", "fatata"],
+  },
+};
 
-const spells = [
-  ...divineSpells,
-  ...arcaneSpells,
-  ...occultSpells,
-  ...primeviSpells,
-];
+const totalSpells = {
+  ...baseAttackSpells,
+  ...combatSpells,
+  ...utilitySpells,
+};
+
+const spells = Object.keys(totalSpells).map((item) => totalSpells[item]);
 
 export default spells;
