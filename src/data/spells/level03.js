@@ -1,3 +1,4 @@
+const allLevels = [4, 5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
   velocità: {
     level: 3,
@@ -7,6 +8,7 @@ const baseAttackSpells = {
     description:
       "Velocizzi una creatura in modo che possa attaccare o muoversi più spesso",
     source: ["arcana", "bianca", "runica", "occulta"],
+    intensified: [7],
   },
   luceIncandescente: {
     level: 3,
@@ -16,6 +18,7 @@ const baseAttackSpells = {
     description:
       "Un raggio di luce incandescente infligge danni aggiuntivi ai non morti e contrasta l'oscurità",
     source: ["bianca"],
+    intensified: allLevels,
   },
   glifoInterdizione: {
     level: 3,
@@ -32,6 +35,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description: "Rallenti una creatura, riducendone le azioni",
     source: ["occulta", "demoniaca", "satanica"],
+    intensified: [6],
   },
   fulmine: {
     level: 3,
@@ -40,6 +44,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Un fulmine colpisce tutte le creature in una linea",
     source: ["primeva", "arcana", "fatata"],
+    intensified: allLevels,
   },
   nubeMaleodorante: {
     level: 3,
@@ -56,6 +61,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "un'esplosione di fuoco in un'area brucia le creature",
     source: ["demoniaca"],
+    intensified: allLevels,
   },
   oscuritàGelida: {
     level: 3,
@@ -65,6 +71,7 @@ const baseAttackSpells = {
     description:
       "Un raggio di oscurità malvagia infligge danni da freddo, contrasta la luce e ferisce i celestiali",
     source: ["nera"],
+    intensified: allLevels,
   },
   toccoDelVampiro: {
     level: 3,
@@ -74,6 +81,7 @@ const baseAttackSpells = {
     description:
       "Infliggi danni di tipo negativo e ottieni pf temporanei con un tocco",
     source: ["nera"],
+    intensified: allLevels,
   },
   crisiMistica: {
     level: 3,
@@ -83,6 +91,7 @@ const baseAttackSpells = {
     description:
       "Provochi danni mentali, e potenzialmente rendi un devoto incapace di lanciare incantesimi",
     source: ["satanica"],
+    intensified: allLevels,
   },
 };
 
@@ -103,6 +112,7 @@ const combatSpells = {
     description:
       "Tu e le creature vicine diventate invisibili mentre esplorate",
     source: ["arcana", "occulta", "fatata"],
+    intensified: [5],
   },
   tramaIpnotica: {
     level: 3,
@@ -185,6 +195,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Crei un muro di rovi",
     source: ["primeva"],
+    intensified: allLevels,
   },
   formaInsetto: {
     level: 3,
@@ -193,6 +204,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un pericoloso insetto gigante",
     source: ["primeva"],
+    intensified: [4, 5],
   },
   legatoTerra: {
     level: 3,
@@ -210,6 +222,7 @@ const combatSpells = {
     description:
       "Vieni circondato da un vortice di turbinanti sciarpe colorate di forza che ti offuscano e disorientano i tuoi nemici",
     source: ["fatata"],
+    intensified: [5, 7, 9],
   },
   sabbieMobili: {
     level: 3,
@@ -218,6 +231,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Fai sussultare la superficie",
     source: ["demoniaca"],
+    intensified: [5, 7, 9],
   },
   cerchioProtezione: {
     level: 3,
@@ -227,6 +241,7 @@ const combatSpells = {
     description:
       "Una creatura emette un'aura che protegge coloro che vi si trovano all'interno da un dato allineamento",
     source: ["demoniaca", "bianca", "runica"],
+    intensified: [4],
   },
   eroismo: {
     level: 3,
@@ -236,6 +251,7 @@ const combatSpells = {
     description:
       "Ravvivi l'eroismo insito in una creatura per renderla più abile",
     source: ["demoniaca"],
+    intensified: [6, 9],
   },
   legareNonMorto: {
     level: 3,
@@ -261,6 +277,7 @@ const combatSpells = {
     description:
       "Maledici il bersaglio con una sete che nessuna bevanda può estinguere",
     source: ["nera", "satanica"],
+    intensified: [3],
   },
   paralizzare: {
     level: 3,
@@ -269,6 +286,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Blocchi un umanoide sul posto",
     source: ["satanica", "nera"],
+    intensified: [7],
   },
   estasiare: {
     level: 3,
@@ -314,6 +332,7 @@ const utilitySpells = {
     description:
       "Tu e i tuoi alleati influenzati ottenete una conoscenza preternaturale del sentiero davanti a voi",
     source: ["bianca", "occulta"],
+    intensified: [6],
   },
   zonaVerità: {
     level: 3,
@@ -346,6 +365,7 @@ const utilitySpells = {
     school: "divinazione",
     description: "Apprendi la direzione verso un oggetto",
     source: ["occulta", "nera"],
+    intensified: [5],
   },
   visioneAnimale: {
     level: 3,
@@ -363,6 +383,7 @@ const utilitySpells = {
     description:
       "Trasforma i piedi di una creatura in pinne, consentendole di nuotare ma rallentandola sul terreno",
     source: ["primeva", "demoniaca", "fatata"],
+    intensified: [6],
   },
   antiIndividuazione: {
     level: 3,
@@ -395,6 +416,7 @@ const utilitySpells = {
     school: "divinazione",
     description: "Invii un messaggio che arriva tramite un sogno",
     source: ["satanica", "occulta", "primeva", "fatata", "nera"],
+    intensified: [4],
   },
 };
 

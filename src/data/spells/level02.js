@@ -1,3 +1,5 @@
+const allLevels = [3, 4, 5, 6, 7, 8, 9, 10];
+
 const baseAttackSpells = {
   silenzio: {
     level: 2,
@@ -6,6 +8,7 @@ const baseAttackSpells = {
     school: "illusione",
     description: "Silenzi tutti i suoni di una creatura",
     source: ["bianca", "runica"],
+    intensified: [4],
   },
   armaSpirituale: {
     level: 2,
@@ -15,6 +18,7 @@ const baseAttackSpells = {
     description:
       "Materializzi un'arma di forza di natura divina che appare ed attacca ripetutamente",
     source: ["runica", "bianca"],
+    intensified: [4, 6, 8, 10],
   },
   manovraTelecinetica: {
     level: 2,
@@ -31,6 +35,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Infliggi danni e assordi le creature con un fragore potente",
     source: ["occulta"],
+    intensified: allLevels,
   },
   formaAnimale: {
     level: 2,
@@ -39,6 +44,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un animale pericoloso",
     source: ["primeva"],
+    intensified: [3, 4, 5],
   },
   ifaFungina: {
     level: 2,
@@ -47,6 +53,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Una sottile ifa cresce dai tuoi piedi e affonda nel terreno",
     source: ["primeva"],
+    intensified: [4, 6],
   },
   risataIncontenibile: {
     level: 2,
@@ -64,6 +71,7 @@ const baseAttackSpells = {
     school: "evocazione",
     description: "Evochi un elementale che combatta con te",
     source: ["fatata", "arcana"],
+    intensified: allLevels,
   },
   frecciaAcida: {
     level: 2,
@@ -72,6 +80,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Una freccia magica infligge danni da acido persistenti",
     source: ["demoniaca"],
+    intensified: [4, 6, 8, 10],
   },
   sferaInfuocata: {
     level: 2,
@@ -80,6 +89,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Una sfera di fuoco rotola al tuo comando",
     source: ["demoniaca"],
+    intensified: allLevels,
   },
   rintoccoDiMorte: {
     level: 2,
@@ -113,6 +123,7 @@ const baseAttackSpells = {
     description:
       "Maledici il bersaglio con una fame che nessun cibo è in grado di saziare",
     source: ["satanica"],
+    intensified: allLevels,
   },
 };
 
@@ -124,6 +135,7 @@ const combatSpells = {
     school: "abiurazione",
     description: "Proteggi una creatura da un tipo di danno da energia",
     source: ["arcana", "runica"],
+    intensified: [4, 7],
   },
   rimuoviParalisi: {
     level: 2,
@@ -132,6 +144,7 @@ const combatSpells = {
     school: "necromanzia",
     description: "Liberi una creatura dalla paralisi",
     source: ["bianca"],
+    intensified: [6],
   },
   rimuoviPaura: {
     level: 2,
@@ -140,6 +153,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Liberi una creatura dal suo terrore",
     source: ["bianca"],
+    intensified: [6],
   },
   ripristinareSensi: {
     level: 2,
@@ -148,6 +162,7 @@ const combatSpells = {
     school: "necromanzia",
     description: "Rimuovi un effetto di cecità o sordità",
     source: ["bianca"],
+    intensified: [6],
   },
   calmareEmozioni: {
     level: 2,
@@ -165,6 +180,7 @@ const combatSpells = {
     description:
       "Impianti una mina mentale all'interno della tua psiche, pronta a detonare contro chiunque provi a manipolare i tuoi pensieri",
     source: ["runica"],
+    intensified: allLevels,
   },
   dissolviMagie: {
     level: 2,
@@ -198,6 +214,7 @@ const combatSpells = {
     school: "divinazione",
     description: "Vedi le creature e gli oggetti invisibili",
     source: ["runica", "occulta"],
+    intensified: [5],
   },
   sfocatura: {
     level: 2,
@@ -214,6 +231,7 @@ const combatSpells = {
     school: "abiurazione",
     description: "La pelle del bersaglio si ricopre di una scorza coriacea",
     source: ["primeva"],
+    intensified: [4, 6, 8, 10],
   },
   intralciare: {
     level: 2,
@@ -231,6 +249,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Formi una ragnatela che impedisce alle creature di muoversi",
     source: ["primeva"],
+    intensified: [4],
   },
   mutareLaPelle: {
     level: 2,
@@ -275,6 +294,7 @@ const combatSpells = {
     description:
       "Una creatura non può essere vista finché non compie un attacco",
     source: ["fatata", "arcana", "satanica"],
+    intensified: [4],
   },
   ingrandire: {
     level: 2,
@@ -283,6 +303,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "La taglia di una creatura aumenta",
     source: ["demoniaca"],
+    intensified: [4, 6],
   },
   marchioImpertinenete: {
     level: 2,
@@ -308,6 +329,7 @@ const combatSpells = {
     school: "invocazione",
     description: "Sopprimi tutte le luci in  un'area",
     source: ["nera", "satanica"],
+    intensified: [4],
   },
   vitaFalsata: {
     level: 2,
@@ -316,6 +338,7 @@ const combatSpells = {
     school: "necromanzia",
     description: "Ottieni pf temporanei",
     source: ["nera", "demoniaca"],
+    intensified: allLevels,
   },
   scudoAltri: {
     level: 2,
@@ -332,6 +355,7 @@ const combatSpells = {
     school: "illusione",
     description: "Convinci una creatura che chiunque veda sia una minaccia",
     source: ["satanica"],
+    intensified: [6],
   },
 };
 
@@ -344,6 +368,7 @@ const utilitySpells = {
     description:
       "La tua bocca, esofago e stomaco diventano incredibilmente elastici e più duri del metallo",
     source: ["fatata", "demoniaca"],
+    intensified: [3],
   },
   creareCibo: {
     level: 2,
@@ -352,6 +377,7 @@ const utilitySpells = {
     school: "evocazione",
     description: "Evochi una quantità cibo che può nutrire più creature",
     source: ["bianca"],
+    intensified: [4, 6, 8],
   },
   ristorare: {
     level: 2,
@@ -360,6 +386,7 @@ const utilitySpells = {
     school: "necromanzia",
     description: "Riduci una condizione o riduci l'effetto di una tossina",
     source: ["bianca"],
+    intensified: [4, 6],
   },
   potenziareProvviste: {
     level: 2,
@@ -368,6 +395,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description: "Migliori la qualità di cibi o bevande e ne rimuovi i veleni",
     source: ["bianca"],
+    intensified: allLevels,
   },
   riposoInviolato: {
     level: 2,
@@ -377,6 +405,7 @@ const utilitySpells = {
     description:
       "Un cadavere non si imputridisce e non può diventare non morto",
     source: ["bianca"],
+    intensified: [5],
   },
   boccaMagica: {
     level: 2,
@@ -403,6 +432,7 @@ const utilitySpells = {
     school: "divinazione",
     description: "Una creatura comprende una lingua",
     source: ["arcana"],
+    intensified: [3, 4],
   },
   scurovisione: {
     level: 2,
@@ -411,6 +441,7 @@ const utilitySpells = {
     school: "divinazione",
     description: "Vedi nell'oscurità",
     source: ["occulta", "nera"],
+    intensified: [3, 5],
   },
   presagio: {
     level: 2,
@@ -428,6 +459,7 @@ const utilitySpells = {
     description:
       "Controlli la posizione e la condizione di una creatura consenziente",
     source: ["occulta"],
+    intensified: [4],
   },
   animaleMessaggero: {
     level: 2,
@@ -470,6 +502,7 @@ const utilitySpells = {
     description:
       "Fai galleggiare una creatura in modo che possa camminare sull'acqua",
     source: ["fatata"],
+    intensified: [4],
   },
   contrastareElementi: {
     level: 2,
@@ -478,6 +511,7 @@ const utilitySpells = {
     school: "abiurazione",
     description: "Proteggi una creatura da freddo o caldo intensi",
     source: ["arcana"],
+    intensified: [3, 5],
   },
   scavoRapido: {
     level: 2,
@@ -487,6 +521,7 @@ const utilitySpells = {
     description:
       "Rimuovi terra, polvere, ghiaia, sabbia e simili (ma non pietra solida) fino alle dimensioni di un cubo di 1,5 metri",
     source: ["runica"],
+    intensified: [4, 6, 8, 10],
   },
   respirareAcqua: {
     level: 2,
@@ -495,6 +530,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description: "Permetti alle creature di respirare sott'acqua",
     source: ["fatata"],
+    intensified: [3, 4],
   },
   restringere: {
     level: 2,
@@ -503,6 +539,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description: "Riduci una creatura consenziente fino a una taglia minuscola",
     source: ["fatata"],
+    intensified: [6],
   },
   fiammaPerenne: {
     level: 2,
@@ -511,6 +548,7 @@ const utilitySpells = {
     school: "invocazione",
     description: "Una fiamma magica arde illimitatamente",
     source: ["runica", "demoniaca"],
+    intensified: allLevels,
   },
   frantumare: {
     level: 2,
@@ -519,6 +557,7 @@ const utilitySpells = {
     school: "invocazione",
     description: "Frantumi un oggetto con un attacco sonoro ad alta frequenza",
     source: ["demoniaca", "arcana"],
+    intensified: allLevels,
   },
   destrieroFantomatico: {
     level: 2,
@@ -527,6 +566,7 @@ const utilitySpells = {
     school: "evocazione",
     description: "Evochi un cavallo magico",
     source: ["demoniaca", "arcana", "occulta", "nera"],
+    intensified: [4, 5, 6],
   },
   movimentiRagno: {
     level: 2,
@@ -535,6 +575,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description: "Concedi velocità di scalare a una creatura",
     source: ["demoniaca"],
+    intensified: [5],
   },
   creaturaIllusoria: {
     level: 2,
@@ -543,6 +584,7 @@ const utilitySpells = {
     school: "illusione",
     description: "Crei  un'illusione verosimile di una creatura",
     source: ["satanica"],
+    intensified: allLevels,
   },
   dissimulare: {
     level: 2,
@@ -560,6 +602,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description: "Assumi la forma di un umanoide",
     source: ["satanica"],
+    intensified: [3, 5],
   },
   allineamentoImperscrutabile: {
     level: 2,

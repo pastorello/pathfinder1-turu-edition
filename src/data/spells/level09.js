@@ -6,6 +6,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Fai collassare una creatura su sé stessa",
     source: ["arcana"],
+    intensified: [10],
   },
   sciameMeteore: {
     level: 9,
@@ -14,6 +15,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Evochi quattro meteore infuocate che esplodono",
     source: ["arcana"],
+    intensified: [10],
   },
   armaGiudizio: {
     level: 9,
@@ -22,6 +24,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Formi un'arma che rafforza la guerra o la pace",
     source: ["runica", "bianca"],
+    intensified: [10],
   },
   canzoneIncomprensibile: {
     level: 9,
@@ -47,6 +50,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Crei un'enorme tempesta pericolosa",
     source: ["primeva", "occulta"],
+    intensified: [10],
   },
   trasformazione: {
     level: 9,
@@ -63,6 +67,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description: "Pronunci una parola che uccide una creatura",
     source: ["nera"],
+    intensified: [10],
   },
   massacro: {
     level: 9,
@@ -71,6 +76,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Uccidi più creature all'istante",
     source: ["nera", "demoniaca"],
+    intensified: [10],
   },
   fatale: {
     level: 9,
@@ -125,6 +131,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Le creature diventano dedite a una causa di tua scelta",
     source: ["demoniaca", "satanica"],
+    intensified: [10],
   },
   presenzaSoverchiante: {
     level: 9,

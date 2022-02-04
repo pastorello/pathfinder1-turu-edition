@@ -1,3 +1,4 @@
+const allLevels = [7, 8, 9, 10];
 const baseAttackSpells = {
   disintegrazione: {
     level: 6,
@@ -6,6 +7,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Riduci in polvere una creatura o un oggetto",
     source: ["arcana", "nera"],
+    intensified: allLevels,
   },
   rianimareMorti: {
     level: 6,
@@ -14,6 +16,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Riporti in vita una creatura morta",
     source: ["bianca", "runica"],
+    intensified: allLevels,
   },
   campoVita: {
     level: 6,
@@ -23,6 +26,7 @@ const baseAttackSpells = {
     description:
       "Crei un campo di energia positiva che guarisce chi vi si trova all'interno",
     source: ["bianca", "runica"],
+    intensified: [8, 9],
   },
   catenaFulmini: {
     level: 6,
@@ -31,6 +35,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Un fulmine rimbalza da una creatura all'altra",
     source: ["arcana", "primeva"],
+    intensified: allLevels,
   },
   semiFuoco: {
     level: 6,
@@ -39,6 +44,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Crei quattro ghiande esplosive",
     source: ["primeva", "fatata", "demoniaca"],
+    intensified: [8, 9],
   },
   metamorfosiFunesta: {
     level: 6,
@@ -63,6 +69,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Formi un muro di lame fatte di forza",
     source: ["demoniaca", "occulta"],
+    intensified: allLevels,
   },
   pungiglionePurpureo: {
     level: 6,
@@ -80,6 +87,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Infliggi danni all'essenza spirituale di una creatura",
     source: ["nera", "occulta"],
+    intensified: allLevels,
   },
   dissanguamentoVampiro: {
     level: 6,
@@ -88,6 +96,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Estrai sangue e forza vitale dalle creature in un cono",
     source: ["nera"],
+    intensified: allLevels,
   },
   dominare: {
     level: 6,
@@ -96,6 +105,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description: "Un umanoide deve obbedire ai tuoi ordini",
     source: ["satanica"],
+    intensified: [10],
   },
   regressioneMentale: {
     level: 6,
@@ -113,6 +123,7 @@ const baseAttackSpells = {
     description:
       "Infliggi danni alla mente di una creatura con visioni di  un'apocalisse",
     source: ["satanica"],
+    intensified: allLevels,
   },
 };
 
@@ -125,6 +136,7 @@ const combatSpells = {
     description:
       "Teletrasporti fino a 2 creature in nuove posizioni vicine a te",
     source: ["arcana", "occulta", "fatata"],
+    intensified: allLevels,
   },
   repulsione: {
     level: 6,
@@ -141,6 +153,7 @@ const combatSpells = {
     school: "invocazione",
     description: "Crei un muro invisibile e durevole di forza magica",
     source: ["arcana", "runica", "occulta"],
+    intensified: [8, 10],
   },
   convincimentoZelante: {
     level: 6,
@@ -150,6 +163,7 @@ const combatSpells = {
     description:
       "Instilli convinzioni e zelo irremovibili nelle creature consenzienti",
     source: ["satanica", "bianca", "nera"],
+    intensified: [9],
   },
   pietraCarne: {
     level: 6,
@@ -175,6 +189,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un drago",
     source: ["fatata", "primeva", "demoniaca"],
+    intensified: [8],
   },
   tramaVibrante: {
     level: 6,
@@ -191,6 +206,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in forma da battaglia con armi divine",
     source: ["satanica", "demoniaca", "nera", "bianca", "runica", "primeva"],
+    intensified: [8],
   },
   ronivaIncantesimi: {
     level: 6,
@@ -245,6 +261,7 @@ const utilitySpells = {
     description:
       "Tu e altre creature consenzienti vi trasportate a grande distanza",
     source: ["arcana", "runica", "demoniaca"],
+    intensified: allLevels,
   },
   pietreParlanti: {
     level: 6,

@@ -1,3 +1,4 @@
+const allLevels = [5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
   cascataSacra: {
     level: 4,
@@ -7,6 +8,7 @@ const baseAttackSpells = {
     description:
       "Trasforma una fiala di acqua santa in un'esplosione di acqua benedetta",
     source: ["bianca"],
+    intensified: allLevels,
   },
   faroVitale: {
     level: 4,
@@ -15,6 +17,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Irradi vitalità che guarisce le creature che ti toccano",
     source: ["bianca", "primeva", "runica"],
+    intensified: allLevels,
   },
   tempestaDarmi: {
     level: 4,
@@ -24,6 +27,7 @@ const baseAttackSpells = {
     description:
       "Moltiplica un'arma che stai impugnando ed attacca più creature con essa",
     source: ["arcana", "runica", "occulta"],
+    intensified: allLevels,
   },
   anamnesiSpirituale: {
     level: 4,
@@ -41,6 +45,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un combattente volante",
     source: ["primeva"],
+    intensified: [5, 6],
   },
   torrenteImpetuoso: {
     level: 4,
@@ -49,6 +54,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Respingi le creature con un rovinoso torrente d'acqua",
     source: ["fatata", "arcana"],
+    intensified: allLevels,
   },
   muroDiFuoco: {
     level: 4,
@@ -58,6 +64,7 @@ const baseAttackSpells = {
     description:
       "Crei un muro ardente che brucia le creature che vi passano attraverso",
     source: ["demoniaca"],
+    intensified: allLevels,
   },
   colleraDivina: {
     level: 4,
@@ -67,6 +74,7 @@ const baseAttackSpells = {
     description:
       "Ostacoli e infliggi danni alle creature di allineamento opposto alla tua divinità",
     source: ["demoniaca", "nera"],
+    intensified: allLevels,
   },
   ritorsioneAnatema: {
     level: 4,
@@ -76,6 +84,7 @@ const baseAttackSpells = {
     description:
       "Provochi sofferenza mentale a chi scaglia un anatema contro la tua divinità",
     source: ["nera"],
+    intensified: allLevels,
   },
   suggestione: {
     level: 4,
@@ -84,6 +93,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description: "Suggerisci a una creatura una linea di azione da seguire",
     source: ["satanica", "fatata"],
+    intensified: [8],
   },
   allucinazioneMortale: {
     level: 4,
@@ -93,6 +103,7 @@ const baseAttackSpells = {
     description:
       "Introduci un'immagine spaventosa nella mente di una creatura per spaventarla anche al punto di morire",
     source: ["satanica"],
+    intensified: allLevels,
   },
 };
 
@@ -104,6 +115,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Ti teletrasporti fino a 36 metri",
     source: ["arcana", "occulta"],
+    intensified: [5],
   },
   intermittenza: {
     level: 4,
@@ -112,6 +124,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Ti sposti rapidamente tra i piani, svanendo e riapparendo",
     source: ["arcana", "fatata"],
+    intensified: [6, 8, 10],
   },
   volare: {
     level: 4,
@@ -120,6 +133,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Fai ottenere alla creatura bersaglio una velocità di volare",
     source: ["arcana", "fatata"],
+    intensified: [7],
   },
   rimuoviMaledizione: {
     level: 4,
@@ -195,6 +209,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un dinosauro",
     source: ["primeva"],
+    intensified: [5, 7],
   },
   scaglieRiflettenti: {
     level: 4,
@@ -204,6 +219,7 @@ const combatSpells = {
     description:
       "Ti crescono una serie di colorate scaglie luminose o  un'armatura di scaglie che conservano l'energia prima di rilasciarla in  un'esplosione finale",
     source: ["primeva"],
+    intensified: [6, 8, 10],
   },
   pellePietra: {
     level: 4,
@@ -212,6 +228,7 @@ const combatSpells = {
     school: "abiurazione",
     description: "Indurisci la pelle di una creatura in pietra durevole",
     source: ["primeva", "demoniaca"],
+    intensified: [6, 8, 10],
   },
   scudoFuoco: {
     level: 4,
@@ -221,6 +238,7 @@ const combatSpells = {
     description:
       "Le fiamme ti proteggono dal freddo e feriscono coloro che ti toccano",
     source: ["demoniaca"],
+    intensified: [6, 8, 10],
   },
   maledizioneReietto: {
     level: 4,
@@ -263,6 +281,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Disorienti una creatura, facendola agire a caso",
     source: ["satanica"],
+    intensified: [8],
   },
 };
 
@@ -274,6 +293,7 @@ const utilitySpells = {
     school: "illusione",
     description: "Camuffi molte creature in altre creature",
     source: ["arcana", "fatata", "nera"],
+    intensified: [5, 7],
   },
   truccoCorda: {
     level: 4,
@@ -299,6 +319,7 @@ const utilitySpells = {
     school: "evocazione",
     description: "Crei un oggetto temporaneo",
     source: ["runica"],
+    intensified: [5],
   },
   frasiDimenticate: {
     level: 4,
@@ -316,6 +337,7 @@ const utilitySpells = {
     school: "divinazione",
     description: "Scopri se gli effetti dello scrutamento sono nell'area",
     source: ["occulta", "demoniaca"],
+    intensified: [6],
   },
   telepatia: {
     level: 4,
@@ -324,6 +346,7 @@ const utilitySpells = {
     school: "divinazione",
     description: "Comunichi telepaticamente con qualsiasi creatura vicina",
     source: ["occulta", "fatata", "nera", "satanica"],
+    intensified: [6],
   },
   leggerePremonizioni: {
     level: 4,
@@ -381,6 +404,7 @@ const utilitySpells = {
     school: "ammaliamento",
     description: "Cambi o impianti memorie",
     source: ["satanica"],
+    intensified: [6],
   },
   terrenoIllusorio: {
     level: 4,
@@ -389,6 +413,7 @@ const utilitySpells = {
     school: "illusione",
     description: "Un ambiente naturale appare come un altro tipo di terreno",
     source: ["satanica", "arcana", "fatata"],
+    intensified: [5],
   },
 };
 

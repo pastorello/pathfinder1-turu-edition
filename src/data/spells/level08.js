@@ -1,3 +1,5 @@
+const allLevels = [9, 10];
+
 const baseAttackSpells = {
   labirinto: {
     level: 8,
@@ -14,6 +16,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Un freddo estremo infligge danni e risucchia una creatura",
     source: ["arcana", "fatata"],
+    intensified: allLevels,
   },
   momentoRisanamento: {
     level: 8,
@@ -30,6 +33,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Scuoti il terreno con un terremoto devastante",
     source: ["fatata", "demoniaca", "runica"],
+    intensified: [10],
   },
   cantoSpirito: {
     level: 8,
@@ -39,6 +43,7 @@ const baseAttackSpells = {
     description:
       "Canti una canzone sinistra che infligge danni a qualsiasi creatura abbia uno spirito",
     source: ["occulta", "satanica"],
+    intensified: allLevels,
   },
   epidemiaSpirito: {
     level: 8,
@@ -55,6 +60,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un potente mostro",
     source: ["demoniaca", "primeva"],
+    intensified: [9],
   },
   orridoAvvizzimento: {
     level: 8,
@@ -63,6 +69,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Disidrati i corpi delle creature, infliggendo loro danni",
     source: ["nera"],
+    intensified: allLevels,
   },
 };
 
@@ -143,6 +150,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Pronunci una parola che stordisce una creatura",
     source: ["satanica", "demoniaca"],
+    intensified: allLevels,
   },
   vuotoMentale: {
     level: 8,

@@ -1,3 +1,5 @@
+const allLevels = [8, 9, 10];
+
 const baseAttackSpells = {
   spruzzoPrismatico: {
     level: 7,
@@ -16,6 +18,7 @@ const baseAttackSpells = {
     description:
       "Un globo di luce solare infligge danni da fuoco, ferisce i non morti e contrasta l'oscurità",
     source: ["bianca"],
+    intensified: allLevels,
   },
   rigenerazione: {
     level: 7,
@@ -25,6 +28,7 @@ const baseAttackSpells = {
     description:
       "Permetti a una creatura di guarire col tempo, la ricrescita dei suoi organi e di riattaccarsi parti del corpo",
     source: ["bianca", "primeva", "runica"],
+    intensified: [9],
   },
   sentenzaDivina: {
     level: 7,
@@ -34,6 +38,7 @@ const baseAttackSpells = {
     description:
       "Le creature dell'allineamento opposto alla tua divinità subiscono danni, sono indebolite, paralizzate o vengono esiliate",
     source: ["runica"],
+    intensified: allLevels,
   },
   eruzioneVulcanica: {
     level: 7,
@@ -43,6 +48,7 @@ const baseAttackSpells = {
     description:
       "Sprigioni spruzzi di lava che bruciano le creature e le incastonano nella roccia",
     source: ["arcana", "demoniaca"],
+    intensified: allLevels,
   },
   corpoInfuocato: {
     level: 7,
@@ -51,6 +57,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description: "Trasformi il tuo corpo in una fiamma vivente",
     source: ["primeva", "fatata", "demoniaca"],
+    intensified: [9],
   },
   esplosioneOscurante: {
     level: 7,
@@ -60,6 +67,7 @@ const baseAttackSpells = {
     description:
       "Un globo di oscurità infligge danni da freddo, ferisce i viventi e prevale sulla luce",
     source: ["occulta", "nera"],
+    intensified: allLevels,
   },
   faroTemporale: {
     level: 7,
@@ -78,6 +86,7 @@ const baseAttackSpells = {
     description:
       "Punti il dito verso una creatura per infliggere danni da energia negativa potenzialmente uccidendola all'istante",
     source: ["nera", "satanica"],
+    intensified: allLevels,
   },
   visioniPericolo: {
     level: 7,
@@ -87,6 +96,7 @@ const baseAttackSpells = {
     description:
       "Crei una visione di terrificanti creature sciamanti che provocano danni mentali",
     source: ["satanica"],
+    intensified: allLevels,
   },
 };
 
@@ -124,6 +134,7 @@ const combatSpells = {
     description:
       "Usi il Piano Etereo per muoverti attraverso gli oggetti e nell'aria",
     source: ["occulta"],
+    intensified: [9],
   },
   egidaEnergia: {
     level: 7,
@@ -133,6 +144,7 @@ const combatSpells = {
     description:
       "Una creatura ottiene resistenza ad acido, elettricità, forza, freddo, fuoco e sonoro",
     source: ["primeva", "fatata"],
+    intensified: [9],
   },
   immagineProiettata: {
     level: 7,
@@ -142,6 +154,7 @@ const combatSpells = {
     description:
       "Crei  un'illusione di te stesso attraverso la quale puoi lanciare incantesimi",
     source: ["occulta"],
+    intensified: [9],
   },
   duplicareNemico: {
     level: 7,
@@ -151,6 +164,7 @@ const combatSpells = {
     description:
       "Crei un duplicato temporaneo di un nemico che combatte al tuo posto",
     source: ["fatata", "demoniaca"],
+    intensified: allLevels,
   },
   recipienteDivino: {
     level: 7,
@@ -159,6 +173,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Assumi le sembianze di un servitore della tua divinità",
     source: ["demoniaca", "bianca"],
+    intensified: [9],
   },
   parolaAccecare: {
     level: 7,
@@ -167,6 +182,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Pronunci una parola che acceca una creatura",
     source: ["nera"],
+    intensified: allLevels,
   },
   possessione: {
     level: 7,
@@ -176,6 +192,7 @@ const combatSpells = {
     description:
       "Invii la tua mente e la tua anima nel corpo di un'altra creatura",
     source: ["nera"],
+    intensified: [9],
   },
   mascheraTerrore: {
     level: 7,
@@ -185,6 +202,7 @@ const combatSpells = {
     description:
       "L'aspetto illusorio spaventoso di una creatura terrorizza chiunque la osservi",
     source: ["satanica"],
+    intensified: [8],
   },
   distorcereMente: {
     level: 7,
@@ -221,6 +239,7 @@ const utilitySpells = {
     description:
       "Prepari un incantesimo da innescare in seguito alle condizioni che tu decidi",
     source: ["arcana", "bianca", "occulta", "nera", "satanica", "fatata"],
+    intensified: allLevels,
   },
   retrocognizione: {
     level: 7,
@@ -230,6 +249,7 @@ const utilitySpells = {
     description:
       "Percepisci impressioni di eventi passati accaduti nella tua locazione",
     source: ["bianca", "occulta", "nera"],
+    intensified: [8, 9],
   },
   senzaOstacoli: {
     level: 7,
@@ -238,6 +258,7 @@ const utilitySpells = {
     school: "abiurazione",
     description: "Permetti alle creature di evitare ostacoli ambientali",
     source: ["primeva", "demoniaca"],
+    intensified: [9],
   },
   reggiaMeravigliosa: {
     level: 7,

@@ -1,3 +1,4 @@
+const allLevels = [6, 7, 8, 9, 10];
 const baseAttackSpells = {
   conoFreddo: {
     level: 5,
@@ -6,6 +7,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Un freddo estremo infligge danni alle creature in un cono",
     source: ["arcana", "fatata"],
+    intensified: allLevels,
   },
   esilio: {
     level: 5,
@@ -14,6 +16,7 @@ const baseAttackSpells = {
     school: "abiurazione",
     description: "Fai tornare una creatura sul suo piano natio",
     source: ["arcana", "runica", "primeva"],
+    intensified: [9],
   },
   respiroVita: {
     level: 5,
@@ -32,6 +35,7 @@ const baseAttackSpells = {
     description:
       "Richiami una tempesta di pioggia acida che bombarda l'area per la durata dell'incantesimo",
     source: ["fatata"],
+    intensified: [7, 9],
   },
   colpoInfuocato: {
     level: 5,
@@ -56,6 +60,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description: "Crei un cono d'ombra che infligge danni del tipo scelto",
     source: ["nera", "occulta"],
+    intensified: allLevels,
   },
   nubeMortale: {
     level: 5,
@@ -64,6 +69,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description: "Avveleni le creature in una nube che si allontana da te",
     source: ["nera", "satanica"],
+    intensified: allLevels,
   },
   impulsoSinaptico: {
     level: 5,
@@ -83,6 +89,7 @@ const combatSpells = {
     school: "illusione",
     description: "Il bersaglio sembra morire, ma in realtà diventa invisibile",
     source: ["arcana", "bianca", "occulta", "nera"],
+    intensified: [7],
   },
   evocaDrago: {
     level: 5,
@@ -91,6 +98,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Evochi un drago che combatta con te",
     source: ["arcana"],
+    intensified: allLevels,
   },
   trasportoTelecinetico: {
     level: 5,
@@ -115,6 +123,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Evochi un celestiale che combatta con te",
     source: ["bianca", "runica"],
+    intensified: allLevels,
   },
   guardianoSpirituale: {
     level: 5,
@@ -124,6 +133,7 @@ const combatSpells = {
     description:
       "Crei un guardiano magico che attacca al tuo comando e subisce danni al posto dei tuoi alleati",
     source: ["bianca"],
+    intensified: [7, 9],
   },
   muroCromatico: {
     level: 5,
@@ -133,6 +143,7 @@ const combatSpells = {
     description:
       "Un muro di luci offre una protezione specifica in base al colore",
     source: ["runica", "arcana"],
+    intensified: [7],
   },
   muroPietra: {
     level: 5,
@@ -141,6 +152,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Crei un muro di pietra",
     source: ["runica"],
+    intensified: [7, 9],
   },
   sottrazioneFantasma: {
     level: 5,
@@ -158,6 +170,7 @@ const combatSpells = {
     school: "divinazione",
     description: "Riprogrammi i sensi di una creatura",
     source: ["occulta", "satanica"],
+    intensified: [9],
   },
   formaVegetale: {
     level: 5,
@@ -167,6 +180,7 @@ const combatSpells = {
     description:
       "Ti trasformi in una pericolosa creatura con il tratto vegetale",
     source: ["primeva"],
+    intensified: [6],
   },
   muroGhiaccio: {
     level: 5,
@@ -176,6 +190,7 @@ const combatSpells = {
     description:
       "Scolpisci un muro di ghiaccio spesso 30 cm che blocca la vista e può raffreddare le creature",
     source: ["primeva", "fatata"],
+    intensified: [7, 9],
   },
   formaElementale: {
     level: 5,
@@ -184,6 +199,7 @@ const combatSpells = {
     school: "trasmutazione",
     description: "Ti trasformi in un elementale",
     source: ["fatata", "primeva"],
+    intensified: [6, 7],
   },
   mantoColori: {
     level: 5,
@@ -201,6 +217,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Evochi un gigante che combatta con te",
     source: ["demoniaca", "fatata"],
+    intensified: allLevels,
   },
   evocaNefando: {
     level: 5,
@@ -209,6 +226,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Evochi un nefando che combatta con te",
     source: ["demoniaca"],
+    intensified: allLevels,
   },
   evocaEntità: {
     level: 5,
@@ -217,6 +235,7 @@ const combatSpells = {
     school: "evocazione",
     description: "Evochi un'aberrazione che combatta con te",
     source: ["demoniaca"],
+    intensified: allLevels,
   },
   frenesiaLunare: {
     level: 5,
@@ -226,6 +245,7 @@ const combatSpells = {
     description:
       "Creature consenzienti sviluppano zanne ed artigli e sono in preda alla follia",
     source: ["demoniaca"],
+    intensified: [6, 8],
   },
   piagaAbissale: {
     level: 5,
@@ -250,6 +270,7 @@ const combatSpells = {
     school: "ammaliamento",
     description: "Fai piangere a dirotto una creatura",
     source: ["satanica"],
+    intensified: [7],
   },
 };
 
@@ -262,6 +283,7 @@ const utilitySpells = {
     description:
       "Crei una scena immaginaria che include più creature ed oggetti",
     source: ["arcana", "fatata"],
+    intensified: [6, 8],
   },
   linguaggi: {
     level: 5,
@@ -271,6 +293,7 @@ const utilitySpells = {
     description:
       "Permetti a una creatura di comprendere e parlare tutte le lingue",
     source: ["bianca", "runica", "demoniaca", "nera"],
+    intensified: [7],
   },
   visioneFalsa: {
     level: 5,
@@ -329,6 +352,7 @@ const utilitySpells = {
     school: "evocazione",
     description: "Ti teletrasporti da un albero all'altro",
     source: ["primeva"],
+    intensified: [6, 8, 9],
   },
   controllareAcqua: {
     level: 5,
@@ -346,6 +370,7 @@ const utilitySpells = {
     school: "evocazione",
     description: "Formi un tunnel di terra attraverso un muro",
     source: ["fatata", "arcana", "runica", "primeva", "demoniaca"],
+    intensified: [7],
   },
   allucinazione: {
     level: 5,
@@ -355,6 +380,7 @@ const utilitySpells = {
     description:
       "Una creatura crede che una cosa sia  un'altra, non può individuare qualcosa, oppure vede qualcosa che in realtà non c'è",
     source: ["satanica"],
+    intensified: [6, 8],
   },
   suggestioneInconscia: {
     level: 5,
@@ -364,6 +390,7 @@ const utilitySpells = {
     description:
       "Insinui una suggestione mentale che deve essere seguita quando si attiva un innesco",
     source: ["satanica"],
+    intensified: [9],
   },
   legameTelepatico: {
     level: 5,
