@@ -6,7 +6,7 @@ const baseAttackSpells = {
     name: "Disintegrazione",
     school: "invocazione",
     description: "Riduci in polvere una creatura o un oggetto",
-    source: ["arcana", "nera"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   rianimareMorti: {
@@ -34,7 +34,7 @@ const baseAttackSpells = {
     name: "Catena di Fulmini",
     school: "invocazione",
     description: "Un fulmine rimbalza da una creatura all'altra",
-    source: ["arcana", "primeva"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   semiFuoco: {
@@ -43,7 +43,7 @@ const baseAttackSpells = {
     name: "Semi di Fuoco",
     school: "invocazione",
     description: "Crei quattro ghiande esplosive",
-    source: ["primeva", "fatata", "demoniaca"],
+    source: ["primeva", "demoniaca"],
     intensified: [8, 9],
   },
   metamorfosiFunesta: {
@@ -52,7 +52,7 @@ const baseAttackSpells = {
     name: "Metamorfosi Funesta",
     school: "trasmutazione",
     description: "Trasformi una creatura in un animale innocuo",
-    source: ["fatata", "primeva", "bianca"],
+    source: ["fatata", "bianca"],
   },
   carnePietra: {
     level: 6,
@@ -60,7 +60,7 @@ const baseAttackSpells = {
     name: "Carne in Pietra",
     school: "trasmutazione",
     description: "Trasformi una creatura vivente in una statua di pietra",
-    source: ["fatata", "arcana", "runica"],
+    source: ["fatata", "arcana"],
   },
   barrieraLame: {
     level: 6,
@@ -68,7 +68,7 @@ const baseAttackSpells = {
     name: "Barriera di Lame",
     school: "invocazione",
     description: "Formi un muro di lame fatte di forza",
-    source: ["demoniaca", "occulta"],
+    source: ["occulta"],
     intensified: allLevels,
   },
   pungiglionePurpureo: {
@@ -86,7 +86,7 @@ const baseAttackSpells = {
     name: "Esplosione dello Spirito",
     school: "necromanzia",
     description: "Infliggi danni all'essenza spirituale di una creatura",
-    source: ["nera", "occulta"],
+    source: ["occulta"],
     intensified: allLevels,
   },
   dissanguamentoVampiro: {
@@ -135,7 +135,7 @@ const combatSpells = {
     school: "evocazione",
     description:
       "Teletrasporti fino a 2 creature in nuove posizioni vicine a te",
-    source: ["arcana", "occulta", "fatata"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   repulsione: {
@@ -144,7 +144,7 @@ const combatSpells = {
     name: "Repulsione",
     school: "abiurazione",
     description: "Impedisci alle creature di avvicinarsi a te",
-    source: ["runica", "bianca"],
+    source: ["runica"],
   },
   muroForza: {
     level: 6,
@@ -152,7 +152,7 @@ const combatSpells = {
     name: "Muro di Forza",
     school: "invocazione",
     description: "Crei un muro invisibile e durevole di forza magica",
-    source: ["arcana", "runica", "occulta"],
+    source: ["arcana", "occulta"],
     intensified: [8, 10],
   },
   convincimentoZelante: {
@@ -162,7 +162,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Instilli convinzioni e zelo irremovibili nelle creature consenzienti",
-    source: ["satanica", "bianca", "nera"],
+    source: ["satanica", "nera"],
     intensified: [9],
   },
   pietraCarne: {
@@ -171,7 +171,7 @@ const combatSpells = {
     name: "Pietra in Carne",
     school: "trasmutazione",
     description: "Ripristini una creatura pietrificata al suo stato naturale",
-    source: ["bianca", "runica", "primeva"],
+    source: ["runica", "primeva"],
   },
   groviglioRampicanti: {
     level: 6,
@@ -205,17 +205,17 @@ const combatSpells = {
     name: "Giusto Potere",
     school: "trasmutazione",
     description: "Ti trasformi in forma da battaglia con armi divine",
-    source: ["satanica", "demoniaca", "nera", "bianca", "runica", "primeva"],
+    source: ["runica"],
     intensified: [8],
   },
-  ronivaIncantesimi: {
+  rovinaIncantesimi: {
     level: 6,
     url: "/wiki/Rovina_Incantesimi",
     name: "Rovina Incantesimi",
     school: "abiurazione",
     description:
       "Una maledizione su una creatura le fa subire danni quando è colpita da un incantesimo e diminuisce la durata dei suoi incantesimi",
-    source: ["satanica", "arcana", "demoniaca", "occulta", "nera"],
+    source: ["satanica", "arcana", "nera"],
   },
   fuorviare: {
     level: 6,
@@ -224,7 +224,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Diventi invisibile e crei un duplicato di te stesso che agisce come te",
-    source: ["satanica", "occulta", "arcana", "fatata", "demoniaca", "nera"],
+    source: ["satanica", "occulta", "arcana", "fatata", "nera"],
   },
 };
 
@@ -235,7 +235,7 @@ const utilitySpells = {
     name: "Scrutare",
     school: "divinazione",
     description: "Spii una creatura",
-    source: ["occulta", "bianca", "demoniaca", "nera", "satanica", "fatata"],
+    source: ["occulta", "nera", "satanica", "fatata"],
   },
   visioneVero: {
     level: 6,
@@ -260,7 +260,7 @@ const utilitySpells = {
     school: "evocazione",
     description:
       "Tu e altre creature consenzienti vi trasportate a grande distanza",
-    source: ["arcana", "runica", "demoniaca"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   pietreParlanti: {
@@ -269,7 +269,7 @@ const utilitySpells = {
     name: "Pietre Parlanti",
     school: "divinazione",
     description: "Parli agli spiriti insiti nella pietra naturale",
-    source: ["occulta", "primeva", "fatata"],
+    source: ["occulta", "primeva"],
   },
 };
 

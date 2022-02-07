@@ -1,45 +1,10 @@
 import React, { useState } from "react";
-import spellsDB from "../data/spells";
-import { Row, Column } from "../components/Grid";
 
-const magicSchools = {
-  blackMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "nera");
-  },
-  whiteMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "bianca");
-  },
-  primeviMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "primeva");
-  },
-  arcaneMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "arcana");
-  },
-  occultMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "occulta");
-  },
-  elementalMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "fatata");
-  },
-  satanicMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "satanica");
-  },
-  runicMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "runica");
-  },
-  demonicMagic: (spell) => {
-    const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "demoniaca");
-  },
-};
+import isValid from "../../tools/isValid";
+import spellsDB from "../../data/spells";
+import { Row, Column } from "../../components/Grid";
+
+import schoolFilters from "./schoolsFilter";
 
 const SpellBook = (props) => {
   const [levelFilter, setLevelFilter] = useState("all");
@@ -47,10 +12,17 @@ const SpellBook = (props) => {
   const [colorFilter, setColorFilter] = useState("all");
 
   const filterFunction = (item) => {
+    const actualLevel = parseInt(levelFilter);
+
+    const isInLevel =
+      item.level === actualLevel ||
+      (isValid.dataArray(item.intensified) &&
+        item.intensified.some((item2) => item2 === actualLevel));
+
     return (
-      (levelFilter === "all" || item.level === parseInt(levelFilter)) &&
+      (levelFilter === "all" || isInLevel) &&
       (schoolFilter === "all" || item.school === schoolFilter) &&
-      (colorFilter === "all" || magicSchools[colorFilter](item))
+      (colorFilter === "all" || schoolFilters[colorFilter](item))
     );
   };
 

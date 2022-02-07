@@ -19,14 +19,14 @@ const baseAttackSpells = {
     source: ["bianca", "primeva", "runica"],
     intensified: allLevels,
   },
-  tempestaDarmi: {
+  tempestaArmi: {
     level: 4,
     url: "/wiki/Tempesta_di_Armi",
     name: "Tempesta di Armi",
     school: "invocazione",
     description:
       "Moltiplica un'arma che stai impugnando ed attacca più creature con essa",
-    source: ["arcana", "runica", "occulta"],
+    source: ["runica"],
     intensified: allLevels,
   },
   anamnesiSpirituale: {
@@ -53,7 +53,7 @@ const baseAttackSpells = {
     name: "Torrente Impetuoso",
     school: "invocazione",
     description: "Respingi le creature con un rovinoso torrente d'acqua",
-    source: ["fatata", "arcana"],
+    source: ["fatata"],
     intensified: allLevels,
   },
   muroDiFuoco: {
@@ -73,7 +73,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Ostacoli e infliggi danni alle creature di allineamento opposto alla tua divinità",
-    source: ["demoniaca", "nera"],
+    source: ["runica"],
     intensified: allLevels,
   },
   ritorsioneAnatema: {
@@ -83,7 +83,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description:
       "Provochi sofferenza mentale a chi scaglia un anatema contro la tua divinità",
-    source: ["nera"],
+    source: ["bianca"],
     intensified: allLevels,
   },
   suggestione: {
@@ -92,7 +92,7 @@ const baseAttackSpells = {
     name: "Suggestione",
     school: "ammaliamento",
     description: "Suggerisci a una creatura una linea di azione da seguire",
-    source: ["satanica", "fatata"],
+    source: ["satanica"],
     intensified: [8],
   },
   allucinazioneMortale: {
@@ -176,7 +176,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Crei una sfera di forza che blocca qualsiasi cosa tenti di attraversarla",
-    source: ["runica", "arcana"],
+    source: ["arcana"],
   },
   chiaroveggenza: {
     level: 4,
@@ -184,7 +184,7 @@ const combatSpells = {
     name: "Chiaroveggenza",
     school: "divinazione",
     description: "Puoi vedere attraverso un sensore magico invisibile",
-    source: ["occulta", "bianca", "satanica"],
+    source: ["occulta", "bianca"],
   },
   camminareAria: {
     level: 4,
@@ -227,7 +227,7 @@ const combatSpells = {
     name: "Pelle di Pietra",
     school: "abiurazione",
     description: "Indurisci la pelle di una creatura in pietra durevole",
-    source: ["primeva", "demoniaca"],
+    source: ["primeva", "runica"],
     intensified: [6, 8, 10],
   },
   scudoFuoco: {
@@ -292,7 +292,7 @@ const utilitySpells = {
     name: "Velo",
     school: "illusione",
     description: "Camuffi molte creature in altre creature",
-    source: ["arcana", "fatata", "nera"],
+    source: ["fatata"],
     intensified: [5, 7],
   },
   truccoCorda: {
@@ -328,7 +328,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Usi questo incantesimo per restaurare il materiale da importanti testi, storici o meno",
-    source: ["arcana", "runica", "bianca"],
+    source: ["arcana"],
   },
   individuazioneScrutamento: {
     level: 4,
@@ -345,7 +345,7 @@ const utilitySpells = {
     name: "Telepatia",
     school: "divinazione",
     description: "Comunichi telepaticamente con qualsiasi creatura vicina",
-    source: ["occulta", "fatata", "nera", "satanica"],
+    source: ["occulta", "nera", "satanica"],
     intensified: [6],
   },
   leggerePremonizioni: {
@@ -363,7 +363,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Una nebbia nera impedisce di percepire, scrutare e leggere nella mente di chiunque al suo interno",
-    source: ["bianca", "runica", "primeva"],
+    source: ["bianca", "runica"],
   },
   parlareVegetali: {
     level: 4,

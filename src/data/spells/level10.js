@@ -5,7 +5,7 @@ const baseAttackSpells = {
     name: "Desiderio",
     school: "divinazione",
     description: "Esprimi un desiderio per duplicare incantesimi",
-    source: ["arcana", "fatata"],
+    source: ["arcana"],
   },
   miracolo: {
     level: 10,
@@ -13,7 +13,7 @@ const baseAttackSpells = {
     name: "Miracolo",
     school: "divinazione",
     description: "Chiedi intercessione per duplicare incantesimi divini",
-    source: ["nera", "bianca", "runica"],
+    source: ["bianca"],
   },
   fenomenoPrimevo: {
     level: 10,
@@ -38,7 +38,7 @@ const baseAttackSpells = {
     name: "Cataclisma",
     school: "invocazione",
     description: "Evochi un rovinoso cataclisma istantaneo",
-    source: ["arcana", "demoniaca", "fatata"],
+    source: ["demoniaca"],
   },
   alterareRealtà: {
     level: 10,
@@ -46,7 +46,7 @@ const baseAttackSpells = {
     name: "Alterare Realtà",
     school: "divinazione",
     description: "Distorci la realtà per duplicare incantesimi occulti",
-    source: ["occulta", "satanica"],
+    source: ["occulta"],
   },
   avatar: {
     level: 10,
@@ -55,7 +55,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description:
       "Ti trasformi in una forma da battaglia determinata dalla tua divinità",
-    source: ["nera", "demoniaca", "bianca", "runica", "satanica"],
+    source: ["demoniaca"],
   },
 };
 
@@ -75,7 +75,7 @@ const combatSpells = {
     school: "necromanzia",
     description:
       "Guarisci le creature in un'area e riporti temporaneamente in vita i morti",
-    source: ["bianca", "runica"],
+    source: ["bianca"],
   },
   fermareTempo: {
     level: 10,
@@ -83,7 +83,7 @@ const combatSpells = {
     name: "Fermare il Tempo",
     school: "trasmutazione",
     description: "Fermi brevemente il tempo per tutto tranne che per te",
-    source: ["occulta", "arcana", "demoniaca", "nera", "satanica"],
+    source: ["occulta", "arcana"],
   },
 };
 
@@ -94,7 +94,7 @@ const utilitySpells = {
     name: "Verità Fittizia",
     school: "ammaliamento",
     description: "Fai credere alle creature che un fatto sia vero",
-    source: ["fatata", "satanica", "nera"],
+    source: ["satanica"],
   },
   portale: {
     level: 10,
@@ -102,7 +102,7 @@ const utilitySpells = {
     name: "Portale",
     school: "evocazione",
     description: "Apri un portale verso un altro piano",
-    source: ["arcana", "runica", "occulta", "demoniaca"],
+    source: ["arcana", "occulta"],
   },
   ricostruire: {
     level: 10,
@@ -110,7 +110,7 @@ const utilitySpells = {
     name: "Ricostruire",
     school: "evocazione",
     description: "Ricrei un oggetto distrutto",
-    source: ["bianca", "primeva"],
+    source: ["runica"],
   },
 };
 

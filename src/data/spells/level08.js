@@ -7,7 +7,7 @@ const baseAttackSpells = {
     name: "Labirinto",
     school: "evocazione",
     description: "Intrappoli una creatura in un labirinto extradimensionale",
-    source: ["arcana", "runica", "bianca"],
+    source: ["arcana", "runica"],
   },
   raggioPolare: {
     level: 8,
@@ -15,7 +15,7 @@ const baseAttackSpells = {
     name: "Raggio Polare",
     school: "invocazione",
     description: "Un freddo estremo infligge danni e risucchia una creatura",
-    source: ["arcana", "fatata"],
+    source: ["fatata"],
     intensified: allLevels,
   },
   momentoRisanamento: {
@@ -32,7 +32,7 @@ const baseAttackSpells = {
     name: "Terremoto",
     school: "invocazione",
     description: "Scuoti il terreno con un terremoto devastante",
-    source: ["fatata", "demoniaca", "runica"],
+    source: ["runica"],
     intensified: [10],
   },
   cantoSpirito: {
@@ -42,7 +42,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Canti una canzone sinistra che infligge danni a qualsiasi creatura abbia uno spirito",
-    source: ["occulta", "satanica"],
+    source: ["occulta"],
     intensified: allLevels,
   },
   epidemiaSpirito: {
@@ -107,7 +107,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "L'energia spirituale recupera un incantesimo speso da una creatura",
-    source: ["bianca", "primeva"],
+    source: ["bianca"],
   },
   campoAntimagia: {
     level: 8,
@@ -141,7 +141,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Il bersaglio è sopraffatto da una voglia irrefrenabile di danzare",
-    source: ["satanica", "demoniaca"],
+    source: ["demoniaca"],
   },
   parolaStordire: {
     level: 8,
@@ -149,7 +149,7 @@ const combatSpells = {
     name: "Parola del Potere, Stordire",
     school: "ammaliamento",
     description: "Pronunci una parola che stordisce una creatura",
-    source: ["satanica", "demoniaca"],
+    source: ["satanica"],
     intensified: allLevels,
   },
   vuotoMentale: {
@@ -170,7 +170,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Tu ed altre creature tracciate la posizione esatta di un soggetto attraverso lo scrutamento",
-    source: ["arcana"],
+    source: ["occulta"],
   },
   rivelaLocazione: {
     level: 8,
@@ -179,7 +179,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Scopri l'esatta locazione di un bersaglio entro un raggio illimitato",
-    source: ["runica", "bianca"],
+    source: ["occulta"],
   },
   consiglioOnirico: {
     level: 8,
@@ -189,13 +189,13 @@ const utilitySpells = {
     description: "Comunichi attraverso un sogno condiviso",
     source: ["satanica", "occulta", "fatata"],
   },
-  camminareNelVento: {
+  camminareVento: {
     level: 8,
     url: "/wiki/Camminare_nel_Vento",
     name: "Camminare nel Vento",
     school: "trasmutazione",
     description: "Trasformi le creature in nubi rapide",
-    source: ["primeva", "demoniaca", "nera"],
+    source: ["primeva", "nera"],
   },
 };
 

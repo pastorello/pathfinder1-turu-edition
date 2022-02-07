@@ -7,7 +7,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description:
       "Velocizzi una creatura in modo che possa attaccare o muoversi più spesso",
-    source: ["arcana", "bianca", "runica", "occulta"],
+    source: ["arcana", "bianca", "occulta"],
     intensified: [7],
   },
   luceIncandescente: {
@@ -34,7 +34,7 @@ const baseAttackSpells = {
     name: "Lentezza",
     school: "trasmutazione",
     description: "Rallenti una creatura, riducendone le azioni",
-    source: ["occulta", "demoniaca", "satanica"],
+    source: ["occulta", "demoniaca"],
     intensified: [6],
   },
   fulmine: {
@@ -43,7 +43,7 @@ const baseAttackSpells = {
     name: "Fulmine",
     school: "invocazione",
     description: "Un fulmine colpisce tutte le creature in una linea",
-    source: ["primeva", "arcana", "fatata"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   nubeMaleodorante: {
@@ -52,7 +52,7 @@ const baseAttackSpells = {
     name: "Nube Maleodorante",
     school: "evocazione",
     description: "Formi una nube che nausea le creature",
-    source: ["fatata", "primeva"],
+    source: ["primeva"],
   },
   pallaFuoco: {
     level: 3,
@@ -221,7 +221,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Vieni circondato da un vortice di turbinanti sciarpe colorate di forza che ti offuscano e disorientano i tuoi nemici",
-    source: ["fatata"],
+    source: ["arcana"],
     intensified: [5, 7, 9],
   },
   sabbieMobili: {
@@ -230,7 +230,7 @@ const combatSpells = {
     name: "Sabbie Mobili",
     school: "trasmutazione",
     description: "Fai sussultare la superficie",
-    source: ["demoniaca"],
+    source: ["runica"],
     intensified: [5, 7, 9],
   },
   cerchioProtezione: {
@@ -250,7 +250,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Ravvivi l'eroismo insito in una creatura per renderla più abile",
-    source: ["demoniaca"],
+    source: ["runica"],
     intensified: [6, 9],
   },
   legareNonMorto: {
@@ -267,7 +267,7 @@ const combatSpells = {
     name: "Cecità",
     school: "necromanzia",
     description: "Rendi cieco un bersaglio",
-    source: ["nera", "satanica"],
+    source: ["nera"],
   },
   tazzaPolvere: {
     level: 3,
@@ -305,7 +305,7 @@ const utilitySpells = {
     name: "Restringere Oggetto",
     school: "trasmutazione",
     description: "Riduci un oggetto alle dimensioni di una moneta",
-    source: ["arcana", "fatata"],
+    source: ["fatata"],
   },
   paginaSegreta: {
     level: 3,
@@ -331,7 +331,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Tu e i tuoi alleati influenzati ottenete una conoscenza preternaturale del sentiero davanti a voi",
-    source: ["bianca", "occulta"],
+    source: ["occulta"],
     intensified: [6],
   },
   zonaVerità: {
@@ -364,7 +364,7 @@ const utilitySpells = {
     name: "Localizzare",
     school: "divinazione",
     description: "Apprendi la direzione verso un oggetto",
-    source: ["occulta", "nera"],
+    source: ["occulta"],
     intensified: [5],
   },
   visioneAnimale: {
@@ -382,7 +382,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description:
       "Trasforma i piedi di una creatura in pinne, consentendole di nuotare ma rallentandola sul terreno",
-    source: ["primeva", "demoniaca", "fatata"],
+    source: ["primeva", "demoniaca"],
     intensified: [6],
   },
   antiIndividuazione: {

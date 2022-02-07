@@ -18,7 +18,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Un cono di schegge di ghiaccio esplode dalle due mani aperte e ricopre il bersaglio in uno strato di gelo",
-    source: ["arcana"],
+    source: ["fatata"],
     intensified: allLevels,
   },
   guarire: {
@@ -46,7 +46,7 @@ const baseAttackSpells = {
     name: "Stretta Folgorante",
     school: "invocazione",
     description: "Fulmini una creatura con l'elettricità",
-    source: ["primeva"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   pallaNeve: {
@@ -75,7 +75,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Crei un guscio di acido attorno a tè che esplode immediatamente verso l'esterno",
-    source: ["demoniaca"],
+    source: ["primeva"],
     intensified: allLevels,
   },
   maniBrucianti: {
@@ -94,7 +94,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Infliggi danni a una creatura e la affliggi con il veleno del ragno",
-    source: ["satanica"],
+    source: ["demoniaca"],
   },
   ferire: {
     level: 1,
@@ -113,7 +113,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Le creature in una linea subiscono danni di tipo negativo e sanguinamento",
-    source: ["nera", "satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
 };
@@ -187,7 +187,7 @@ const combatSpells = {
     name: "Protezione",
     school: "abiurazione",
     description: "Proteggi una creatura da quelle di un dato allineamento",
-    source: ["bianca", "runica"],
+    source: ["bianca"],
   },
   santuario: {
     level: 1,
@@ -195,7 +195,7 @@ const combatSpells = {
     name: "Santuario",
     school: "abiurazione",
     description: "Proteggi una creatura dagli attacchi",
-    source: ["runica"],
+    source: ["bianca"],
   },
   evocaCostrutto: {
     level: 1,
@@ -229,7 +229,7 @@ const combatSpells = {
     name: "Colpo Accurato",
     school: "divinazione",
     description: "Rendi il tuo prossimo attacco particolarmente accurato",
-    source: ["occulta"],
+    source: ["demoniaca"],
   },
   folataVento: {
     level: 1,
@@ -298,7 +298,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Una grossa gemma fluttua attorno al bersaglio con  un'orbita irregolare",
-    source: ["fatata"],
+    source: ["runica"],
     intensified: allLevels,
   },
   sonno: {
@@ -307,7 +307,7 @@ const combatSpells = {
     name: "Sonno",
     school: "ammaliamento",
     description: "Fai addormentare le creature in  un'area piccola",
-    source: ["fatata"],
+    source: ["satanica"],
     intensified: [4],
   },
   anatema: {
@@ -361,7 +361,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Provochi a una creatura un dolore continuo che la rende nauseata",
-    source: ["nera"],
+    source: ["satanica"],
     intensified: allLevels,
   },
   legameSpirito: {
@@ -370,7 +370,7 @@ const combatSpells = {
     name: "Legame con lo Spirito",
     school: "necromanzia",
     description: "Trasferisci ininterrottamente la tua salute a qualcun altro",
-    source: ["nera"],
+    source: ["bianca"],
     intensified: allLevels,
   },
   pesteGoblin: {
@@ -397,7 +397,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Mandi in sovraccarico la mente e il corpo di un bersaglio, costringendolo a diventare irrequieto e iperattivo",
-    source: ["satanica", "occulta"],
+    source: ["satanica"],
     intensified: allLevels,
   },
   charme: {
@@ -427,7 +427,7 @@ const utilitySpells = {
     name: "Disco Fluttuante",
     school: "evocazione",
     description: "Un disco di energia ti segue, trasportando oggetti",
-    source: ["arcana"],
+    source: ["occulta"],
   },
   oggettoIllusorio: {
     level: 1,
@@ -435,7 +435,7 @@ const utilitySpells = {
     name: "Oggetto Illusorio",
     school: "illusione",
     description: "Crei  un'illusione verosimile di un oggetto",
-    source: ["arcana"],
+    source: ["satanica"],
     intensified: [2, 5],
   },
   passoRapido: {
@@ -452,7 +452,7 @@ const utilitySpells = {
     name: "Allarme",
     school: "abiurazione",
     description: "Vieni avvertito se una creatura entra in un'area protetta",
-    source: ["arcana"],
+    source: ["runica"],
     intensified: [3],
   },
   individuazioneVeleno: {
@@ -470,7 +470,7 @@ const utilitySpells = {
     name: "Individuazione dell'Allineamento",
     school: "divinazione",
     description: "Vedi le aure di un dato allineamento",
-    source: ["bianca"],
+    source: ["runica"],
     intensified: [2],
   },
   purificareCibo: {
@@ -515,7 +515,7 @@ const utilitySpells = {
     school: "evocazione",
     description:
       "Evochi nelle tue mani un semplice attrezzo temporaneo, come una pala o una corda",
-    source: ["runica"],
+    source: ["fatata"],
   },
   imprimereMessaggio: {
     level: 1,
@@ -550,7 +550,7 @@ const utilitySpells = {
     name: "Prevedere Pericolo",
     school: "divinazione",
     description: "Concedi al bersaglio un barlume di preveggenza",
-    source: ["occulta", "bianca"],
+    source: ["occulta"],
     intensified: [3, 5, 7],
   },
   servitoreInosservato: {
@@ -584,7 +584,7 @@ const utilitySpells = {
     name: "Creare Acqua",
     school: "evocazione",
     description: "Evochi 8 litri di acqua",
-    source: ["primeva"],
+    source: ["fatata"],
   },
   caricoFormica: {
     level: 1,
@@ -592,7 +592,7 @@ const utilitySpells = {
     name: "Carico della Formica",
     school: "trasmutazione",
     description: "Il bersaglio può trasportare un carico maggiore",
-    source: ["primeva", "demoniaca"],
+    source: ["demoniaca"],
   },
   ventriloquio: {
     level: 1,
@@ -628,7 +628,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Usi catene, viticci o altri lacci di natura magica per legare il tuo bersaglio a te",
-    source: ["demoniaca", "nera"],
+    source: ["primeva"],
     intensified: allLevels,
   },
   passoVeloce: {
@@ -637,7 +637,7 @@ const utilitySpells = {
     name: "Passo Veloce",
     school: "trasmutazione",
     description: "Incrementi la tua velocità per 1 ora",
-    source: ["demoniaca"],
+    source: ["primeva"],
     intensified: [2],
   },
   saltare: {
@@ -665,7 +665,7 @@ const utilitySpells = {
     name: "Camuffamento Illusorio",
     school: "illusione",
     description: "Assumi l'aspetto di  un'altra creatura",
-    source: ["satanica", "fatata"],
+    source: ["satanica"],
     intensified: [2, 3],
   },
   connessioneMentale: {
@@ -675,7 +675,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Impartisci mentalmente 10 minuti di informazioni in un istante",
-    source: ["satanica"],
+    source: ["occulta"],
   },
   scambiareAspetto: {
     level: 1,

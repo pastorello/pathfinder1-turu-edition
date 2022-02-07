@@ -35,7 +35,7 @@ const baseSpells = {
     name: "Sigillo",
     school: "trasmutazione",
     description: "Apponi un marchio magico",
-    source: traditions.all,
+    source: ["arcana", "runica", "primeva", "fatata", "satanica"],
     intensified: [3, 5, 7],
   },
 };
@@ -47,7 +47,7 @@ const baseAttackSpells = {
     name: "Raggio di Gelo",
     school: "invocazione",
     description: "Infliggi danni da freddo a una creatura",
-    source: ["arcana"],
+    source: ["fatata"],
     intensified: allLevels,
   },
   distruggereNonMorti: {
@@ -84,7 +84,7 @@ const baseAttackSpells = {
     name: "Arco Elettrico",
     school: "invocazione",
     description: "Colpisci una o due creature con fulmini",
-    source: ["primeva"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   produrreFiamma: {
@@ -102,7 +102,7 @@ const baseAttackSpells = {
     name: "Fiotto Acido",
     school: "invocazione",
     description: "Infliggi danni da acido alle creature",
-    source: ["fatata"],
+    source: ["primeva"],
     intensified: allLevels,
   },
   frastornare: {
@@ -133,7 +133,7 @@ const combatSpells = {
     name: "Impedimento",
     school: "evocazione",
     description: "Evochi un rampicante per intralciare una creatura",
-    source: ["primeva", "arcana", "fatata"],
+    source: ["primeva"],
     intensified: [2, 4],
   },
   scudo: {
@@ -143,7 +143,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Uno scudo di forza magica blocca gli attacchi e dardo incantato",
-    source: ["arcana", "runica"],
+    source: ["arcana"],
     intensified: [3, 5, 7, 9],
   },
   stabilizzare: {
@@ -152,7 +152,7 @@ const combatSpells = {
     name: "Stabilizzare",
     school: "necromanzia",
     description: "Stabilizzi una creatura morente.",
-    source: ["bianca", "primeva"],
+    source: ["bianca", "primeva", "runica"],
   },
   interdizioneMinaccia: {
     level: 0,
@@ -160,7 +160,7 @@ const combatSpells = {
     name: "Interdizione alla Minaccia",
     school: "abiurazione",
     description: "Proteggi un alleato da un nemico specifico",
-    source: ["bianca", "occulta", "nera", "demoniaca"],
+    source: ["bianca", "occulta", "nera"],
     intensified: [6],
   },
   guida: {
@@ -169,7 +169,7 @@ const combatSpells = {
     name: "Guida",
     school: "divinazione",
     description: "Una guida divina fornisce un bonus su un tiro",
-    source: ["runica", "occulta", "satanica", "nera", "demoniaca"],
+    source: ["runica", "occulta", "satanica", "nera", "demoniaca", "primeva"],
   },
   suonoFantasma: {
     level: 0,
@@ -197,7 +197,7 @@ const utilitySpells = {
     name: "Luce",
     school: "invocazione",
     description: "Fai risplendere un oggetto",
-    source: ["arcana", "runica"],
+    source: ["arcana"],
     intensified: [4],
   },
   messaggio: {
@@ -207,7 +207,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Pronunci un messaggio a una creatura distante, la quale può rispondere",
-    source: ["bianca", "satanica", "nera"],
+    source: ["bianca", "satanica", "nera", "primeva", "fatata", "demoniaca"],
     intensified: [3],
   },
   condividerePassati: {
@@ -225,7 +225,7 @@ const utilitySpells = {
     name: "Mano Magica",
     school: "invocazione",
     description: "Dai l'ordine a una mano magica di muovere un oggetto",
-    source: ["occulta", "fatata", "satanica"],
+    source: ["occulta"],
     intensified: [3, 5, 7],
   },
   conoscereDirezione: {

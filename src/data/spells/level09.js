@@ -14,7 +14,7 @@ const baseAttackSpells = {
     name: "Sciame di Meteore",
     school: "invocazione",
     description: "Evochi quattro meteore infuocate che esplodono",
-    source: ["arcana"],
+    source: ["demoniaca"],
     intensified: [10],
   },
   armaGiudizio: {
@@ -23,7 +23,7 @@ const baseAttackSpells = {
     name: "Arma del Giudizio",
     school: "invocazione",
     description: "Formi un'arma che rafforza la guerra o la pace",
-    source: ["runica", "bianca"],
+    source: ["runica"],
     intensified: [10],
   },
   canzoneIncomprensibile: {
@@ -32,7 +32,7 @@ const baseAttackSpells = {
     name: "Canzone Incomprensibile",
     school: "ammaliamento",
     description: "Una canzone debilita le creature in strani modi",
-    source: ["occulta", "fatata"],
+    source: ["occulta"],
   },
   naturaOstile: {
     level: 9,
@@ -49,7 +49,7 @@ const baseAttackSpells = {
     name: "Tempesta di Vendetta",
     school: "invocazione",
     description: "Crei un'enorme tempesta pericolosa",
-    source: ["primeva", "occulta"],
+    source: ["occulta"],
     intensified: [10],
   },
   trasformazione: {
@@ -58,7 +58,7 @@ const baseAttackSpells = {
     name: "Trasformazione",
     school: "trasmutazione",
     description: "Ti trasformi ripetutamente in una forma di tua scelta",
-    source: ["demoniaca", "fatata"],
+    source: ["fatata"],
   },
   parolaUccidere: {
     level: 9,
@@ -75,7 +75,7 @@ const baseAttackSpells = {
     name: "Massacro",
     school: "necromanzia",
     description: "Uccidi più creature all'istante",
-    source: ["nera", "demoniaca"],
+    source: ["nera"],
     intensified: [10],
   },
   fatale: {
@@ -105,7 +105,7 @@ const combatSpells = {
     name: "Sfera Prismatica",
     school: "abiurazione",
     description: "Crei una sfera protettiva composta di sette strati cromatici",
-    source: ["arcana", "runica", "fatata"],
+    source: ["arcana"],
   },
   disgiunzione: {
     level: 9,
@@ -113,7 +113,7 @@ const combatSpells = {
     name: "Disgiunzione",
     school: "abiurazione",
     description: "Disattivi o distruggi un oggetto magico",
-    source: ["arcana", "runica", "fatata", "primeva", "nera"],
+    source: ["arcana"],
   },
   previsione: {
     level: 9,
@@ -122,7 +122,7 @@ const combatSpells = {
     school: "divinazione",
     description:
       "Percepisci quando una creatura è in pericolo e la proteggi con buona sorte",
-    source: ["occulta", "bianca", "primeva"],
+    source: ["occulta", "bianca"],
   },
   crociata: {
     level: 9,
@@ -130,7 +130,7 @@ const combatSpells = {
     name: "Crociata",
     school: "ammaliamento",
     description: "Le creature diventano dedite a una causa di tua scelta",
-    source: ["demoniaca", "satanica"],
+    source: ["runica"],
     intensified: [10],
   },
   presenzaSoverchiante: {
@@ -139,7 +139,7 @@ const combatSpells = {
     name: "Presenza Soverchiante",
     school: "ammaliamento",
     description: "Assumi gli aspetti maestosi di un dio",
-    source: ["demoniaca", "nera", "satanica"],
+    source: ["demoniaca", "satanica"],
   },
 };
 
@@ -158,7 +158,7 @@ const utilitySpells = {
     name: "Reggia Gloriosa",
     school: "evocazione",
     description: "Evochi una reggia che dura 1 giorno",
-    source: ["occulta", "arcana", "fatata"],
+    source: ["arcana", "fatata"],
   },
 };
 

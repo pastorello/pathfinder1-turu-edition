@@ -8,7 +8,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Sprigioni raggi di luce arcobaleno che hanno vari effetti sulle creature in un cono",
-    source: ["arcana", "fatata"],
+    source: ["arcana"],
   },
   esplosioneSolare: {
     level: 7,
@@ -47,7 +47,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Sprigioni spruzzi di lava che bruciano le creature e le incastonano nella roccia",
-    source: ["arcana", "demoniaca"],
+    source: ["demoniaca"],
     intensified: allLevels,
   },
   corpoInfuocato: {
@@ -56,7 +56,7 @@ const baseAttackSpells = {
     name: "Corpo Infuocato",
     school: "trasmutazione",
     description: "Trasformi il tuo corpo in una fiamma vivente",
-    source: ["primeva", "fatata", "demoniaca"],
+    source: ["demoniaca"],
     intensified: [9],
   },
   esplosioneOscurante: {
@@ -85,7 +85,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Punti il dito verso una creatura per infliggere danni da energia negativa potenzialmente uccidendola all'istante",
-    source: ["nera", "satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
   visioniPericolo: {
@@ -115,7 +115,7 @@ const combatSpells = {
     name: "Riflettere Incantesimo",
     school: "abiurazione",
     description: "Rifletti indietro gli incantesimi a chi li lanciati",
-    source: ["arcana", "runica"],
+    source: ["arcana"],
   },
   bersaglioAccurato: {
     level: 7,
@@ -124,7 +124,7 @@ const combatSpells = {
     school: "divinazione",
     description:
       "Rendi più attacchi contro una creatura particolarmente accurati",
-    source: ["bianca", "runica", "primeva"],
+    source: ["occulta"],
   },
   transizioneEterea: {
     level: 7,
@@ -153,7 +153,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Crei  un'illusione di te stesso attraverso la quale puoi lanciare incantesimi",
-    source: ["occulta"],
+    source: ["fatata"],
     intensified: [9],
   },
   duplicareNemico: {
@@ -163,7 +163,7 @@ const combatSpells = {
     school: "evocazione",
     description:
       "Crei un duplicato temporaneo di un nemico che combatte al tuo posto",
-    source: ["fatata", "demoniaca"],
+    source: ["fatata"],
     intensified: allLevels,
   },
   recipienteDivino: {
@@ -238,7 +238,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Prepari un incantesimo da innescare in seguito alle condizioni che tu decidi",
-    source: ["arcana", "bianca", "occulta", "nera", "satanica", "fatata"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   retrocognizione: {
@@ -248,7 +248,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Percepisci impressioni di eventi passati accaduti nella tua locazione",
-    source: ["bianca", "occulta", "nera"],
+    source: ["occulta"],
     intensified: [8, 9],
   },
   senzaOstacoli: {
@@ -257,7 +257,7 @@ const utilitySpells = {
     name: "Senza Ostacoli",
     school: "abiurazione",
     description: "Permetti alle creature di evitare ostacoli ambientali",
-    source: ["primeva", "demoniaca"],
+    source: ["primeva"],
     intensified: [9],
   },
   reggiaMeravigliosa: {

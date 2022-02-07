@@ -7,7 +7,7 @@ const baseAttackSpells = {
     name: "Silenzio",
     school: "illusione",
     description: "Silenzi tutti i suoni di una creatura",
-    source: ["bianca", "runica"],
+    source: ["bianca"],
     intensified: [4],
   },
   armaSpirituale: {
@@ -17,7 +17,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Materializzi un'arma di forza di natura divina che appare ed attacca ripetutamente",
-    source: ["runica", "bianca"],
+    source: ["runica"],
     intensified: [4, 6, 8, 10],
   },
   manovraTelecinetica: {
@@ -62,7 +62,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description:
       "Una risata incontrollabile rende una creatura incapace di compiere tutte le proprie azioni",
-    source: ["fatata"],
+    source: ["satanica"],
   },
   evocaElementale: {
     level: 2,
@@ -70,7 +70,7 @@ const baseAttackSpells = {
     name: "Evoca Elementale",
     school: "evocazione",
     description: "Evochi un elementale che combatta con te",
-    source: ["fatata", "arcana"],
+    source: ["runica", "fatata", "occulta", "demoniaca"],
     intensified: allLevels,
   },
   frecciaAcida: {
@@ -79,7 +79,7 @@ const baseAttackSpells = {
     name: "Freccia Acida",
     school: "invocazione",
     description: "Una freccia magica infligge danni da acido persistenti",
-    source: ["demoniaca"],
+    source: ["primeva"],
     intensified: [4, 6, 8, 10],
   },
   sferaInfuocata: {
@@ -122,7 +122,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Maledici il bersaglio con una fame che nessun cibo è in grado di saziare",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
 };
@@ -179,7 +179,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Impianti una mina mentale all'interno della tua psiche, pronta a detonare contro chiunque provi a manipolare i tuoi pensieri",
-    source: ["runica"],
+    source: ["bianca"],
     intensified: allLevels,
   },
   dissolviMagie: {
@@ -248,7 +248,7 @@ const combatSpells = {
     name: "Ragnatela",
     school: "evocazione",
     description: "Formi una ragnatela che impedisce alle creature di muoversi",
-    source: ["primeva"],
+    source: ["demoniaca"],
     intensified: [4],
   },
   mutareLaPelle: {
@@ -267,7 +267,7 @@ const combatSpells = {
     school: "invocazione",
     description:
       "Luci colorate impediscono alle creature di essere occultate o invisibili",
-    source: ["fatata"],
+    source: ["arcana"],
   },
   immagineSpeculare: {
     level: 2,
@@ -284,7 +284,7 @@ const combatSpells = {
     school: "invocazione",
     description:
       "Una polvere luccicante nega l'invisibilità e ostacola la visione",
-    source: ["fatata"],
+    source: ["arcana"],
   },
   invisibilità: {
     level: 2,
@@ -337,7 +337,7 @@ const combatSpells = {
     name: "Vita Falsata",
     school: "necromanzia",
     description: "Ottieni pf temporanei",
-    source: ["nera", "demoniaca"],
+    source: ["nera"],
     intensified: allLevels,
   },
   scudoAltri: {
@@ -376,7 +376,7 @@ const utilitySpells = {
     name: "Creare Cibo",
     school: "evocazione",
     description: "Evochi una quantità cibo che può nutrire più creature",
-    source: ["bianca"],
+    source: ["primeva"],
     intensified: [4, 6, 8],
   },
   ristorare: {
@@ -547,7 +547,7 @@ const utilitySpells = {
     name: "Fiamma Perenne",
     school: "invocazione",
     description: "Una fiamma magica arde illimitatamente",
-    source: ["runica", "demoniaca"],
+    source: ["demoniaca"],
     intensified: allLevels,
   },
   frantumare: {
@@ -556,7 +556,7 @@ const utilitySpells = {
     name: "Frantumare",
     school: "invocazione",
     description: "Frantumi un oggetto con un attacco sonoro ad alta frequenza",
-    source: ["demoniaca", "arcana"],
+    source: ["occulta"],
     intensified: allLevels,
   },
   destrieroFantomatico: {
@@ -565,7 +565,7 @@ const utilitySpells = {
     name: "Destriero Fantomatico",
     school: "evocazione",
     description: "Evochi un cavallo magico",
-    source: ["demoniaca", "arcana", "occulta", "nera"],
+    source: ["arcana", "nera"],
     intensified: [4, 5, 6],
   },
   movimentiRagno: {
