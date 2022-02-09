@@ -59,14 +59,14 @@ const classi = [
   {
     name: "Soldato della Fede di Sarenae",
     virtue: "onestà",
-    magia: "bianca",
+    magia: "divina",
     alignments: ["nb"],
     stirpi: ["umano", "elfo", "nano"],
   },
   {
     name: "Ecclesiastico di Pharasma",
     virtue: "compassione",
-    magia: "bianca",
+    magia: "divina",
     alignments: ["nb"],
     stirpi: ["umano", "elfo"],
   },
@@ -102,14 +102,14 @@ const classi = [
   {
     name: "Stregone Vodoo",
     stirpi: ["umano"],
-    magia: "nera",
+    magia: "blasfema",
     alignments: ["lm", "nm", "cm"],
   },
   {
     name: "Stregone Bianco",
     stirpi: ["elfo", "halfling"],
     lineage: "angelica",
-    magia: "bianca",
+    magia: "divina",
     alignments: ["lb", "nb", "cb"],
   },
   {

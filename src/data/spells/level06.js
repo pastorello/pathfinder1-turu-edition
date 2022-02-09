@@ -6,7 +6,7 @@ const baseAttackSpells = {
     name: "Disintegrazione",
     school: "invocazione",
     description: "Riduci in polvere una creatura o un oggetto",
-    source: ["arcana"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   rianimareMorti: {
@@ -15,7 +15,7 @@ const baseAttackSpells = {
     name: "Rianimare Morti",
     school: "necromanzia",
     description: "Riporti in vita una creatura morta",
-    source: ["bianca", "runica"],
+    source: ["divina", "runica"],
     intensified: allLevels,
   },
   campoVita: {
@@ -25,7 +25,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Crei un campo di energia positiva che guarisce chi vi si trova all'interno",
-    source: ["bianca", "runica"],
+    source: ["divina", "runica"],
     intensified: [8, 9],
   },
   catenaFulmini: {
@@ -43,7 +43,7 @@ const baseAttackSpells = {
     name: "Semi di Fuoco",
     school: "invocazione",
     description: "Crei quattro ghiande esplosive",
-    source: ["primeva", "demoniaca"],
+    source: ["primeva", "infernale"],
     intensified: [8, 9],
   },
   metamorfosiFunesta: {
@@ -52,7 +52,7 @@ const baseAttackSpells = {
     name: "Metamorfosi Funesta",
     school: "trasmutazione",
     description: "Trasformi una creatura in un animale innocuo",
-    source: ["fatata", "bianca"],
+    source: ["fatata"],
   },
   carnePietra: {
     level: 6,
@@ -60,7 +60,7 @@ const baseAttackSpells = {
     name: "Carne in Pietra",
     school: "trasmutazione",
     description: "Trasformi una creatura vivente in una statua di pietra",
-    source: ["fatata", "arcana"],
+    source: ["fatata"],
   },
   barrieraLame: {
     level: 6,
@@ -68,7 +68,7 @@ const baseAttackSpells = {
     name: "Barriera di Lame",
     school: "invocazione",
     description: "Formi un muro di lame fatte di forza",
-    source: ["occulta"],
+    source: ["arcana"],
     intensified: allLevels,
   },
   pungiglionePurpureo: {
@@ -78,7 +78,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Infliggi danni a una creatura e la infetti con il veleno del verme purpureo",
-    source: ["demoniaca"],
+    source: ["nera"],
   },
   esplosioneSpirito: {
     level: 6,
@@ -86,7 +86,7 @@ const baseAttackSpells = {
     name: "Esplosione dello Spirito",
     school: "necromanzia",
     description: "Infliggi danni all'essenza spirituale di una creatura",
-    source: ["occulta"],
+    source: ["occulta", "blasfema"],
     intensified: allLevels,
   },
   dissanguamentoVampiro: {
@@ -95,7 +95,7 @@ const baseAttackSpells = {
     name: "Dissanguamento del Vampiro",
     school: "necromanzia",
     description: "Estrai sangue e forza vitale dalle creature in un cono",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   dominare: {
@@ -104,7 +104,7 @@ const baseAttackSpells = {
     name: "Dominare",
     school: "ammaliamento",
     description: "Un umanoide deve obbedire ai tuoi ordini",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [10],
   },
   regressioneMentale: {
@@ -113,7 +113,7 @@ const baseAttackSpells = {
     name: "Regressione Mentale",
     school: "ammaliamento",
     description: "Riduci permanentemente le facoltà mentali di una creatura",
-    source: ["satanica"],
+    source: ["infernale"],
   },
   allucinazioneCatastrofica: {
     level: 6,
@@ -122,7 +122,7 @@ const baseAttackSpells = {
     school: "illusione",
     description:
       "Infliggi danni alla mente di una creatura con visioni di  un'apocalisse",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
 };
@@ -144,7 +144,7 @@ const combatSpells = {
     name: "Repulsione",
     school: "abiurazione",
     description: "Impedisci alle creature di avvicinarsi a te",
-    source: ["runica"],
+    source: ["runica", "divina", "occulta"],
   },
   muroForza: {
     level: 6,
@@ -152,7 +152,7 @@ const combatSpells = {
     name: "Muro di Forza",
     school: "invocazione",
     description: "Crei un muro invisibile e durevole di forza magica",
-    source: ["arcana", "occulta"],
+    source: ["arcana"],
     intensified: [8, 10],
   },
   convincimentoZelante: {
@@ -162,7 +162,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Instilli convinzioni e zelo irremovibili nelle creature consenzienti",
-    source: ["satanica", "nera"],
+    source: ["blasfema", "divina"],
     intensified: [9],
   },
   pietraCarne: {
@@ -171,7 +171,7 @@ const combatSpells = {
     name: "Pietra in Carne",
     school: "trasmutazione",
     description: "Ripristini una creatura pietrificata al suo stato naturale",
-    source: ["runica", "primeva"],
+    source: ["runica", "primeva", "divina"],
   },
   groviglioRampicanti: {
     level: 6,
@@ -188,7 +188,7 @@ const combatSpells = {
     name: "Forma di Drago",
     school: "trasmutazione",
     description: "Ti trasformi in un drago",
-    source: ["fatata", "primeva", "demoniaca"],
+    source: ["fatata", "primeva", "infernale"],
     intensified: [8],
   },
   tramaVibrante: {
@@ -215,7 +215,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Una maledizione su una creatura le fa subire danni quando è colpita da un incantesimo e diminuisce la durata dei suoi incantesimi",
-    source: ["satanica", "arcana", "nera"],
+    source: ["blasfema", "infernale"],
   },
   fuorviare: {
     level: 6,
@@ -224,7 +224,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Diventi invisibile e crei un duplicato di te stesso che agisce come te",
-    source: ["satanica", "occulta", "arcana", "fatata", "nera"],
+    source: ["nera", "occulta", "fatata"],
   },
 };
 
@@ -235,7 +235,7 @@ const utilitySpells = {
     name: "Scrutare",
     school: "divinazione",
     description: "Spii una creatura",
-    source: ["occulta", "nera", "satanica", "fatata"],
+    source: ["occulta", "blasfema", "nera", "fatata"],
   },
   visioneVero: {
     level: 6,
@@ -245,12 +245,13 @@ const utilitySpells = {
     description: "Vedi attraverso illusioni e trasmutazioni",
     source: [
       "arcana",
-      "bianca",
+      "divina",
       "runica",
       "occulta",
       "primeva",
+      "infernale",
+      "blasfema",
       "nera",
-      "satanica",
     ],
   },
   teletrasporto: {

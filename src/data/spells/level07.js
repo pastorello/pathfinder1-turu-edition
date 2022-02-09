@@ -17,7 +17,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Un globo di luce solare infligge danni da fuoco, ferisce i non morti e contrasta l'oscurità",
-    source: ["bianca"],
+    source: ["divina", "primeva"],
     intensified: allLevels,
   },
   rigenerazione: {
@@ -27,7 +27,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Permetti a una creatura di guarire col tempo, la ricrescita dei suoi organi e di riattaccarsi parti del corpo",
-    source: ["bianca", "primeva", "runica"],
+    source: ["divina", "primeva", "runica"],
     intensified: [9],
   },
   sentenzaDivina: {
@@ -37,7 +37,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Le creature dell'allineamento opposto alla tua divinità subiscono danni, sono indebolite, paralizzate o vengono esiliate",
-    source: ["runica"],
+    source: ["runica", "divina", "blasfema"],
     intensified: allLevels,
   },
   eruzioneVulcanica: {
@@ -47,7 +47,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Sprigioni spruzzi di lava che bruciano le creature e le incastonano nella roccia",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   corpoInfuocato: {
@@ -56,7 +56,7 @@ const baseAttackSpells = {
     name: "Corpo Infuocato",
     school: "trasmutazione",
     description: "Trasformi il tuo corpo in una fiamma vivente",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: [9],
   },
   esplosioneOscurante: {
@@ -66,7 +66,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Un globo di oscurità infligge danni da freddo, ferisce i viventi e prevale sulla luce",
-    source: ["occulta", "nera"],
+    source: ["occulta", "blasfema"],
     intensified: allLevels,
   },
   faroTemporale: {
@@ -85,7 +85,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Punti il dito verso una creatura per infliggere danni da energia negativa potenzialmente uccidendola all'istante",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   visioniPericolo: {
@@ -95,7 +95,7 @@ const baseAttackSpells = {
     school: "illusione",
     description:
       "Crei una visione di terrificanti creature sciamanti che provocano danni mentali",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
 };
@@ -115,7 +115,7 @@ const combatSpells = {
     name: "Riflettere Incantesimo",
     school: "abiurazione",
     description: "Rifletti indietro gli incantesimi a chi li lanciati",
-    source: ["arcana"],
+    source: ["arcana", "fatata"],
   },
   bersaglioAccurato: {
     level: 7,
@@ -143,7 +143,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Una creatura ottiene resistenza ad acido, elettricità, forza, freddo, fuoco e sonoro",
-    source: ["primeva", "fatata"],
+    source: ["primeva", "fatata", "divina", "runica", "infernale"],
     intensified: [9],
   },
   immagineProiettata: {
@@ -172,7 +172,7 @@ const combatSpells = {
     name: "Recipiente Divino",
     school: "trasmutazione",
     description: "Assumi le sembianze di un servitore della tua divinità",
-    source: ["demoniaca", "bianca"],
+    source: ["divina", "blasfema"],
     intensified: [9],
   },
   parolaAccecare: {
@@ -191,7 +191,7 @@ const combatSpells = {
     school: "necromanzia",
     description:
       "Invii la tua mente e la tua anima nel corpo di un'altra creatura",
-    source: ["nera"],
+    source: ["blasfema", "nera"],
     intensified: [9],
   },
   mascheraTerrore: {
@@ -201,7 +201,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "L'aspetto illusorio spaventoso di una creatura terrorizza chiunque la osservi",
-    source: ["satanica"],
+    source: ["infernale"],
     intensified: [8],
   },
   distorcereMente: {
@@ -210,7 +210,7 @@ const combatSpells = {
     name: "Distorcere Mente",
     school: "ammaliamento",
     description: "Confondi una creatura, potenzialmente in modo permanente",
-    source: ["satanica"],
+    source: ["infernale", "nera"],
   },
 };
 
@@ -221,7 +221,7 @@ const utilitySpells = {
     name: "Spostamento Planare",
     school: "evocazione",
     description: "Trasporti le creature in un altro piano di esistenza",
-    source: ["arcana", "primeva", "runica", "demoniaca"],
+    source: ["arcana", "runica", "primeva"],
   },
   serraturaDimensionale: {
     level: 7,
@@ -238,7 +238,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Prepari un incantesimo da innescare in seguito alle condizioni che tu decidi",
-    source: ["arcana"],
+    source: ["arcana", "nera"],
     intensified: allLevels,
   },
   retrocognizione: {
@@ -266,7 +266,7 @@ const utilitySpells = {
     name: "Reggia Meravigliosa",
     school: "evocazione",
     description: "Evochi una residenza sicura in un semipiano",
-    source: ["fatata", "satanica"],
+    source: ["fatata"],
   },
 };
 

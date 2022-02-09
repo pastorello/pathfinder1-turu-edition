@@ -20,11 +20,15 @@ const isValidObject = (dataObject) => {
   );
 };
 
+const isValidString = (theString) =>
+  typeof theString === "string" && theString.length > 0;
+
 const isValid = {
   num: isValidInt,
   elem: elementExists,
   dataArray: isValidDataArray,
   dataObj: isValidObject,
+  word: isValidString,
 };
 
 export default isValid;

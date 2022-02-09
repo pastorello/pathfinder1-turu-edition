@@ -24,7 +24,7 @@ const baseAttackSpells = {
     name: "Momento di Risanamento",
     school: "necromanzia",
     description: "Conferisci un giorno di recupero in un istante",
-    source: ["bianca", "primeva"],
+    source: ["divina", "primeva"],
   },
   terremoto: {
     level: 8,
@@ -32,7 +32,7 @@ const baseAttackSpells = {
     name: "Terremoto",
     school: "invocazione",
     description: "Scuoti il terreno con un terremoto devastante",
-    source: ["runica"],
+    source: ["runica", "primeva", "infernale"],
     intensified: [10],
   },
   cantoSpirito: {
@@ -42,7 +42,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Canti una canzone sinistra che infligge danni a qualsiasi creatura abbia uno spirito",
-    source: ["occulta"],
+    source: ["infernale", "blasfema"],
     intensified: allLevels,
   },
   epidemiaSpirito: {
@@ -51,7 +51,7 @@ const baseAttackSpells = {
     name: "Epidemia dello Spirito",
     school: "necromanzia",
     description: "Indebolisci un bersaglio con una maledizione contagiosa",
-    source: ["occulta", "nera", "satanica"],
+    source: ["blasfema"],
   },
   formaMostruosità: {
     level: 8,
@@ -59,7 +59,7 @@ const baseAttackSpells = {
     name: "Forma di Mostruosità",
     school: "trasmutazione",
     description: "Ti trasformi in un potente mostro",
-    source: ["demoniaca", "primeva"],
+    source: ["infernale", "primeva", "fatata", "infernale"],
     intensified: [9],
   },
   orridoAvvizzimento: {
@@ -68,7 +68,7 @@ const baseAttackSpells = {
     name: "Orrido Avvizzimento",
     school: "necromanzia",
     description: "Disidrati i corpi delle creature, infliggendo loro danni",
-    source: ["nera"],
+    source: ["blasfema", "nera"],
     intensified: allLevels,
   },
 };
@@ -98,7 +98,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Gli alleati in un'aura hanno difese migliori e sono protetti contro un allineamento",
-    source: ["bianca", "demoniaca", "nera"],
+    source: ["divina", "blasfema"],
   },
   ispirazioneDivina: {
     level: 8,
@@ -107,7 +107,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "L'energia spirituale recupera un incantesimo speso da una creatura",
-    source: ["bianca"],
+    source: ["divina"],
   },
   campoAntimagia: {
     level: 8,
@@ -115,7 +115,7 @@ const combatSpells = {
     name: "Campo AntiMagia",
     school: "abiurazione",
     description: "La magia non funziona in  un'area che ti circonda",
-    source: ["runica", "arcana"],
+    source: ["runica", "arcana", "blasfema", "divina"],
   },
   sparizione: {
     level: 8,
@@ -124,7 +124,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Rendi una creatura invisibile, silente e impossibile da individuare da tutti i sensi",
-    source: ["occulta", "satanica", "fatata", "nera"],
+    source: ["nera", "fatata", "arcana"],
   },
   ventiPunitori: {
     level: 8,
@@ -132,7 +132,7 @@ const combatSpells = {
     name: "Venti Punitori",
     school: "invocazione",
     description: "Un ciclone ostacola i voli e intrappola le creature",
-    source: ["fatata", "primeva", "occulta", "nera"],
+    source: ["occulta", "primeva"],
   },
   danzaIrrefrenabile: {
     level: 8,
@@ -141,7 +141,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Il bersaglio è sopraffatto da una voglia irrefrenabile di danzare",
-    source: ["demoniaca"],
+    source: ["infernale"],
   },
   parolaStordire: {
     level: 8,
@@ -149,7 +149,7 @@ const combatSpells = {
     name: "Parola del Potere, Stordire",
     school: "ammaliamento",
     description: "Pronunci una parola che stordisce una creatura",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
   vuotoMentale: {
@@ -158,7 +158,7 @@ const combatSpells = {
     name: "Vuoto Mentale",
     school: "abiurazione",
     description: "Proteggi una creatura da magie mentali e alcune divinazioni",
-    source: ["runica", "bianca", "occulta", "primeva"],
+    source: ["divina", "runica"],
   },
 };
 
@@ -170,7 +170,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Tu ed altre creature tracciate la posizione esatta di un soggetto attraverso lo scrutamento",
-    source: ["occulta"],
+    source: ["occulta", "nera"],
   },
   rivelaLocazione: {
     level: 8,
@@ -179,7 +179,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Scopri l'esatta locazione di un bersaglio entro un raggio illimitato",
-    source: ["occulta"],
+    source: ["occulta", "nera"],
   },
   consiglioOnirico: {
     level: 8,
@@ -187,7 +187,7 @@ const utilitySpells = {
     name: "Consiglio Onirico",
     school: "illusione",
     description: "Comunichi attraverso un sogno condiviso",
-    source: ["satanica", "occulta", "fatata"],
+    source: ["occulta"],
   },
   camminareVento: {
     level: 8,
@@ -195,7 +195,7 @@ const utilitySpells = {
     name: "Camminare nel Vento",
     school: "trasmutazione",
     description: "Trasformi le creature in nubi rapide",
-    source: ["primeva", "nera"],
+    source: ["occulta", "primeva", "fatata"],
   },
 };
 

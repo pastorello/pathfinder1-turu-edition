@@ -5,7 +5,7 @@ const elfi = [
   {
     name: "Giustiziere di Torag",
     description: `I Giustizieri di Torag sono la guardia scelta del Tribunale, 
-    sono detiti a contrastare la Magia Satanica e far rispettare le leggi.`,
+    sono detiti a contrastare la Magia Nera e far rispettare le leggi.`,
     symbol: "Bilancia",
     alignments: [deity.alignment],
     relativeClass: "Campione",

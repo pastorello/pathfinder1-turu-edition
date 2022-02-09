@@ -1,14 +1,13 @@
 const allLevels = [4, 5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
-  velocità: {
+  fulmine: {
     level: 3,
-    url: "/wiki/Incantesimi/Velocit%C3%A0",
-    name: "Velocità",
-    school: "trasmutazione",
-    description:
-      "Velocizzi una creatura in modo che possa attaccare o muoversi più spesso",
-    source: ["arcana", "bianca", "occulta"],
-    intensified: [7],
+    url: "/wiki/Fulmine",
+    name: "Fulmine",
+    school: "invocazione",
+    description: "Un fulmine colpisce tutte le creature in una linea",
+    source: ["arcana"],
+    intensified: allLevels,
   },
   luceIncandescente: {
     level: 3,
@@ -17,7 +16,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Un raggio di luce incandescente infligge danni aggiuntivi ai non morti e contrasta l'oscurità",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: allLevels,
   },
   glifoInterdizione: {
@@ -34,17 +33,8 @@ const baseAttackSpells = {
     name: "Lentezza",
     school: "trasmutazione",
     description: "Rallenti una creatura, riducendone le azioni",
-    source: ["occulta", "demoniaca"],
+    source: ["occulta", "infernale", "fatata", "nera"],
     intensified: [6],
-  },
-  fulmine: {
-    level: 3,
-    url: "/wiki/Fulmine",
-    name: "Fulmine",
-    school: "invocazione",
-    description: "Un fulmine colpisce tutte le creature in una linea",
-    source: ["arcana"],
-    intensified: allLevels,
   },
   nubeMaleodorante: {
     level: 3,
@@ -52,7 +42,7 @@ const baseAttackSpells = {
     name: "Nube Maleodorante",
     school: "evocazione",
     description: "Formi una nube che nausea le creature",
-    source: ["primeva"],
+    source: ["primeva", "fatata", "infernale"],
   },
   pallaFuoco: {
     level: 3,
@@ -60,7 +50,7 @@ const baseAttackSpells = {
     name: "Palla di Fuoco",
     school: "invocazione",
     description: "un'esplosione di fuoco in un'area brucia le creature",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   oscuritàGelida: {
@@ -70,7 +60,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Un raggio di oscurità malvagia infligge danni da freddo, contrasta la luce e ferisce i celestiali",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   toccoDelVampiro: {
@@ -80,7 +70,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Infliggi danni di tipo negativo e ottieni pf temporanei con un tocco",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   crisiMistica: {
@@ -90,12 +80,22 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description:
       "Provochi danni mentali, e potenzialmente rendi un devoto incapace di lanciare incantesimi",
-    source: ["satanica"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
 };
 
 const combatSpells = {
+  velocità: {
+    level: 3,
+    url: "/wiki/Incantesimi/Velocit%C3%A0",
+    name: "Velocità",
+    school: "trasmutazione",
+    description:
+      "Velocizzi una creatura in modo che possa attaccare o muoversi più spesso",
+    source: ["arcana", "divina", "occulta", "fatata", "infernale", "nera"],
+    intensified: [7],
+  },
   pozzoGravitazionale: {
     level: 3,
     url: "/wiki/Pozzo_Gravitazionale",
@@ -111,7 +111,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Tu e le creature vicine diventate invisibili mentre esplorate",
-    source: ["arcana", "occulta", "fatata"],
+    source: ["arcana", "occulta", "fatata", "nera", "infernale"],
     intensified: [5],
   },
   tramaIpnotica: {
@@ -128,7 +128,7 @@ const combatSpells = {
     name: "Levitazione",
     school: "invocazione",
     description: "Fai fluttuare un oggetto o creatura a qualche metro da terra",
-    source: ["arcana", "occulta"],
+    source: ["arcana", "occulta", "fatata", "infernale"],
   },
   rimuoviMalattia: {
     level: 3,
@@ -136,7 +136,7 @@ const combatSpells = {
     name: "Rimuovi Malattia",
     school: "necromanzia",
     description: "Curi una malattia che affligge una creatura",
-    source: ["bianca", "runica"],
+    source: ["divina", "runica", "primeva"],
   },
   neutralizzaVeleno: {
     level: 3,
@@ -144,7 +144,7 @@ const combatSpells = {
     name: "Neutralizza Veleno",
     school: "necromanzia",
     description: "Curi un veleno che affligge una creatura",
-    source: ["bianca", "runica"],
+    source: ["divina", "runica", "primeva"],
   },
   comandoLiberazione: {
     level: 3,
@@ -153,7 +153,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Emetti un urlo liberatorio, spronando un alleato a liberarsi da un effetto che lo tiene fermo",
-    source: ["bianca"],
+    source: ["divina", "primeva"],
   },
   fondersiPietra: {
     level: 3,
@@ -169,7 +169,7 @@ const combatSpells = {
     name: "Arma Spettrale",
     school: "trasmutazione",
     description: "un'arma ha effetto sulle creature incorporee",
-    source: ["runica"],
+    source: ["runica", "infernale"],
   },
   chiaroudienza: {
     level: 3,
@@ -212,7 +212,7 @@ const combatSpells = {
     name: "Legato a Terra",
     school: "trasmutazione",
     description: "Porti a terra una creatura volante",
-    source: ["primeva", "demoniaca"],
+    source: ["primeva", "infernale"],
   },
   sciarpeTurbinanti: {
     level: 3,
@@ -230,7 +230,7 @@ const combatSpells = {
     name: "Sabbie Mobili",
     school: "trasmutazione",
     description: "Fai sussultare la superficie",
-    source: ["runica"],
+    source: ["runica", "infernale"],
     intensified: [5, 7, 9],
   },
   cerchioProtezione: {
@@ -240,7 +240,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Una creatura emette un'aura che protegge coloro che vi si trovano all'interno da un dato allineamento",
-    source: ["demoniaca", "bianca", "runica"],
+    source: ["divina", "runica", "blasfema"],
     intensified: [4],
   },
   eroismo: {
@@ -250,7 +250,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Ravvivi l'eroismo insito in una creatura per renderla più abile",
-    source: ["runica"],
+    source: ["runica", "divina"],
     intensified: [6, 9],
   },
   legareNonMorto: {
@@ -259,7 +259,7 @@ const combatSpells = {
     name: "Legare Non Morto",
     school: "necromanzia",
     description: "Prendi il controllo di un non morto privo di intelletto",
-    source: ["nera"],
+    source: ["blasfema"],
   },
   cecità: {
     level: 3,
@@ -267,7 +267,7 @@ const combatSpells = {
     name: "Cecità",
     school: "necromanzia",
     description: "Rendi cieco un bersaglio",
-    source: ["nera"],
+    source: ["blasfema", "nera"],
   },
   tazzaPolvere: {
     level: 3,
@@ -276,7 +276,7 @@ const combatSpells = {
     school: "necromanzia",
     description:
       "Maledici il bersaglio con una sete che nessuna bevanda può estinguere",
-    source: ["nera", "satanica"],
+    source: ["blasfema", "nera", "infernale"],
     intensified: [3],
   },
   paralizzare: {
@@ -285,7 +285,7 @@ const combatSpells = {
     name: "Paralizzare",
     school: "ammaliamento",
     description: "Blocchi un umanoide sul posto",
-    source: ["satanica", "nera"],
+    source: ["nera", "blasfema"],
     intensified: [7],
   },
   estasiare: {
@@ -294,7 +294,7 @@ const combatSpells = {
     name: "Estasiare",
     school: "ammaliamento",
     description: "Le creature sono affascinate dal tuo discorso",
-    source: ["satanica", "fatata"],
+    source: ["nera", "fatata"],
   },
 };
 
@@ -322,7 +322,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Crei un'area di protezione della durata di 24 ore contro aberrazioni, celestiali, draghi, nefandi o non morti",
-    source: ["bianca", "runica", "demoniaca", "nera"],
+    source: ["divina", "runica", "blasfema"],
   },
   mostrareVia: {
     level: 3,
@@ -340,7 +340,7 @@ const utilitySpells = {
     name: "Zona di Verità",
     school: "ammaliamento",
     description: "Costringi le creature a dire la verità",
-    source: ["runica", "bianca", "demoniaca", "satanica"],
+    source: ["runica", "divina"],
   },
   ipercognizione: {
     level: 3,
@@ -356,7 +356,7 @@ const utilitySpells = {
     name: "Guida del Girovago",
     school: "divinazione",
     description: "Trovi un tragitto ideale verso una destinazione",
-    source: ["occulta", "primeva"],
+    source: ["occulta"],
   },
   localizzare: {
     level: 3,
@@ -382,7 +382,7 @@ const utilitySpells = {
     school: "trasmutazione",
     description:
       "Trasforma i piedi di una creatura in pinne, consentendole di nuotare ma rallentandola sul terreno",
-    source: ["primeva", "demoniaca"],
+    source: ["primeva"],
     intensified: [6],
   },
   antiIndividuazione: {
@@ -391,15 +391,7 @@ const utilitySpells = {
     name: "Anti-Individuazione",
     school: "abiurazione",
     description: "Proteggi una creatura o un oggetto dall'individuazione",
-    source: [
-      "fatata",
-      "arcana",
-      "runica",
-      "demoniaca",
-      "satanica",
-      "bianca",
-      "nera",
-    ],
+    source: ["fatata", "arcana", "nera", "divina"],
   },
   leggereMente: {
     level: 3,
@@ -407,7 +399,7 @@ const utilitySpells = {
     name: "Leggere nella Mente",
     school: "divinazione",
     description: "Leggi i pensieri superficiali di una creatura",
-    source: ["satanica"],
+    source: ["nera"],
   },
   messaggioOnirico: {
     level: 3,
@@ -415,7 +407,7 @@ const utilitySpells = {
     name: "Messaggio Onirico",
     school: "divinazione",
     description: "Invii un messaggio che arriva tramite un sogno",
-    source: ["satanica", "occulta", "primeva", "fatata", "nera"],
+    source: ["nera", "occulta", "fatata", "blasfema"],
     intensified: [4],
   },
 };

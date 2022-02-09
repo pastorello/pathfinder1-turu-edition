@@ -1,11 +1,11 @@
 const schoolFilters = {
   blackMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "nera");
+    return theSource.some((item) => item === "blasfema");
   },
   whiteMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "bianca");
+    return theSource.some((item) => item === "divina");
   },
   primeviMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
@@ -25,7 +25,7 @@ const schoolFilters = {
   },
   satanicMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "satanica");
+    return theSource.some((item) => item === "nera");
   },
   runicMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
@@ -33,7 +33,7 @@ const schoolFilters = {
   },
   demonicMagic: (spell) => {
     const theSource = Array.isArray(spell.source) ? spell.source : [];
-    return theSource.some((item) => item === "demoniaca");
+    return theSource.some((item) => item === "infernale");
   },
 };
 

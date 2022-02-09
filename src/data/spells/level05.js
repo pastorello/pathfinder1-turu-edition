@@ -15,7 +15,7 @@ const baseAttackSpells = {
     name: "Esilio",
     school: "abiurazione",
     description: "Fai tornare una creatura sul suo piano natio",
-    source: ["arcana", "runica"],
+    source: ["arcana", "runica", "blasfema"],
     intensified: [9],
   },
   respiroVita: {
@@ -25,7 +25,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Reagisci per rianimare una creatura al momento della sua morte",
-    source: ["bianca", "primeva", "runica"],
+    source: ["divina", "primeva", "runica"],
   },
   tempestaAcida: {
     level: 5,
@@ -43,7 +43,7 @@ const baseAttackSpells = {
     name: "Colpo Infuocato",
     school: "invocazione",
     description: "Evochi il fuoco divino dal cielo",
-    source: ["bianca", "demoniaca"],
+    source: ["divina", "infernale"],
   },
   tentacoliNeri: {
     level: 5,
@@ -51,7 +51,7 @@ const baseAttackSpells = {
     name: "Tentacoli Neri",
     school: "evocazione",
     description: "Tentacoli in  un'area afferrano le creature",
-    source: ["demoniaca"],
+    source: ["infernale"],
   },
   esplosioneOmbra: {
     level: 5,
@@ -68,7 +68,7 @@ const baseAttackSpells = {
     name: "Nube Mortale",
     school: "necromanzia",
     description: "Avveleni le creature in una nube che si allontana da te",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   impulsoSinaptico: {
@@ -77,7 +77,7 @@ const baseAttackSpells = {
     name: "Impulso Sinaptico",
     school: "ammaliamento",
     description: "Rallenti le creature con un'esplosione mentale",
-    source: ["satanica"],
+    source: ["nera"],
   },
 };
 
@@ -88,7 +88,7 @@ const combatSpells = {
     name: "Morte Illusoria",
     school: "illusione",
     description: "Il bersaglio sembra morire, ma in realtà diventa invisibile",
-    source: ["occulta", "nera"],
+    source: ["blasfema", "arcana", "fatata"],
     intensified: [7],
   },
   evocaDrago: {
@@ -106,7 +106,7 @@ const combatSpells = {
     name: "Trasporto Telecinetico",
     school: "invocazione",
     description: "Sposti un oggetto grande",
-    source: ["arcana", "occulta", "satanica"],
+    source: ["arcana", "occulta"],
   },
   interdizioneMorte: {
     level: 5,
@@ -114,7 +114,7 @@ const combatSpells = {
     name: "Interdizione alla Morte",
     school: "abiurazione",
     description: "Proteggi una creatura dall'energia negativa",
-    source: ["bianca", "runica", "primeva"],
+    source: ["divina", "runica", "primeva"],
   },
   evocaCelestiale: {
     level: 5,
@@ -122,7 +122,7 @@ const combatSpells = {
     name: "Evoca Celestiale",
     school: "evocazione",
     description: "Evochi un celestiale che combatta con te",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: allLevels,
   },
   guardianoSpirituale: {
@@ -132,7 +132,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Crei un guardiano magico che attacca al tuo comando e subisce danni al posto dei tuoi alleati",
-    source: ["bianca"],
+    source: ["divina", "runica"],
     intensified: [7, 9],
   },
   muroCromatico: {
@@ -161,7 +161,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Reagisci per ridurre il danno di un incantesimo di un nemico trasformandolo in una versione parzialmente illusoria",
-    source: ["occulta", "nera"],
+    source: ["fatata"],
   },
   sinestesia: {
     level: 5,
@@ -169,7 +169,7 @@ const combatSpells = {
     name: "Sinestesia",
     school: "divinazione",
     description: "Riprogrammi i sensi di una creatura",
-    source: ["satanica"],
+    source: ["fatata"],
     intensified: [9],
   },
   formaVegetale: {
@@ -198,7 +198,7 @@ const combatSpells = {
     name: "Forma Elementale",
     school: "trasmutazione",
     description: "Ti trasformi in un elementale",
-    source: ["fatata", "primeva"],
+    source: ["fatata", "infernale", "runica", "occulta"],
     intensified: [6, 7],
   },
   mantoColori: {
@@ -208,7 +208,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Colori accecanti abbagliano le creature vicine al bersaglio, e gli attacchi provocano lampi di luce abbaglianti",
-    source: ["fatata"],
+    source: ["arcana"],
   },
   evocaGigante: {
     level: 5,
@@ -225,7 +225,7 @@ const combatSpells = {
     name: "Evoca Nefando",
     school: "evocazione",
     description: "Evochi un nefando che combatta con te",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   evocaEntità: {
@@ -234,7 +234,7 @@ const combatSpells = {
     name: "Evoca Entità",
     school: "evocazione",
     description: "Evochi un'aberrazione che combatta con te",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   frenesiaLunare: {
@@ -244,7 +244,7 @@ const combatSpells = {
     school: "trasmutazione",
     description:
       "Creature consenzienti sviluppano zanne ed artigli e sono in preda alla follia",
-    source: ["demoniaca"],
+    source: ["primeva"],
     intensified: [6, 8],
   },
   piagaAbissale: {
@@ -253,7 +253,7 @@ const combatSpells = {
     name: "Piaga Abissale",
     school: "necromanzia",
     description: "Infliggi una maledizione che rende risucchiato",
-    source: ["nera"],
+    source: ["blasfema"],
   },
   maledizionaMarinaio: {
     level: 5,
@@ -261,7 +261,7 @@ const combatSpells = {
     name: "Maledizione del Marinaio",
     school: "necromanzia",
     description: "Contagi una creatura con la maledizione del mare mosso",
-    source: ["nera"],
+    source: ["blasfema", "infernale"],
   },
   disperazioneOpprimente: {
     level: 5,
@@ -269,7 +269,7 @@ const combatSpells = {
     name: "Disperazione Opprimente",
     school: "ammaliamento",
     description: "Fai piangere a dirotto una creatura",
-    source: ["satanica"],
+    source: ["infernale"],
     intensified: [7],
   },
 };
@@ -282,7 +282,7 @@ const utilitySpells = {
     school: "illusione",
     description:
       "Crei una scena immaginaria che include più creature ed oggetti",
-    source: ["fatata"],
+    source: ["nera"],
     intensified: [6, 8],
   },
   linguaggi: {
@@ -292,7 +292,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Permetti a una creatura di comprendere e parlare tutte le lingue",
-    source: ["runica", "demoniaca", "nera"],
+    source: ["divina"],
     intensified: [7],
   },
   visioneFalsa: {
@@ -301,7 +301,7 @@ const utilitySpells = {
     name: "Visione Falsa",
     school: "illusione",
     description: "Inganni un incantesimo di scrutamento",
-    source: ["arcana", "nera"],
+    source: ["arcana", "nera", "occulta"],
   },
   inviare: {
     level: 5,
@@ -310,7 +310,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Invii un messaggio mentale a una creatura sul tuo pianeta e ricevi una risposta",
-    source: ["bianca", "primeva", "demoniaca", "nera"],
+    source: ["divina", "blasfema"],
   },
   occhioIndagatore: {
     level: 5,
@@ -318,7 +318,7 @@ const utilitySpells = {
     name: "Occhio Indagatore",
     school: "divinazione",
     description: "Un occhio invisibile ti trasmette ciò che vede",
-    source: ["occulta", "arcana", "bianca", "nera"],
+    source: ["occulta", "blasfema"],
   },
   sondaMentale: {
     level: 5,
@@ -327,7 +327,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Accedi alle conoscenze e alle memorie nella mente di una creatura",
-    source: ["satanica"],
+    source: ["nera"],
   },
   camminareOmbre: {
     level: 5,
@@ -343,7 +343,7 @@ const utilitySpells = {
     name: "Sognare Potenziale",
     school: "ammaliamento",
     description: "Il bersaglio si riaddestra nei suoi sogni",
-    source: ["occulta", "bianca"],
+    source: ["occulta"],
   },
   traslazioneArborea: {
     level: 5,
@@ -361,7 +361,7 @@ const utilitySpells = {
     school: "invocazione",
     description:
       "Accresci o diminuisci il livello dell'acqua in una vasta area",
-    source: ["primeva"],
+    source: ["fatata"],
   },
   passapareti: {
     level: 5,
@@ -369,7 +369,7 @@ const utilitySpells = {
     name: "Passapareti",
     school: "evocazione",
     description: "Formi un tunnel di terra attraverso un muro",
-    source: ["runica", "primeva", "demoniaca"],
+    source: ["runica"],
     intensified: [7],
   },
   allucinazione: {
@@ -379,7 +379,7 @@ const utilitySpells = {
     school: "illusione",
     description:
       "Una creatura crede che una cosa sia  un'altra, non può individuare qualcosa, oppure vede qualcosa che in realtà non c'è",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [6, 8],
   },
   suggestioneInconscia: {
@@ -389,7 +389,7 @@ const utilitySpells = {
     school: "ammaliamento",
     description:
       "Insinui una suggestione mentale che deve essere seguita quando si attiva un innesco",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [9],
   },
   legameTelepatico: {
@@ -399,7 +399,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Colleghi le menti con creature consenzienti per comunicare telepaticamente a grandi distanze",
-    source: ["satanica", "fatata", "demoniaca"],
+    source: ["nera"],
   },
 };
 

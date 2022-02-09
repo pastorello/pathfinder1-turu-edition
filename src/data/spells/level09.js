@@ -1,4 +1,13 @@
 const baseAttackSpells = {
+  gridoBanshee: {
+    level: 9,
+    url: "/wiki/Grido_della_Banshee",
+    name: "Grido della Banshee",
+    school: "necromanzia",
+    description: "Il tuo grido infligge danni e risucchia le creature.",
+    source: ["blasfema"],
+    intensified: [10],
+  },
   implosione: {
     level: 9,
     url: "/wiki/Implosione",
@@ -14,7 +23,7 @@ const baseAttackSpells = {
     name: "Sciame di Meteore",
     school: "invocazione",
     description: "Evochi quattro meteore infuocate che esplodono",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: [10],
   },
   armaGiudizio: {
@@ -32,7 +41,7 @@ const baseAttackSpells = {
     name: "Canzone Incomprensibile",
     school: "ammaliamento",
     description: "Una canzone debilita le creature in strani modi",
-    source: ["occulta"],
+    source: ["occulta", "fatata", "infernale"],
   },
   naturaOstile: {
     level: 9,
@@ -58,7 +67,7 @@ const baseAttackSpells = {
     name: "Trasformazione",
     school: "trasmutazione",
     description: "Ti trasformi ripetutamente in una forma di tua scelta",
-    source: ["fatata"],
+    source: ["primeva", "fatata"],
   },
   parolaUccidere: {
     level: 9,
@@ -75,7 +84,7 @@ const baseAttackSpells = {
     name: "Massacro",
     school: "necromanzia",
     description: "Uccidi più creature all'istante",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: [10],
   },
   fatale: {
@@ -85,7 +94,7 @@ const baseAttackSpells = {
     school: "illusione",
     description:
       "Spaventi e infliggi danni mentali a un grande numero di creature, anche al punto di ucciderle",
-    source: ["satanica"],
+    source: ["nera"],
   },
   richiestaTelepatica: {
     level: 9,
@@ -94,7 +103,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description:
       "Invii un messaggio mentale che spinge una creatura a seguire una linea d'azione",
-    source: ["satanica"],
+    source: ["nera"],
   },
 };
 
@@ -113,7 +122,7 @@ const combatSpells = {
     name: "Disgiunzione",
     school: "abiurazione",
     description: "Disattivi o distruggi un oggetto magico",
-    source: ["arcana"],
+    source: ["runica", "arcana", "divina"],
   },
   previsione: {
     level: 9,
@@ -122,7 +131,7 @@ const combatSpells = {
     school: "divinazione",
     description:
       "Percepisci quando una creatura è in pericolo e la proteggi con buona sorte",
-    source: ["occulta", "bianca"],
+    source: ["occulta"],
   },
   crociata: {
     level: 9,
@@ -130,7 +139,7 @@ const combatSpells = {
     name: "Crociata",
     school: "ammaliamento",
     description: "Le creature diventano dedite a una causa di tua scelta",
-    source: ["runica"],
+    source: ["runica", "divina"],
     intensified: [10],
   },
   presenzaSoverchiante: {
@@ -139,7 +148,7 @@ const combatSpells = {
     name: "Presenza Soverchiante",
     school: "ammaliamento",
     description: "Assumi gli aspetti maestosi di un dio",
-    source: ["demoniaca", "satanica"],
+    source: ["divina", "fatata"],
   },
 };
 
@@ -150,7 +159,7 @@ const utilitySpells = {
     name: "Legare Anima",
     school: "necromanzia",
     description: "Imprigioni l'anima di una creatura morta",
-    source: ["nera", "demoniaca", "satanica"],
+    source: ["blasfema", "infernale"],
   },
   reggiaGloriosa: {
     level: 9,
@@ -158,7 +167,7 @@ const utilitySpells = {
     name: "Reggia Gloriosa",
     school: "evocazione",
     description: "Evochi una reggia che dura 1 giorno",
-    source: ["arcana", "fatata"],
+    source: ["fatata"],
   },
 };
 

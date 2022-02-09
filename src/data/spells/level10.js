@@ -5,7 +5,7 @@ const baseAttackSpells = {
     name: "Desiderio",
     school: "divinazione",
     description: "Esprimi un desiderio per duplicare incantesimi",
-    source: ["arcana"],
+    source: ["arcana", "fatata", "infernale", "nera"],
   },
   miracolo: {
     level: 10,
@@ -13,7 +13,7 @@ const baseAttackSpells = {
     name: "Miracolo",
     school: "divinazione",
     description: "Chiedi intercessione per duplicare incantesimi divini",
-    source: ["bianca"],
+    source: ["divina", "runica", "blasfema"],
   },
   fenomenoPrimevo: {
     level: 10,
@@ -38,7 +38,7 @@ const baseAttackSpells = {
     name: "Cataclisma",
     school: "invocazione",
     description: "Evochi un rovinoso cataclisma istantaneo",
-    source: ["demoniaca"],
+    source: ["infernale"],
   },
   alterareRealtà: {
     level: 10,
@@ -55,7 +55,7 @@ const baseAttackSpells = {
     school: "trasmutazione",
     description:
       "Ti trasformi in una forma da battaglia determinata dalla tua divinità",
-    source: ["demoniaca"],
+    source: ["blasfema"],
   },
 };
 
@@ -66,7 +66,7 @@ const combatSpells = {
     name: "Mandria Primeva",
     school: "trasmutazione",
     description: "Trasformi creature consenzienti in mammut",
-    source: ["primeva", "fatata"],
+    source: ["primeva"],
   },
   reviviscenza: {
     level: 10,
@@ -75,7 +75,7 @@ const combatSpells = {
     school: "necromanzia",
     description:
       "Guarisci le creature in un'area e riporti temporaneamente in vita i morti",
-    source: ["bianca"],
+    source: ["divina"],
   },
   fermareTempo: {
     level: 10,
@@ -83,7 +83,7 @@ const combatSpells = {
     name: "Fermare il Tempo",
     school: "trasmutazione",
     description: "Fermi brevemente il tempo per tutto tranne che per te",
-    source: ["occulta", "arcana"],
+    source: ["occulta"],
   },
 };
 
@@ -94,7 +94,7 @@ const utilitySpells = {
     name: "Verità Fittizia",
     school: "ammaliamento",
     description: "Fai credere alle creature che un fatto sia vero",
-    source: ["satanica"],
+    source: ["nera"],
   },
   portale: {
     level: 10,
@@ -102,7 +102,7 @@ const utilitySpells = {
     name: "Portale",
     school: "evocazione",
     description: "Apri un portale verso un altro piano",
-    source: ["arcana", "occulta"],
+    source: ["arcana"],
   },
   ricostruire: {
     level: 10,

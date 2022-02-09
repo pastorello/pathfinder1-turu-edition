@@ -7,7 +7,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Trasforma una fiala di acqua santa in un'esplosione di acqua benedetta",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: allLevels,
   },
   faroVitale: {
@@ -16,7 +16,7 @@ const baseAttackSpells = {
     name: "Faro Vitale",
     school: "necromanzia",
     description: "Irradi vitalità che guarisce le creature che ti toccano",
-    source: ["bianca", "primeva", "runica"],
+    source: ["divina", "primeva", "runica"],
     intensified: allLevels,
   },
   tempestaArmi: {
@@ -26,7 +26,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Moltiplica un'arma che stai impugnando ed attacca più creature con essa",
-    source: ["runica"],
+    source: ["runica", "infernale"],
     intensified: allLevels,
   },
   anamnesiSpirituale: {
@@ -63,7 +63,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Crei un muro ardente che brucia le creature che vi passano attraverso",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   colleraDivina: {
@@ -73,7 +73,7 @@ const baseAttackSpells = {
     school: "invocazione",
     description:
       "Ostacoli e infliggi danni alle creature di allineamento opposto alla tua divinità",
-    source: ["runica"],
+    source: ["runica", "blasfema"],
     intensified: allLevels,
   },
   ritorsioneAnatema: {
@@ -83,7 +83,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description:
       "Provochi sofferenza mentale a chi scaglia un anatema contro la tua divinità",
-    source: ["bianca"],
+    source: ["divina", "blasfema"],
     intensified: allLevels,
   },
   suggestione: {
@@ -92,7 +92,7 @@ const baseAttackSpells = {
     name: "Suggestione",
     school: "ammaliamento",
     description: "Suggerisci a una creatura una linea di azione da seguire",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [8],
   },
   allucinazioneMortale: {
@@ -102,7 +102,7 @@ const baseAttackSpells = {
     school: "illusione",
     description:
       "Introduci un'immagine spaventosa nella mente di una creatura per spaventarla anche al punto di morire",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
 };
@@ -114,7 +114,7 @@ const combatSpells = {
     name: "Porta Dimensionale",
     school: "evocazione",
     description: "Ti teletrasporti fino a 36 metri",
-    source: ["arcana", "occulta"],
+    source: ["arcana"],
     intensified: [5],
   },
   intermittenza: {
@@ -123,7 +123,7 @@ const combatSpells = {
     name: "Intermittenza",
     school: "evocazione",
     description: "Ti sposti rapidamente tra i piani, svanendo e riapparendo",
-    source: ["arcana", "fatata"],
+    source: ["arcana"],
     intensified: [6, 8, 10],
   },
   volare: {
@@ -132,7 +132,7 @@ const combatSpells = {
     name: "Volare",
     school: "trasmutazione",
     description: "Fai ottenere alla creatura bersaglio una velocità di volare",
-    source: ["arcana", "fatata"],
+    source: ["arcana", "fatata", "infernale"],
     intensified: [7],
   },
   rimuoviMaledizione: {
@@ -141,7 +141,7 @@ const combatSpells = {
     name: "Rimuovi Maledizione",
     school: "necromanzia",
     description: "Contrasti una maledizione che affligge una creatura",
-    source: ["bianca"],
+    source: ["divina"],
   },
   ancoraDimensionale: {
     level: 4,
@@ -150,7 +150,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Impedisci a una creatura di teletrasportarsi o viaggiare in altri piani",
-    source: ["runica", "demoniaca"],
+    source: ["runica", "arcana"],
   },
   globoInvulnerabilità: {
     level: 4,
@@ -159,7 +159,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Una sfera magica contrasta gli incantesimi che tentano di entrarvi",
-    source: ["runica"],
+    source: ["runica", "arcana", "blasfema"],
   },
   immunitàIncantesimi: {
     level: 4,
@@ -167,7 +167,7 @@ const combatSpells = {
     name: "Immunità agli Incantesimi",
     school: "abiurazione",
     description: "Pronuncia un incantesimo per negare i suoi effetti su di te",
-    source: ["runica", "bianca", "nera"],
+    source: ["divina", "blasfema", "arcana"],
   },
   sferaElastica: {
     level: 4,
@@ -184,7 +184,7 @@ const combatSpells = {
     name: "Chiaroveggenza",
     school: "divinazione",
     description: "Puoi vedere attraverso un sensore magico invisibile",
-    source: ["occulta", "bianca"],
+    source: ["occulta"],
   },
   camminareAria: {
     level: 4,
@@ -200,7 +200,7 @@ const combatSpells = {
     name: "Libertà di Movimento",
     school: "abiurazione",
     description: "Una creatura supera gli impedimenti al suo movimento",
-    source: ["primeva", "bianca"],
+    source: ["primeva"],
   },
   formaDinosauro: {
     level: 4,
@@ -227,7 +227,7 @@ const combatSpells = {
     name: "Pelle di Pietra",
     school: "abiurazione",
     description: "Indurisci la pelle di una creatura in pietra durevole",
-    source: ["primeva", "runica"],
+    source: ["primeva", "runica", "infernale"],
     intensified: [6, 8, 10],
   },
   scudoFuoco: {
@@ -237,7 +237,7 @@ const combatSpells = {
     school: "invocazione",
     description:
       "Le fiamme ti proteggono dal freddo e feriscono coloro che ti toccano",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: [6, 8, 10],
   },
   maledizioneReietto: {
@@ -247,7 +247,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Affliggi una creatura con una maledizione che la rende sgradevole e fastidiosa",
-    source: ["demoniaca", "nera", "satanica"],
+    source: ["infernale", "blasfema", "nera"],
   },
   formaGassosa: {
     level: 4,
@@ -255,7 +255,7 @@ const combatSpells = {
     name: "Forma Gassosa",
     school: "trasmutazione",
     description: "Trasforma una creatura consenziente in una nube volante",
-    source: ["nera", "fatata"],
+    source: ["blasfema", "fatata"],
   },
   nebbiaSolida: {
     level: 4,
@@ -264,7 +264,7 @@ const combatSpells = {
     school: "evocazione",
     description:
       "Evochi una nebbia fitta difficile da attraversare che oscura la vista",
-    source: ["nera", "occulta", "fatata"],
+    source: ["occulta", "fatata"],
   },
   incubo: {
     level: 4,
@@ -272,7 +272,7 @@ const combatSpells = {
     name: "Incubo",
     school: "illusione",
     description: "Infesta i sogni di una creatura con incubi inquietanti",
-    source: ["satanica"],
+    source: ["nera"],
   },
   confusione: {
     level: 4,
@@ -280,7 +280,7 @@ const combatSpells = {
     name: "Confusione",
     school: "ammaliamento",
     description: "Disorienti una creatura, facendola agire a caso",
-    source: ["satanica"],
+    source: ["infernale"],
     intensified: [8],
   },
 };
@@ -302,7 +302,7 @@ const utilitySpells = {
     school: "evocazione",
     description:
       "Animi una corda che sale verso un nascondiglio extradimensionale",
-    source: ["arcana", "fatata"],
+    source: ["fatata"],
   },
   rivelaBugie: {
     level: 4,
@@ -310,7 +310,7 @@ const utilitySpells = {
     name: "Rivela Bugie",
     school: "divinazione",
     description: "Individui abilmente bugie e falsità",
-    source: ["bianca", "demoniaca"],
+    source: ["divina"],
   },
   creazione: {
     level: 4,
@@ -328,7 +328,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Usi questo incantesimo per restaurare il materiale da importanti testi, storici o meno",
-    source: ["arcana"],
+    source: ["arcana", "blasfema", "divina"],
   },
   individuazioneScrutamento: {
     level: 4,
@@ -336,7 +336,7 @@ const utilitySpells = {
     name: "Individuazione dello Scrutamento",
     school: "divinazione",
     description: "Scopri se gli effetti dello scrutamento sono nell'area",
-    source: ["occulta", "demoniaca"],
+    source: ["occulta"],
     intensified: [6],
   },
   telepatia: {
@@ -345,7 +345,7 @@ const utilitySpells = {
     name: "Telepatia",
     school: "divinazione",
     description: "Comunichi telepaticamente con qualsiasi creatura vicina",
-    source: ["occulta", "nera", "satanica"],
+    source: ["occulta", "nera"],
     intensified: [6],
   },
   leggerePremonizioni: {
@@ -354,7 +354,7 @@ const utilitySpells = {
     name: "Leggere Premonizioni",
     school: "divinazione",
     description: "Apprendi un indizio su un evento che sta per accadere",
-    source: ["occulta", "bianca", "primeva"],
+    source: ["occulta"],
   },
   santuarioPrivato: {
     level: 4,
@@ -363,7 +363,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Una nebbia nera impedisce di percepire, scrutare e leggere nella mente di chiunque al suo interno",
-    source: ["bianca", "runica"],
+    source: ["divina"],
   },
   parlareVegetali: {
     level: 4,
@@ -387,7 +387,7 @@ const utilitySpells = {
     name: "Loquacità",
     school: "ammaliamento",
     description: "Menti impunemente",
-    source: ["demoniaca", "nera", "satanica"],
+    source: ["infernale", "nera", "fatata"],
   },
   cadavereParlante: {
     level: 4,
@@ -395,7 +395,7 @@ const utilitySpells = {
     name: "Cadavere Parlante",
     school: "necromanzia",
     description: "Un cadavere risponde a tre domande",
-    source: ["nera", "occulta", "demoniaca"],
+    source: ["blasfema", "occulta"],
   },
   modificareMemoria: {
     level: 4,
@@ -403,7 +403,7 @@ const utilitySpells = {
     name: "Modificare Memoria",
     school: "ammaliamento",
     description: "Cambi o impianti memorie",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [6],
   },
   terrenoIllusorio: {
@@ -412,7 +412,7 @@ const utilitySpells = {
     name: "Terreno Illusorio",
     school: "illusione",
     description: "Un ambiente naturale appare come un altro tipo di terreno",
-    source: ["satanica", "arcana", "fatata"],
+    source: ["nera", "fatata"],
     intensified: [5],
   },
 };

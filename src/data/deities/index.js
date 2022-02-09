@@ -67,7 +67,7 @@ const deities = [
     name: "Atreia",
     title: "La Custode della Fiamma",
     alignment: "nb",
-    tradition: "bianca",
+    tradition: "divina",
     relic: "Candela dell'Amore",
     virtue: ["Compassione", "Sacrificio"],
     description: `<p>
@@ -225,13 +225,13 @@ const deities = [
   {
     name: "Belzebu",
     title: "Il Dio della Distruzione",
-    tradition: "demoniaca",
+    tradition: "infernale",
     plane: "Abisso",
     planeUrl: "https://pf2.altervista.org/wiki/Abisso",
     alignment: "cm",
     classes: [
       "Invasato (Barbaro/Istinto del Gigante)",
-      "Devoto del Caos (Stregone/Demoniaca)",
+      "Devoto del Caos (Stregone/infernale)",
       "Demonologo (Mago/Trasmutatore)",
     ],
     url: "https://pf2.altervista.org/wiki/Rovagug",
@@ -247,7 +247,7 @@ const deities = [
   {
     name: "Satana",
     title: "Il Diavolo",
-    tradition: "satanica",
+    tradition: "nera",
     plane: "Inferno",
     planeUrl: "https://pf2.altervista.org/wiki/Inferno",
     alignment: "lm",
@@ -268,7 +268,7 @@ const deities = [
   {
     name: "Urgathoa",
     title: "La Morte",
-    tradition: "nera",
+    tradition: "blasfema",
     plane: "Ossario",
     planeUrl: "https://pf2.altervista.org/wiki/Ossario",
     alignment: "nm",

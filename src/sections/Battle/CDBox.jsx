@@ -6,7 +6,6 @@ import { Row, Column } from "../../components/Grid";
 import getCDResult from "../../tools/getCDResult";
 import CDRoller from "../../components/CDRoller";
 import Selector from "../../components/Selector";
-import getBonus from "../../tools/getBonus";
 
 const checkTypes = [
   {

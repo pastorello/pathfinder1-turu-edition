@@ -1,6 +1,6 @@
-const goodTraditions = ["bianca", "arcana", "runica"];
-const neutralTraditions = ["occulta", "satanica", "fatata"];
-const evilTraditions = ["satanica", "nera", "demoniaca"];
+const goodTraditions = ["divina", "arcana", "runica"];
+const neutralTraditions = ["occulta", "nera", "fatata"];
+const evilTraditions = ["nera", "blasfema", "infernale"];
 
 const traditions = {
   all: [...goodTraditions, ...neutralTraditions, ...evilTraditions],

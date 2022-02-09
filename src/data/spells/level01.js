@@ -28,7 +28,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Energia positiva guarisce i viventi o ferisce i non morti sia una creatura singola che tutte quelle presenti in un'esplosione",
-    source: ["bianca", "runica", "primeva"],
+    source: ["divina", "runica", "primeva"],
     intensified: allLevels,
   },
   ondaUrto: {
@@ -37,7 +37,7 @@ const baseAttackSpells = {
     name: "Onda d'Urto",
     school: "invocazione",
     description: "Crei  un'onda di energia che si propaga attraverso la terra",
-    source: ["occulta", "runica"],
+    source: ["runica"],
     intensified: allLevels,
   },
   strettaFolgorante: {
@@ -84,7 +84,7 @@ const baseAttackSpells = {
     name: "Mani Brucianti",
     school: "invocazione",
     description: "Dalle tue mani si sprigiona un piccolo cono di fiamme",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   morsoRagno: {
@@ -94,7 +94,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Infliggi danni a una creatura e la affliggi con il veleno del ragno",
-    source: ["demoniaca"],
+    source: ["nera"],
   },
   ferire: {
     level: 1,
@@ -103,7 +103,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Energia negativa ferisce i viventi o guarisce i non morti, sia una creatura alla volta che tutte insieme in un'esplosione",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   rampicantiMacabri: {
@@ -113,7 +113,7 @@ const baseAttackSpells = {
     school: "necromanzia",
     description:
       "Le creature in una linea subiscono danni di tipo negativo e sanguinamento",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
 };
@@ -159,7 +159,7 @@ const combatSpells = {
     school: "necromanzia",
     description:
       "Guarisci il bersaglio e lo rinforzi contro gli attacchi mentali",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: allLevels,
   },
   sopportare: {
@@ -169,7 +169,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Rinvigorisci la mente della creatura toccata, spronandola a perseverare",
-    source: ["bianca"],
+    source: ["divina", "infernale"],
     intensified: allLevels,
   },
   benedizione: {
@@ -179,7 +179,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Rendi potenti gli attacchi dei tuoi alleati in un'aura attorno a te",
-    source: ["bianca"],
+    source: ["divina"],
   },
   protezione: {
     level: 1,
@@ -187,7 +187,7 @@ const combatSpells = {
     name: "Protezione",
     school: "abiurazione",
     description: "Proteggi una creatura da quelle di un dato allineamento",
-    source: ["bianca"],
+    source: ["divina", "blasfema"],
   },
   santuario: {
     level: 1,
@@ -195,7 +195,7 @@ const combatSpells = {
     name: "Santuario",
     school: "abiurazione",
     description: "Proteggi una creatura dagli attacchi",
-    source: ["bianca"],
+    source: ["divina"],
   },
   evocaCostrutto: {
     level: 1,
@@ -221,7 +221,7 @@ const combatSpells = {
     name: "Sudario di Penombra",
     school: "invocazione",
     description: "Avvolgi il bersaglio in un sudario d'ombra",
-    source: ["occulta"],
+    source: ["occulta", "blasfema"],
   },
   colpoAccurato: {
     level: 1,
@@ -229,7 +229,7 @@ const combatSpells = {
     name: "Colpo Accurato",
     school: "divinazione",
     description: "Rendi il tuo prossimo attacco particolarmente accurato",
-    source: ["demoniaca"],
+    source: ["occulta"],
   },
   folataVento: {
     level: 1,
@@ -280,7 +280,7 @@ const combatSpells = {
     name: "Bolla d'Aria",
     school: "evocazione",
     description: "Reagisci per creare aria affinché una creatura respiri",
-    source: ["fatata"],
+    source: ["fatata", "arcana"],
   },
   evocaFatato: {
     level: 1,
@@ -307,7 +307,7 @@ const combatSpells = {
     name: "Sonno",
     school: "ammaliamento",
     description: "Fai addormentare le creature in  un'area piccola",
-    source: ["satanica"],
+    source: ["nera", "fatata"],
     intensified: [4],
   },
   anatema: {
@@ -317,7 +317,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Rendi difficili gli attacchi dei tuoi nemici in un'aura attorno a te",
-    source: ["demoniaca", "bianca"],
+    source: ["blasfema"],
   },
   cattivoPresagio: {
     level: 1,
@@ -326,7 +326,7 @@ const combatSpells = {
     school: "divinazione",
     description:
       "Il bersaglio viene colpito dalla sfortuna, venendone destabilizzato",
-    source: ["demoniaca"],
+    source: ["occulta", "infernale"],
   },
   armaMagica: {
     level: 1,
@@ -334,7 +334,7 @@ const combatSpells = {
     name: "Arma Magica",
     school: "trasmutazione",
     description: "Rendi un'arma temporaneamente magica",
-    source: ["demoniaca"],
+    source: ["runica", "infernale"],
   },
   comando: {
     level: 1,
@@ -343,7 +343,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Ordini a una creatura di avvicinarsi, fuggire, lasciar cadere qualcosa, cadere prona o alzarsi in piedi",
-    source: ["demoniaca"],
+    source: ["blasfema", "nera"],
     intensified: [5],
   },
   raggioIndebolimento: {
@@ -352,7 +352,7 @@ const combatSpells = {
     name: "Raggio di Indebolimento",
     school: "necromanzia",
     description: "Prosciughi la forza di una creatura",
-    source: ["nera"],
+    source: ["blasfema"],
   },
   doloreFantasma: {
     level: 1,
@@ -361,7 +361,7 @@ const combatSpells = {
     school: "illusione",
     description:
       "Provochi a una creatura un dolore continuo che la rende nauseata",
-    source: ["satanica"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
   legameSpirito: {
@@ -370,7 +370,7 @@ const combatSpells = {
     name: "Legame con lo Spirito",
     school: "necromanzia",
     description: "Trasferisci ininterrottamente la tua salute a qualcun altro",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: allLevels,
   },
   pesteGoblin: {
@@ -379,7 +379,7 @@ const combatSpells = {
     name: "Peste del Goblin",
     school: "necromanzia",
     description: "Infetti una creatura con la peste del goblin",
-    source: ["nera"],
+    source: ["infernale"],
   },
   disorientare: {
     level: 1,
@@ -388,7 +388,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Pianti semi di confusione nella mente del tuo bersaglio, rendendo maldestri sia le sue azioni che i suoi pensieri",
-    source: ["satanica"],
+    source: ["nera", "infernale"],
   },
   agitare: {
     level: 1,
@@ -397,7 +397,7 @@ const combatSpells = {
     school: "ammaliamento",
     description:
       "Mandi in sovraccarico la mente e il corpo di un bersaglio, costringendolo a diventare irrequieto e iperattivo",
-    source: ["satanica"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   charme: {
@@ -406,7 +406,7 @@ const combatSpells = {
     name: "Charme",
     school: "ammaliamento",
     description: "Un umanoide diventa più amichevole nei tuoi confronti",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [4, 8],
   },
   paura: {
@@ -415,7 +415,7 @@ const combatSpells = {
     name: "Paura",
     school: "ammaliamento",
     description: "Infondi paura a una creatura, fino a farla fuggire",
-    source: ["satanica"],
+    source: ["blasfema"],
     intensified: [3],
   },
 };
@@ -427,7 +427,7 @@ const utilitySpells = {
     name: "Disco Fluttuante",
     school: "evocazione",
     description: "Un disco di energia ti segue, trasportando oggetti",
-    source: ["occulta"],
+    source: ["arcana"],
   },
   oggettoIllusorio: {
     level: 1,
@@ -435,7 +435,7 @@ const utilitySpells = {
     name: "Oggetto Illusorio",
     school: "illusione",
     description: "Crei  un'illusione verosimile di un oggetto",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [2, 5],
   },
   passoRapido: {
@@ -444,7 +444,7 @@ const utilitySpells = {
     name: "Passo Rapido",
     school: "trasmutazione",
     description: "Accelera notevolmente la tua velocità",
-    source: ["arcana"],
+    source: ["primeva"],
   },
   allarme: {
     level: 1,
@@ -452,7 +452,7 @@ const utilitySpells = {
     name: "Allarme",
     school: "abiurazione",
     description: "Vieni avvertito se una creatura entra in un'area protetta",
-    source: ["runica"],
+    source: ["arcana"],
     intensified: [3],
   },
   individuazioneVeleno: {
@@ -461,7 +461,7 @@ const utilitySpells = {
     name: "Individuazione del Veleno",
     school: "divinazione",
     description: "Determini se un oggetto o creatura è velenoso",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: [2],
   },
   individuazioneAllineamento: {
@@ -470,7 +470,7 @@ const utilitySpells = {
     name: "Individuazione dell'Allineamento",
     school: "divinazione",
     description: "Vedi le aure di un dato allineamento",
-    source: ["runica"],
+    source: ["divina", "blasfema"],
     intensified: [2],
   },
   purificareCibo: {
@@ -479,7 +479,7 @@ const utilitySpells = {
     name: "Purificare Cibo e Bevande",
     school: "necromanzia",
     description: "Rendi cibi e bevande sicuri da consumare",
-    source: ["bianca"],
+    source: ["divina"],
   },
   runaMessaggio: {
     level: 1,
@@ -515,7 +515,7 @@ const utilitySpells = {
     school: "evocazione",
     description:
       "Evochi nelle tue mani un semplice attrezzo temporaneo, come una pala o una corda",
-    source: ["fatata"],
+    source: ["runica"],
   },
   imprimereMessaggio: {
     level: 1,
@@ -524,7 +524,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Proietti delle vibrazioni psichiche verso il bersaglio, imprimendovi un breve messaggio o un'emozione che vuoi comunicare",
-    source: ["occulta", "nera"],
+    source: ["occulta"],
   },
   condividereSapienza: {
     level: 1,
@@ -559,7 +559,7 @@ const utilitySpells = {
     name: "Servitore Inosservato",
     school: "evocazione",
     description: "Crei una creatura invisibile al tuo servizio",
-    source: ["occulta", "nera"],
+    source: ["occulta", "arcana", "infernale"],
   },
   negareOdore: {
     level: 1,
@@ -592,7 +592,7 @@ const utilitySpells = {
     name: "Carico della Formica",
     school: "trasmutazione",
     description: "Il bersaglio può trasportare un carico maggiore",
-    source: ["demoniaca"],
+    source: ["infernale"],
   },
   ventriloquio: {
     level: 1,
@@ -609,7 +609,7 @@ const utilitySpells = {
     name: "Oggetto Falsificato",
     school: "illusione",
     description: "Camuffi un oggetto per farlo apparire perfetto o scadente",
-    source: ["fatata"],
+    source: ["nera"],
     intensified: [2, 3],
   },
   formaMinuscola: {
@@ -628,7 +628,7 @@ const utilitySpells = {
     school: "abiurazione",
     description:
       "Usi catene, viticci o altri lacci di natura magica per legare il tuo bersaglio a te",
-    source: ["primeva"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   passoVeloce: {
@@ -646,7 +646,7 @@ const utilitySpells = {
     name: "Saltare",
     school: "trasmutazione",
     description: "Effettui un salto notevole",
-    source: ["demoniaca"],
+    source: ["fatata"],
     intensified: [3],
   },
   auraMagica: {
@@ -656,7 +656,7 @@ const utilitySpells = {
     school: "illusione",
     description:
       "Cambi il modo in cui appare la magia di un oggetto agli incantesimi di individuazione",
-    source: ["satanica", "nera"],
+    source: ["nera"],
     intensified: [3],
   },
   camuffamentoIllusorio: {
@@ -665,7 +665,7 @@ const utilitySpells = {
     name: "Camuffamento Illusorio",
     school: "illusione",
     description: "Assumi l'aspetto di  un'altra creatura",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: [2, 3],
   },
   connessioneMentale: {
@@ -683,7 +683,7 @@ const utilitySpells = {
     name: "Scambiare Aspetto",
     school: "illusione",
     description: "Scambi il tuo aspetto con quello di qualcun altro",
-    source: ["satanica"],
+    source: ["nera"],
   },
 };
 

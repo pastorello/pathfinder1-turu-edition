@@ -5,124 +5,163 @@ import spellsDB from "../../data/spells";
 import { Row, Column } from "../../components/Grid";
 
 import schoolFilters from "./schoolsFilter";
+import SearchStats from "./SearchStats";
+import Selector from "../../components/Selector";
+import SpellCard from "./SpellCard";
+import BookStats from "./BookStats";
+
+const optionAll = { value: "all", label: "all" };
+
+const schoolOptions = [
+  { value: "all", label: "all" },
+  { value: "abiurazione", label: "abiurazione" },
+  { value: "ammaliamento", label: "ammaliamento" },
+  { value: "evocazione", label: "evocazione" },
+  { value: "illusione", label: "illusione" },
+  { value: "invocazione", label: "invocazione" },
+  { value: "necromanzia", label: "necromanzia" },
+  { value: "trasmutazione", label: "trasmutazione" },
+  { value: "divinazione", label: "divinazione" },
+];
+
+const colorOptions = [
+  { value: "all", label: "all" },
+  { value: "arcaneMagic", label: "Arcana" },
+  { value: "blackMagic", label: "Blasfema" },
+  { value: "whiteMagic", label: "Divina" },
+  { value: "elementalMagic", label: "Fatata" },
+  { value: "demonicMagic", label: "Infernale" },
+  { value: "satanicMagic", label: "Nera" },
+  { value: "occultMagic", label: "Occulta" },
+  { value: "primeviMagic", label: "Primeva" },
+  { value: "runicMagic", label: "Runica" },
+];
 
 const SpellBook = (props) => {
-  const [levelFilter, setLevelFilter] = useState("all");
-  const [schoolFilter, setSchoolFilter] = useState("all");
-  const [colorFilter, setColorFilter] = useState("all");
+  const [levelFilter, setLevelFilter] = useState(optionAll);
+  const [schoolFilter, setSchoolFilter] = useState(optionAll);
+  const [colorFilter, setColorFilter] = useState(optionAll);
+  const [searchValue, setSearchValue] = useState("");
 
   const filterFunction = (item) => {
-    const actualLevel = parseInt(levelFilter);
+    const actualLevel = levelFilter.value;
 
     const isInLevel =
+      actualLevel === "all" ||
       item.level === actualLevel ||
       (isValid.dataArray(item.intensified) &&
         item.intensified.some((item2) => item2 === actualLevel));
 
+    const isInWord =
+      searchValue === null ||
+      item.name.toLowerCase().includes(searchValue.toLowerCase());
+
     return (
-      (levelFilter === "all" || isInLevel) &&
-      (schoolFilter === "all" || item.school === schoolFilter) &&
-      (colorFilter === "all" || schoolFilters[colorFilter](item))
+      isInWord &&
+      isInLevel &&
+      (schoolFilter.value === "all" || item.school === schoolFilter.value) &&
+      (colorFilter.value === "all" || schoolFilters[colorFilter.value](item))
     );
   };
 
-  const theSpells = spellsDB
+  const mainSpells = [];
+  const intensifiedSpells = [];
+
+  spellsDB
     .filter((item) => filterFunction(item))
     .sort((a, b) => {
-      if (a.level < b.level) {
-        return -1;
-      }
-      if (a.level > b.level) {
-        return 1;
-      }
       if (a.name < b.name) {
         return -1;
       }
       if (a.name > b.name) {
         return 1;
       }
+      if (a.level < b.level) {
+        return -1;
+      }
+      if (a.level > b.level) {
+        return 1;
+      }
       return 0;
     })
-    .map((item) => {
-      return (
-        <Row className="mb10" key={item.url}>
-          <Column small={1}>{item.level}</Column>
-          <Column small={3}>
-            <h3>
-              <a
-                href={`https://pf2.altervista.org${item.url}`}
-                target={"_blank"}
-                rel="noreferrer"
-              >
-                {item.name}
-              </a>{" "}
-            </h3>
-          </Column>
-          <Column small={2}>
-            <small>{item.school}</small>
-          </Column>
-          <Column small={6}>
-            <p>{item.description}</p>
-          </Column>
-        </Row>
-      );
-    });
+    .forEach((item) =>
+      isValid.dataArray(item.intensified) &&
+      item.intensified.some((item2) => item2 === levelFilter.value)
+        ? intensifiedSpells.push(item)
+        : mainSpells.push(item)
+    );
+
+  const SpellCards = mainSpells.map((item) => (
+    <SpellCard data={item} key={item.url} />
+  ));
+  const IntensifiedSpellCards = intensifiedSpells.map((item) => (
+    <SpellCard data={item} key={item.url} />
+  ));
+
+  const theProps = {
+    searchInput: {
+      placeholder: "search",
+      value: searchValue,
+      onChange: (event) => setSearchValue(event.target.value),
+    },
+    levelSelect: {
+      options: [
+        optionAll,
+        ...Array.from(Array(11).keys()).map((item) => ({
+          value: item,
+          label: item,
+        })),
+      ],
+      onChange: (value) => setLevelFilter(value),
+      value: levelFilter,
+    },
+    schoolSelect: {
+      options: schoolOptions,
+      onChange: (value) => setSchoolFilter(value),
+      value: schoolFilter,
+    },
+    colorSelect: {
+      options: colorOptions,
+      onChange: (value) => setColorFilter(value),
+      value: colorFilter,
+    },
+  };
+
   return (
-    <Row>
-      <Column small={12}>
-        <h2>SpellBook</h2>
-        <Row className="mb20">
-          <Column small={1}>{theSpells.length}</Column>
-          <Column small={3}>
-            Livello:
-            <select onChange={(event) => setLevelFilter(event.target.value)}>
-              <option value={"all"}>all</option>
-              <option value={0}>0</option>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-              <option value={10}>10</option>
-            </select>
-          </Column>
-          <Column small={3}>
-            Scuola:
-            <select onChange={(event) => setSchoolFilter(event.target.value)}>
-              <option value={"all"}>all</option>
-              <option value={"abiurazione"}>abiurazione</option>
-              <option value={"ammaliamento"}>ammaliamento</option>
-              <option value={"evocazione"}>evocazione</option>
-              <option value={"illusione"}>illusione</option>
-              <option value={"invocazione"}>invocazione</option>
-              <option value={"necromanzia"}>necromanzia</option>
-              <option value={"trasmutazione"}>trasmutazione</option>
-              <option value={"divinazione"}>divinazione</option>
-            </select>
-          </Column>
-          <Column small={3}>
-            Magia:
-            <select onChange={(event) => setColorFilter(event.target.value)}>
-              <option value={"all"}>all</option>
-              <option value={"whiteMagic"}>Magia Bianca</option>
-              <option value={"arcaneMagic"}>Magia Arcana</option>
-              <option value={"runicMagic"}>Magia Runica</option>
-              <option value={"occultMagic"}>Magia Occulta</option>
-              <option value={"primeviMagic"}>Magia Primeva</option>
-              <option value={"elementalMagic"}>Magia Fatata</option>
-              <option value={"demonicMagic"}>Magia Demoniaca</option>
-              <option value={"blackMagic"}>Magia Nera</option>
-              <option value={"satanicMagic"}>Magia Satanica</option>
-            </select>
-          </Column>
-        </Row>
-        {theSpells}
-      </Column>
-    </Row>
+    <>
+      <Row className="mb20">
+        <Column small={3}>
+          <h1>SpellBook</h1>
+        </Column>
+        <Column small={9}>
+          <SearchStats main={mainSpells} intensified={intensifiedSpells} />
+        </Column>
+      </Row>
+      <BookStats />
+      <Row className="mb20">
+        <Column small={1}>
+          <Selector {...theProps.levelSelect} />
+        </Column>
+        <Column small={3}>
+          <input {...theProps.searchInput} />
+        </Column>
+        <Column small={2}>
+          <Selector {...theProps.schoolSelect} />
+        </Column>
+        <Column small={6}>
+          <Selector {...theProps.colorSelect} />
+        </Column>
+      </Row>
+      {SpellCards}
+      <Row>
+        <Column small={12}>
+          <hr />
+          <h2>Intensificati disponibili</h2>
+        </Column>
+        <hr />
+      </Row>
+      {IntensifiedSpellCards}
+    </>
   );
 };
 

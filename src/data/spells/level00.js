@@ -1,4 +1,15 @@
-import traditions from "./traditions";
+const allTraditions = [
+  "divina",
+  "arcana",
+  "fatata",
+  "runica",
+  "occulta",
+  "primeva",
+  "infernale",
+  "blasfema",
+  "nera",
+];
+
 const allLevels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const baseSpells = {
@@ -8,7 +19,7 @@ const baseSpells = {
     name: "Prestidigitazione",
     school: "invocazione",
     description: "Esegui un trucco magico minore",
-    source: traditions.all,
+    source: allTraditions,
   },
   individuazioneMagico: {
     level: 0,
@@ -16,7 +27,7 @@ const baseSpells = {
     name: "Individuazione del Magico",
     school: "divinazione",
     description: "Percepisci la vicinanza della magia",
-    source: traditions.all,
+    source: allTraditions,
     intensified: [3, 4],
   },
   leggereAura: {
@@ -26,7 +37,7 @@ const baseSpells = {
     school: "divinazione",
     description:
       "Vieni a sapere se un oggetto è magico e ne determini la scuola di magia",
-    source: traditions.all,
+    source: allTraditions,
     intensified: [3, 6],
   },
   sigillo: {
@@ -35,7 +46,7 @@ const baseSpells = {
     name: "Sigillo",
     school: "trasmutazione",
     description: "Apponi un marchio magico",
-    source: ["arcana", "runica", "primeva", "fatata", "satanica"],
+    source: allTraditions,
     intensified: [3, 5, 7],
   },
 };
@@ -56,7 +67,7 @@ const baseAttackSpells = {
     name: "Distruggere Non Morti",
     school: "necromanzia",
     description: "Infliggi danni da energia positiva ai non morti",
-    source: ["bianca"],
+    source: ["divina"],
     intensified: allLevels,
   },
   lanciaDivina: {
@@ -93,7 +104,7 @@ const baseAttackSpells = {
     name: "Produrre Fiamma",
     school: "invocazione",
     description: "Accendi piccole fiamme per attaccare da vicino o a distanza",
-    source: ["demoniaca"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   fiottoAcido: {
@@ -112,7 +123,7 @@ const baseAttackSpells = {
     school: "ammaliamento",
     description:
       "Infliggi danni alla mente di una creatura, possibilmente fino a stordirla",
-    source: ["satanica"],
+    source: ["nera"],
     intensified: allLevels,
   },
   toccoGelido: {
@@ -121,7 +132,7 @@ const baseAttackSpells = {
     name: "Tocco Gelido",
     school: "necromanzia",
     description: "Il tuo tocco ferisce i viventi o disorienta i non morti",
-    source: ["nera"],
+    source: ["blasfema"],
     intensified: allLevels,
   },
 };
@@ -143,7 +154,7 @@ const combatSpells = {
     school: "abiurazione",
     description:
       "Uno scudo di forza magica blocca gli attacchi e dardo incantato",
-    source: ["arcana"],
+    source: ["arcana", "fatata", "occulta", "nera"],
     intensified: [3, 5, 7, 9],
   },
   stabilizzare: {
@@ -152,7 +163,7 @@ const combatSpells = {
     name: "Stabilizzare",
     school: "necromanzia",
     description: "Stabilizzi una creatura morente.",
-    source: ["bianca", "primeva", "runica"],
+    source: ["divina", "primeva", "runica"],
   },
   interdizioneMinaccia: {
     level: 0,
@@ -160,7 +171,7 @@ const combatSpells = {
     name: "Interdizione alla Minaccia",
     school: "abiurazione",
     description: "Proteggi un alleato da un nemico specifico",
-    source: ["bianca", "occulta", "nera"],
+    source: ["divina", "occulta", "runica"],
     intensified: [6],
   },
   guida: {
@@ -169,7 +180,7 @@ const combatSpells = {
     name: "Guida",
     school: "divinazione",
     description: "Una guida divina fornisce un bonus su un tiro",
-    source: ["runica", "occulta", "satanica", "nera", "demoniaca", "primeva"],
+    source: ["runica", "blasfema"],
   },
   suonoFantasma: {
     level: 0,
@@ -177,7 +188,7 @@ const combatSpells = {
     name: "Suono Fantasma",
     school: "illusione",
     description: "Crei suoni falsi",
-    source: ["satanica", "fatata"],
+    source: ["nera", "fatata", "blasfema", "infernale"],
     intensified: [3, 5],
   },
 };
@@ -189,7 +200,7 @@ const utilitySpells = {
     name: "Luci Danzanti",
     school: "invocazione",
     description: "Crea quattro luci fluttuanti che puoi muovere",
-    source: ["fatata", "arcana", "primeva", "demoniaca"],
+    source: ["fatata", "arcana", "infernale"],
   },
   luce: {
     level: 0,
@@ -197,7 +208,7 @@ const utilitySpells = {
     name: "Luce",
     school: "invocazione",
     description: "Fai risplendere un oggetto",
-    source: ["arcana"],
+    source: ["arcana", "divina"],
     intensified: [4],
   },
   messaggio: {
@@ -207,7 +218,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Pronunci un messaggio a una creatura distante, la quale può rispondere",
-    source: ["bianca", "satanica", "nera", "primeva", "fatata", "demoniaca"],
+    source: ["divina", "nera", "blasfema", "primeva", "fatata", "infernale"],
     intensified: [3],
   },
   condividerePassati: {
@@ -217,7 +228,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Toccando la fronte dei bersagli, metti le loro menti in contatto.",
-    source: ["bianca", "occulta", "nera"],
+    source: ["occulta"],
   },
   manoMagica: {
     level: 0,
@@ -225,7 +236,7 @@ const utilitySpells = {
     name: "Mano Magica",
     school: "invocazione",
     description: "Dai l'ordine a una mano magica di muovere un oggetto",
-    source: ["occulta"],
+    source: ["occulta", "arcana", "blasfema", "infernale", "nera"],
     intensified: [3, 5, 7],
   },
   conoscereDirezione: {
@@ -234,7 +245,7 @@ const utilitySpells = {
     name: "Conoscere Direzione",
     school: "divinazione",
     description: "Sai in quale direzione è il nord",
-    source: ["runica", "primeva", "demoniaca"],
+    source: ["runica", "primeva"],
     intensified: [7],
   },
 };
