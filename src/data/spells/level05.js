@@ -97,7 +97,7 @@ const combatSpells = {
     name: "Evoca Drago",
     school: "evocazione",
     description: "Evochi un drago che combatta con te",
-    source: ["arcana"],
+    source: ["infernale"],
     intensified: allLevels,
   },
   trasportoTelecinetico: {
@@ -106,7 +106,7 @@ const combatSpells = {
     name: "Trasporto Telecinetico",
     school: "invocazione",
     description: "Sposti un oggetto grande",
-    source: ["arcana", "occulta"],
+    source: ["occulta"],
   },
   interdizioneMorte: {
     level: 5,
@@ -261,7 +261,7 @@ const combatSpells = {
     name: "Maledizione del Marinaio",
     school: "necromanzia",
     description: "Contagi una creatura con la maledizione del mare mosso",
-    source: ["blasfema", "infernale"],
+    source: ["blasfema"],
   },
   disperazioneOpprimente: {
     level: 5,
@@ -292,7 +292,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Permetti a una creatura di comprendere e parlare tutte le lingue",
-    source: ["divina"],
+    source: ["divina", "arcana"],
     intensified: [7],
   },
   visioneFalsa: {
@@ -399,7 +399,7 @@ const utilitySpells = {
     school: "divinazione",
     description:
       "Colleghi le menti con creature consenzienti per comunicare telepaticamente a grandi distanze",
-    source: ["nera"],
+    source: ["nera", "arcana"],
   },
 };
 

@@ -26,7 +26,7 @@ const baseAttackSpells = {
     name: "Manovra Telecinetica",
     school: "invocazione",
     description: "Disarmi, spingi o sbilanci una creatura telecineticamente",
-    source: ["occulta", "arcana"],
+    source: ["occulta"],
   },
   suonoDirompente: {
     level: 2,
@@ -422,7 +422,7 @@ const utilitySpells = {
     school: "illusione",
     description:
       "Fai apparire una bocca illusoria per pronunciare un messaggio",
-    source: ["runica", "nera"],
+    source: ["runica", "nera", "arcana"],
   },
   scassinare: {
     level: 2,
