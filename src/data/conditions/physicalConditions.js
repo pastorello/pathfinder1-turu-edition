@@ -49,9 +49,10 @@ const basePhysicalConditions = {
     name: "Abbagliato",
     effect: (player) => ({
       ...player,
+      perception: addBonus(player.perception, "status", -1),
       activeEffects: [
         ...player.activeEffects,
-        "prova semplice CD 5 per compiere le azioni che hanno un bersaglio",
+        "-1 Tiro per colpire (da implementare nuovo sistema)",
       ],
     }),
   },
