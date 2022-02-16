@@ -4,7 +4,7 @@ const Home = (props) => {
   return (
     <>
       <h1>
-        Pathfinder 2 <small>Turu's Edition asd</small>
+        Pathfinder 2 <small>Turu's Edition maronn</small>
       </h1>
       <ul>
         <li>
