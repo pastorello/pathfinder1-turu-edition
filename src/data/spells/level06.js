@@ -2,7 +2,7 @@ const allLevels = [7, 8, 9, 10];
 const baseAttackSpells = {
   disintegrazione: {
     level: 6,
-    url: "/wiki/Disintegrazione",
+    url: "/wiki/Incantesimi/Disintegrazione",
     name: "Disintegrazione",
     school: "invocazione",
     description: "Riduci in polvere una creatura o un oggetto",
@@ -11,7 +11,7 @@ const baseAttackSpells = {
   },
   rianimareMorti: {
     level: 6,
-    url: "/wiki/Rianimare_Morti",
+    url: "/wiki/Incantesimi/Rianimare_Morti",
     name: "Rianimare Morti",
     school: "necromanzia",
     description: "Riporti in vita una creatura morta",
@@ -20,7 +20,7 @@ const baseAttackSpells = {
   },
   campoVita: {
     level: 6,
-    url: "/wiki/Campo_di_Vita",
+    url: "/wiki/Incantesimi/Campo_di_Vita",
     name: "Campo di Vita",
     school: "necromanzia",
     description:
@@ -30,7 +30,7 @@ const baseAttackSpells = {
   },
   catenaFulmini: {
     level: 6,
-    url: "/wiki/Catena_di_Fulmini",
+    url: "/wiki/Incantesimi/Catena_di_Fulmini",
     name: "Catena di Fulmini",
     school: "invocazione",
     description: "Un fulmine rimbalza da una creatura all'altra",
@@ -39,7 +39,7 @@ const baseAttackSpells = {
   },
   semiFuoco: {
     level: 6,
-    url: "/wiki/Semi_di_Fuoco",
+    url: "/wiki/Incantesimi/Semi_di_Fuoco",
     name: "Semi di Fuoco",
     school: "invocazione",
     description: "Crei quattro ghiande esplosive",
@@ -48,7 +48,7 @@ const baseAttackSpells = {
   },
   metamorfosiFunesta: {
     level: 6,
-    url: "/wiki/Metamorfosi_Funesta",
+    url: "/wiki/Incantesimi/Metamorfosi_Funesta",
     name: "Metamorfosi Funesta",
     school: "trasmutazione",
     description: "Trasformi una creatura in un animale innocuo",
@@ -56,7 +56,7 @@ const baseAttackSpells = {
   },
   carnePietra: {
     level: 6,
-    url: "/wiki/Carne_in_Pietra",
+    url: "/wiki/Incantesimi/Carne_in_Pietra",
     name: "Carne in Pietra",
     school: "trasmutazione",
     description: "Trasformi una creatura vivente in una statua di pietra",
@@ -64,7 +64,7 @@ const baseAttackSpells = {
   },
   barrieraLame: {
     level: 6,
-    url: "/wiki/Barriera_di_Lame",
+    url: "/wiki/Incantesimi/Barriera_di_Lame",
     name: "Barriera di Lame",
     school: "invocazione",
     description: "Formi un muro di lame fatte di forza",
@@ -73,7 +73,7 @@ const baseAttackSpells = {
   },
   pungiglionePurpureo: {
     level: 6,
-    url: "/wiki/Pungiglione_del_Verme_Purpureo",
+    url: "/wiki/Incantesimi/Pungiglione_del_Verme_Purpureo",
     name: "Pungiglione del Verme Purpureo",
     school: "necromanzia",
     description:
@@ -82,7 +82,7 @@ const baseAttackSpells = {
   },
   esplosioneSpirito: {
     level: 6,
-    url: "/wiki/Esplosione_dello_Spirito",
+    url: "/wiki/Incantesimi/Esplosione_dello_Spirito",
     name: "Esplosione dello Spirito",
     school: "necromanzia",
     description: "Infliggi danni all'essenza spirituale di una creatura",
@@ -91,7 +91,7 @@ const baseAttackSpells = {
   },
   dissanguamentoVampiro: {
     level: 6,
-    url: "/wiki/Dissanguamento_del_Vampiro",
+    url: "/wiki/Incantesimi/Dissanguamento_del_Vampiro",
     name: "Dissanguamento del Vampiro",
     school: "necromanzia",
     description: "Estrai sangue e forza vitale dalle creature in un cono",
@@ -100,7 +100,7 @@ const baseAttackSpells = {
   },
   dominare: {
     level: 6,
-    url: "/wiki/Dominare",
+    url: "/wiki/Incantesimi/Dominare",
     name: "Dominare",
     school: "ammaliamento",
     description: "Un umanoide deve obbedire ai tuoi ordini",
@@ -109,7 +109,7 @@ const baseAttackSpells = {
   },
   regressioneMentale: {
     level: 6,
-    url: "/wiki/Regressione_Mentale",
+    url: "/wiki/Incantesimi/Regressione_Mentale",
     name: "Regressione Mentale",
     school: "ammaliamento",
     description: "Riduci permanentemente le facoltà mentali di una creatura",
@@ -117,7 +117,7 @@ const baseAttackSpells = {
   },
   allucinazioneCatastrofica: {
     level: 6,
-    url: "/wiki/Allucinazione_Catastrofica",
+    url: "/wiki/Incantesimi/Allucinazione_Catastrofica",
     name: "Allucinazione Catastrofica",
     school: "illusione",
     description:
@@ -130,7 +130,7 @@ const baseAttackSpells = {
 const combatSpells = {
   trasposizioneCollettiva: {
     level: 6,
-    url: "/wiki/Trasposizione_Collettiva",
+    url: "/wiki/Incantesimi/Trasposizione_Collettiva",
     name: "Trasposizione Collettiva",
     school: "evocazione",
     description:
@@ -140,7 +140,7 @@ const combatSpells = {
   },
   repulsione: {
     level: 6,
-    url: "/wiki/Repulsione",
+    url: "/wiki/Incantesimi/Repulsione",
     name: "Repulsione",
     school: "abiurazione",
     description: "Impedisci alle creature di avvicinarsi a te",
@@ -148,7 +148,7 @@ const combatSpells = {
   },
   muroForza: {
     level: 6,
-    url: "/wiki/Muro_di_Forza",
+    url: "/wiki/Incantesimi/Muro_di_Forza",
     name: "Muro di Forza",
     school: "invocazione",
     description: "Crei un muro invisibile e durevole di forza magica",
@@ -157,7 +157,7 @@ const combatSpells = {
   },
   convincimentoZelante: {
     level: 6,
-    url: "/wiki/Convincimento_Zelante",
+    url: "/wiki/Incantesimi/Convincimento_Zelante",
     name: "Convincimento Zelante",
     school: "ammaliamento",
     description:
@@ -167,7 +167,7 @@ const combatSpells = {
   },
   pietraCarne: {
     level: 6,
-    url: "/wiki/Pietra_in_Carne",
+    url: "/wiki/Incantesimi/Pietra_in_Carne",
     name: "Pietra in Carne",
     school: "trasmutazione",
     description: "Ripristini una creatura pietrificata al suo stato naturale",
@@ -175,7 +175,7 @@ const combatSpells = {
   },
   groviglioRampicanti: {
     level: 6,
-    url: "/wiki/Groviglio_di_Rampicanti",
+    url: "/wiki/Incantesimi/Groviglio_di_Rampicanti",
     name: "Groviglio di Rampicanti",
     school: "evocazione",
     description:
@@ -184,7 +184,7 @@ const combatSpells = {
   },
   formaDrago: {
     level: 6,
-    url: "/wiki/Incantesimi/Forma_di_Drago",
+    url: "/wikiForma_di_Drago",
     name: "Forma di Drago",
     school: "trasmutazione",
     description: "Ti trasformi in un drago",
@@ -193,7 +193,7 @@ const combatSpells = {
   },
   tramaVibrante: {
     level: 6,
-    url: "/wiki/Trama_Vibrante",
+    url: "/wiki/Incantesimi/Trama_Vibrante",
     name: "Trama Vibrante",
     school: "illusione",
     description: "Crei una trama di luci che abbaglia ed acceca",
@@ -201,7 +201,7 @@ const combatSpells = {
   },
   giustoPotere: {
     level: 6,
-    url: "/wiki/Giusto_Potere",
+    url: "/wiki/Incantesimi/Giusto_Potere",
     name: "Giusto Potere",
     school: "trasmutazione",
     description: "Ti trasformi in forma da battaglia con armi divine",
@@ -210,7 +210,7 @@ const combatSpells = {
   },
   rovinaIncantesimi: {
     level: 6,
-    url: "/wiki/Rovina_Incantesimi",
+    url: "/wiki/Incantesimi/Rovina_Incantesimi",
     name: "Rovina Incantesimi",
     school: "abiurazione",
     description:
@@ -219,7 +219,7 @@ const combatSpells = {
   },
   fuorviare: {
     level: 6,
-    url: "/wiki/Fuorviare",
+    url: "/wiki/Incantesimi/Fuorviare",
     name: "Fuorviare",
     school: "illusione",
     description:
@@ -231,7 +231,7 @@ const combatSpells = {
 const utilitySpells = {
   scrutare: {
     level: 6,
-    url: "/wiki/Scrutare",
+    url: "/wiki/Incantesimi/Scrutare",
     name: "Scrutare",
     school: "divinazione",
     description: "Spii una creatura",
@@ -239,7 +239,7 @@ const utilitySpells = {
   },
   visioneVero: {
     level: 6,
-    url: "/wiki/Visione_del_Vero",
+    url: "/wiki/Incantesimi/Visione_del_Vero",
     name: "Visione del Vero",
     school: "divinazione",
     description: "Vedi attraverso illusioni e trasmutazioni",
@@ -256,7 +256,7 @@ const utilitySpells = {
   },
   teletrasporto: {
     level: 6,
-    url: "/wiki/Teletrasporto",
+    url: "/wiki/Incantesimi/Teletrasporto",
     name: "Teletrasporto",
     school: "evocazione",
     description:
@@ -266,7 +266,7 @@ const utilitySpells = {
   },
   pietreParlanti: {
     level: 6,
-    url: "/wiki/Pietre_Parlanti",
+    url: "/wiki/Incantesimi/Pietre_Parlanti",
     name: "Pietre Parlanti",
     school: "divinazione",
     description: "Parli agli spiriti insiti nella pietra naturale",

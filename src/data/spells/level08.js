@@ -3,7 +3,7 @@ const allLevels = [9, 10];
 const baseAttackSpells = {
   labirinto: {
     level: 8,
-    url: "/wiki/Labirinto",
+    url: "/wiki/Incantesimi/Labirinto",
     name: "Labirinto",
     school: "evocazione",
     description: "Intrappoli una creatura in un labirinto extradimensionale",
@@ -11,7 +11,7 @@ const baseAttackSpells = {
   },
   raggioPolare: {
     level: 8,
-    url: "/wiki/Raggio_Polare",
+    url: "/wiki/Incantesimi/Raggio_Polare",
     name: "Raggio Polare",
     school: "invocazione",
     description: "Un freddo estremo infligge danni e risucchia una creatura",
@@ -20,7 +20,7 @@ const baseAttackSpells = {
   },
   momentoRisanamento: {
     level: 8,
-    url: "/wiki/Momento_di_Risanamento",
+    url: "/wiki/Incantesimi/Momento_di_Risanamento",
     name: "Momento di Risanamento",
     school: "necromanzia",
     description: "Conferisci un giorno di recupero in un istante",
@@ -28,7 +28,7 @@ const baseAttackSpells = {
   },
   terremoto: {
     level: 8,
-    url: "/wiki/Terremoto",
+    url: "/wiki/Incantesimi/Terremoto",
     name: "Terremoto",
     school: "invocazione",
     description: "Scuoti il terreno con un terremoto devastante",
@@ -37,7 +37,7 @@ const baseAttackSpells = {
   },
   cantoSpirito: {
     level: 8,
-    url: "/wiki/Canto_dello_Spirito",
+    url: "/wiki/Incantesimi/Canto_dello_Spirito",
     name: "Canto dello Spirito",
     school: "necromanzia",
     description:
@@ -47,7 +47,7 @@ const baseAttackSpells = {
   },
   epidemiaSpirito: {
     level: 8,
-    url: "/wiki/Epidemia_dello_Spirito",
+    url: "/wiki/Incantesimi/Epidemia_dello_Spirito",
     name: "Epidemia dello Spirito",
     school: "necromanzia",
     description: "Indebolisci un bersaglio con una maledizione contagiosa",
@@ -55,7 +55,7 @@ const baseAttackSpells = {
   },
   formaMostruosità: {
     level: 8,
-    url: "/wiki/Forma_di_Mostruosit%C3%A0",
+    url: "/wiki/Incantesimi/Forma_di_Mostruosit%C3%A0",
     name: "Forma di Mostruosità",
     school: "trasmutazione",
     description: "Ti trasformi in un potente mostro",
@@ -64,7 +64,7 @@ const baseAttackSpells = {
   },
   orridoAvvizzimento: {
     level: 8,
-    url: "/wiki/Orrido_Avvizzimento",
+    url: "/wiki/Incantesimi/Orrido_Avvizzimento",
     name: "Orrido Avvizzimento",
     school: "necromanzia",
     description: "Disidrati i corpi delle creature, infliggendo loro danni",
@@ -76,7 +76,7 @@ const baseAttackSpells = {
 const combatSpells = {
   tramaScintillante: {
     level: 8,
-    url: "/wiki/Trama_Scintillante",
+    url: "/wiki/Incantesimi/Trama_Scintillante",
     name: "Trama Scintillante",
     school: "illusione",
     description:
@@ -85,7 +85,7 @@ const combatSpells = {
   },
   muroPrismatico: {
     level: 8,
-    url: "/wiki/Muro_Prismatico",
+    url: "/wiki/Incantesimi/Muro_Prismatico",
     name: "Muro Prismatico",
     school: "abiurazione",
     description: "Crei un muro protettivo con sette strati cromatici",
@@ -93,7 +93,7 @@ const combatSpells = {
   },
   auraDivina: {
     level: 8,
-    url: "/wiki/Aura_Divina",
+    url: "/wiki/Incantesimi/Aura_Divina",
     name: "Aura Divina",
     school: "abiurazione",
     description:
@@ -102,7 +102,7 @@ const combatSpells = {
   },
   ispirazioneDivina: {
     level: 8,
-    url: "/wiki/Ispirazione_Divina",
+    url: "/wiki/Incantesimi/Ispirazione_Divina",
     name: "Ispirazione Divina",
     school: "ammaliamento",
     description:
@@ -111,7 +111,7 @@ const combatSpells = {
   },
   campoAntimagia: {
     level: 8,
-    url: "/wiki/Campo_AntiMagia",
+    url: "/wiki/Incantesimi/Campo_AntiMagia",
     name: "Campo AntiMagia",
     school: "abiurazione",
     description: "La magia non funziona in  un'area che ti circonda",
@@ -119,7 +119,7 @@ const combatSpells = {
   },
   sparizione: {
     level: 8,
-    url: "/wiki/Sparizione",
+    url: "/wiki/Incantesimi/Sparizione",
     name: "Sparizione",
     school: "illusione",
     description:
@@ -128,7 +128,7 @@ const combatSpells = {
   },
   ventiPunitori: {
     level: 8,
-    url: "/wiki/Venti_Punitori",
+    url: "/wiki/Incantesimi/Venti_Punitori",
     name: "Venti Punitori",
     school: "invocazione",
     description: "Un ciclone ostacola i voli e intrappola le creature",
@@ -136,7 +136,7 @@ const combatSpells = {
   },
   danzaIrrefrenabile: {
     level: 8,
-    url: "/wiki/Danza_Irrefrenabile",
+    url: "/wiki/Incantesimi/Danza_Irrefrenabile",
     name: "Danza Irrefrenabile",
     school: "ammaliamento",
     description:
@@ -145,7 +145,7 @@ const combatSpells = {
   },
   parolaStordire: {
     level: 8,
-    url: "/wiki/Parola_del_Potere,_Stordire",
+    url: "/wiki/Incantesimi/Parola_del_Potere,_Stordire",
     name: "Parola del Potere, Stordire",
     school: "ammaliamento",
     description: "Pronunci una parola che stordisce una creatura",
@@ -154,7 +154,7 @@ const combatSpells = {
   },
   vuotoMentale: {
     level: 8,
-    url: "/wiki/Vuoto_Mentale",
+    url: "/wiki/Incantesimi/Vuoto_Mentale",
     name: "Vuoto Mentale",
     school: "abiurazione",
     description: "Proteggi una creatura da magie mentali e alcune divinazioni",
@@ -165,7 +165,7 @@ const combatSpells = {
 const utilitySpells = {
   osservazioneIncessante: {
     level: 8,
-    url: "/wiki/Osservazione_Incessante",
+    url: "/wiki/Incantesimi/Osservazione_Incessante",
     name: "Osservazione Incessante",
     school: "divinazione",
     description:
@@ -174,7 +174,7 @@ const utilitySpells = {
   },
   rivelaLocazione: {
     level: 8,
-    url: "/wiki/Rivela_Locazione",
+    url: "/wiki/Incantesimi/Rivela_Locazione",
     name: "Rivela Locazione",
     school: "divinazione",
     description:
@@ -183,7 +183,7 @@ const utilitySpells = {
   },
   consiglioOnirico: {
     level: 8,
-    url: "/wiki/Consiglio_Onirico",
+    url: "/wiki/Incantesimi/Consiglio_Onirico",
     name: "Consiglio Onirico",
     school: "illusione",
     description: "Comunichi attraverso un sogno condiviso",
@@ -191,7 +191,7 @@ const utilitySpells = {
   },
   camminareVento: {
     level: 8,
-    url: "/wiki/Camminare_nel_Vento",
+    url: "/wiki/Incantesimi/Camminare_nel_Vento",
     name: "Camminare nel Vento",
     school: "trasmutazione",
     description: "Trasformi le creature in nubi rapide",

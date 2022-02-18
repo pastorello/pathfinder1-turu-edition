@@ -3,7 +3,7 @@ const allLevels = [8, 9, 10];
 const baseAttackSpells = {
   spruzzoPrismatico: {
     level: 7,
-    url: "/wiki/Spruzzo_Prismatico",
+    url: "/wiki/Incantesimi/Spruzzo_Prismatico",
     name: "Spruzzo Prismatico",
     school: "invocazione",
     description:
@@ -12,7 +12,7 @@ const baseAttackSpells = {
   },
   esplosioneSolare: {
     level: 7,
-    url: "/wiki/Esplosione_Solare",
+    url: "/wiki/Incantesimi/Esplosione_Solare",
     name: "Esplosione Solare",
     school: "invocazione",
     description:
@@ -22,7 +22,7 @@ const baseAttackSpells = {
   },
   rigenerazione: {
     level: 7,
-    url: "/wiki/Rigenerazione",
+    url: "/wiki/Incantesimi/Rigenerazione",
     name: "Rigenerazione",
     school: "necromanzia",
     description:
@@ -32,7 +32,7 @@ const baseAttackSpells = {
   },
   sentenzaDivina: {
     level: 7,
-    url: "/wiki/Sentenza_Divina",
+    url: "/wiki/Incantesimi/Sentenza_Divina",
     name: "Sentenza Divina",
     school: "invocazione",
     description:
@@ -42,7 +42,7 @@ const baseAttackSpells = {
   },
   eruzioneVulcanica: {
     level: 7,
-    url: "/wiki/Eruzione_Vulcanica",
+    url: "/wiki/Incantesimi/Eruzione_Vulcanica",
     name: "Eruzione Vulcanica",
     school: "invocazione",
     description:
@@ -52,7 +52,7 @@ const baseAttackSpells = {
   },
   corpoInfuocato: {
     level: 7,
-    url: "/wiki/Corpo_Infuocato",
+    url: "/wiki/Incantesimi/Corpo_Infuocato",
     name: "Corpo Infuocato",
     school: "trasmutazione",
     description: "Trasformi il tuo corpo in una fiamma vivente",
@@ -61,7 +61,7 @@ const baseAttackSpells = {
   },
   esplosioneOscurante: {
     level: 7,
-    url: "/wiki/Esplosione_Oscurante",
+    url: "/wiki/Incantesimi/Esplosione_Oscurante",
     name: "Esplosione Oscurante",
     school: "necromanzia",
     description:
@@ -71,7 +71,7 @@ const baseAttackSpells = {
   },
   faroTemporale: {
     level: 7,
-    url: "/wiki/Faro_Temporale",
+    url: "/wiki/Incantesimi/Faro_Temporale",
     name: "Faro Temporale",
     school: "divinazione",
     description:
@@ -80,7 +80,7 @@ const baseAttackSpells = {
   },
   ditoMorte: {
     level: 7,
-    url: "/wiki/Dito_della_Morte",
+    url: "/wiki/Incantesimi/Dito_della_Morte",
     name: "Dito della Morte",
     school: "necromanzia",
     description:
@@ -90,7 +90,7 @@ const baseAttackSpells = {
   },
   visioniPericolo: {
     level: 7,
-    url: "/wiki/Visioni_di_Pericolo",
+    url: "/wiki/Incantesimi/Visioni_di_Pericolo",
     name: "Visioni di Pericolo",
     school: "illusione",
     description:
@@ -103,7 +103,7 @@ const baseAttackSpells = {
 const combatSpells = {
   inversioneGravità: {
     level: 7,
-    url: "/wiki/Inversione_della_Gravit%C3%A0",
+    url: "/wiki/Incantesimi/Inversione_della_Gravit%C3%A0",
     name: "Inversione della Gravità",
     school: "invocazione",
     description: "Inverti la spinta gravitazionale in  un'area",
@@ -111,7 +111,7 @@ const combatSpells = {
   },
   riflettereIncantesimo: {
     level: 7,
-    url: "/wiki/Incantesimi/Riflettere_Incantesimo",
+    url: "/wikiRiflettere_Incantesimo",
     name: "Riflettere Incantesimo",
     school: "abiurazione",
     description: "Rifletti indietro gli incantesimi a chi li lanciati",
@@ -119,7 +119,7 @@ const combatSpells = {
   },
   bersaglioAccurato: {
     level: 7,
-    url: "/wiki/Bersaglio_Accurato",
+    url: "/wiki/Incantesimi/Bersaglio_Accurato",
     name: "Bersaglio Accurato",
     school: "divinazione",
     description:
@@ -128,7 +128,7 @@ const combatSpells = {
   },
   transizioneEterea: {
     level: 7,
-    url: "/wiki/Transizione_Eterea",
+    url: "/wiki/Incantesimi/Transizione_Eterea",
     name: "Transizione Eterea",
     school: "evocazione",
     description:
@@ -138,7 +138,7 @@ const combatSpells = {
   },
   egidaEnergia: {
     level: 7,
-    url: "/wiki/Egida_di_Energia",
+    url: "/wiki/Incantesimi/Egida_di_Energia",
     name: "Egida di Energia",
     school: "abiurazione",
     description:
@@ -148,7 +148,7 @@ const combatSpells = {
   },
   immagineProiettata: {
     level: 7,
-    url: "/wiki/Immagine_Proiettata",
+    url: "/wiki/Incantesimi/Immagine_Proiettata",
     name: "Immagine Proiettata",
     school: "illusione",
     description:
@@ -158,7 +158,7 @@ const combatSpells = {
   },
   duplicareNemico: {
     level: 7,
-    url: "/wiki/Duplicare_Nemico",
+    url: "/wiki/Incantesimi/Duplicare_Nemico",
     name: "Duplicare Nemico",
     school: "evocazione",
     description:
@@ -168,7 +168,7 @@ const combatSpells = {
   },
   recipienteDivino: {
     level: 7,
-    url: "/wiki/Recipiente_Divino",
+    url: "/wiki/Incantesimi/Recipiente_Divino",
     name: "Recipiente Divino",
     school: "trasmutazione",
     description: "Assumi le sembianze di un servitore della tua divinità",
@@ -177,7 +177,7 @@ const combatSpells = {
   },
   parolaAccecare: {
     level: 7,
-    url: "/wiki/Parola_del_Potere,_Accecare",
+    url: "/wiki/Incantesimi/Parola_del_Potere,_Accecare",
     name: "Parola del Potere, Accecare",
     school: "ammaliamento",
     description: "Pronunci una parola che acceca una creatura",
@@ -186,7 +186,7 @@ const combatSpells = {
   },
   possessione: {
     level: 7,
-    url: "/wiki/Possessione",
+    url: "/wiki/Incantesimi/Possessione",
     name: "Possessione",
     school: "necromanzia",
     description:
@@ -196,7 +196,7 @@ const combatSpells = {
   },
   mascheraTerrore: {
     level: 7,
-    url: "/wiki/Maschera_di_Terrore",
+    url: "/wiki/Incantesimi/Maschera_di_Terrore",
     name: "Maschera di Terrore",
     school: "illusione",
     description:
@@ -206,7 +206,7 @@ const combatSpells = {
   },
   distorcereMente: {
     level: 7,
-    url: "/wiki/Distorcere_Mente",
+    url: "/wiki/Incantesimi/Distorcere_Mente",
     name: "Distorcere Mente",
     school: "ammaliamento",
     description: "Confondi una creatura, potenzialmente in modo permanente",
@@ -217,7 +217,7 @@ const combatSpells = {
 const utilitySpells = {
   spostamentoPlanare: {
     level: 7,
-    url: "/wiki/Spostamento_Planare",
+    url: "/wiki/Incantesimi/Spostamento_Planare",
     name: "Spostamento Planare",
     school: "evocazione",
     description: "Trasporti le creature in un altro piano di esistenza",
@@ -225,7 +225,7 @@ const utilitySpells = {
   },
   serraturaDimensionale: {
     level: 7,
-    url: "/wiki/Serratura_Dimensionale",
+    url: "/wiki/Incantesimi/Serratura_Dimensionale",
     name: "Serratura Dimensionale",
     school: "abiurazione",
     description: "Impedisci il teletrasporto ed i viaggi planati",
@@ -233,7 +233,7 @@ const utilitySpells = {
   },
   contingenza: {
     level: 7,
-    url: "/wiki/Contingenza",
+    url: "/wiki/Incantesimi/Contingenza",
     name: "Contingenza",
     school: "abiurazione",
     description:
@@ -243,7 +243,7 @@ const utilitySpells = {
   },
   retrocognizione: {
     level: 7,
-    url: "/wiki/Retrocognizione",
+    url: "/wiki/Incantesimi/Retrocognizione",
     name: "Retrocognizione",
     school: "divinazione",
     description:
@@ -253,7 +253,7 @@ const utilitySpells = {
   },
   senzaOstacoli: {
     level: 7,
-    url: "/wiki/Senza_Ostacoli",
+    url: "/wiki/Incantesimi/Senza_Ostacoli",
     name: "Senza Ostacoli",
     school: "abiurazione",
     description: "Permetti alle creature di evitare ostacoli ambientali",
@@ -262,7 +262,7 @@ const utilitySpells = {
   },
   reggiaMeravigliosa: {
     level: 7,
-    url: "/wiki/Reggia_Meravigliosa",
+    url: "/wiki/Incantesimi/Reggia_Meravigliosa",
     name: "Reggia Meravigliosa",
     school: "evocazione",
     description: "Evochi una residenza sicura in un semipiano",

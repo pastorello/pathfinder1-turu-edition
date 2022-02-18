@@ -3,7 +3,7 @@ const allLevels = [3, 4, 5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
   silenzio: {
     level: 2,
-    url: "/wiki/Silenzio",
+    url: "/wiki/Incantesimi/Silenzio",
     name: "Silenzio",
     school: "illusione",
     description: "Silenzi tutti i suoni di una creatura",
@@ -12,7 +12,7 @@ const baseAttackSpells = {
   },
   armaSpirituale: {
     level: 2,
-    url: "/wiki/Arma_Spirituale",
+    url: "/wiki/Incantesimi/Arma_Spirituale",
     name: "Arma Spirituale",
     school: "invocazione",
     description:
@@ -22,7 +22,7 @@ const baseAttackSpells = {
   },
   manovraTelecinetica: {
     level: 2,
-    url: "/wiki/Manovra_Telecinetica",
+    url: "/wiki/Incantesimi/Manovra_Telecinetica",
     name: "Manovra Telecinetica",
     school: "invocazione",
     description: "Disarmi, spingi o sbilanci una creatura telecineticamente",
@@ -30,7 +30,7 @@ const baseAttackSpells = {
   },
   suonoDirompente: {
     level: 2,
-    url: "/wiki/Suono_Dirompente",
+    url: "/wiki/Incantesimi/Suono_Dirompente",
     name: "Suono Dirompente",
     school: "invocazione",
     description: "Infliggi danni e assordi le creature con un fragore potente",
@@ -39,7 +39,7 @@ const baseAttackSpells = {
   },
   formaAnimale: {
     level: 2,
-    url: "/wiki/Forma_di_Animale",
+    url: "/wiki/Incantesimi/Forma_di_Animale",
     name: "Forma di Animale",
     school: "trasmutazione",
     description: "Ti trasformi in un animale pericoloso",
@@ -48,7 +48,7 @@ const baseAttackSpells = {
   },
   ifaFungina: {
     level: 2,
-    url: "/wiki/Ifa_Fungina",
+    url: "/wiki/Incantesimi/Ifa_Fungina",
     name: "Ifa Fungina",
     school: "necromanzia",
     description: "Una sottile ifa cresce dai tuoi piedi e affonda nel terreno",
@@ -57,7 +57,7 @@ const baseAttackSpells = {
   },
   risataIncontenibile: {
     level: 2,
-    url: "/wiki/Risata_Incontenibile",
+    url: "/wiki/Incantesimi/Risata_Incontenibile",
     name: "Risata Incontenibile",
     school: "ammaliamento",
     description:
@@ -66,7 +66,7 @@ const baseAttackSpells = {
   },
   evocaElementale: {
     level: 2,
-    url: "/wiki/Evoca_Elementale",
+    url: "/wiki/Incantesimi/Evoca_Elementale",
     name: "Evoca Elementale",
     school: "evocazione",
     description: "Evochi un elementale che combatta con te",
@@ -75,7 +75,7 @@ const baseAttackSpells = {
   },
   frecciaAcida: {
     level: 2,
-    url: "/wiki/Freccia_Acida",
+    url: "/wiki/Incantesimi/Freccia_Acida",
     name: "Freccia Acida",
     school: "invocazione",
     description: "Una freccia magica infligge danni da acido persistenti",
@@ -84,7 +84,7 @@ const baseAttackSpells = {
   },
   sferaInfuocata: {
     level: 2,
-    url: "/wiki/Sfera_Infuocata",
+    url: "/wiki/Incantesimi/Sfera_Infuocata",
     name: "Sfera Infuocata",
     school: "invocazione",
     description: "Una sfera di fuoco rotola al tuo comando",
@@ -93,7 +93,7 @@ const baseAttackSpells = {
   },
   rintoccoDiMorte: {
     level: 2,
-    url: "/wiki/Rintocco_di_Morte",
+    url: "/wiki/Incantesimi/Rintocco_di_Morte",
     name: "Rintocco di Morte",
     school: "necromanzia",
     description: "Infliggi il colpo di grazia a una creatura in punto di morte",
@@ -101,7 +101,7 @@ const baseAttackSpells = {
   },
   furoriGhoul: {
     level: 2,
-    url: "/wiki/Furori_del_Ghoul",
+    url: "/wiki/Incantesimi/Furori_del_Ghoul",
     name: "Furori del Ghoul",
     school: "necromanzia",
     description: "Infetti una creatura con la febbre del ghoul",
@@ -109,7 +109,7 @@ const baseAttackSpells = {
   },
   toccoIdiozia: {
     level: 2,
-    url: "/wiki/Tocco_di_Idiozia",
+    url: "/wiki/Incantesimi/Tocco_di_Idiozia",
     name: "Tocco di Idiozia",
     school: "ammaliamento",
     description: "Offuschi la mente di un bersaglio con un tocco",
@@ -117,7 +117,7 @@ const baseAttackSpells = {
   },
   banchettoCeneri: {
     level: 2,
-    url: "/wiki/Banchetto_di_Ceneri",
+    url: "/wiki/Incantesimi/Banchetto_di_Ceneri",
     name: "Banchetto di Ceneri",
     school: "necromanzia",
     description:
@@ -130,7 +130,7 @@ const baseAttackSpells = {
 const combatSpells = {
   resistereEnergia: {
     level: 2,
-    url: "/wiki/Resistere_all%27Energia",
+    url: "/wiki/Incantesimi/Resistere_all%27Energia",
     name: "Resistere all'Energia",
     school: "abiurazione",
     description: "Proteggi una creatura da un tipo di danno da energia",
@@ -139,7 +139,7 @@ const combatSpells = {
   },
   rimuoviParalisi: {
     level: 2,
-    url: "/wiki/Rimuovi_Paralisi",
+    url: "/wiki/Incantesimi/Rimuovi_Paralisi",
     name: "Rimuovi Paralisi",
     school: "necromanzia",
     description: "Liberi una creatura dalla paralisi",
@@ -148,7 +148,7 @@ const combatSpells = {
   },
   rimuoviPaura: {
     level: 2,
-    url: "/wiki/Rimuovi_Paura",
+    url: "/wiki/Incantesimi/Rimuovi_Paura",
     name: "Rimuovi Paura",
     school: "ammaliamento",
     description: "Liberi una creatura dal suo terrore",
@@ -157,7 +157,7 @@ const combatSpells = {
   },
   ripristinareSensi: {
     level: 2,
-    url: "/wiki/Ripristinare_Sensi",
+    url: "/wiki/Incantesimi/Ripristinare_Sensi",
     name: "Ripristinare Sensi",
     school: "necromanzia",
     description: "Rimuovi un effetto di cecità o sordità",
@@ -166,7 +166,7 @@ const combatSpells = {
   },
   calmareEmozioni: {
     level: 2,
-    url: "/wiki/Calmare_Emozioni",
+    url: "/wiki/Incantesimi/Calmare_Emozioni",
     name: "Calmare Emozioni",
     school: "ammaliamento",
     description: "Sopprimi le emozioni forti e l'ostilità",
@@ -174,7 +174,7 @@ const combatSpells = {
   },
   minaMentale: {
     level: 2,
-    url: "/wiki/Mina_Mentale",
+    url: "/wiki/Incantesimi/Mina_Mentale",
     name: "Mina Mentale",
     school: "abiurazione",
     description:
@@ -184,7 +184,7 @@ const combatSpells = {
   },
   dissolviMagie: {
     level: 2,
-    url: "/wiki/Dissolvi_Magie",
+    url: "/wiki/Incantesimi/Dissolvi_Magie",
     name: "Dissolvi Magie",
     school: "abiurazione",
     description: "Poni fine a un incantesimo o sopprimi la magia di un oggetto",
@@ -200,7 +200,7 @@ const combatSpells = {
   },
   manoSpettrale: {
     level: 2,
-    url: "/wiki/Mano_Spettrale",
+    url: "/wiki/Incantesimi/Mano_Spettrale",
     name: "Mano Spettrale",
     school: "necromanzia",
     description:
@@ -209,7 +209,7 @@ const combatSpells = {
   },
   foschiaOccultante: {
     level: 2,
-    url: "/wiki/Foschia_Occultante",
+    url: "/wiki/Incantesimi/Foschia_Occultante",
     name: "Foschia Occultante",
     school: "evocazione",
     description: "Occulti le creature in una nube di foschia",
@@ -217,7 +217,7 @@ const combatSpells = {
   },
   vedereInvisibilità: {
     level: 2,
-    url: "/wiki/Vedere_Invisibilit%C3%A0",
+    url: "/wiki/Incantesimi/Vedere_Invisibilit%C3%A0",
     name: "Vedere Invisibilità",
     school: "divinazione",
     description: "Vedi le creature e gli oggetti invisibili",
@@ -226,7 +226,7 @@ const combatSpells = {
   },
   sfocatura: {
     level: 2,
-    url: "/wiki/Sfocatura",
+    url: "/wiki/Incantesimi/Sfocatura",
     name: "Sfocatura",
     school: "illusione",
     description: "Rendi la forma del bersaglio sfocata e difficile da colpire",
@@ -234,7 +234,7 @@ const combatSpells = {
   },
   pelleCoriacea: {
     level: 2,
-    url: "/wiki/Pelle_Coriacea",
+    url: "/wiki/Incantesimi/Pelle_Coriacea",
     name: "Pelle Coriacea",
     school: "abiurazione",
     description: "La pelle del bersaglio si ricopre di una scorza coriacea",
@@ -243,7 +243,7 @@ const combatSpells = {
   },
   intralciare: {
     level: 2,
-    url: "/wiki/Intralciare",
+    url: "/wiki/Incantesimi/Intralciare",
     name: "Intralciare",
     school: "trasmutazione",
     description:
@@ -252,7 +252,7 @@ const combatSpells = {
   },
   ragnatela: {
     level: 2,
-    url: "/wiki/Ragnatela",
+    url: "/wiki/Incantesimi/Ragnatela",
     name: "Ragnatela",
     school: "evocazione",
     description: "Formi una ragnatela che impedisce alle creature di muoversi",
@@ -261,7 +261,7 @@ const combatSpells = {
   },
   mutareLaPelle: {
     level: 2,
-    url: "/wiki/Mutare_la_Pelle",
+    url: "/wiki/Incantesimi/Mutare_la_Pelle",
     name: "Mutare la Pelle",
     school: "necromanzia",
     description:
@@ -270,7 +270,7 @@ const combatSpells = {
   },
   luminescenza: {
     level: 2,
-    url: "/wiki/Luminescenza",
+    url: "/wiki/Incantesimi/Luminescenza",
     name: "Luminescenza",
     school: "invocazione",
     description:
@@ -279,7 +279,7 @@ const combatSpells = {
   },
   immagineSpeculare: {
     level: 2,
-    url: "/wiki/Immagine_Speculare",
+    url: "/wiki/Incantesimi/Immagine_Speculare",
     name: "Immagine Speculare",
     school: "illusione",
     description: "I tuoi duplicati illusori fanno fallire gli attacchi",
@@ -287,7 +287,7 @@ const combatSpells = {
   },
   polvereLuccicante: {
     level: 2,
-    url: "/wiki/Polvere_Luccicante",
+    url: "/wiki/Incantesimi/Polvere_Luccicante",
     name: "Polvere Luccicante",
     school: "invocazione",
     description:
@@ -296,7 +296,7 @@ const combatSpells = {
   },
   invisibilità: {
     level: 2,
-    url: "/wiki/Invisibilit%C3%A0",
+    url: "/wiki/Incantesimi/Invisibilit%C3%A0",
     name: "Invisibilità",
     school: "illusione",
     description:
@@ -306,7 +306,7 @@ const combatSpells = {
   },
   ingrandire: {
     level: 2,
-    url: "/wiki/Ingrandire",
+    url: "/wiki/Incantesimi/Ingrandire",
     name: "Ingrandire",
     school: "trasmutazione",
     description: "La taglia di una creatura aumenta",
@@ -315,7 +315,7 @@ const combatSpells = {
   },
   marchioImpertinenete: {
     level: 2,
-    url: "/wiki/Marchio_dell%27Impenitente",
+    url: "/wiki/Incantesimi/Marchio_dell%27Impenitente",
     name: "Marchio dell'Impenitente",
     school: "abiurazione",
     description:
@@ -324,7 +324,7 @@ const combatSpells = {
   },
   sordità: {
     level: 2,
-    url: "/wiki/Sordit%C3%A0",
+    url: "/wiki/Incantesimi/Sordit%C3%A0",
     name: "Sordità",
     school: "necromanzia",
     description: "Rendi una creatura sorda",
@@ -332,7 +332,7 @@ const combatSpells = {
   },
   oscurità: {
     level: 2,
-    url: "/wiki/Oscurit%C3%A0",
+    url: "/wiki/Incantesimi/Oscurit%C3%A0",
     name: "Oscurità",
     school: "invocazione",
     description: "Sopprimi tutte le luci in  un'area",
@@ -341,7 +341,7 @@ const combatSpells = {
   },
   vitaFalsata: {
     level: 2,
-    url: "/wiki/Vita_Falsata",
+    url: "/wiki/Incantesimi/Vita_Falsata",
     name: "Vita Falsata",
     school: "necromanzia",
     description: "Ottieni pf temporanei",
@@ -350,7 +350,7 @@ const combatSpells = {
   },
   scudoAltri: {
     level: 2,
-    url: "/wiki/Scudo_su_Altri",
+    url: "/wiki/Incantesimi/Scudo_su_Altri",
     name: "Scudo su Altri",
     school: "necromanzia",
     description: "Assorbi metà del danno che subirebbe un alleato",
@@ -358,7 +358,7 @@ const combatSpells = {
   },
   paranoia: {
     level: 2,
-    url: "/wiki/Paranoia",
+    url: "/wiki/Incantesimi/Paranoia",
     name: "Paranoia",
     school: "illusione",
     description: "Convinci una creatura che chiunque veda sia una minaccia",
@@ -370,7 +370,7 @@ const combatSpells = {
 const utilitySpells = {
   stomacoFerro: {
     level: 2,
-    url: "/wiki/Stomaco_di_Ferro",
+    url: "/wiki/Incantesimi/Stomaco_di_Ferro",
     name: "Stomaco di Ferro",
     school: "trasmutazione",
     description:
@@ -380,7 +380,7 @@ const utilitySpells = {
   },
   creareCibo: {
     level: 2,
-    url: "/wiki/Creare_Cibo",
+    url: "/wiki/Incantesimi/Creare_Cibo",
     name: "Creare Cibo",
     school: "evocazione",
     description: "Evochi una quantità cibo che può nutrire più creature",
@@ -389,7 +389,7 @@ const utilitySpells = {
   },
   ristorare: {
     level: 2,
-    url: "/wiki/Ristorare",
+    url: "/wiki/Incantesimi/Ristorare",
     name: "Ristorare",
     school: "necromanzia",
     description: "Riduci una condizione o riduci l'effetto di una tossina",
@@ -398,7 +398,7 @@ const utilitySpells = {
   },
   potenziareProvviste: {
     level: 2,
-    url: "/wiki/Potenziare_Provviste",
+    url: "/wiki/Incantesimi/Potenziare_Provviste",
     name: "Potenziare Provviste",
     school: "trasmutazione",
     description: "Migliori la qualità di cibi o bevande e ne rimuovi i veleni",
@@ -407,7 +407,7 @@ const utilitySpells = {
   },
   riposoInviolato: {
     level: 2,
-    url: "/wiki/Riposo_Inviolato",
+    url: "/wiki/Incantesimi/Riposo_Inviolato",
     name: "Riposo Inviolato",
     school: "necromanzia",
     description:
@@ -417,7 +417,7 @@ const utilitySpells = {
   },
   boccaMagica: {
     level: 2,
-    url: "/wiki/Bocca_Magica",
+    url: "/wiki/Incantesimi/Bocca_Magica",
     name: "Bocca Magica",
     school: "illusione",
     description:
@@ -426,7 +426,7 @@ const utilitySpells = {
   },
   scassinare: {
     level: 2,
-    url: "/wiki/Scassinare",
+    url: "/wiki/Incantesimi/Scassinare",
     name: "Scassinare",
     school: "trasmutazione",
     description:
@@ -435,7 +435,7 @@ const utilitySpells = {
   },
   comprensioneLingue: {
     level: 2,
-    url: "/wiki/Comprensione_delle_Lingue",
+    url: "/wiki/Incantesimi/Comprensione_delle_Lingue",
     name: "Comprensione delle Lingue",
     school: "divinazione",
     description: "Una creatura comprende una lingua",
@@ -444,7 +444,7 @@ const utilitySpells = {
   },
   scurovisione: {
     level: 2,
-    url: "/wiki/Incantesimi/Scurovisione",
+    url: "/wikiScurovisione",
     name: "Scurovisione",
     school: "divinazione",
     description: "Vedi nell'oscurità",
@@ -453,7 +453,7 @@ const utilitySpells = {
   },
   presagio: {
     level: 2,
-    url: "/wiki/Presagio",
+    url: "/wiki/Incantesimi/Presagio",
     name: "Presagio",
     school: "divinazione",
     description: "Prevedi se una linea d'azione avrà risultati favorevoli",
@@ -461,7 +461,7 @@ const utilitySpells = {
   },
   status: {
     level: 2,
-    url: "/wiki/Status",
+    url: "/wiki/Incantesimi/Status",
     name: "Status",
     school: "divinazione",
     description:
@@ -471,7 +471,7 @@ const utilitySpells = {
   },
   animaleMessaggero: {
     level: 2,
-    url: "/wiki/Animale_Messaggero",
+    url: "/wiki/Incantesimi/Animale_Messaggero",
     name: "Animale Messaggero",
     school: "ammaliamento",
     description:
@@ -480,7 +480,7 @@ const utilitySpells = {
   },
   formaArborea: {
     level: 2,
-    url: "/wiki/Forma_Arborea",
+    url: "/wiki/Incantesimi/Forma_Arborea",
     name: "Forma Arborea",
     school: "trasmutazione",
     description: "Ti trasformi in un albero",
@@ -488,7 +488,7 @@ const utilitySpells = {
   },
   parlareAnimali: {
     level: 2,
-    url: "/wiki/Parlare_con_gli_Animali",
+    url: "/wiki/Incantesimi/Parlare_con_gli_Animali",
     name: "Parlare con gli Animali",
     school: "divinazione",
     description: "Comunichi con gli animali",
@@ -496,7 +496,7 @@ const utilitySpells = {
   },
   scolpireLegno: {
     level: 2,
-    url: "/wiki/Scolpire_Legno",
+    url: "/wiki/Incantesimi/Scolpire_Legno",
     name: "Scolpire Legno",
     school: "trasmutazione",
     description: "Scolpisci il legno in una forma grezza a tua scelta",
@@ -504,7 +504,7 @@ const utilitySpells = {
   },
   camminareAcqua: {
     level: 2,
-    url: "/wiki/Camminare_sull%27Acqua",
+    url: "/wiki/Incantesimi/Camminare_sull%27Acqua",
     name: "Camminare sull'Acqua",
     school: "trasmutazione",
     description:
@@ -514,7 +514,7 @@ const utilitySpells = {
   },
   contrastareElementi: {
     level: 2,
-    url: "/wiki/Contrastare_Elementi",
+    url: "/wiki/Incantesimi/Contrastare_Elementi",
     name: "Contrastare Elementi",
     school: "abiurazione",
     description: "Proteggi una creatura da freddo o caldo intensi",
@@ -523,7 +523,7 @@ const utilitySpells = {
   },
   scavoRapido: {
     level: 2,
-    url: "/wiki/Scavo_Rapido",
+    url: "/wiki/Incantesimi/Scavo_Rapido",
     name: "Scavo Rapido",
     school: "trasmutazione",
     description:
@@ -533,7 +533,7 @@ const utilitySpells = {
   },
   respirareAcqua: {
     level: 2,
-    url: "/wiki/Respirare_Sott%27Acqua",
+    url: "/wiki/Incantesimi/Respirare_Sott%27Acqua",
     name: "Respirare Sott'Acqua",
     school: "trasmutazione",
     description: "Permetti alle creature di respirare sott'acqua",
@@ -542,7 +542,7 @@ const utilitySpells = {
   },
   restringere: {
     level: 2,
-    url: "/wiki/Restringere",
+    url: "/wiki/Incantesimi/Restringere",
     name: "Restringere",
     school: "trasmutazione",
     description: "Riduci una creatura consenziente fino a una taglia minuscola",
@@ -551,7 +551,7 @@ const utilitySpells = {
   },
   fiammaPerenne: {
     level: 2,
-    url: "/wiki/Fiamma_Perenne",
+    url: "/wiki/Incantesimi/Fiamma_Perenne",
     name: "Fiamma Perenne",
     school: "invocazione",
     description: "Una fiamma magica arde illimitatamente",
@@ -560,7 +560,7 @@ const utilitySpells = {
   },
   frantumare: {
     level: 2,
-    url: "/wiki/Frantumare",
+    url: "/wiki/Incantesimi/Frantumare",
     name: "Frantumare",
     school: "invocazione",
     description: "Frantumi un oggetto con un attacco sonoro ad alta frequenza",
@@ -569,7 +569,7 @@ const utilitySpells = {
   },
   destrieroFantomatico: {
     level: 2,
-    url: "/wiki/Destriero_Fantomatico",
+    url: "/wiki/Incantesimi/Destriero_Fantomatico",
     name: "Destriero Fantomatico",
     school: "evocazione",
     description: "Evochi un cavallo magico",
@@ -578,7 +578,7 @@ const utilitySpells = {
   },
   movimentiRagno: {
     level: 2,
-    url: "/wiki/Movimenti_del_Ragno",
+    url: "/wiki/Incantesimi/Movimenti_del_Ragno",
     name: "Movimenti del Ragno",
     school: "trasmutazione",
     description: "Concedi velocità di scalare a una creatura",
@@ -587,7 +587,7 @@ const utilitySpells = {
   },
   creaturaIllusoria: {
     level: 2,
-    url: "/wiki/Creatura_Illusoria",
+    url: "/wiki/Incantesimi/Creatura_Illusoria",
     name: "Creatura Illusoria",
     school: "illusione",
     description: "Crei  un'illusione verosimile di una creatura",
@@ -596,7 +596,7 @@ const utilitySpells = {
   },
   dissimulare: {
     level: 2,
-    url: "/wiki/Dissimulare",
+    url: "/wiki/Incantesimi/Dissimulare",
     name: "Dissimulare",
     school: "illusione",
     description:
@@ -605,7 +605,7 @@ const utilitySpells = {
   },
   formaUmanoide: {
     level: 2,
-    url: "/wiki/Forma_Umanoide",
+    url: "/wiki/Incantesimi/Forma_Umanoide",
     name: "Forma Umanoide",
     school: "trasmutazione",
     description: "Assumi la forma di un umanoide",
@@ -614,7 +614,7 @@ const utilitySpells = {
   },
   allineamentoImperscrutabile: {
     level: 2,
-    url: "/wiki/Allineamento_Imperscrutabile",
+    url: "/wiki/Incantesimi/Allineamento_Imperscrutabile",
     name: "Allineamento Imperscrutabile",
     school: "abiurazione",
     description:

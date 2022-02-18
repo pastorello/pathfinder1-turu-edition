@@ -9,7 +9,7 @@ const SpellCard = (props) => {
       <Column small={3}>
         <h3>
           <a
-            href={`https://pf2.altervista.org${props.data.url}`}
+            href={`https://golarion.altervista.org${props.data.url}`}
             target={"_blank"}
             rel="noreferrer"
           >

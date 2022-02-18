@@ -1,7 +1,7 @@
 const spells = [
   {
     level: 1,
-    url: "/wiki/Bacche_Benefiche",
+    url: "/wiki/Incantesimi/Bacche_Benefiche",
     name: "Bacche Benefiche",
     source: ["primeva"],
     school: "necromanzia",
@@ -12,7 +12,7 @@ const spells = [
   },
   {
     level: 6,
-    url: "/wiki/Incantesimi/Evocazioni_Primeve",
+    url: "/wikiEvocazioni_Primeve",
     name: "Evocazioni Primeve",
     source: ["primeva"],
     school: "evocazione",
@@ -21,7 +21,7 @@ const spells = [
   },
   {
     level: 8,
-    url: "/wiki/Incantesimi/Rovi_Acuminati",
+    url: "/wikiRovi_Acuminati",
     name: "Rovi Acuminati",
     source: ["primeva"],
     school: "evocazione",
@@ -31,7 +31,7 @@ const spells = [
   },
   {
     level: 9,
-    url: "/wiki/Signore_della_Tempesta",
+    url: "/wiki/Incantesimi/Signore_della_Tempesta",
     name: "Signore della Tempesta",
     source: ["primeva"],
     school: "invocazione",
@@ -41,7 +41,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Incantesimi/Forma_Selvatica",
+    url: "/wikiForma_Selvatica",
     name: "Forma Selvatica",
     source: ["primeva"],
     school: "trasmutazione",
@@ -51,7 +51,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Volo_dei_Venti_di_Tempesta",
+    url: "/wiki/Incantesimi/Volo_dei_Venti_di_Tempesta",
     name: "Volo dei Venti di Tempesta",
     source: ["trasmutazione"],
     school: "evocazione",
@@ -61,7 +61,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Ondata_di_Tempesta",
+    url: "/wiki/Incantesimi/Ondata_di_Tempesta",
     name: "Ondata di Tempesta",
     source: ["primeva"],
     school: "invocazione",
@@ -71,7 +71,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Morfosi_Feroce",
+    url: "/wiki/Incantesimi/Morfosi_Feroce",
     name: "Morfosi Feroce",
     source: ["primeva"],
     school: "trasmutazione",
@@ -81,7 +81,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Incantesimi/Guarire_Animale",
+    url: "/wikiGuarire_Animale",
     name: "Guarire Animale",
     source: ["primeva"],
     school: "necromanzia",

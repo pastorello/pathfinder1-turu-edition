@@ -1,7 +1,7 @@
 const baseAttackSpells = {
   desiderio: {
     level: 10,
-    url: "/wiki/Desiderio",
+    url: "/wiki/Incantesimi/Desiderio",
     name: "Desiderio",
     school: "divinazione",
     description: "Esprimi un desiderio per duplicare incantesimi",
@@ -9,7 +9,7 @@ const baseAttackSpells = {
   },
   miracolo: {
     level: 10,
-    url: "/wiki/Miracolo",
+    url: "/wiki/Incantesimi/Miracolo",
     name: "Miracolo",
     school: "divinazione",
     description: "Chiedi intercessione per duplicare incantesimi divini",
@@ -17,7 +17,7 @@ const baseAttackSpells = {
   },
   fenomenoPrimevo: {
     level: 10,
-    url: "/wiki/Fenomeno_Primevo",
+    url: "/wiki/Incantesimi/Fenomeno_Primevo",
     name: "Fenomeno Primevo",
     school: "divinazione",
     description:
@@ -26,7 +26,7 @@ const baseAttackSpells = {
   },
   incarnareNatura: {
     level: 10,
-    url: "/wiki/Incarnare_Natura",
+    url: "/wiki/Incantesimi/Incarnare_Natura",
     name: "Incarnare Natura",
     school: "trasmutazione",
     description: "Ti trasformi in un'enorme incarnazione della natura",
@@ -34,7 +34,7 @@ const baseAttackSpells = {
   },
   cataclisma: {
     level: 10,
-    url: "/wiki/Cataclisma",
+    url: "/wiki/Incantesimi/Cataclisma",
     name: "Cataclisma",
     school: "invocazione",
     description: "Evochi un rovinoso cataclisma istantaneo",
@@ -42,7 +42,7 @@ const baseAttackSpells = {
   },
   alterareRealtà: {
     level: 10,
-    url: "/wiki/Alterare_Realt%C3%A0",
+    url: "/wiki/Incantesimi/Alterare_Realt%C3%A0",
     name: "Alterare Realtà",
     school: "divinazione",
     description: "Distorci la realtà per duplicare incantesimi occulti",
@@ -50,7 +50,7 @@ const baseAttackSpells = {
   },
   avatar: {
     level: 10,
-    url: "/wiki/Avatar",
+    url: "/wiki/Incantesimi/Avatar",
     name: "Avatar",
     school: "trasmutazione",
     description:
@@ -62,7 +62,7 @@ const baseAttackSpells = {
 const combatSpells = {
   mandriaPrimeva: {
     level: 10,
-    url: "/wiki/Mandria_Primeva",
+    url: "/wiki/Incantesimi/Mandria_Primeva",
     name: "Mandria Primeva",
     school: "trasmutazione",
     description: "Trasformi creature consenzienti in mammut",
@@ -70,7 +70,7 @@ const combatSpells = {
   },
   reviviscenza: {
     level: 10,
-    url: "/wiki/Reviviscenza",
+    url: "/wiki/Incantesimi/Reviviscenza",
     name: "Reviviscenza",
     school: "necromanzia",
     description:
@@ -79,7 +79,7 @@ const combatSpells = {
   },
   fermareTempo: {
     level: 10,
-    url: "/wiki/Fermare_il_Tempo",
+    url: "/wiki/Incantesimi/Fermare_il_Tempo",
     name: "Fermare il Tempo",
     school: "trasmutazione",
     description: "Fermi brevemente il tempo per tutto tranne che per te",
@@ -90,7 +90,7 @@ const combatSpells = {
 const utilitySpells = {
   veritàFittizia: {
     level: 10,
-    url: "/wiki/Verit%C3%A0_Fittizia",
+    url: "/wiki/Incantesimi/Verit%C3%A0_Fittizia",
     name: "Verità Fittizia",
     school: "ammaliamento",
     description: "Fai credere alle creature che un fatto sia vero",
@@ -98,7 +98,7 @@ const utilitySpells = {
   },
   portale: {
     level: 10,
-    url: "/wiki/Portale",
+    url: "/wiki/Incantesimi/Portale",
     name: "Portale",
     school: "evocazione",
     description: "Apri un portale verso un altro piano",
@@ -106,7 +106,7 @@ const utilitySpells = {
   },
   ricostruire: {
     level: 10,
-    url: "/wiki/Ricostruire",
+    url: "/wiki/Incantesimi/Ricostruire",
     name: "Ricostruire",
     school: "evocazione",
     description: "Ricrei un oggetto distrutto",

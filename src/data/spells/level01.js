@@ -4,7 +4,7 @@ const allLevels = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
   dardoIncantato: {
     level: 1,
-    url: "/wiki/Dardo_Incantato",
+    url: "/wiki/Incantesimi/Dardo_Incantato",
     name: "Dardo Incantato",
     school: "invocazione",
     description: "Bersagli le creature con dardi infallibili di forza magica",
@@ -13,7 +13,7 @@ const baseAttackSpells = {
   },
   spruzzoGelido: {
     level: 1,
-    url: "/wiki/Spruzzo_Gelido",
+    url: "/wiki/Incantesimi/Spruzzo_Gelido",
     name: "Spruzzo Gelido",
     school: "invocazione",
     description:
@@ -23,7 +23,7 @@ const baseAttackSpells = {
   },
   guarire: {
     level: 1,
-    url: "/wiki/Guarire",
+    url: "/wiki/Incantesimi/Guarire",
     name: "Guarire",
     school: "necromanzia",
     description:
@@ -33,7 +33,7 @@ const baseAttackSpells = {
   },
   ondaUrto: {
     level: 1,
-    url: "/wiki/Onda_d%27Urto",
+    url: "/wiki/Incantesimi/Onda_d%27Urto",
     name: "Onda d'Urto",
     school: "invocazione",
     description: "Crei  un'onda di energia che si propaga attraverso la terra",
@@ -42,7 +42,7 @@ const baseAttackSpells = {
   },
   strettaFolgorante: {
     level: 1,
-    url: "/wiki/Stretta_Folgorante",
+    url: "/wiki/Incantesimi/Stretta_Folgorante",
     name: "Stretta Folgorante",
     school: "invocazione",
     description: "Fulmini una creatura con l'elettricità",
@@ -51,7 +51,7 @@ const baseAttackSpells = {
   },
   pallaNeve: {
     level: 1,
-    url: "/wiki/Palla_di_Neve",
+    url: "/wiki/Incantesimi/Palla_di_Neve",
     name: "Palla di Neve",
     school: "invocazione",
     description:
@@ -61,7 +61,7 @@ const baseAttackSpells = {
   },
   spintaIdraulica: {
     level: 1,
-    url: "/wiki/Spinta_Idraulica",
+    url: "/wiki/Incantesimi/Spinta_Idraulica",
     name: "Spinta Idraulica",
     school: "invocazione",
     description: "Infliggi danni e spingi una creatura con un getto di acqua",
@@ -70,7 +70,7 @@ const baseAttackSpells = {
   },
   esplosioneAcida: {
     level: 1,
-    url: "/wiki/Esplosione_Acida",
+    url: "/wiki/Incantesimi/Esplosione_Acida",
     name: "Esplosione Acida",
     school: "invocazione",
     description:
@@ -80,7 +80,7 @@ const baseAttackSpells = {
   },
   maniBrucianti: {
     level: 1,
-    url: "/wiki/Mani_Brucianti",
+    url: "/wiki/Incantesimi/Mani_Brucianti",
     name: "Mani Brucianti",
     school: "invocazione",
     description: "Dalle tue mani si sprigiona un piccolo cono di fiamme",
@@ -89,7 +89,7 @@ const baseAttackSpells = {
   },
   morsoRagno: {
     level: 1,
-    url: "/wiki/Morso_del_Ragno",
+    url: "/wiki/Incantesimi/Morso_del_Ragno",
     name: "Morso del Ragno",
     school: "necromanzia",
     description:
@@ -98,7 +98,7 @@ const baseAttackSpells = {
   },
   ferire: {
     level: 1,
-    url: "/wiki/Ferire",
+    url: "/wiki/Incantesimi/Ferire",
     name: "Ferire",
     school: "necromanzia",
     description:
@@ -108,7 +108,7 @@ const baseAttackSpells = {
   },
   rampicantiMacabri: {
     level: 1,
-    url: "/wiki/Rampicanti_Macabri",
+    url: "/wiki/Incantesimi/Rampicanti_Macabri",
     name: "Rampicanti Macabri",
     school: "necromanzia",
     description:
@@ -121,7 +121,7 @@ const baseAttackSpells = {
 const combatSpells = {
   armaturaMagica: {
     level: 1,
-    url: "/wiki/Armatura_Magica",
+    url: "/wiki/Incantesimi/Armatura_Magica",
     name: "Armatura Magica",
     school: "abiurazione",
     description: "Ti proteggi con  un'armatura magica",
@@ -130,7 +130,7 @@ const combatSpells = {
   },
   unto: {
     level: 1,
-    url: "/wiki/Unto",
+    url: "/wiki/Incantesimi/Unto",
     name: "Unto",
     school: "evocazione",
     description: "Cospargi una superficie od oggetto con una poltiglia untuosa",
@@ -138,7 +138,7 @@ const combatSpells = {
   },
   spruzzoColorato: {
     level: 1,
-    url: "/wiki/Spruzzo_Colorato",
+    url: "/wiki/Incantesimi/Spruzzo_Colorato",
     name: "Spruzzo Colorato",
     school: "illusione",
     description: "Un vortice di colori abbaglia o stordisce le creature",
@@ -146,7 +146,7 @@ const combatSpells = {
   },
   cadutaMorbida: {
     level: 1,
-    url: "/wiki/Caduta_Morbida",
+    url: "/wiki/Incantesimi/Caduta_Morbida",
     name: "Caduta Morbida",
     school: "abiurazione",
     description: "Reagisci per rallentare la caduta di una creatura",
@@ -154,7 +154,7 @@ const combatSpells = {
   },
   lenire: {
     level: 1,
-    url: "/wiki/Lenire",
+    url: "/wiki/Incantesimi/Lenire",
     name: "Lenire",
     school: "necromanzia",
     description:
@@ -164,7 +164,7 @@ const combatSpells = {
   },
   sopportare: {
     level: 1,
-    url: "/wiki/Sopportare",
+    url: "/wiki/Incantesimi/Sopportare",
     name: "Sopportare",
     school: "ammaliamento",
     description:
@@ -174,7 +174,7 @@ const combatSpells = {
   },
   benedizione: {
     level: 1,
-    url: "/wiki/Benedizione",
+    url: "/wiki/Incantesimi/Benedizione",
     name: "Benedizione",
     school: "ammaliamento",
     description:
@@ -183,7 +183,7 @@ const combatSpells = {
   },
   protezione: {
     level: 1,
-    url: "/wiki/Protezione",
+    url: "/wiki/Incantesimi/Protezione",
     name: "Protezione",
     school: "abiurazione",
     description: "Proteggi una creatura da quelle di un dato allineamento",
@@ -191,7 +191,7 @@ const combatSpells = {
   },
   santuario: {
     level: 1,
-    url: "/wiki/Santuario",
+    url: "/wiki/Incantesimi/Santuario",
     name: "Santuario",
     school: "abiurazione",
     description: "Proteggi una creatura dagli attacchi",
@@ -199,7 +199,7 @@ const combatSpells = {
   },
   evocaCostrutto: {
     level: 1,
-    url: "/wiki/Evoca_Costrutto",
+    url: "/wiki/Incantesimi/Evoca_Costrutto",
     name: "Evoca Costrutto",
     school: "evocazione",
     description: "Evochi un costrutto che combatta con te",
@@ -208,7 +208,7 @@ const combatSpells = {
   },
   armaDistruttiva: {
     level: 1,
-    url: "/wiki/Arma_Distruttiva",
+    url: "/wiki/Incantesimi/Arma_Distruttiva",
     name: "Arma Distruttiva",
     school: "necromanzia",
     description: "Le armi infliggono danni di tipo positivo ai non morti",
@@ -217,7 +217,7 @@ const combatSpells = {
   },
   sudarioPenombra: {
     level: 1,
-    url: "/wiki/Sudario_di_Penombra",
+    url: "/wiki/Incantesimi/Sudario_di_Penombra",
     name: "Sudario di Penombra",
     school: "invocazione",
     description: "Avvolgi il bersaglio in un sudario d'ombra",
@@ -225,7 +225,7 @@ const combatSpells = {
   },
   colpoAccurato: {
     level: 1,
-    url: "/wiki/Colpo_Accurato",
+    url: "/wiki/Incantesimi/Colpo_Accurato",
     name: "Colpo Accurato",
     school: "divinazione",
     description: "Rendi il tuo prossimo attacco particolarmente accurato",
@@ -233,7 +233,7 @@ const combatSpells = {
   },
   folataVento: {
     level: 1,
-    url: "/wiki/Folata_di_Vento",
+    url: "/wiki/Incantesimi/Folata_di_Vento",
     name: "Folata di Vento",
     school: "invocazione",
     description: "Il vento spegne i fuochi e respinge oggetti e creature",
@@ -241,7 +241,7 @@ const combatSpells = {
   },
   evocaAnimale: {
     level: 1,
-    url: "/wiki/Evoca_Animale",
+    url: "/wiki/Incantesimi/Evoca_Animale",
     name: "Evoca Animale",
     school: "evocazione",
     description: "Evochi un animale che combatta con te",
@@ -250,7 +250,7 @@ const combatSpells = {
   },
   evocaPiante: {
     level: 1,
-    url: "/wiki/Evoca_Piante_e_Funghi",
+    url: "/wiki/Incantesimi/Evoca_Piante_e_Funghi",
     name: "Evoca Piante e Funghi",
     school: "evocazione",
     description: "Evochi una pianta o fungo che combatta con te",
@@ -258,7 +258,7 @@ const combatSpells = {
   },
   zannaMagica: {
     level: 1,
-    url: "/wiki/Zanna_Magica",
+    url: "/wiki/Incantesimi/Zanna_Magica",
     name: "Zanna Magica",
     school: "trasmutazione",
     description:
@@ -267,7 +267,7 @@ const combatSpells = {
   },
   randelloIncantato: {
     level: 1,
-    url: "/wiki/Randello_Incantato",
+    url: "/wiki/Incantesimi/Randello_Incantato",
     name: "Randello Incantato",
     school: "trasmutazione",
     description:
@@ -276,7 +276,7 @@ const combatSpells = {
   },
   bollaAria: {
     level: 1,
-    url: "/wiki/Bolla_d%27Aria",
+    url: "/wiki/Incantesimi/Bolla_d%27Aria",
     name: "Bolla d'Aria",
     school: "evocazione",
     description: "Reagisci per creare aria affinché una creatura respiri",
@@ -284,7 +284,7 @@ const combatSpells = {
   },
   evocaFatato: {
     level: 1,
-    url: "/wiki/Evoca_Fatato",
+    url: "/wiki/Incantesimi/Evoca_Fatato",
     name: "Evoca Fatato",
     school: "evocazione",
     description: "Evochi un fatato che combatta con te",
@@ -293,7 +293,7 @@ const combatSpells = {
   },
   gemmaFrantumazione: {
     level: 1,
-    url: "/wiki/Gemma_a_Frantumazione",
+    url: "/wiki/Incantesimi/Gemma_a_Frantumazione",
     name: "Gemma a Frantumazione",
     school: "abiurazione",
     description:
@@ -303,7 +303,7 @@ const combatSpells = {
   },
   sonno: {
     level: 1,
-    url: "/wiki/Sonno",
+    url: "/wiki/Incantesimi/Sonno",
     name: "Sonno",
     school: "ammaliamento",
     description: "Fai addormentare le creature in  un'area piccola",
@@ -312,7 +312,7 @@ const combatSpells = {
   },
   anatema: {
     level: 1,
-    url: "/wiki/Anatema",
+    url: "/wiki/Incantesimi/Anatema",
     name: "Anatema",
     school: "ammaliamento",
     description:
@@ -321,7 +321,7 @@ const combatSpells = {
   },
   cattivoPresagio: {
     level: 1,
-    url: "/wiki/Cattivo_Presagio",
+    url: "/wiki/Incantesimi/Cattivo_Presagio",
     name: "Cattivo Presagio",
     school: "divinazione",
     description:
@@ -330,7 +330,7 @@ const combatSpells = {
   },
   armaMagica: {
     level: 1,
-    url: "/wiki/Arma_Magica",
+    url: "/wiki/Incantesimi/Arma_Magica",
     name: "Arma Magica",
     school: "trasmutazione",
     description: "Rendi un'arma temporaneamente magica",
@@ -338,7 +338,7 @@ const combatSpells = {
   },
   comando: {
     level: 1,
-    url: "/wiki/Comando",
+    url: "/wiki/Incantesimi/Comando",
     name: "Comando",
     school: "ammaliamento",
     description:
@@ -348,7 +348,7 @@ const combatSpells = {
   },
   raggioIndebolimento: {
     level: 1,
-    url: "/wiki/Raggio_di_Indebolimento",
+    url: "/wiki/Incantesimi/Raggio_di_Indebolimento",
     name: "Raggio di Indebolimento",
     school: "necromanzia",
     description: "Prosciughi la forza di una creatura",
@@ -356,7 +356,7 @@ const combatSpells = {
   },
   doloreFantasma: {
     level: 1,
-    url: "/wiki/Dolore_Fantasma",
+    url: "/wiki/Incantesimi/Dolore_Fantasma",
     name: "Dolore Fantasma",
     school: "illusione",
     description:
@@ -366,7 +366,7 @@ const combatSpells = {
   },
   legameSpirito: {
     level: 1,
-    url: "/wiki/Legame_con_lo_Spirito",
+    url: "/wiki/Incantesimi/Legame_con_lo_Spirito",
     name: "Legame con lo Spirito",
     school: "necromanzia",
     description: "Trasferisci ininterrottamente la tua salute a qualcun altro",
@@ -375,7 +375,7 @@ const combatSpells = {
   },
   pesteGoblin: {
     level: 1,
-    url: "/wiki/Peste_del_Goblin",
+    url: "/wiki/Incantesimi/Peste_del_Goblin",
     name: "Peste del Goblin",
     school: "necromanzia",
     description: "Infetti una creatura con la peste del goblin",
@@ -383,7 +383,7 @@ const combatSpells = {
   },
   disorientare: {
     level: 1,
-    url: "/wiki/Disorientare",
+    url: "/wiki/Incantesimi/Disorientare",
     name: "Disorientare",
     school: "ammaliamento",
     description:
@@ -392,7 +392,7 @@ const combatSpells = {
   },
   agitare: {
     level: 1,
-    url: "/wiki/Agitare",
+    url: "/wiki/Incantesimi/Agitare",
     name: "Agitare",
     school: "ammaliamento",
     description:
@@ -402,7 +402,7 @@ const combatSpells = {
   },
   charme: {
     level: 1,
-    url: "/wiki/Charme",
+    url: "/wiki/Incantesimi/Charme",
     name: "Charme",
     school: "ammaliamento",
     description: "Un umanoide diventa più amichevole nei tuoi confronti",
@@ -411,7 +411,7 @@ const combatSpells = {
   },
   paura: {
     level: 1,
-    url: "/wiki/Paura",
+    url: "/wiki/Incantesimi/Paura",
     name: "Paura",
     school: "ammaliamento",
     description: "Infondi paura a una creatura, fino a farla fuggire",
@@ -423,7 +423,7 @@ const combatSpells = {
 const utilitySpells = {
   discoFluttuante: {
     level: 1,
-    url: "/wiki/Disco_Fluttuante",
+    url: "/wiki/Incantesimi/Disco_Fluttuante",
     name: "Disco Fluttuante",
     school: "evocazione",
     description: "Un disco di energia ti segue, trasportando oggetti",
@@ -431,7 +431,7 @@ const utilitySpells = {
   },
   oggettoIllusorio: {
     level: 1,
-    url: "/wiki/Oggetto_Illusorio",
+    url: "/wiki/Incantesimi/Oggetto_Illusorio",
     name: "Oggetto Illusorio",
     school: "illusione",
     description: "Crei  un'illusione verosimile di un oggetto",
@@ -440,7 +440,7 @@ const utilitySpells = {
   },
   passoRapido: {
     level: 1,
-    url: "/wiki/Passo_Rapido",
+    url: "/wiki/Incantesimi/Passo_Rapido",
     name: "Passo Rapido",
     school: "trasmutazione",
     description: "Accelera notevolmente la tua velocità",
@@ -448,7 +448,7 @@ const utilitySpells = {
   },
   allarme: {
     level: 1,
-    url: "/wiki/Allarme",
+    url: "/wiki/Incantesimi/Allarme",
     name: "Allarme",
     school: "abiurazione",
     description: "Vieni avvertito se una creatura entra in un'area protetta",
@@ -457,7 +457,7 @@ const utilitySpells = {
   },
   individuazioneVeleno: {
     level: 1,
-    url: "/wiki/Individuazione_del_Veleno",
+    url: "/wiki/Incantesimi/Individuazione_del_Veleno",
     name: "Individuazione del Veleno",
     school: "divinazione",
     description: "Determini se un oggetto o creatura è velenoso",
@@ -466,7 +466,7 @@ const utilitySpells = {
   },
   individuazioneAllineamento: {
     level: 1,
-    url: "/wiki/Individuazione_dell%27Allineamento",
+    url: "/wiki/Incantesimi/Individuazione_dell%27Allineamento",
     name: "Individuazione dell'Allineamento",
     school: "divinazione",
     description: "Vedi le aure di un dato allineamento",
@@ -475,7 +475,7 @@ const utilitySpells = {
   },
   purificareCibo: {
     level: 1,
-    url: "/wiki/Purificare_Cibo_e_Bevande",
+    url: "/wiki/Incantesimi/Purificare_Cibo_e_Bevande",
     name: "Purificare Cibo e Bevande",
     school: "necromanzia",
     description: "Rendi cibi e bevande sicuri da consumare",
@@ -483,7 +483,7 @@ const utilitySpells = {
   },
   runaMessaggio: {
     level: 1,
-    url: "/wiki/Runa_Messaggio",
+    url: "/wiki/Incantesimi/Runa_Messaggio",
     name: "Runa Messaggio",
     school: "divinazione",
     description:
@@ -492,7 +492,7 @@ const utilitySpells = {
   },
   riparare: {
     level: 1,
-    url: "/wiki/Incantesimi/Riparare",
+    url: "/wikiRiparare",
     name: "Riparare",
     school: "trasmutazione",
     description: "Ripari un oggetto non magico",
@@ -501,7 +501,7 @@ const utilitySpells = {
   },
   serratura: {
     level: 1,
-    url: "/wiki/Serratura",
+    url: "/wiki/Incantesimi/Serratura",
     name: "Serratura",
     school: "abiurazione",
     description: "Rendi una serratura difficile da aprire",
@@ -510,7 +510,7 @@ const utilitySpells = {
   },
   strumentoTemporaneo: {
     level: 1,
-    url: "/wiki/Strumento_Temporaneo",
+    url: "/wiki/Incantesimi/Strumento_Temporaneo",
     name: "Strumento Temporaneo",
     school: "evocazione",
     description:
@@ -519,7 +519,7 @@ const utilitySpells = {
   },
   imprimereMessaggio: {
     level: 1,
-    url: "/wiki/Imprimere_Messaggio",
+    url: "/wiki/Incantesimi/Imprimere_Messaggio",
     name: "Imprimere Messaggio",
     school: "divinazione",
     description:
@@ -528,7 +528,7 @@ const utilitySpells = {
   },
   condividereSapienza: {
     level: 1,
-    url: "/wiki/Condividere_Sapienza",
+    url: "/wiki/Incantesimi/Condividere_Sapienza",
     name: "Condividere Sapienza",
     school: "divinazione",
     description: "Condividi la tua conoscenza con le creature toccate",
@@ -537,7 +537,7 @@ const utilitySpells = {
   },
   leggereOggetto: {
     level: 1,
-    url: "/wiki/Leggere_un_Oggetto",
+    url: "/wiki/Incantesimi/Leggere_un_Oggetto",
     name: "Leggere un Oggetto",
     school: "divinazione",
     description:
@@ -546,7 +546,7 @@ const utilitySpells = {
   },
   prevederePericolo: {
     level: 1,
-    url: "/wiki/Prevedere_Pericolo",
+    url: "/wiki/Incantesimi/Prevedere_Pericolo",
     name: "Prevedere Pericolo",
     school: "divinazione",
     description: "Concedi al bersaglio un barlume di preveggenza",
@@ -555,7 +555,7 @@ const utilitySpells = {
   },
   servitoreInosservato: {
     level: 1,
-    url: "/wiki/Servitore_Inosservato",
+    url: "/wiki/Incantesimi/Servitore_Inosservato",
     name: "Servitore Inosservato",
     school: "evocazione",
     description: "Crei una creatura invisibile al tuo servizio",
@@ -563,7 +563,7 @@ const utilitySpells = {
   },
   negareOdore: {
     level: 1,
-    url: "/wiki/Negare_Odore",
+    url: "/wiki/Incantesimi/Negare_Odore",
     name: "Negare Odore",
     school: "abiurazione",
     description: "Sopprimi l'odore di una creatura",
@@ -572,7 +572,7 @@ const utilitySpells = {
   },
   passareSenzaTracce: {
     level: 1,
-    url: "/wiki/Passare_Senza_Tracce",
+    url: "/wiki/Incantesimi/Passare_Senza_Tracce",
     name: "Passare Senza Tracce",
     school: "abiurazione",
     description: "Rendi le tue tracce difficili da trovare",
@@ -580,7 +580,7 @@ const utilitySpells = {
   },
   creareAcqua: {
     level: 1,
-    url: "/wiki/Creare_Acqua",
+    url: "/wiki/Incantesimi/Creare_Acqua",
     name: "Creare Acqua",
     school: "evocazione",
     description: "Evochi 8 litri di acqua",
@@ -588,7 +588,7 @@ const utilitySpells = {
   },
   caricoFormica: {
     level: 1,
-    url: "/wiki/Carico_della_Formica",
+    url: "/wiki/Incantesimi/Carico_della_Formica",
     name: "Carico della Formica",
     school: "trasmutazione",
     description: "Il bersaglio può trasportare un carico maggiore",
@@ -596,7 +596,7 @@ const utilitySpells = {
   },
   ventriloquio: {
     level: 1,
-    url: "/wiki/Ventriloquio",
+    url: "/wiki/Incantesimi/Ventriloquio",
     name: "Ventriloquio",
     school: "illusione",
     description: "Trasferisci la tua voce",
@@ -605,7 +605,7 @@ const utilitySpells = {
   },
   oggettoFalsificato: {
     level: 1,
-    url: "/wiki/Oggetto_Falsificato",
+    url: "/wiki/Incantesimi/Oggetto_Falsificato",
     name: "Oggetto Falsificato",
     school: "illusione",
     description: "Camuffi un oggetto per farlo apparire perfetto o scadente",
@@ -614,7 +614,7 @@ const utilitySpells = {
   },
   formaMinuscola: {
     level: 1,
-    url: "/wiki/Forma_Minuscola",
+    url: "/wiki/Incantesimi/Forma_Minuscola",
     name: "Forma Minuscola",
     school: "trasmutazione",
     description: "Ti trasformi in un animale non pericoloso",
@@ -623,7 +623,7 @@ const utilitySpells = {
   },
   legare: {
     level: 1,
-    url: "/wiki/Legare",
+    url: "/wiki/Incantesimi/Legare",
     name: "Legare",
     school: "abiurazione",
     description:
@@ -633,7 +633,7 @@ const utilitySpells = {
   },
   passoVeloce: {
     level: 1,
-    url: "/wiki/Passo_Veloce",
+    url: "/wiki/Incantesimi/Passo_Veloce",
     name: "Passo Veloce",
     school: "trasmutazione",
     description: "Incrementi la tua velocità per 1 ora",
@@ -642,7 +642,7 @@ const utilitySpells = {
   },
   saltare: {
     level: 1,
-    url: "/wiki/Incantesimi/Saltare",
+    url: "/wikiSaltare",
     name: "Saltare",
     school: "trasmutazione",
     description: "Effettui un salto notevole",
@@ -651,7 +651,7 @@ const utilitySpells = {
   },
   auraMagica: {
     level: 1,
-    url: "/wiki/Aura_Magica",
+    url: "/wiki/Incantesimi/Aura_Magica",
     name: "Aura Magica",
     school: "illusione",
     description:
@@ -661,7 +661,7 @@ const utilitySpells = {
   },
   camuffamentoIllusorio: {
     level: 1,
-    url: "/wiki/Camuffamento_Illusorio",
+    url: "/wiki/Incantesimi/Camuffamento_Illusorio",
     name: "Camuffamento Illusorio",
     school: "illusione",
     description: "Assumi l'aspetto di  un'altra creatura",
@@ -670,7 +670,7 @@ const utilitySpells = {
   },
   connessioneMentale: {
     level: 1,
-    url: "/wiki/Connessione_Mentale",
+    url: "/wiki/Incantesimi/Connessione_Mentale",
     name: "Connessione Mentale",
     school: "divinazione",
     description:
@@ -679,7 +679,7 @@ const utilitySpells = {
   },
   scambiareAspetto: {
     level: 1,
-    url: "/wiki/Scambiare_Aspetto",
+    url: "/wiki/Incantesimi/Scambiare_Aspetto",
     name: "Scambiare Aspetto",
     school: "illusione",
     description: "Scambi il tuo aspetto con quello di qualcun altro",

@@ -2,7 +2,7 @@ const allLevels = [4, 5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
   fulmine: {
     level: 3,
-    url: "/wiki/Fulmine",
+    url: "/wiki/Incantesimi/Fulmine",
     name: "Fulmine",
     school: "invocazione",
     description: "Un fulmine colpisce tutte le creature in una linea",
@@ -11,7 +11,7 @@ const baseAttackSpells = {
   },
   luceIncandescente: {
     level: 3,
-    url: "/wiki/Luce_Incandescente",
+    url: "/wiki/Incantesimi/Luce_Incandescente",
     name: "Luce Incandescente",
     school: "invocazione",
     description:
@@ -21,7 +21,7 @@ const baseAttackSpells = {
   },
   glifoInterdizione: {
     level: 3,
-    url: "/wiki/Glifo_di_Interdizione",
+    url: "/wiki/Incantesimi/Glifo_di_Interdizione",
     name: "Glifo di Interdizione",
     school: "abiurazione",
     description: "Infondi un incantesimo in un simbolo per creare una trappola",
@@ -29,7 +29,7 @@ const baseAttackSpells = {
   },
   lentezza: {
     level: 3,
-    url: "/wiki/Lentezza",
+    url: "/wiki/Incantesimi/Lentezza",
     name: "Lentezza",
     school: "trasmutazione",
     description: "Rallenti una creatura, riducendone le azioni",
@@ -38,7 +38,7 @@ const baseAttackSpells = {
   },
   nubeMaleodorante: {
     level: 3,
-    url: "/wiki/Nube_Maleodorante",
+    url: "/wiki/Incantesimi/Nube_Maleodorante",
     name: "Nube Maleodorante",
     school: "evocazione",
     description: "Formi una nube che nausea le creature",
@@ -46,7 +46,7 @@ const baseAttackSpells = {
   },
   pallaFuoco: {
     level: 3,
-    url: "/wiki/Palla_di_Fuoco",
+    url: "/wiki/Incantesimi/Palla_di_Fuoco",
     name: "Palla di Fuoco",
     school: "invocazione",
     description: "un'esplosione di fuoco in un'area brucia le creature",
@@ -55,7 +55,7 @@ const baseAttackSpells = {
   },
   oscuritàGelida: {
     level: 3,
-    url: "/wiki/Oscurit%C3%A0_Gelida",
+    url: "/wiki/Incantesimi/Oscurit%C3%A0_Gelida",
     name: "Oscurità Gelida",
     school: "invocazione",
     description:
@@ -65,7 +65,7 @@ const baseAttackSpells = {
   },
   toccoDelVampiro: {
     level: 3,
-    url: "/wiki/Tocco_del_Vampiro",
+    url: "/wiki/Incantesimi/Tocco_del_Vampiro",
     name: "Tocco del Vampiro",
     school: "necromanzia",
     description:
@@ -75,7 +75,7 @@ const baseAttackSpells = {
   },
   crisiMistica: {
     level: 3,
-    url: "/wiki/Crisi_Mistica",
+    url: "/wiki/Incantesimi/Crisi_Mistica",
     name: "Crisi Mistica",
     school: "ammaliamento",
     description:
@@ -88,7 +88,7 @@ const baseAttackSpells = {
 const combatSpells = {
   velocità: {
     level: 3,
-    url: "/wiki/Incantesimi/Velocit%C3%A0",
+    url: "/wikiVelocit%C3%A0",
     name: "Velocità",
     school: "trasmutazione",
     description:
@@ -98,7 +98,7 @@ const combatSpells = {
   },
   pozzoGravitazionale: {
     level: 3,
-    url: "/wiki/Pozzo_Gravitazionale",
+    url: "/wiki/Incantesimi/Pozzo_Gravitazionale",
     name: "Pozzo Gravitazionale",
     school: "invocazione",
     description: "Crei una sfera di gravità alterata",
@@ -106,7 +106,7 @@ const combatSpells = {
   },
   sferaInvisibilità: {
     level: 3,
-    url: "/wiki/Sfera_di_Invisibilit%C3%A0",
+    url: "/wiki/Incantesimi/Sfera_di_Invisibilit%C3%A0",
     name: "Sfera di Invisibilità",
     school: "illusione",
     description:
@@ -116,7 +116,7 @@ const combatSpells = {
   },
   tramaIpnotica: {
     level: 3,
-    url: "/wiki/Trama_Ipnotica",
+    url: "/wiki/Incantesimi/Trama_Ipnotica",
     name: "Trama Ipnotica",
     school: "illusione",
     description: "Colori cangianti abbagliano ed affascinano le creature",
@@ -124,7 +124,7 @@ const combatSpells = {
   },
   levitazione: {
     level: 3,
-    url: "/wiki/Levitazione",
+    url: "/wiki/Incantesimi/Levitazione",
     name: "Levitazione",
     school: "invocazione",
     description: "Fai fluttuare un oggetto o creatura a qualche metro da terra",
@@ -132,7 +132,7 @@ const combatSpells = {
   },
   rimuoviMalattia: {
     level: 3,
-    url: "/wiki/Rimuovi_Malattia",
+    url: "/wiki/Incantesimi/Rimuovi_Malattia",
     name: "Rimuovi Malattia",
     school: "necromanzia",
     description: "Curi una malattia che affligge una creatura",
@@ -140,7 +140,7 @@ const combatSpells = {
   },
   neutralizzaVeleno: {
     level: 3,
-    url: "/wiki/Neutralizza_Veleno",
+    url: "/wiki/Incantesimi/Neutralizza_Veleno",
     name: "Neutralizza Veleno",
     school: "necromanzia",
     description: "Curi un veleno che affligge una creatura",
@@ -148,7 +148,7 @@ const combatSpells = {
   },
   comandoLiberazione: {
     level: 3,
-    url: "/wiki/Comando_di_Liberazione",
+    url: "/wiki/Incantesimi/Comando_di_Liberazione",
     name: "Comando di Liberazione",
     school: "ammaliamento",
     description:
@@ -157,7 +157,7 @@ const combatSpells = {
   },
   fondersiPietra: {
     level: 3,
-    url: "/wiki/Fondersi_nella_Pietra",
+    url: "/wiki/Incantesimi/Fondersi_nella_Pietra",
     name: "Fondersi nella Pietra",
     school: "trasmutazione",
     description: "Ti fondi in un blocco di pietra",
@@ -165,7 +165,7 @@ const combatSpells = {
   },
   armaSpettrale: {
     level: 3,
-    url: "/wiki/Arma_Spettrale",
+    url: "/wiki/Incantesimi/Arma_Spettrale",
     name: "Arma Spettrale",
     school: "trasmutazione",
     description: "un'arma ha effetto sulle creature incorporee",
@@ -173,7 +173,7 @@ const combatSpells = {
   },
   chiaroudienza: {
     level: 3,
-    url: "/wiki/Chiaroudienza",
+    url: "/wiki/Incantesimi/Chiaroudienza",
     name: "Chiaroudienza",
     school: "divinazione",
     description: "Puoi udire attraverso un sensore magico invisibile",
@@ -181,7 +181,7 @@ const combatSpells = {
   },
   muroVento: {
     level: 3,
-    url: "/wiki/Muro_di_Vento",
+    url: "/wiki/Incantesimi/Muro_di_Vento",
     name: "Muro di Vento",
     school: "invocazione",
     description:
@@ -190,7 +190,7 @@ const combatSpells = {
   },
   muroSpine: {
     level: 3,
-    url: "/wiki/Muro_di_Spine",
+    url: "/wiki/Incantesimi/Muro_di_Spine",
     name: "Muro di Spine",
     school: "evocazione",
     description: "Crei un muro di rovi",
@@ -199,7 +199,7 @@ const combatSpells = {
   },
   formaInsetto: {
     level: 3,
-    url: "/wiki/Incantesimi/Forma_di_Insetto",
+    url: "/wikiForma_di_Insetto",
     name: "Forma di Insetto",
     school: "trasmutazione",
     description: "Ti trasformi in un pericoloso insetto gigante",
@@ -208,7 +208,7 @@ const combatSpells = {
   },
   legatoTerra: {
     level: 3,
-    url: "/wiki/Legato_a_Terra",
+    url: "/wiki/Incantesimi/Legato_a_Terra",
     name: "Legato a Terra",
     school: "trasmutazione",
     description: "Porti a terra una creatura volante",
@@ -216,7 +216,7 @@ const combatSpells = {
   },
   sciarpeTurbinanti: {
     level: 3,
-    url: "/wiki/Sciarpe_Turbinanti",
+    url: "/wiki/Incantesimi/Sciarpe_Turbinanti",
     name: "Sciarpe Turbinanti",
     school: "abiurazione",
     description:
@@ -226,7 +226,7 @@ const combatSpells = {
   },
   sabbieMobili: {
     level: 3,
-    url: "/wiki/Sabbie_Mobili",
+    url: "/wiki/Incantesimi/Sabbie_Mobili",
     name: "Sabbie Mobili",
     school: "trasmutazione",
     description: "Fai sussultare la superficie",
@@ -235,7 +235,7 @@ const combatSpells = {
   },
   cerchioProtezione: {
     level: 3,
-    url: "/wiki/Cerchio_di_Protezione",
+    url: "/wiki/Incantesimi/Cerchio_di_Protezione",
     name: "Cerchio di Protezione",
     school: "abiurazione",
     description:
@@ -245,7 +245,7 @@ const combatSpells = {
   },
   eroismo: {
     level: 3,
-    url: "/wiki/Eroismo",
+    url: "/wiki/Incantesimi/Eroismo",
     name: "Eroismo",
     school: "ammaliamento",
     description:
@@ -255,7 +255,7 @@ const combatSpells = {
   },
   legareNonMorto: {
     level: 3,
-    url: "/wiki/Legare_Non_Morto",
+    url: "/wiki/Incantesimi/Legare_Non_Morto",
     name: "Legare Non Morto",
     school: "necromanzia",
     description: "Prendi il controllo di un non morto privo di intelletto",
@@ -263,7 +263,7 @@ const combatSpells = {
   },
   cecità: {
     level: 3,
-    url: "/wiki/Cecit%C3%A0",
+    url: "/wiki/Incantesimi/Cecit%C3%A0",
     name: "Cecità",
     school: "necromanzia",
     description: "Rendi cieco un bersaglio",
@@ -271,7 +271,7 @@ const combatSpells = {
   },
   tazzaPolvere: {
     level: 3,
-    url: "/wiki/Tazza_di_Polvere",
+    url: "/wiki/Incantesimi/Tazza_di_Polvere",
     name: "Tazza di Polvere",
     school: "necromanzia",
     description:
@@ -281,7 +281,7 @@ const combatSpells = {
   },
   paralizzare: {
     level: 3,
-    url: "/wiki/Paralizzare",
+    url: "/wiki/Incantesimi/Paralizzare",
     name: "Paralizzare",
     school: "ammaliamento",
     description: "Blocchi un umanoide sul posto",
@@ -290,7 +290,7 @@ const combatSpells = {
   },
   estasiare: {
     level: 3,
-    url: "/wiki/Estasiare",
+    url: "/wiki/Incantesimi/Estasiare",
     name: "Estasiare",
     school: "ammaliamento",
     description: "Le creature sono affascinate dal tuo discorso",
@@ -301,7 +301,7 @@ const combatSpells = {
 const utilitySpells = {
   restringereOggetto: {
     level: 3,
-    url: "/wiki/Restringere_Oggetto",
+    url: "/wiki/Incantesimi/Restringere_Oggetto",
     name: "Restringere Oggetto",
     school: "trasmutazione",
     description: "Riduci un oggetto alle dimensioni di una moneta",
@@ -309,7 +309,7 @@ const utilitySpells = {
   },
   paginaSegreta: {
     level: 3,
-    url: "/wiki/Pagina_Segreta",
+    url: "/wiki/Incantesimi/Pagina_Segreta",
     name: "Pagina Segreta",
     school: "illusione",
     description: "Alteri l'apparenza di una pagina",
@@ -317,7 +317,7 @@ const utilitySpells = {
   },
   terrenoConsacrato: {
     level: 3,
-    url: "/wiki/Terreno_Consacrato",
+    url: "/wiki/Incantesimi/Terreno_Consacrato",
     name: "Terreno Consacrato",
     school: "abiurazione",
     description:
@@ -326,7 +326,7 @@ const utilitySpells = {
   },
   mostrareVia: {
     level: 3,
-    url: "/wiki/Mostrare_la_Via",
+    url: "/wiki/Incantesimi/Mostrare_la_Via",
     name: "Mostrare la Via",
     school: "divinazione",
     description:
@@ -336,7 +336,7 @@ const utilitySpells = {
   },
   zonaVerità: {
     level: 3,
-    url: "/wiki/Zona_di_Verit%C3%A0",
+    url: "/wiki/Incantesimi/Zona_di_Verit%C3%A0",
     name: "Zona di Verità",
     school: "ammaliamento",
     description: "Costringi le creature a dire la verità",
@@ -344,7 +344,7 @@ const utilitySpells = {
   },
   ipercognizione: {
     level: 3,
-    url: "/wiki/Ipercognizione",
+    url: "/wiki/Incantesimi/Ipercognizione",
     name: "Ipercognizione",
     school: "divinazione",
     description: "Ricordi enormi quantità di informazioni in un istante",
@@ -352,7 +352,7 @@ const utilitySpells = {
   },
   guidaGirovago: {
     level: 3,
-    url: "/wiki/Guida_del_Girovago",
+    url: "/wiki/Incantesimi/Guida_del_Girovago",
     name: "Guida del Girovago",
     school: "divinazione",
     description: "Trovi un tragitto ideale verso una destinazione",
@@ -360,7 +360,7 @@ const utilitySpells = {
   },
   localizzare: {
     level: 3,
-    url: "/wiki/Localizzare",
+    url: "/wiki/Incantesimi/Localizzare",
     name: "Localizzare",
     school: "divinazione",
     description: "Apprendi la direzione verso un oggetto",
@@ -369,7 +369,7 @@ const utilitySpells = {
   },
   visioneAnimale: {
     level: 3,
-    url: "/wiki/Visione_dell%27Animale",
+    url: "/wiki/Incantesimi/Visione_dell%27Animale",
     name: "Visione dell'Animale",
     school: "divinazione",
     description: "Sposti i tuoi sensi su un animale",
@@ -377,7 +377,7 @@ const utilitySpells = {
   },
   piediPinnati: {
     level: 3,
-    url: "/wiki/Piedi_Pinnati",
+    url: "/wiki/Incantesimi/Piedi_Pinnati",
     name: "Piedi Pinnati",
     school: "trasmutazione",
     description:
@@ -387,7 +387,7 @@ const utilitySpells = {
   },
   antiIndividuazione: {
     level: 3,
-    url: "/wiki/Anti-Individuazione",
+    url: "/wiki/Incantesimi/Anti-Individuazione",
     name: "Anti-Individuazione",
     school: "abiurazione",
     description: "Proteggi una creatura o un oggetto dall'individuazione",
@@ -395,7 +395,7 @@ const utilitySpells = {
   },
   leggereMente: {
     level: 3,
-    url: "/wiki/Leggere_nella_Mente",
+    url: "/wiki/Incantesimi/Leggere_nella_Mente",
     name: "Leggere nella Mente",
     school: "divinazione",
     description: "Leggi i pensieri superficiali di una creatura",
@@ -403,7 +403,7 @@ const utilitySpells = {
   },
   messaggioOnirico: {
     level: 3,
-    url: "/wiki/Messaggio_Onirico",
+    url: "/wiki/Incantesimi/Messaggio_Onirico",
     name: "Messaggio Onirico",
     school: "divinazione",
     description: "Invii un messaggio che arriva tramite un sogno",

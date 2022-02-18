@@ -1,7 +1,7 @@
 const spells = [
   {
     level: 1,
-    url: "/wiki/Composizione_Prolungata",
+    url: "/wiki/Incantesimi/Composizione_Prolungata",
     name: "Composizione Prolungata",
     source: ["bardo"],
     school: "ammaliamento",
@@ -11,7 +11,7 @@ const spells = [
   },
   {
     level: 10,
-    url: "/wiki/Melodia_Fatale",
+    url: "/wiki/Incantesimi/Melodia_Fatale",
     name: "Melodia Fatale",
     source: ["bardo"],
     school: "ammaliamento",
@@ -21,7 +21,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Contro_Esibizione",
+    url: "/wiki/Incantesimi/Contro_Esibizione",
     name: "Contro Esibizione",
     source: ["bardo"],
     school: "ammaliamento",
@@ -31,7 +31,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Incantesimi/Ispirare_Difesa",
+    url: "/wikiIspirare_Difesa",
     name: "Ispirare Difesa",
     source: ["bardo"],
     school: "ammaliamento",
@@ -40,7 +40,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Incantesimi/Tempo_Triplo",
+    url: "/wikiTempo_Triplo",
     name: "Tempo Triplo",
     source: ["bardo"],
     school: "ammaliamento",
@@ -49,7 +49,7 @@ const spells = [
   },
   {
     level: 3,
-    url: "/wiki/Incantesimi/Ispirare_Terrore",
+    url: "/wikiIspirare_Terrore",
     name: "Ispirare Terrore",
     source: ["bardo"],
     school: "ammaliamento",
@@ -58,7 +58,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Incantesimi/Ispirare_Eroismo",
+    url: "/wikiIspirare_Eroismo",
     name: "Ispirare Eroismo",
     source: ["bardo"],
     school: "ammaliamento",
@@ -67,7 +67,7 @@ const spells = [
   },
   {
     level: 5,
-    url: "/wiki/Incantesimi/Casa_dalle_Pareti_Immaginarie",
+    url: "/wikiCasa_dalle_Pareti_Immaginarie",
     name: "Casa dalle Pareti Immaginarie",
     source: ["bardo"],
     school: "illusione",
@@ -77,7 +77,7 @@ const spells = [
   },
   {
     level: 7,
-    url: "/wiki/Incantesimi/Allegro",
+    url: "/wikiAllegro",
     name: "Allegro",
     source: ["bardo"],
     school: "ammaliamento",
@@ -86,7 +86,7 @@ const spells = [
   },
   {
     level: 7,
-    url: "/wiki/Ballata_Lenitiva",
+    url: "/wiki/Incantesimi/Ballata_Lenitiva",
     name: "Ballata Lenitiva",
     source: ["bardo"],
     school: "ammaliamento",
@@ -94,7 +94,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Incantesimi/Ispirare_Competenza",
+    url: "/wikiIspirare_Competenza",
     name: "Ispirare Competenza",
     source: ["bardo"],
     school: "ammaliamento",
@@ -104,7 +104,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Ispirare_Coraggio",
+    url: "/wiki/Incantesimi/Ispirare_Coraggio",
     name: "Ispirare Coraggio",
     source: ["bardo"],
     school: "ammaliamento",
@@ -114,7 +114,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Incantesimi/Ritornello_d%27Argento",
+    url: "/wikiRitornello_d%27Argento",
     name: "Ritornello d'Argento",
     source: ["bardo"],
     school: "abiurazione",
@@ -123,7 +123,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Incantesimi/Studi_del_Maestro_di_Sapienza",
+    url: "/wikiStudi_del_Maestro_di_Sapienza",
     name: "Studi del Maestro di Sapienza",
     source: ["bardo"],
     school: "divinazione",

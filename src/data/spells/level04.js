@@ -2,7 +2,7 @@ const allLevels = [5, 6, 7, 8, 9, 10];
 const baseAttackSpells = {
   cascataSacra: {
     level: 4,
-    url: "/wiki/Cascata_Sacra",
+    url: "/wiki/Incantesimi/Cascata_Sacra",
     name: "Cascata Sacra",
     school: "invocazione",
     description:
@@ -12,7 +12,7 @@ const baseAttackSpells = {
   },
   faroVitale: {
     level: 4,
-    url: "/wiki/Faro_Vitale",
+    url: "/wiki/Incantesimi/Faro_Vitale",
     name: "Faro Vitale",
     school: "necromanzia",
     description: "Irradi vitalità che guarisce le creature che ti toccano",
@@ -21,7 +21,7 @@ const baseAttackSpells = {
   },
   tempestaArmi: {
     level: 4,
-    url: "/wiki/Tempesta_di_Armi",
+    url: "/wiki/Incantesimi/Tempesta_di_Armi",
     name: "Tempesta di Armi",
     school: "invocazione",
     description:
@@ -31,7 +31,7 @@ const baseAttackSpells = {
   },
   anamnesiSpirituale: {
     level: 4,
-    url: "/wiki/Anamnesi_Spirituale",
+    url: "/wiki/Incantesimi/Anamnesi_Spirituale",
     name: "Anamnesi Spirituale",
     school: "necromanzia",
     description:
@@ -40,7 +40,7 @@ const baseAttackSpells = {
   },
   formaVolante: {
     level: 4,
-    url: "/wiki/Forma_Volante",
+    url: "/wiki/Incantesimi/Forma_Volante",
     name: "Forma Volante",
     school: "trasmutazione",
     description: "Ti trasformi in un combattente volante",
@@ -49,7 +49,7 @@ const baseAttackSpells = {
   },
   torrenteImpetuoso: {
     level: 4,
-    url: "/wiki/Torrente_Impetuoso",
+    url: "/wiki/Incantesimi/Torrente_Impetuoso",
     name: "Torrente Impetuoso",
     school: "invocazione",
     description: "Respingi le creature con un rovinoso torrente d'acqua",
@@ -58,7 +58,7 @@ const baseAttackSpells = {
   },
   muroDiFuoco: {
     level: 4,
-    url: "/wiki/Muro_di_Fuoco",
+    url: "/wiki/Incantesimi/Muro_di_Fuoco",
     name: "Muro di Fuoco",
     school: "invocazione",
     description:
@@ -68,7 +68,7 @@ const baseAttackSpells = {
   },
   colleraDivina: {
     level: 4,
-    url: "/wiki/Collera_Divina",
+    url: "/wiki/Incantesimi/Collera_Divina",
     name: "Collera Divina",
     school: "invocazione",
     description:
@@ -78,7 +78,7 @@ const baseAttackSpells = {
   },
   ritorsioneAnatema: {
     level: 4,
-    url: "/wiki/Ritorsione_dell%27Anatema",
+    url: "/wiki/Incantesimi/Ritorsione_dell%27Anatema",
     name: "Ritorsione dell'Anatema",
     school: "ammaliamento",
     description:
@@ -88,7 +88,7 @@ const baseAttackSpells = {
   },
   suggestione: {
     level: 4,
-    url: "/wiki/Suggestione",
+    url: "/wiki/Incantesimi/Suggestione",
     name: "Suggestione",
     school: "ammaliamento",
     description: "Suggerisci a una creatura una linea di azione da seguire",
@@ -97,7 +97,7 @@ const baseAttackSpells = {
   },
   allucinazioneMortale: {
     level: 4,
-    url: "/wiki/Allucinazione_Mortale",
+    url: "/wiki/Incantesimi/Allucinazione_Mortale",
     name: "Allucinazione Mortale",
     school: "illusione",
     description:
@@ -110,7 +110,7 @@ const baseAttackSpells = {
 const combatSpells = {
   portaDimensionale: {
     level: 4,
-    url: "/wiki/Porta_Dimensionale",
+    url: "/wiki/Incantesimi/Porta_Dimensionale",
     name: "Porta Dimensionale",
     school: "evocazione",
     description: "Ti teletrasporti fino a 36 metri",
@@ -119,7 +119,7 @@ const combatSpells = {
   },
   intermittenza: {
     level: 4,
-    url: "/wiki/Intermittenza",
+    url: "/wiki/Incantesimi/Intermittenza",
     name: "Intermittenza",
     school: "evocazione",
     description: "Ti sposti rapidamente tra i piani, svanendo e riapparendo",
@@ -128,7 +128,7 @@ const combatSpells = {
   },
   volare: {
     level: 4,
-    url: "/wiki/Incantesimi/Volare",
+    url: "/wikiVolare",
     name: "Volare",
     school: "trasmutazione",
     description: "Fai ottenere alla creatura bersaglio una velocità di volare",
@@ -137,7 +137,7 @@ const combatSpells = {
   },
   rimuoviMaledizione: {
     level: 4,
-    url: "/wiki/Rimuovi_Maledizione",
+    url: "/wiki/Incantesimi/Rimuovi_Maledizione",
     name: "Rimuovi Maledizione",
     school: "necromanzia",
     description: "Contrasti una maledizione che affligge una creatura",
@@ -145,7 +145,7 @@ const combatSpells = {
   },
   ancoraDimensionale: {
     level: 4,
-    url: "/wiki/Ancora_Dimensionale",
+    url: "/wiki/Incantesimi/Ancora_Dimensionale",
     name: "Ancora Dimensionale",
     school: "abiurazione",
     description:
@@ -154,7 +154,7 @@ const combatSpells = {
   },
   globoInvulnerabilità: {
     level: 4,
-    url: "/wiki/Globo_di_Invulnerabilit%C3%A0",
+    url: "/wiki/Incantesimi/Globo_di_Invulnerabilit%C3%A0",
     name: "Globo di Invulnerabilità",
     school: "abiurazione",
     description:
@@ -163,7 +163,7 @@ const combatSpells = {
   },
   immunitàIncantesimi: {
     level: 4,
-    url: "/wiki/Immunit%C3%A0_agli_Incantesimi",
+    url: "/wiki/Incantesimi/Immunit%C3%A0_agli_Incantesimi",
     name: "Immunità agli Incantesimi",
     school: "abiurazione",
     description: "Pronuncia un incantesimo per negare i suoi effetti su di te",
@@ -171,7 +171,7 @@ const combatSpells = {
   },
   sferaElastica: {
     level: 4,
-    url: "/wiki/Sfera_Elastica",
+    url: "/wiki/Incantesimi/Sfera_Elastica",
     name: "Sfera Elastica",
     school: "abiurazione",
     description:
@@ -180,7 +180,7 @@ const combatSpells = {
   },
   chiaroveggenza: {
     level: 4,
-    url: "/wiki/Chiaroveggenza",
+    url: "/wiki/Incantesimi/Chiaroveggenza",
     name: "Chiaroveggenza",
     school: "divinazione",
     description: "Puoi vedere attraverso un sensore magico invisibile",
@@ -188,7 +188,7 @@ const combatSpells = {
   },
   camminareAria: {
     level: 4,
-    url: "/wiki/Camminare_nell%27Aria",
+    url: "/wiki/Incantesimi/Camminare_nell%27Aria",
     name: "Camminare nell'Aria",
     school: "trasmutazione",
     description: "Cammini nell'aria come se fosse terreno solido",
@@ -196,7 +196,7 @@ const combatSpells = {
   },
   libertàMovimento: {
     level: 4,
-    url: "/wiki/Libert%C3%A0_di_Movimento",
+    url: "/wiki/Incantesimi/Libert%C3%A0_di_Movimento",
     name: "Libertà di Movimento",
     school: "abiurazione",
     description: "Una creatura supera gli impedimenti al suo movimento",
@@ -204,7 +204,7 @@ const combatSpells = {
   },
   formaDinosauro: {
     level: 4,
-    url: "/wiki/Forma_di_Dinosauro",
+    url: "/wiki/Incantesimi/Forma_di_Dinosauro",
     name: "Forma di Dinosauro",
     school: "trasmutazione",
     description: "Ti trasformi in un dinosauro",
@@ -213,7 +213,7 @@ const combatSpells = {
   },
   scaglieRiflettenti: {
     level: 4,
-    url: "/wiki/Scaglie_Riflettenti",
+    url: "/wiki/Incantesimi/Scaglie_Riflettenti",
     name: "Scaglie Riflettenti",
     school: "abiurazione",
     description:
@@ -223,7 +223,7 @@ const combatSpells = {
   },
   pellePietra: {
     level: 4,
-    url: "/wiki/Pelle_di_Pietra",
+    url: "/wiki/Incantesimi/Pelle_di_Pietra",
     name: "Pelle di Pietra",
     school: "abiurazione",
     description: "Indurisci la pelle di una creatura in pietra durevole",
@@ -232,7 +232,7 @@ const combatSpells = {
   },
   scudoFuoco: {
     level: 4,
-    url: "/wiki/Scudo_di_Fuoco",
+    url: "/wiki/Incantesimi/Scudo_di_Fuoco",
     name: "Scudo di Fuoco",
     school: "invocazione",
     description:
@@ -242,7 +242,7 @@ const combatSpells = {
   },
   maledizioneReietto: {
     level: 4,
-    url: "/wiki/Maledizione_del_Reietto",
+    url: "/wiki/Incantesimi/Maledizione_del_Reietto",
     name: "Maledizione del Reietto",
     school: "ammaliamento",
     description:
@@ -251,7 +251,7 @@ const combatSpells = {
   },
   formaGassosa: {
     level: 4,
-    url: "/wiki/Forma_Gassosa",
+    url: "/wiki/Incantesimi/Forma_Gassosa",
     name: "Forma Gassosa",
     school: "trasmutazione",
     description: "Trasforma una creatura consenziente in una nube volante",
@@ -259,7 +259,7 @@ const combatSpells = {
   },
   nebbiaSolida: {
     level: 4,
-    url: "/wiki/Nebbia_Solida",
+    url: "/wiki/Incantesimi/Nebbia_Solida",
     name: "Nebbia Solida",
     school: "evocazione",
     description:
@@ -268,7 +268,7 @@ const combatSpells = {
   },
   incubo: {
     level: 4,
-    url: "/wiki/Incubo",
+    url: "/wiki/Incantesimi/Incubo",
     name: "Incubo",
     school: "illusione",
     description: "Infesta i sogni di una creatura con incubi inquietanti",
@@ -276,7 +276,7 @@ const combatSpells = {
   },
   confusione: {
     level: 4,
-    url: "/wiki/Confusione",
+    url: "/wiki/Incantesimi/Confusione",
     name: "Confusione",
     school: "ammaliamento",
     description: "Disorienti una creatura, facendola agire a caso",
@@ -288,7 +288,7 @@ const combatSpells = {
 const utilitySpells = {
   velo: {
     level: 4,
-    url: "/wiki/Velo",
+    url: "/wiki/Incantesimi/Velo",
     name: "Velo",
     school: "illusione",
     description: "Camuffi molte creature in altre creature",
@@ -297,7 +297,7 @@ const utilitySpells = {
   },
   truccoCorda: {
     level: 4,
-    url: "/wiki/Trucco_della_Corda",
+    url: "/wiki/Incantesimi/Trucco_della_Corda",
     name: "Trucco della Corda",
     school: "evocazione",
     description:
@@ -306,7 +306,7 @@ const utilitySpells = {
   },
   rivelaBugie: {
     level: 4,
-    url: "/wiki/Rivela_Bugie",
+    url: "/wiki/Incantesimi/Rivela_Bugie",
     name: "Rivela Bugie",
     school: "divinazione",
     description: "Individui abilmente bugie e falsità",
@@ -314,7 +314,7 @@ const utilitySpells = {
   },
   creazione: {
     level: 4,
-    url: "/wiki/Creazione",
+    url: "/wiki/Incantesimi/Creazione",
     name: "Creazione",
     school: "evocazione",
     description: "Crei un oggetto temporaneo",
@@ -323,7 +323,7 @@ const utilitySpells = {
   },
   frasiDimenticate: {
     level: 4,
-    url: "/wiki/Frasi_Dimenticate",
+    url: "/wiki/Incantesimi/Frasi_Dimenticate",
     name: "Frasi Dimenticate",
     school: "divinazione",
     description:
@@ -332,7 +332,7 @@ const utilitySpells = {
   },
   individuazioneScrutamento: {
     level: 4,
-    url: "/wiki/Individuazione_dello_Scrutamento",
+    url: "/wiki/Incantesimi/Individuazione_dello_Scrutamento",
     name: "Individuazione dello Scrutamento",
     school: "divinazione",
     description: "Scopri se gli effetti dello scrutamento sono nell'area",
@@ -341,7 +341,7 @@ const utilitySpells = {
   },
   telepatia: {
     level: 4,
-    url: "/wiki/Telepatia",
+    url: "/wiki/Incantesimi/Telepatia",
     name: "Telepatia",
     school: "divinazione",
     description: "Comunichi telepaticamente con qualsiasi creatura vicina",
@@ -350,7 +350,7 @@ const utilitySpells = {
   },
   leggerePremonizioni: {
     level: 4,
-    url: "/wiki/Leggere_Premonizioni",
+    url: "/wiki/Incantesimi/Leggere_Premonizioni",
     name: "Leggere Premonizioni",
     school: "divinazione",
     description: "Apprendi un indizio su un evento che sta per accadere",
@@ -358,7 +358,7 @@ const utilitySpells = {
   },
   santuarioPrivato: {
     level: 4,
-    url: "/wiki/Santuario_Privato",
+    url: "/wiki/Incantesimi/Santuario_Privato",
     name: "Santuario Privato",
     school: "abiurazione",
     description:
@@ -367,7 +367,7 @@ const utilitySpells = {
   },
   parlareVegetali: {
     level: 4,
-    url: "/wiki/Parlare_con_i_Vegetali",
+    url: "/wiki/Incantesimi/Parlare_con_i_Vegetali",
     name: "Parlare con i Vegetali",
     school: "divinazione",
     description: "Comunichi con le piante e le creature con il tratto vegetale",
@@ -375,7 +375,7 @@ const utilitySpells = {
   },
   scolpirePietra: {
     level: 4,
-    url: "/wiki/Scolpire_Pietra",
+    url: "/wiki/Incantesimi/Scolpire_Pietra",
     name: "Scolpire Pietra",
     school: "trasmutazione",
     description: "Scolpisci un cubo di pietra",
@@ -383,7 +383,7 @@ const utilitySpells = {
   },
   loquacità: {
     level: 4,
-    url: "/wiki/Loquacit%C3%A0",
+    url: "/wiki/Incantesimi/Loquacit%C3%A0",
     name: "Loquacità",
     school: "ammaliamento",
     description: "Menti impunemente",
@@ -391,7 +391,7 @@ const utilitySpells = {
   },
   cadavereParlante: {
     level: 4,
-    url: "/wiki/Cadavere_Parlante",
+    url: "/wiki/Incantesimi/Cadavere_Parlante",
     name: "Cadavere Parlante",
     school: "necromanzia",
     description: "Un cadavere risponde a tre domande",
@@ -399,7 +399,7 @@ const utilitySpells = {
   },
   modificareMemoria: {
     level: 4,
-    url: "/wiki/Modificare_Memoria",
+    url: "/wiki/Incantesimi/Modificare_Memoria",
     name: "Modificare Memoria",
     school: "ammaliamento",
     description: "Cambi o impianti memorie",
@@ -408,7 +408,7 @@ const utilitySpells = {
   },
   terrenoIllusorio: {
     level: 4,
-    url: "/wiki/Terreno_Illusorio",
+    url: "/wiki/Incantesimi/Terreno_Illusorio",
     name: "Terreno Illusorio",
     school: "illusione",
     description: "Un ambiente naturale appare come un altro tipo di terreno",

@@ -15,7 +15,7 @@ const allLevels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const baseSpells = {
   prestidigitazione: {
     level: 0,
-    url: "/wiki/Prestidigitazione",
+    url: "/wiki/Incantesimi/Prestidigitazione",
     name: "Prestidigitazione",
     school: "invocazione",
     description: "Esegui un trucco magico minore",
@@ -23,7 +23,7 @@ const baseSpells = {
   },
   individuazioneMagico: {
     level: 0,
-    url: "/wiki/Individuazione_del_Magico",
+    url: "/wiki/Incantesimi/Individuazione_del_Magico",
     name: "Individuazione del Magico",
     school: "divinazione",
     description: "Percepisci la vicinanza della magia",
@@ -32,7 +32,7 @@ const baseSpells = {
   },
   leggereAura: {
     level: 0,
-    url: "/wiki/Leggere_Aura",
+    url: "/wiki/Incantesimi/Leggere_Aura",
     name: "Leggere Aura",
     school: "divinazione",
     description:
@@ -42,7 +42,7 @@ const baseSpells = {
   },
   sigillo: {
     level: 0,
-    url: "/wiki/Sigillo",
+    url: "/wiki/Incantesimi/Sigillo",
     name: "Sigillo",
     school: "trasmutazione",
     description: "Apponi un marchio magico",
@@ -54,7 +54,7 @@ const baseSpells = {
 const baseAttackSpells = {
   raggioGelo: {
     level: 0,
-    url: "/wiki/Raggio_di_Gelo",
+    url: "/wiki/Incantesimi/Raggio_di_Gelo",
     name: "Raggio di Gelo",
     school: "invocazione",
     description: "Infliggi danni da freddo a una creatura",
@@ -63,7 +63,7 @@ const baseAttackSpells = {
   },
   distruggereNonMorti: {
     level: 0,
-    url: "/wiki/Distruggere_Non_Morti",
+    url: "/wiki/Incantesimi/Distruggere_Non_Morti",
     name: "Distruggere Non Morti",
     school: "necromanzia",
     description: "Infliggi danni da energia positiva ai non morti",
@@ -72,7 +72,7 @@ const baseAttackSpells = {
   },
   lanciaDivina: {
     level: 0,
-    url: "/wiki/Lancia_Divina",
+    url: "/wiki/Incantesimi/Lancia_Divina",
     name: "Lancia Divina",
     school: "invocazione",
     description:
@@ -82,7 +82,7 @@ const baseAttackSpells = {
   },
   proiettileTelecinetico: {
     level: 0,
-    url: "/wiki/Proiettile_Telecinetico",
+    url: "/wiki/Incantesimi/Proiettile_Telecinetico",
     name: "Proiettile Telecinetico",
     school: "invocazione",
     description: "Scagli un oggetto contro una creatura",
@@ -91,7 +91,7 @@ const baseAttackSpells = {
   },
   arcoElettrico: {
     level: 0,
-    url: "/wiki/Arco_Elettrico",
+    url: "/wiki/Incantesimi/Arco_Elettrico",
     name: "Arco Elettrico",
     school: "invocazione",
     description: "Colpisci una o due creature con fulmini",
@@ -100,7 +100,7 @@ const baseAttackSpells = {
   },
   produrreFiamma: {
     level: 0,
-    url: "/wiki/Produrre_Fiamma",
+    url: "/wiki/Incantesimi/Produrre_Fiamma",
     name: "Produrre Fiamma",
     school: "invocazione",
     description: "Accendi piccole fiamme per attaccare da vicino o a distanza",
@@ -109,7 +109,7 @@ const baseAttackSpells = {
   },
   fiottoAcido: {
     level: 0,
-    url: "/wiki/Fiotto_Acido",
+    url: "/wiki/Incantesimi/Fiotto_Acido",
     name: "Fiotto Acido",
     school: "invocazione",
     description: "Infliggi danni da acido alle creature",
@@ -118,7 +118,7 @@ const baseAttackSpells = {
   },
   frastornare: {
     level: 0,
-    url: "/wiki/Frastornare",
+    url: "/wiki/Incantesimi/Frastornare",
     name: "Frastornare",
     school: "ammaliamento",
     description:
@@ -128,7 +128,7 @@ const baseAttackSpells = {
   },
   toccoGelido: {
     level: 0,
-    url: "/wiki/Tocco_Gelido",
+    url: "/wiki/Incantesimi/Tocco_Gelido",
     name: "Tocco Gelido",
     school: "necromanzia",
     description: "Il tuo tocco ferisce i viventi o disorienta i non morti",
@@ -140,7 +140,7 @@ const baseAttackSpells = {
 const combatSpells = {
   impedimento: {
     level: 0,
-    url: "/wiki/Impedimento",
+    url: "/wiki/Incantesimi/Impedimento",
     name: "Impedimento",
     school: "evocazione",
     description: "Evochi un rampicante per intralciare una creatura",
@@ -149,7 +149,7 @@ const combatSpells = {
   },
   scudo: {
     level: 0,
-    url: "/wiki/Scudo",
+    url: "/wiki/Incantesimi/Scudo",
     name: "Scudo",
     school: "abiurazione",
     description:
@@ -159,7 +159,7 @@ const combatSpells = {
   },
   stabilizzare: {
     level: 0,
-    url: "/wiki/Stabilizzare",
+    url: "/wiki/Incantesimi/Stabilizzare",
     name: "Stabilizzare",
     school: "necromanzia",
     description: "Stabilizzi una creatura morente.",
@@ -167,7 +167,7 @@ const combatSpells = {
   },
   interdizioneMinaccia: {
     level: 0,
-    url: "/wiki/Interdizione_alla_Minaccia",
+    url: "/wiki/Incantesimi/Interdizione_alla_Minaccia",
     name: "Interdizione alla Minaccia",
     school: "abiurazione",
     description: "Proteggi un alleato da un nemico specifico",
@@ -176,7 +176,7 @@ const combatSpells = {
   },
   guida: {
     level: 0,
-    url: "/wiki/Incantesimi/Guida",
+    url: "/wikiGuida",
     name: "Guida",
     school: "divinazione",
     description: "Una guida divina fornisce un bonus su un tiro",
@@ -184,7 +184,7 @@ const combatSpells = {
   },
   suonoFantasma: {
     level: 0,
-    url: "/wiki/Suono_Fantasma",
+    url: "/wiki/Incantesimi/Suono_Fantasma",
     name: "Suono Fantasma",
     school: "illusione",
     description: "Crei suoni falsi",
@@ -196,7 +196,7 @@ const combatSpells = {
 const utilitySpells = {
   luciDanzanti: {
     level: 0,
-    url: "/wiki/Luci_Danzanti",
+    url: "/wiki/Incantesimi/Luci_Danzanti",
     name: "Luci Danzanti",
     school: "invocazione",
     description: "Crea quattro luci fluttuanti che puoi muovere",
@@ -204,7 +204,7 @@ const utilitySpells = {
   },
   luce: {
     level: 0,
-    url: "/wiki/Luce",
+    url: "/wiki/Incantesimi/Luce",
     name: "Luce",
     school: "invocazione",
     description: "Fai risplendere un oggetto",
@@ -213,7 +213,7 @@ const utilitySpells = {
   },
   messaggio: {
     level: 0,
-    url: "/wiki/Messaggio",
+    url: "/wiki/Incantesimi/Messaggio",
     name: "Messaggio",
     school: "divinazione",
     description:
@@ -223,7 +223,7 @@ const utilitySpells = {
   },
   condividerePassati: {
     level: 0,
-    url: "/wiki/Condividere_i_Passati",
+    url: "/wiki/Incantesimi/Condividere_i_Passati",
     name: "Condividere i Passati",
     school: "divinazione",
     description:
@@ -232,7 +232,7 @@ const utilitySpells = {
   },
   manoMagica: {
     level: 0,
-    url: "/wiki/Mano_Magica",
+    url: "/wiki/Incantesimi/Mano_Magica",
     name: "Mano Magica",
     school: "invocazione",
     description: "Dai l'ordine a una mano magica di muovere un oggetto",
@@ -241,7 +241,7 @@ const utilitySpells = {
   },
   conoscereDirezione: {
     level: 0,
-    url: "/wiki/Conoscere_Direzione",
+    url: "/wiki/Incantesimi/Conoscere_Direzione",
     name: "Conoscere Direzione",
     school: "divinazione",
     description: "Sai in quale direzione è il nord",

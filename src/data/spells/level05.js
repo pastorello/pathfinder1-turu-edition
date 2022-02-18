@@ -2,7 +2,7 @@ const allLevels = [6, 7, 8, 9, 10];
 const baseAttackSpells = {
   conoFreddo: {
     level: 5,
-    url: "/wiki/Cono_di_Freddo",
+    url: "/wiki/Incantesimi/Cono_di_Freddo",
     name: "Cono di Freddo",
     school: "invocazione",
     description: "Un freddo estremo infligge danni alle creature in un cono",
@@ -11,7 +11,7 @@ const baseAttackSpells = {
   },
   esilio: {
     level: 5,
-    url: "/wiki/Esilio",
+    url: "/wiki/Incantesimi/Esilio",
     name: "Esilio",
     school: "abiurazione",
     description: "Fai tornare una creatura sul suo piano natio",
@@ -20,7 +20,7 @@ const baseAttackSpells = {
   },
   respiroVita: {
     level: 5,
-    url: "/wiki/Respiro_di_Vita",
+    url: "/wiki/Incantesimi/Respiro_di_Vita",
     name: "Respiro di Vita",
     school: "necromanzia",
     description:
@@ -29,7 +29,7 @@ const baseAttackSpells = {
   },
   tempestaAcida: {
     level: 5,
-    url: "/wiki/Tempesta_Acida",
+    url: "/wiki/Incantesimi/Tempesta_Acida",
     name: "Tempesta Acida",
     school: "invocazione",
     description:
@@ -39,7 +39,7 @@ const baseAttackSpells = {
   },
   colpoInfuocato: {
     level: 5,
-    url: "/wiki/Colpo_Infuocato",
+    url: "/wiki/Incantesimi/Colpo_Infuocato",
     name: "Colpo Infuocato",
     school: "invocazione",
     description: "Evochi il fuoco divino dal cielo",
@@ -47,7 +47,7 @@ const baseAttackSpells = {
   },
   tentacoliNeri: {
     level: 5,
-    url: "/wiki/Tentacoli_Neri",
+    url: "/wiki/Incantesimi/Tentacoli_Neri",
     name: "Tentacoli Neri",
     school: "evocazione",
     description: "Tentacoli in  un'area afferrano le creature",
@@ -55,7 +55,7 @@ const baseAttackSpells = {
   },
   esplosioneOmbra: {
     level: 5,
-    url: "/wiki/Esplosione_d%27Ombra",
+    url: "/wiki/Incantesimi/Esplosione_d%27Ombra",
     name: "Esplosione d'Ombra",
     school: "invocazione",
     description: "Crei un cono d'ombra che infligge danni del tipo scelto",
@@ -64,7 +64,7 @@ const baseAttackSpells = {
   },
   nubeMortale: {
     level: 5,
-    url: "/wiki/Nube_Mortale",
+    url: "/wiki/Incantesimi/Nube_Mortale",
     name: "Nube Mortale",
     school: "necromanzia",
     description: "Avveleni le creature in una nube che si allontana da te",
@@ -73,7 +73,7 @@ const baseAttackSpells = {
   },
   impulsoSinaptico: {
     level: 5,
-    url: "/wiki/Impulso_Sinaptico",
+    url: "/wiki/Incantesimi/Impulso_Sinaptico",
     name: "Impulso Sinaptico",
     school: "ammaliamento",
     description: "Rallenti le creature con un'esplosione mentale",
@@ -84,7 +84,7 @@ const baseAttackSpells = {
 const combatSpells = {
   morteIllusoria: {
     level: 5,
-    url: "/wiki/Morte_Illusoria",
+    url: "/wiki/Incantesimi/Morte_Illusoria",
     name: "Morte Illusoria",
     school: "illusione",
     description: "Il bersaglio sembra morire, ma in realtà diventa invisibile",
@@ -93,7 +93,7 @@ const combatSpells = {
   },
   evocaDrago: {
     level: 5,
-    url: "/wiki/Evoca_Drago",
+    url: "/wiki/Incantesimi/Evoca_Drago",
     name: "Evoca Drago",
     school: "evocazione",
     description: "Evochi un drago che combatta con te",
@@ -102,7 +102,7 @@ const combatSpells = {
   },
   trasportoTelecinetico: {
     level: 5,
-    url: "/wiki/Trasporto_Telecinetico",
+    url: "/wiki/Incantesimi/Trasporto_Telecinetico",
     name: "Trasporto Telecinetico",
     school: "invocazione",
     description: "Sposti un oggetto grande",
@@ -110,7 +110,7 @@ const combatSpells = {
   },
   interdizioneMorte: {
     level: 5,
-    url: "/wiki/Interdizione_alla_Morte",
+    url: "/wiki/Incantesimi/Interdizione_alla_Morte",
     name: "Interdizione alla Morte",
     school: "abiurazione",
     description: "Proteggi una creatura dall'energia negativa",
@@ -118,7 +118,7 @@ const combatSpells = {
   },
   evocaCelestiale: {
     level: 5,
-    url: "/wiki/Evoca_Celestiale",
+    url: "/wiki/Incantesimi/Evoca_Celestiale",
     name: "Evoca Celestiale",
     school: "evocazione",
     description: "Evochi un celestiale che combatta con te",
@@ -127,7 +127,7 @@ const combatSpells = {
   },
   guardianoSpirituale: {
     level: 5,
-    url: "/wiki/Guardiano_Spirituale",
+    url: "/wiki/Incantesimi/Guardiano_Spirituale",
     name: "Guardiano Spirituale",
     school: "abiurazione",
     description:
@@ -137,7 +137,7 @@ const combatSpells = {
   },
   muroCromatico: {
     level: 5,
-    url: "/wiki/Muro_Cromatico",
+    url: "/wiki/Incantesimi/Muro_Cromatico",
     name: "Muro Cromatico",
     school: "abiurazione",
     description:
@@ -147,7 +147,7 @@ const combatSpells = {
   },
   muroPietra: {
     level: 5,
-    url: "/wiki/Muro_di_Pietra",
+    url: "/wiki/Incantesimi/Muro_di_Pietra",
     name: "Muro di Pietra",
     school: "evocazione",
     description: "Crei un muro di pietra",
@@ -156,7 +156,7 @@ const combatSpells = {
   },
   sottrazioneFantasma: {
     level: 5,
-    url: "/wiki/Sottrazione_Fantasma",
+    url: "/wiki/Incantesimi/Sottrazione_Fantasma",
     name: "Sottrazione Fantasma",
     school: "illusione",
     description:
@@ -165,7 +165,7 @@ const combatSpells = {
   },
   sinestesia: {
     level: 5,
-    url: "/wiki/Sinestesia",
+    url: "/wiki/Incantesimi/Sinestesia",
     name: "Sinestesia",
     school: "divinazione",
     description: "Riprogrammi i sensi di una creatura",
@@ -174,7 +174,7 @@ const combatSpells = {
   },
   formaVegetale: {
     level: 5,
-    url: "/wiki/Incantesimi/Forma_Vegetale",
+    url: "/wikiForma_Vegetale",
     name: "Forma Vegetale",
     school: "trasmutazione",
     description:
@@ -184,7 +184,7 @@ const combatSpells = {
   },
   muroGhiaccio: {
     level: 5,
-    url: "/wiki/Muro_di_Ghiaccio",
+    url: "/wiki/Incantesimi/Muro_di_Ghiaccio",
     name: "Muro di Ghiaccio",
     school: "invocazione",
     description:
@@ -194,7 +194,7 @@ const combatSpells = {
   },
   formaElementale: {
     level: 5,
-    url: "/wiki/Incantesimi/Forma_Elementale",
+    url: "/wikiForma_Elementale",
     name: "Forma Elementale",
     school: "trasmutazione",
     description: "Ti trasformi in un elementale",
@@ -203,7 +203,7 @@ const combatSpells = {
   },
   mantoColori: {
     level: 5,
-    url: "/wiki/Manto_di_Colori",
+    url: "/wiki/Incantesimi/Manto_di_Colori",
     name: "Manto di Colori",
     school: "illusione",
     description:
@@ -212,7 +212,7 @@ const combatSpells = {
   },
   evocaGigante: {
     level: 5,
-    url: "/wiki/Evoca_Gigante",
+    url: "/wiki/Incantesimi/Evoca_Gigante",
     name: "Evoca Gigante",
     school: "evocazione",
     description: "Evochi un gigante che combatta con te",
@@ -221,7 +221,7 @@ const combatSpells = {
   },
   evocaNefando: {
     level: 5,
-    url: "/wiki/Evoca_Nefando",
+    url: "/wiki/Incantesimi/Evoca_Nefando",
     name: "Evoca Nefando",
     school: "evocazione",
     description: "Evochi un nefando che combatta con te",
@@ -230,7 +230,7 @@ const combatSpells = {
   },
   evocaEntità: {
     level: 5,
-    url: "/wiki/Evoca_Entit%C3%A0",
+    url: "/wiki/Incantesimi/Evoca_Entit%C3%A0",
     name: "Evoca Entità",
     school: "evocazione",
     description: "Evochi un'aberrazione che combatta con te",
@@ -239,7 +239,7 @@ const combatSpells = {
   },
   frenesiaLunare: {
     level: 5,
-    url: "/wiki/Frenesia_Lunare",
+    url: "/wiki/Incantesimi/Frenesia_Lunare",
     name: "Frenesia Lunare",
     school: "trasmutazione",
     description:
@@ -249,7 +249,7 @@ const combatSpells = {
   },
   piagaAbissale: {
     level: 5,
-    url: "/wiki/Piaga_Abissale",
+    url: "/wiki/Incantesimi/Piaga_Abissale",
     name: "Piaga Abissale",
     school: "necromanzia",
     description: "Infliggi una maledizione che rende risucchiato",
@@ -257,7 +257,7 @@ const combatSpells = {
   },
   maledizionaMarinaio: {
     level: 5,
-    url: "/wiki/Maledizione_del_Marinaio",
+    url: "/wiki/Incantesimi/Maledizione_del_Marinaio",
     name: "Maledizione del Marinaio",
     school: "necromanzia",
     description: "Contagi una creatura con la maledizione del mare mosso",
@@ -265,7 +265,7 @@ const combatSpells = {
   },
   disperazioneOpprimente: {
     level: 5,
-    url: "/wiki/Disperazione_Opprimente",
+    url: "/wiki/Incantesimi/Disperazione_Opprimente",
     name: "Disperazione Opprimente",
     school: "ammaliamento",
     description: "Fai piangere a dirotto una creatura",
@@ -277,7 +277,7 @@ const combatSpells = {
 const utilitySpells = {
   scenaIllusoria: {
     level: 5,
-    url: "/wiki/Scena_Illusoria",
+    url: "/wiki/Incantesimi/Scena_Illusoria",
     name: "Scena Illusoria",
     school: "illusione",
     description:
@@ -287,7 +287,7 @@ const utilitySpells = {
   },
   linguaggi: {
     level: 5,
-    url: "/wiki/Linguaggi",
+    url: "/wiki/Incantesimi/Linguaggi",
     name: "Linguaggi",
     school: "divinazione",
     description:
@@ -297,7 +297,7 @@ const utilitySpells = {
   },
   visioneFalsa: {
     level: 5,
-    url: "/wiki/Visione_Falsa",
+    url: "/wiki/Incantesimi/Visione_Falsa",
     name: "Visione Falsa",
     school: "illusione",
     description: "Inganni un incantesimo di scrutamento",
@@ -305,7 +305,7 @@ const utilitySpells = {
   },
   inviare: {
     level: 5,
-    url: "/wiki/Inviare",
+    url: "/wiki/Incantesimi/Inviare",
     name: "Inviare",
     school: "divinazione",
     description:
@@ -314,7 +314,7 @@ const utilitySpells = {
   },
   occhioIndagatore: {
     level: 5,
-    url: "/wiki/Occhio_Indagatore",
+    url: "/wiki/Incantesimi/Occhio_Indagatore",
     name: "Occhio Indagatore",
     school: "divinazione",
     description: "Un occhio invisibile ti trasmette ciò che vede",
@@ -322,7 +322,7 @@ const utilitySpells = {
   },
   sondaMentale: {
     level: 5,
-    url: "/wiki/Sonda_Mentale",
+    url: "/wiki/Incantesimi/Sonda_Mentale",
     name: "Sonda Mentale",
     school: "divinazione",
     description:
@@ -331,7 +331,7 @@ const utilitySpells = {
   },
   camminareOmbre: {
     level: 5,
-    url: "/wiki/Camminare_nelle_Ombre",
+    url: "/wiki/Incantesimi/Camminare_nelle_Ombre",
     name: "Camminare nelle Ombre",
     school: "evocazione",
     description: "Viaggi rapidamente attraverso il Piano delle Ombre",
@@ -339,7 +339,7 @@ const utilitySpells = {
   },
   sognarePotenziale: {
     level: 5,
-    url: "/wiki/Sognare_Potenziale",
+    url: "/wiki/Incantesimi/Sognare_Potenziale",
     name: "Sognare Potenziale",
     school: "ammaliamento",
     description: "Il bersaglio si riaddestra nei suoi sogni",
@@ -347,7 +347,7 @@ const utilitySpells = {
   },
   traslazioneArborea: {
     level: 5,
-    url: "/wiki/Traslazione_Arborea",
+    url: "/wiki/Incantesimi/Traslazione_Arborea",
     name: "Traslazione Arborea",
     school: "evocazione",
     description: "Ti teletrasporti da un albero all'altro",
@@ -356,7 +356,7 @@ const utilitySpells = {
   },
   controllareAcqua: {
     level: 5,
-    url: "/wiki/Controllare_Acqua",
+    url: "/wiki/Incantesimi/Controllare_Acqua",
     name: "Controllare Acqua",
     school: "invocazione",
     description:
@@ -365,7 +365,7 @@ const utilitySpells = {
   },
   passapareti: {
     level: 5,
-    url: "/wiki/Passapareti",
+    url: "/wiki/Incantesimi/Passapareti",
     name: "Passapareti",
     school: "evocazione",
     description: "Formi un tunnel di terra attraverso un muro",
@@ -374,7 +374,7 @@ const utilitySpells = {
   },
   allucinazione: {
     level: 5,
-    url: "/wiki/Allucinazione",
+    url: "/wiki/Incantesimi/Allucinazione",
     name: "Allucinazione",
     school: "illusione",
     description:
@@ -384,7 +384,7 @@ const utilitySpells = {
   },
   suggestioneInconscia: {
     level: 5,
-    url: "/wiki/Suggestione_Inconscia",
+    url: "/wiki/Incantesimi/Suggestione_Inconscia",
     name: "Suggestione Inconscia",
     school: "ammaliamento",
     description:
@@ -394,7 +394,7 @@ const utilitySpells = {
   },
   legameTelepatico: {
     level: 5,
-    url: "/wiki/Legame_Telepatico",
+    url: "/wiki/Incantesimi/Legame_Telepatico",
     name: "Legame Telepatico",
     school: "divinazione",
     description:

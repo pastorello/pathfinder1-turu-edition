@@ -1,7 +1,7 @@
 const spells = [
   {
     level: 1,
-    url: "/wiki/Avanzare_Senza_Ostacoli",
+    url: "/wiki/Incantesimi/Avanzare_Senza_Ostacoli",
     name: "Avanzare Senza Ostacoli",
     source: ["divina"],
     school: "trasmutazione",
@@ -10,7 +10,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Bagliore_Accecante",
+    url: "/wiki/Incantesimi/Bagliore_Accecante",
     name: "Bagliore Accecante",
     source: ["divina"],
     school: "invocazione",
@@ -21,7 +21,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Benedizione_del_Guaritore",
+    url: "/wiki/Incantesimi/Benedizione_del_Guaritore",
     name: "Benedizione del Guaritore",
     source: ["divina"],
     school: "necromanzia",
@@ -32,7 +32,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Censura",
+    url: "/wiki/Incantesimi/Censura",
     name: "Censura",
     source: ["divina"],
     school: "trasmutazione",
@@ -42,7 +42,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Chiamata_di_Morte",
+    url: "/wiki/Incantesimi/Chiamata_di_Morte",
     name: "Chiamata di Morte",
     source: ["divina"],
     school: "necromanzia",
@@ -52,7 +52,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Cieca_Ambizione",
+    url: "/wiki/Incantesimi/Cieca_Ambizione",
     name: "Cieca Ambizione",
     source: ["divina"],
     school: "ammaliamento",
@@ -63,7 +63,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Condividere_Fardello",
+    url: "/wiki/Incantesimi/Condividere_Fardello",
     name: "Condividere Fardello",
     source: ["divina"],
     school: "abiurazione",
@@ -72,7 +72,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Condividere_Sapienza",
+    url: "/wiki/Incantesimi/Condividere_Sapienza",
     name: "Condividere Sapienza",
     source: ["divina"],
     school: "divinazione",
@@ -81,527 +81,527 @@ const spells = [
   },
   /*
 
-  url: "/wiki/Piedi_Agili" title="Piedi Agili">Piedi Agili</a>
+  url: "/wiki/Incantesimi/Piedi_Agili" title="Piedi Agili">Piedi Agili</a>
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "La benedizione del tuo Dio rende i tuoi piedi più veloci e i tuoi movimenti più fluidi.
 
-url: "/wiki/Pietra_Sfrecciante" title="Pietra Sfrecciante">Pietra Sfrecciante</a>
+url: "/wiki/Incantesimi/Pietra_Sfrecciante" title="Pietra Sfrecciante">Pietra Sfrecciante</a>
 asd:  "Hurtling Stone
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Attacco" title="Tratti/Attacco">Attacco</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Tratti/Terra" title="Tratti/Terra">Terra</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Attacco" title="Tratti/Attacco">Attacco</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Incantesimi/Tratti/Terra" title="Tratti/Terra">Terra</a>
 asd:  "Focalizzato
 asd:  "1
 asd:  "
 asd:  "Evochi una pietra magica e la lanci, con la presenza del tuo Dio che guida il tuo braccio.
 
-url: "/wiki/Pizzico_di_Fortuna" title="Pizzico di Fortuna">Pizzico di Fortuna</a>
+url: "/wiki/Incantesimi/Pizzico_di_Fortuna" title="Pizzico di Fortuna">Pizzico di Fortuna</a>
 asd:  "Bit of Luck
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "Fai pendere leggermente l'ago della bilancia della fortuna a favore di una creatura per proteggerla da un disastro.
 
-url: "/wiki/Quiete_Forzata" title="Quiete Forzata">Quiete Forzata</a>
+url: "/wiki/Incantesimi/Quiete_Forzata" title="Quiete Forzata">Quiete Forzata</a>
 asd:  "Forced Quiet
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "Abbassi il volume della voce del bersaglio, impedendogli di divulgare segreti importanti.
 
-url: "/wiki/Raggio_di_Fuoco" title="Raggio di Fuoco">Raggio di Fuoco</a>
+url: "/wiki/Incantesimi/Raggio_di_Fuoco" title="Raggio di Fuoco">Raggio di Fuoco</a>
 asd:  "Fire Ray
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Attacco" title="Tratti/Attacco">Attacco</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Fuoco" title="Tratti/Fuoco">Fuoco</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Attacco" title="Tratti/Attacco">Attacco</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Fuoco" title="Tratti/Fuoco">Fuoco</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "Una striscia di fuoco ardente si inarca nell'aria.
 
-url: "/wiki/Raggio_Lunare" title="Raggio Lunare">Raggio Lunare</a>
+url: "/wiki/Incantesimi/Raggio_Lunare" title="Raggio Lunare">Raggio Lunare</a>
 asd:  "Moonbeam
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Attacco" title="Tratti/Attacco">Attacco</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Fuoco" title="Tratti/Fuoco">Fuoco</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Tratti/Luce" title="Tratti/Luce">Luce</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Attacco" title="Tratti/Attacco">Attacco</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Fuoco" title="Tratti/Fuoco">Fuoco</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Incantesimi/Tratti/Luce" title="Tratti/Luce">Luce</a>
 asd:  "Focalizzato
 asd:  "Emetti un raggio di luce lunare.
 
-url: "/wiki/Ricordo_Erudito" title="Ricordo Erudito">Ricordo Erudito</a>
+url: "/wiki/Incantesimi/Ricordo_Erudito" title="Ricordo Erudito">Ricordo Erudito</a>
 asd:  "Scholarly Recollection
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "Recitando una breve preghiera mentre raccogli le idee, hai la fortuna di scoprire che la tua Divinità ti ha dato le giuste informazioni per la tua situazione.
 
-url: "/wiki/Scatto_Atletico" title="Scatto Atletico">Scatto Atletico</a>
+url: "/wiki/Incantesimi/Scatto_Atletico" title="Scatto Atletico">Scatto Atletico</a>
 asd:  "Athletic Rush
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "Il tuo corpo cresce in forza fisica e abilità.
 
-url: "/wiki/Schizzo_Artistico" title="Schizzo Artistico">Schizzo Artistico</a>
+url: "/wiki/Incantesimi/Schizzo_Artistico" title="Schizzo Artistico">Schizzo Artistico</a>
 asd:  "Splash of Art
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>, <a href="/wiki/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>, <a href="/wiki/Incantesimi/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
 asd:  "Focalizzato
 asd:  "L'area è invasa da una grande quantità di pitture, attrezzi o altri simboli artistici illusori e colorati.
 
-url: "/wiki/Sogni_d%27Oro" title="Sogni d'Oro">Sogni d'Oro</a>
+url: "/wiki/Incantesimi/Sogni_d%27Oro" title="Sogni d'Oro">Sogni d'Oro</a>
 asd:  "Sweet Dream
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Linguistico" title="Tratti/Linguistico">Linguistico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Tratti/Sonno" title="Tratti/Sonno">Sonno</a>, <a href="/wiki/Tratti/Uditivo" title="Tratti/Uditivo">Uditivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Linguistico" title="Tratti/Linguistico">Linguistico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Incantesimi/Tratti/Sonno" title="Tratti/Sonno">Sonno</a>, <a href="/wiki/Incantesimi/Tratti/Uditivo" title="Tratti/Uditivo">Uditivo</a>
 asd:  "Focalizzato
 asd:  "Cantando o raccontando storie, culli il bersaglio in un sogno incantevole.
 
-url: "/wiki/Sovraccarico_dell%27Arma" title="Sovraccarico dell'Arma">Sovraccarico dell'Arma</a>
+url: "/wiki/Incantesimi/Sovraccarico_dell%27Arma" title="Sovraccarico dell'Arma">Sovraccarico dell'Arma</a>
 asd:  "Weapon Surge
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "Puntando la tua arma verso l'alto, la infondi di energia divina.
 
-url: "/wiki/Spine_Palpitanti" title="Spine Palpitanti">Spine Palpitanti</a>
+url: "/wiki/Incantesimi/Spine_Palpitanti" title="Spine Palpitanti">Spine Palpitanti</a>
 asd:  "Vibrant Thorns
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Morfosi" title="Tratti/Morfosi">Morfosi</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>, <a href="/wiki/Tratti/Vegetale" title="Tratti/Vegetale">Vegetale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Morfosi" title="Tratti/Morfosi">Morfosi</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>, <a href="/wiki/Incantesimi/Tratti/Vegetale" title="Tratti/Vegetale">Vegetale</a>
 asd:  "Focalizzato
 asd:  "Sul tuo corpo compare un manto di spine che ferisce coloro che ti colpiscono e trabocca di magia vitale.
 
-url: "/wiki/Spostamento_Improvviso" title="Spostamento Improvviso">Spostamento Improvviso</a>
+url: "/wiki/Incantesimi/Spostamento_Improvviso" title="Spostamento Improvviso">Spostamento Improvviso</a>
 asd:  "Sudden Shift
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>
 asd:  "Focalizzato
 asd:  "Ti sposti rapidamente da un punto pericoloso e ti nascondi.
 
-  url: "/wiki/Leggere_Fato" title="Leggere Fato">Leggere Fato</a>
+  url: "/wiki/Incantesimi/Leggere_Fato" title="Leggere Fato">Leggere Fato</a>
 asd:  "Read Fate
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Predizione" title="Tratti/Predizione">Predizione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Predizione" title="Tratti/Predizione">Predizione</a>
 asd:  "Focalizzato
 asd:  "Tenti di sapere qualcosa in più sul destino a breve termine del bersaglio.
 
-url: "/wiki/Manto_d%27Ombra" title="Manto d'Ombra">Manto d'Ombra</a>
+url: "/wiki/Incantesimi/Manto_d%27Ombra" title="Manto d'Ombra">Manto d'Ombra</a>
 asd:  "Cloak of Shadow
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Tratti/Oscurit%C3%A0" title="Tratti/Oscurità">Oscurità</a>, <a href="/wiki/Tratti/Ombra" title="Tratti/Ombra">Ombra</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Incantesimi/Tratti/Oscurit%C3%A0" title="Tratti/Oscurità">Oscurità</a>, <a href="/wiki/Incantesimi/Tratti/Ombra" title="Tratti/Ombra">Ombra</a>
 asd:  "Focalizzato
 asd:  "Avvolgi il bersaglio in un manto di ombre vorticose che lo rende più difficile da vedere.
 
-url: "/wiki/Mente_Perfezionata" title="Mente Perfezionata">Mente Perfezionata</a>
+url: "/wiki/Incantesimi/Mente_Perfezionata" title="Mente Perfezionata">Mente Perfezionata</a>
 asd:  "Perfected Mind
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "Mediti sulla perfezione per rimuovere tutte le distrazioni dalla tua mente.
 
-url: "/wiki/Ondata_di_Marea" title="Ondata di Marea">Ondata di Marea</a>
+url: "/wiki/Incantesimi/Ondata_di_Marea" title="Ondata di Marea">Ondata di Marea</a>
 asd:  "Tidal Surge
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Acqua" title="Tratti/Acqua">Acqua</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Acqua" title="Tratti/Acqua">Acqua</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "Richiami un'onda gigantesca per spostare il bersaglio su uno specchio d'acqua o sulla terra.
 
-url: "/wiki/Pancia_Piena" title="Pancia Piena">Pancia Piena</a>
+url: "/wiki/Incantesimi/Pancia_Piena" title="Pancia Piena">Pancia Piena</a>
 asd:  "Overstuff
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "Il bersaglio assume una quantità enorme di cibo e bevande.
 
-url: "/wiki/Parola_di_Verit%C3%A0" title="Parola di Verità">Parola di Verità</a>
+url: "/wiki/Incantesimi/Parola_di_Verit%C3%A0" title="Parola di Verità">Parola di Verità</a>
 asd:  "Word of Truth
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>
 asd:  "Focalizzato
 asd:  "Pronunci un'affermazione della quale sei convinto che sia vera e che sia immune a tentativi di essere travisata con parole fuorvianti, omissioni e simili.
 
 asd:  "Manuale di Gioco
-url: "/wiki/Parole_Lenitive" title="Parole Lenitive">Parole Lenitive</a>
+url: "/wiki/Incantesimi/Parole_Lenitive" title="Parole Lenitive">Parole Lenitive</a>
 asd:  "Soothing Words
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "Tenti di calmare il bersaglio pronunciando parole lenitive con un tono calmo e pacato.
 
 
-url: "/wiki/Tocco_di_Non_Morte" title="Tocco di Non Morte">Tocco di Non Morte</a>
+url: "/wiki/Incantesimi/Tocco_di_Non_Morte" title="Tocco di Non Morte">Tocco di Non Morte</a>
 asd:  "Touch of Undeath
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Tratti/Negativo" title="Tratti/Negativo">Negativo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Incantesimi/Tratti/Negativo" title="Tratti/Negativo">Negativo</a>
 asd:  "Focalizzato
 asd:  "Attacchi la forza vitale del bersaglio con la non morte.
 
-url: "/wiki/Tocco_di_Obbedienza" title="Tocco di Obbedienza">Tocco di Obbedienza</a>
+url: "/wiki/Incantesimi/Tocco_di_Obbedienza" title="Tocco di Obbedienza">Tocco di Obbedienza</a>
 asd:  "Touch of Obedience
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "Il tuo tocco imperioso intacca la forza di volontà del bersaglio, rendendolo più facile da controllare.
 
-url: "/wiki/Velo_di_Sicurezza" title="Velo di Sicurezza">Velo di Sicurezza</a>
+url: "/wiki/Incantesimi/Velo_di_Sicurezza" title="Velo di Sicurezza">Velo di Sicurezza</a>
 asd:  "Veil of Confidence
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "Ti circondi di un velo di sicurezza.
 
- url:   "/wiki/Vendicare_Dolore" title="Vendicare Dolore">Vendicare Dolore</a>
+ url:   "/wiki/Incantesimi/Vendicare_Dolore" title="Vendicare Dolore">Vendicare Dolore</a>
 asd:  "Retributive Pain
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Tratti/Non_Letale" title="Tratti/Non Letale">Non Letale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Incantesimi/Tratti/Non_Letale" title="Tratti/Non Letale">Non Letale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "La tua vendetta si abbatte su agili che ti tormenta riflettendo una parte del tuo dolore.
 
- url:   "/wiki/Colpo_di_Fortuna" title="Colpo di Fortuna">Colpo di Fortuna</a>
+ url:   "/wiki/Incantesimi/Colpo_di_Fortuna" title="Colpo di Fortuna">Colpo di Fortuna</a>
 asd:  "Lucky Break
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Ritiri un Tiro Salvezza e usi il migliore dei due risultati.
 
- url:   "/wiki/Comando_Sferzante" title="Comando Sferzante">Comando Sferzante</a>
+ url:   "/wiki/Incantesimi/Comando_Sferzante" title="Comando Sferzante">Comando Sferzante</a>
 asd:  "Commanding Lash
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Minacciandolo di infliggergli ulteriori sofferenze, costringi al tuo volere una creatura alla quale hai inflitto danno di recente.
 
- url:   "/wiki/Competizione_Estrema" title="Competizione Estrema">Competizione Estrema</a>
+ url:   "/wiki/Incantesimi/Competizione_Estrema" title="Competizione Estrema">Competizione Estrema</a>
 asd:  "Competitive Edge
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "La tua competitività ti porta a migliorarti contro le avversità.
 
 
- url:   "/wiki/Conoscere_il_Nemico" title="Conoscere il Nemico">Conoscere il Nemico</a>
+ url:   "/wiki/Incantesimi/Conoscere_il_Nemico" title="Conoscere il Nemico">Conoscere il Nemico</a>
 asd:  "Know the Enemy
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Effettua un'azione di Ricordare Conoscenze, tirando la prova di abilità appropriata per identificare le capacità della creatura innescante.
 
-url:   "/wiki/Disperdersi_nell%27Aria" title="Disperdersi nell'Aria">Disperdersi nell'Aria</a>
+url:   "/wiki/Incantesimi/Disperdersi_nell%27Aria" title="Disperdersi nell'Aria">Disperdersi nell'Aria</a>
 asd:  "Disperse into Air
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Aria" title="Tratti/Aria">Aria</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Metamorfosi" title="Tratti/Metamorfosi">Metamorfosi</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Aria" title="Tratti/Aria">Aria</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Metamorfosi" title="Tratti/Metamorfosi">Metamorfosi</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Dopo aver subito il danno innescante, ti trasformi in aria.
 
-url:   "/wiki/Fare_il_Proprio_Corso" title="Fare il Proprio Corso">Fare il Proprio Corso</a>
+url:   "/wiki/Incantesimi/Fare_il_Proprio_Corso" title="Fare il Proprio Corso">Fare il Proprio Corso</a>
 asd:  "Take Its Course
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Puoi far giungere una creatura al momento peggiore della sua sofferenza o intensificare il suo tormento.
 
-url:   "/wiki/Fervore_della_Battaglia" title="Fervore della Battaglia">Fervore della Battaglia</a>
+url:   "/wiki/Incantesimi/Fervore_della_Battaglia" title="Fervore della Battaglia">Fervore della Battaglia</a>
 asd:  "Zeal for Battle
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Fomenti la giusta collera tra te stesso e un alleato.
 
-url:   "/wiki/Aura_Distruttiva" title="Aura Distruttiva">Aura Distruttiva</a>
+url:   "/wiki/Incantesimi/Aura_Distruttiva" title="Aura Distruttiva">Aura Distruttiva</a>
 asd:  "Destructive Aura
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Polveri vorticose di devastazione divina ti circondano, indebolendo le difese di tutti coloro che toccano.
 
-url: "/wiki/Barriera_Infuocata" title="Barriera Infuocata">Barriera Infuocata</a>
+url: "/wiki/Incantesimi/Barriera_Infuocata" title="Barriera Infuocata">Barriera Infuocata</a>
 asd:  "Flame Barrier
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Proteggi te stesso o un alleato dalle fiamme.
 
- url:   "/wiki/Battito_della_Citt%C3%A0" title="Battito della Città">Battito della Città</a>
+ url:   "/wiki/Incantesimi/Battito_della_Citt%C3%A0" title="Battito della Città">Battito della Città</a>
 asd:  "Pulse of the City
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Scrutare" title="Tratti/Scrutare">Scrutare</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Scrutare" title="Tratti/Scrutare">Scrutare</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Ti inserisci nello spirito del tempo dell'insediamento più vicino (se ce ne sono).
 
-url: "/wiki/Depositario_della_Magia" title="Depositario della Magia">Depositario della Magia</a>
+url: "/wiki/Incantesimi/Depositario_della_Magia" title="Depositario della Magia">Depositario della Magia</a>
 asd:  "Magic's Vessel
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "Una creatura diventa un recipiente per l'energia magica pura inviata dalla tua divinità.
 
-url: "/wiki/Folata_Impetuosa" title="Folata Impetuosa">Folata Impetuosa</a>
+url: "/wiki/Incantesimi/Folata_Impetuosa" title="Folata Impetuosa">Folata Impetuosa</a>
 asd:  "Pushing Gust
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Aria" title="Tratti/Aria">Aria</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Evocazione" title="Tratti/Evocazione">Evocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Aria" title="Tratti/Aria">Aria</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Evocazione" title="Tratti/Evocazione">Evocazione</a>
 asd:  "Focalizzato
 asd:  "Spingendo l'aria, investi il bersaglio con una potente Folata di Vento.
 
-url: "/wiki/Grido_di_Distruzione" title="Grido di Distruzione">Grido di Distruzione</a>
+url: "/wiki/Incantesimi/Grido_di_Distruzione" title="Grido di Distruzione">Grido di Distruzione</a>
 asd:  "Cry of Destruction
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Tratti/Sonoro" title="Tratti/Sonoro">Sonoro</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>, <a href="/wiki/Incantesimi/Tratti/Sonoro" title="Tratti/Sonoro">Sonoro</a>
 asd:  "Focalizzato
 asd:  "La tua voce esplode, distruggendo tutto ciò che si trova di fronte a te.
 
-url: "/wiki/Impressione_di_Ricchezza" title="Impressione di Ricchezza">Impressione di Ricchezza</a>
+url: "/wiki/Incantesimi/Impressione_di_Ricchezza" title="Impressione di Ricchezza">Impressione di Ricchezza</a>
 asd:  "Appearance of Wealth
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>
 asd:  "Focalizzato
 asd:  "1
 asd:  "Crei una breve visione di una ricchezza immensa che riempie l'area dell'incantesimo.
 
-url: "/wiki/Incubo_del_Risveglio" title="Incubo del Risveglio">Incubo del Risveglio</a>
+url: "/wiki/Incantesimi/Incubo_del_Risveglio" title="Incubo del Risveglio">Incubo del Risveglio</a>
 asd:  "Waking Nightmare
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Tratti/Paura" title="Tratti/Paura">Paura</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Incantesimi/Tratti/Paura" title="Tratti/Paura">Paura</a>
 asd:  "Focalizzato
 asd:  "Imprimi nella mente della creatura una visione terrificante proveniente dai suoi incubi
 
-url: "/wiki/Infliggere_Dolore" title="Infliggere Dolore">Infliggere Dolore</a>
+url: "/wiki/Incantesimi/Infliggere_Dolore" title="Infliggere Dolore">Infliggere Dolore</a>
 asd:  "Savor the Sting
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Tratti/Non_Letale" title="Tratti/Non Letale">Non Letale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Incantesimi/Tratti/Non_Letale" title="Tratti/Non Letale">Non Letale</a>
 asd:  "Focalizzato
 asd:  "Provi piacere nell'infliggere dolore al bersaglio.
 
-url: "/wiki/Sacrificio_del_Protettore" title="Sacrificio del Protettore">Sacrificio del Protettore</a>
+url: "/wiki/Incantesimi/Sacrificio_del_Protettore" title="Sacrificio del Protettore">Sacrificio del Protettore</a>
 asd:  "Protector's Sacrifice
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "Proteggi il tuo alleato soffrendo al suo posto.
 
-url: "/wiki/Tocco_Affascinante" title="Tocco Affascinante">Tocco Affascinante</a>
+url: "/wiki/Incantesimi/Tocco_Affascinante" title="Tocco Affascinante">Tocco Affascinante</a>
 asd:  "Charming Touch
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "Infondi attrazione nel bersaglio, facendolo agire in modo più amichevole.
 
-url: "/wiki/Volto_tra_la_Folla" title="Volto tra la Folla">Volto tra la Folla</a>
+url: "/wiki/Incantesimi/Volto_tra_la_Folla" title="Volto tra la Folla">Volto tra la Folla</a>
 asd:  "Face In The Crowd
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>, <a href="/wiki/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>, <a href="/wiki/Incantesimi/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
 asd:  "Focalizzato
 asd:  "Mentre ti trovi in mezzo a una folla di creature più o meno simili, il tuo aspetto diventa scialbo e indistinto.
 
-url: "/wiki/Abbondanza_della_Natura" title="Abbondanza della Natura">Abbondanza della Natura</a>
+url: "/wiki/Incantesimi/Abbondanza_della_Natura" title="Abbondanza della Natura">Abbondanza della Natura</a>
 asd:  "Nature's Bounty
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Evocazione" title="Tratti/Evocazione">Evocazione</a>, <a href="/wiki/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>, <a href="/wiki/Tratti/Vegetale" title="Tratti/Vegetale">Vegetale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Evocazione" title="Tratti/Evocazione">Evocazione</a>, <a href="/wiki/Incantesimi/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>, <a href="/wiki/Incantesimi/Tratti/Vegetale" title="Tratti/Vegetale">Vegetale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Un frutto o una verdura delle dimensioni del palmo di una mano compare nella tua mano aperta.
 
-url:   "/wiki/Adorazione_Accattivante" title="Adorazione Accattivante">Adorazione Accattivante</a>
+url:   "/wiki/Incantesimi/Adorazione_Accattivante" title="Adorazione Accattivante">Adorazione Accattivante</a>
 asd:  "Captivating Adoration
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>, <a href="/wiki/Incantesimi/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Diventi estremamente affascinante e le creature vengono distratte dalla loro attrazione nei tuoi confronti per tutto il tempo in cui rimangono all'interno dell'area.
 
- url:   "/wiki/Allontanare_la_Morte" title="Allontanare la Morte">Allontanare la Morte</a>
+ url:   "/wiki/Incantesimi/Allontanare_la_Morte" title="Allontanare la Morte">Allontanare la Morte</a>
 asd:  "Rebuke Death
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Guarigione" title="Tratti/Guarigione">Guarigione</a>, <a href="/wiki/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Guarigione" title="Tratti/Guarigione">Guarigione</a>, <a href="/wiki/Incantesimi/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Incantesimi/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Strappi le creature dalle grinfie della morte.
 
-url:   "/wiki/Nubifragio" title="Nubifragio">Nubifragio</a>
+url:   "/wiki/Incantesimi/Nubifragio" title="Nubifragio">Nubifragio</a>
 asd:  "Downpour
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Acqua" title="Tratti/Acqua">Acqua</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Acqua" title="Tratti/Acqua">Acqua</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Evochi un nubifragio torrenziale, il quale spegne le fiamme non magiche.
 
-url:   "/wiki/Occhi_Oscurati" title="Occhi Oscurati">Occhi Oscurati</a>
+url:   "/wiki/Incantesimi/Occhi_Oscurati" title="Occhi Oscurati">Occhi Oscurati</a>
 asd:  "Darkened Eyes
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Oscurit%C3%A0" title="Tratti/Oscurità">Oscurità</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Oscurit%C3%A0" title="Tratti/Oscurità">Oscurità</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Fai penetrare le tenebre nella vista del bersaglio.
 
-url:   "/wiki/Orgoglio_Delirante" title="Orgoglio Delirante">Orgoglio Delirante</a>
+url:   "/wiki/Incantesimi/Orgoglio_Delirante" title="Orgoglio Delirante">Orgoglio Delirante</a>
 asd:  "Delusional Pride
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Sovraccarichi la sicurezza in sé stesso del bersaglio, il quale attribuisce i suoi fallimenti a fattori esterni.
 
-url:   "/wiki/Parola_di_Libert%C3%A0" title="Parola di Libertà">Parola di Libertà</a>
+url:   "/wiki/Incantesimi/Parola_di_Libert%C3%A0" title="Parola di Libertà">Parola di Libertà</a>
 asd:  "Word of Freedom
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Pronunci una parola di potere che libera una creatura.
 
-url: "/wiki/Forma_Perfezionata" title="Forma Perfezionata">Forma Perfezionata</a>
+url: "/wiki/Incantesimi/Forma_Perfezionata" title="Forma Perfezionata">Forma Perfezionata</a>
 asd:  "Perfected Form
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Ritira il Tiro Salvezza ed utilizza il risultato migliore.
 
-url:   "/wiki/Gemello_dell%27Ingannatore" title="Gemello dell'Ingannatore">Gemello dell'Ingannatore</a>
+url:   "/wiki/Incantesimi/Gemello_dell%27Ingannatore" title="Gemello dell'Ingannatore">Gemello dell'Ingannatore</a>
 asd:  "Trickster's Twin
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>, <a href="/wiki/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Illusione" title="Tratti/Illusione">Illusione</a>, <a href="/wiki/Incantesimi/Tratti/Visivo" title="Tratti/Visivo">Visivo</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Ti accontenti raramente di essere in un posto alla volta.
 
-url:   "/wiki/Incubo_Condiviso" title="Incubo Condiviso">Incubo Condiviso</a>
+url:   "/wiki/Incantesimi/Incubo_Condiviso" title="Incubo Condiviso">Incubo Condiviso</a>
 asd:  "Shared Nightmare
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Emozione" title="Tratti/Emozione">Emozione</a>, <a href="/wiki/Incantesimi/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Fondendo la tua mente con quella del bersaglio, scambi visioni disorientanti tra i vostri incubi.
 
-url:   "/wiki/Intravedere_Verit%C3%A0" title="Intravedere Verità">Intravedere Verità</a>
+url:   "/wiki/Incantesimi/Intravedere_Verit%C3%A0" title="Intravedere Verità">Intravedere Verità</a>
 asd:  "Glimpse the Truth
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Rivelazione" title="Tratti/Rivelazione">Rivelazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Rivelazione" title="Tratti/Rivelazione">Rivelazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Intuizioni divine ti permettono di vedere le cose per quelle che sono realmente.
 
-url:   "/wiki/Luminosit%C3%A0_Positiva" title="Luminosità Positiva">Luminosità Positiva</a>
+url:   "/wiki/Incantesimi/Luminosit%C3%A0_Positiva" title="Luminosità Positiva">Luminosità Positiva</a>
 asd:  "Positive Luminance
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Luce" title="Tratti/Luce">Luce</a>, <a href="/wiki/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Luce" title="Tratti/Luce">Luce</a>, <a href="/wiki/Incantesimi/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Incantesimi/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Attirando forza vitale al tuo interno, diventi un faro di energia positiva.
 
-url: "/wiki/Metalli_Preziosi" title="Metalli Preziosi">Metalli Preziosi</a>
+url: "/wiki/Incantesimi/Metalli_Preziosi" title="Metalli Preziosi">Metalli Preziosi</a>
 asd:  "Precious Metals
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "La tua Divinità benedice i metalli base per trasformarli in metalli preziosi.
 
-url:   "/wiki/Proliferazione_Artistica" title="Proliferazione Artistica">Proliferazione Artistica</a>
+url:   "/wiki/Incantesimi/Proliferazione_Artistica" title="Proliferazione Artistica">Proliferazione Artistica</a>
 asd:  "Artistic Flourish
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Trasformi il bersaglio in modo che corrisponda alla tua visione artigianale ed artistica.
 
-url:   "/wiki/Resistenza_Duratura" title="Resistenza Duratura">Resistenza Duratura</a>
+url:   "/wiki/Incantesimi/Resistenza_Duratura" title="Resistenza Duratura">Resistenza Duratura</a>
 asd:  "Enduring Might
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "La tua resistenza si unisce alla forza divina per proteggerti.
 
- url:   "/wiki/Richiamo_del_Sognatore" title="Richiamo del Sognatore">Richiamo del Sognatore</a>
+ url:   "/wiki/Incantesimi/Richiamo_del_Sognatore" title="Richiamo del Sognatore">Richiamo del Sognatore</a>
 asd:  "Dreamer's Call
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Incapacitazione" title="Tratti/Incapacitazione">Incapacitazione</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Il bersaglio diventa distratto e suggestionabile, inondato da sogni vividi ad occhi aperti.
 
-url:   "/wiki/Segnale_Mistico" title="Segnale Mistico">Segnale Mistico</a>
+url:   "/wiki/Incantesimi/Segnale_Mistico" title="Segnale Mistico">Segnale Mistico</a>
 asd:  "Mystic Beacon
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Il prossimo incantesimo che infligge danno o incantesimo di guarigione che il bersaglio lancerà prima dell'inizio del tuo turno successivo infligge danni o ripristina Punti Ferita come se l'incantesimo fosse intensificato a 1 livello superiore al suo effettivo livello.
 
- url:   "/wiki/Segreto_Protetto" title="Segreto Protetto">Segreto Protetto</a>
+ url:   "/wiki/Incantesimi/Segreto_Protetto" title="Segreto Protetto">Segreto Protetto</a>
 asd:  "Safeguard Secret
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Mentale" title="Tratti/Mentale">Mentale</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Metti un segreto al sicuro da occhi indiscreti.
 
- url:   "/wiki/Sfera_del_Protettore" title="Sfera del Protettore">Sfera del Protettore</a>
+ url:   "/wiki/Incantesimi/Sfera_del_Protettore" title="Sfera del Protettore">Sfera del Protettore</a>
 asd:  "Protector's Sphere
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Emani un'aura protettiva che ti difende insieme ai tuoi alleati.
 
-url:   "/wiki/Sostentamento_Malevolo" title="Sostentamento Malevolo">Sostentamento Malevolo</a>
+url:   "/wiki/Incantesimi/Sostentamento_Malevolo" title="Sostentamento Malevolo">Sostentamento Malevolo</a>
 asd:  "Malignant Sustenance
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Tratti/Negativo" title="Tratti/Negativo">Negativo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Incantesimi/Tratti/Negativo" title="Tratti/Negativo">Negativo</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Instilli un germe di energia negativa in una creatura non morta, ripristinando il suo vigore innaturale.
 
-url:   "/wiki/Sradicare_Non_Morti" title="Sradicare Non Morti">Sradicare Non Morti</a>
+url:   "/wiki/Incantesimi/Sradicare_Non_Morti" title="Sradicare Non Morti">Sradicare Non Morti</a>
 asd:  "Eradicate Undeath
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Necromanzia" title="Tratti/Necromanzia">Necromanzia</a>, <a href="/wiki/Incantesimi/Tratti/Positivo" title="Tratti/Positivo">Positivo</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Una massiccia inondazione di energia vitale fa a pezzi i non morti.
 
-url:   "/wiki/Tentare_la_Sorte" title="Tentare la Sorte">Tentare la Sorte</a>
+url:   "/wiki/Incantesimi/Tentare_la_Sorte" title="Tentare la Sorte">Tentare la Sorte</a>
 asd:  "Tempt Fate
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Divinazione" title="Tratti/Divinazione">Divinazione</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Distorci le forze del fato per rendere un momento catastrofico o provvidenziale, senza vie di mezzo.
 
-url:   "/wiki/Terremoto_Localizzato" title="Terremoto Localizzato">Terremoto Localizzato</a>
+url:   "/wiki/Incantesimi/Terremoto_Localizzato" title="Terremoto Localizzato">Terremoto Localizzato</a>
 asd:  "Localized Quake
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Terra" title="Tratti/Terra">Terra</a>, <a href="/wiki/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Terra" title="Tratti/Terra">Terra</a>, <a href="/wiki/Incantesimi/Tratti/Trasmutazione" title="Tratti/Trasmutazione">Trasmutazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Scuoti la terra, facendo cadere le creature vicine.
 
-url:   "/wiki/Tocco_della_Luna" title="Tocco della Luna">Tocco della Luna</a>
+url:   "/wiki/Incantesimi/Tocco_della_Luna" title="Tocco della Luna">Tocco della Luna</a>
 asd:  "Touch of the Moon
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Luce" title="Tratti/Luce">Luce</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Ammaliamento" title="Tratti/Ammaliamento">Ammaliamento</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Luce" title="Tratti/Luce">Luce</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Quando tocchi il bersaglio, sulla sua fronte appare un simbolo della luna che risplende di tenue luce lunare.
 
-url:   "/wiki/Transito_del_Viaggiatore" title="Transito del Viaggiatore">Transito del Viaggiatore</a>
+url:   "/wiki/Incantesimi/Transito_del_Viaggiatore" title="Transito del Viaggiatore">Transito del Viaggiatore</a>
 asd:  "Traveler’s Transit
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Invocazione" title="Tratti/Invocazione">Invocazione</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Aggiungi potenza ai tuoi muscoli, permettendoti di Nuotare o Scalare pareti con facilità.
 
-url:   "/wiki/Unit%C3%A0" title="Unità">Unità</a>
+url:   "/wiki/Incantesimi/Unit%C3%A0" title="Unità">Unità</a>
 asd:  "Unity
 asd:  "Chierico
-asd:  "<a href="/wiki/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
+asd:  "<a href="/wiki/Incantesimi/Tratti/Non_Comune" title="Tratti/Non Comune">Non Comune</a>, <a href="/wiki/Incantesimi/Tratti/Abiurazione" title="Tratti/Abiurazione">Abiurazione</a>, <a href="/wiki/Incantesimi/Tratti/Chierico" title="Tratti/Chierico">Chierico</a>, <a href="/wiki/Incantesimi/Tratti/Fortuna" title="Tratti/Fortuna">Fortuna</a>
 asd:  "Focalizzato
 asd:  "4
 asd:  "Metti insieme una difesa unita.

@@ -1,7 +1,7 @@
 const spells = [
   {
     level: 2,
-    url: "/wiki/Incantesimi/Invocare_il_Giuramento_Cremisi",
+    url: "/wikiInvocare_il_Giuramento_Cremisi",
     name: "Invocare il Giuramento Cremisi",
     source: [],
     school: "invocazione",
@@ -11,7 +11,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Dardo_Invernale",
+    url: "/wiki/Incantesimi/Dardo_Invernale",
     name: "Dardo Invernale",
     source: [],
     school: "invocazione",
@@ -20,7 +20,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Espellere_Anima",
+    url: "/wiki/Incantesimi/Espellere_Anima",
     name: "Espellere Anima",
     source: [],
     school: "necromanzia",
@@ -30,7 +30,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Essiccare",
+    url: "/wiki/Incantesimi/Essiccare",
     name: "Essiccare",
     source: [],
     school: "invocazione",
@@ -39,7 +39,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Giavellotto_Elettrico",
+    url: "/wiki/Incantesimi/Giavellotto_Elettrico",
     name: "Giavellotto Elettrico",
     source: [],
     school: "invocazione",
@@ -49,7 +49,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Iperfocalizzazione",
+    url: "/wiki/Incantesimi/Iperfocalizzazione",
     name: "Iperfocalizzazione",
     source: [],
     school: "divinazione",
@@ -59,7 +59,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Lamento",
+    url: "/wiki/Incantesimi/Lamento",
     name: "Lamento",
     source: [],
     school: "ammaliamento",
@@ -69,7 +69,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Percezione_dello_Sciame",
+    url: "/wiki/Incantesimi/Percezione_dello_Sciame",
     name: "Percezione dello Sciame",
     source: [],
     school: "divinazione",
@@ -79,7 +79,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Piaghe_Divine",
+    url: "/wiki/Incantesimi/Piaghe_Divine",
     name: "Piaghe Divine",
     source: [],
     school: "necromanzia",
@@ -89,7 +89,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Ricordi_dell%27Oggetto",
+    url: "/wiki/Incantesimi/Ricordi_dell%27Oggetto",
     name: "Ricordi dell'Oggetto",
     source: [],
     school: "divinazione",
@@ -99,7 +99,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Ritardare_Conseguenze",
+    url: "/wiki/Incantesimi/Ritardare_Conseguenze",
     name: "Ritardare Conseguenze",
     source: [],
     school: "abiurazione",
@@ -109,7 +109,7 @@ const spells = [
   },
   {
     level: 2,
-    url: "/wiki/Sbarramento_Draconico",
+    url: "/wiki/Incantesimi/Sbarramento_Draconico",
     name: "Sbarramento Draconico",
     source: [],
     school: "invocazione",
@@ -119,7 +119,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Stella_Zenith",
+    url: "/wiki/Incantesimi/Stella_Zenith",
     name: "Stella Zenith",
     source: [],
     school: "divinazione",
@@ -130,7 +130,7 @@ const spells = [
 
   {
     level: 1,
-    url: "/wiki/Stemma_del_Giuramento",
+    url: "/wiki/Incantesimi/Stemma_del_Giuramento",
     name: "Stemma del Giuramento",
     source: [],
     school: "evocazione",
@@ -141,7 +141,7 @@ const spells = [
 
   {
     level: 1,
-    url: "/wiki/Stretta_Avvizzente",
+    url: "/wiki/Incantesimi/Stretta_Avvizzente",
     name: "Stretta Avvizzente",
     source: [],
     school: "necromanzia",
@@ -152,7 +152,7 @@ const spells = [
   },
   {
     level: 1,
-    url: "/wiki/Vuoto_Interno",
+    url: "/wiki/Incantesimi/Vuoto_Interno",
     name: "Vuoto Interno",
     source: [],
     school: "abiurazione",
@@ -162,7 +162,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Ablazione_Adattiva",
+    url: "/wiki/Incantesimi/Ablazione_Adattiva",
     name: "Ablazione Adattiva",
     source: [],
     school: "abiurazione",
@@ -172,7 +172,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Asterismo",
+    url: "/wiki/Incantesimi/Asterismo",
     name: "Asterismo",
     source: [],
     school: "invocazione",
@@ -182,7 +182,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Campo_Incolto",
+    url: "/wiki/Incantesimi/Campo_Incolto",
     name: "Campo Incolto",
     source: [],
     school: "necromanzia",
@@ -193,7 +193,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Forma_di_Mantide",
+    url: "/wiki/Incantesimi/Forma_di_Mantide",
     name: "Forma di Mantide",
     source: [],
     school: "trasmutazione",
@@ -202,7 +202,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Forma_di_Sciame",
+    url: "/wiki/Incantesimi/Forma_di_Sciame",
     name: "Forma di Sciame",
     source: [],
     school: "trasmutazione",
@@ -211,7 +211,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Fonte_di_Serenit%C3%A0",
+    url: "/wiki/Incantesimi/Fonte_di_Serenit%C3%A0",
     name: "Fonte di Serenità",
     source: [],
     school: "abiurazione",
@@ -221,7 +221,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Imbottigliare_Tempesta",
+    url: "/wiki/Incantesimi/Imbottigliare_Tempesta",
     name: "Imbottigliare Tempesta",
     source: [],
     school: "invocazione",
@@ -231,7 +231,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Interstizio_Ectoplasmatico",
+    url: "/wiki/Incantesimi/Interstizio_Ectoplasmatico",
     name: "Interstizio Ectoplasmatico",
     source: [],
     school: "necromanzia",
@@ -241,7 +241,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Miasma_Ripugnante",
+    url: "/wiki/Incantesimi/Miasma_Ripugnante",
     name: "Miasma Ripugnante",
     source: [],
     school: "necromanzia",
@@ -252,7 +252,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Pericoli_Evanescenti",
+    url: "/wiki/Incantesimi/Pericoli_Evanescenti",
     name: "Pericoli Evanescenti",
     source: [],
     school: "illusione",
@@ -262,7 +262,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Polvere_di_Diamante",
+    url: "/wiki/Incantesimi/Polvere_di_Diamante",
     name: "Polvere di Diamante",
     source: [],
     school: "invocazione",
@@ -272,7 +272,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Porta_sull%27Oltre",
+    url: "/wiki/Incantesimi/Porta_sull%27Oltre",
     name: "Porta sull'Oltre",
     source: [],
     school: "evocazione",
@@ -282,7 +282,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Ricordare_i_Perduti",
+    url: "/wiki/Incantesimi/Ricordare_i_Perduti",
     name: "Ricordare i Perduti",
     source: [],
     school: "divinazione",
@@ -292,7 +292,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Ruggito_del_Dragone",
+    url: "/wiki/Incantesimi/Ruggito_del_Dragone",
     name: "Ruggito del Dragone",
     source: [],
     school: "ammaliamento",
@@ -302,7 +302,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Sfida_Doverosa",
+    url: "/wiki/Incantesimi/Sfida_Doverosa",
     name: "Sfida Doverosa",
     source: [],
     school: "abiurazione",
@@ -312,7 +312,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Sofferenza_Traboccante",
+    url: "/wiki/Incantesimi/Sofferenza_Traboccante",
     name: "Sofferenza Traboccante",
     source: [],
     school: "ammaliamento",
@@ -322,7 +322,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Stasi",
+    url: "/wiki/Incantesimi/Stasi",
     name: "Stasi",
     source: [],
     school: "trasmutazione",
@@ -332,7 +332,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Trascrizione_Fantasma",
+    url: "/wiki/Incantesimi/Trascrizione_Fantasma",
     name: "Trascrizione Fantasma",
     source: [],
     school: "illusione",
@@ -342,7 +342,7 @@ const spells = [
   },
   {
     level: 4,
-    url: "/wiki/Tempesta_di_Polvere",
+    url: "/wiki/Incantesimi/Tempesta_di_Polvere",
     name: "Tempesta di Polvere",
     source: [],
     school: "invocazione",
