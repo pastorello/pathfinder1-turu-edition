@@ -1,27 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Column } from "../components/Grid";
-import alignments from "../data/alignments";
-import deities from "../data/deities";
-const DeityCard = (deity) => {
-  return (
-    <Row>
-      <Column small={3}>
-        <h3>
-          <a href={deity.url}>{deity.name}</a> <small>{deity.title}</small>
-        </h3>
-      </Column>
-      <Column small={2}>{alignments[deity.alignment]}</Column>
-      <Column small={2}>{deity.virtue}</Column>
-      <Column small={3}>
-        <h3>
-          <a href={deity.oppositeUrl}>{deity.oppositeDeity}</a>{" "}
-          <small>{deity.oppositeTitle}</small>
-        </h3>
-      </Column>
-      <Column small={2}>{alignments[deity.oppositeAlignment]}</Column>
-    </Row>
-  );
-};
 
 const Dieties = (props) => {
   return (
@@ -29,10 +7,38 @@ const Dieties = (props) => {
       <Column small={12}>
         <h2>Divinità</h2>
         <Row>
+          <Column small={12}>
+            <a
+              href="https://docs.google.com/document/d/1p9Q8d1qKTc9yAHb93-iyxapg4XtY1mXsB5U0_O7v-1c/edit"
+              target="_blank"
+              rel="noreferrer"
+              className="button mb20"
+            >
+              Divinità e Domini (Gdoc by Ciommo)
+            </a>
+          </Column>
+        </Row>
+        <Row>
           <Column>
-            {deities.map((item) => (
-              <DeityCard {...item} key={item.name} />
-            ))}
+            <h3>Divinodinamica</h3>
+            <ol className="mb20">
+              <li>il trapasso è diverso</li>
+              <li>c'è l'inferno che è un pianeta</li>
+              <li>c'è il paradiso che è un pianeta</li>
+              <li>
+                c'è Nectano che è il piano dell energia neativa dove risiede il
+                dio dei morti Mavros (neutrale malvagio)
+              </li>
+            </ol>
+
+            <h3>Magiodinamica</h3>
+            <ul>
+              <li>
+                La magia è divisa in 8 scuole perchè ci sono 8 pianeti creati da
+                Lord Ao per controllare il caos, il movimento dei pianeti genera
+                la magia
+              </li>
+            </ul>
           </Column>
         </Row>
       </Column>

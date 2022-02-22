@@ -42,11 +42,14 @@ export default createGlobalStyle`
     strong {
         font-weight: bold;
     }
-    button {
-        border-radius: 4px;
+    button, .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         padding: 8px;
         border: 1px solid ${borderColor};
+        border-radius: 4px;
         background: ${bgButtonColor};
         &:hover{
             background: ${hoverBg};
