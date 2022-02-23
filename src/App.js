@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import GlobalStyle from "./theme/GlobalStyle";
 import { Row, Column } from "./components/Grid";
@@ -13,23 +13,31 @@ const App = (props) => {
     <Router>
       <GlobalStyle />
       <Row>
-        <Column small={1}>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/spells">SpellBook</Link>
-            </li>
-            <li>
-              <Link to="/deities">Divinità</Link>
-            </li>
-            <li>
-              <Link to="/battle">Battaglia</Link>
-            </li>
-          </ul>
+        <Column small={12} large={1}>
+          <Row className="collapse mb20">
+            <Column small={6} large={12}>
+              <Link className="button" to="/">
+                Home
+              </Link>
+            </Column>
+            <Column small={6} large={12}>
+              <Link className="button" to="/spells">
+                SpellBook
+              </Link>
+            </Column>
+            <Column small={6} large={12}>
+              <Link className="button" to="/deities">
+                Divinità
+              </Link>
+            </Column>
+            <Column small={6} large={12}>
+              <Link className="button" to="/battle">
+                Battaglia
+              </Link>
+            </Column>
+          </Row>
         </Column>
-        <Column small={11}>
+        <Column small={12} large={11}>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/battle" element={<Battle />} />
