@@ -59,6 +59,9 @@ export default createGlobalStyle`
         list-style-type: "-";
         padding-left: 10px;
     }
+    ol li {
+        list-style-type: decimal;
+    }
     input {
         text-align: center;
         border-radius: 4px;

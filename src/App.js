@@ -7,6 +7,8 @@ import Home from "./sections/Home";
 import Battle from "./sections/Battle";
 import SpellBook from "./sections/SpellBook";
 import Deities from "./sections/Deities";
+import Scheda from "./sections/Scheda";
+import Diario from "./sections/Diario";
 
 const App = (props) => {
   return (
@@ -18,6 +20,16 @@ const App = (props) => {
             <Column small={6} large={12}>
               <Link className="button" to="/">
                 Home
+              </Link>
+            </Column>
+            <Column small={6} large={12}>
+              <Link className="button" to="/scheda">
+                Scheda
+              </Link>
+            </Column>
+            <Column small={6} large={12}>
+              <Link className="button" to="/diario">
+                Diario
               </Link>
             </Column>
             <Column small={6} large={12}>
@@ -40,6 +52,8 @@ const App = (props) => {
         <Column small={12} large={11}>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route path="/scheda" element={<Scheda />} />
+            <Route path="/diario" element={<Diario />} />
             <Route path="/battle" element={<Battle />} />
             <Route path="/spells" element={<SpellBook />} />
             <Route path="/deities" element={<Deities />} />
